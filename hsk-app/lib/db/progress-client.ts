@@ -92,3 +92,43 @@ export async function syncBatchProgressToDB(
     console.log(`[syncBatchProgressToDB] ${rows.length}개 단어 DB 저장 완료`);
   }
 }
+
+/**
+ * 클라이언트에서 본인의 전체 진도를 DB에서 가져오기
+ * (서버용 fetchAllProgressFromDB와 같지만 브라우저 클라이언트 사용)
+ */
+export async function fetchAllProgressFromDBClient(): Promise<WordProgress[]> {
+  const supabase = createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) {
+    console.warn('[fetchAllProgressFromDBClient] 로그인 안 됨');
+    return [];
+  }
+
+  const { data, error } = await supabase
+    .from('user_progress')
+    .select('*')
+    .eq('user_id', user.id);
+
+  if (error) {
+    console.error('[fetchAllProgressFromDBClient] DB 에러:', error);
+    return [];
+  }
+
+  return (data ?? []).map((row) => ({
+    wordId: parseInt(row.word_id.replace('w-', ''), 10),
+    totalAttempts: row.correct_count + row.wrong_count,
+    correctCount: row.correct_count,
+    wrongCount: row.wrong_count,
+    currentStreak: 0,
+    inWrongNote: row.status === 'learning',
+    lastStudiedAt: row.last_reviewed_at ?? '',
+    srs: {
+      easeFactor: 2.5,
+      interval: row.interval_days ?? 0,
+      repetitions: row.correct_count,
+      nextReviewAt: row.next_review_at ?? new Date().toISOString(),
+      lastReviewedAt: row.last_reviewed_at ?? '',
+    },
+  }));
+}

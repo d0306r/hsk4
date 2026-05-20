@@ -1,6 +1,7 @@
 // app/layout.tsx
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import SyncOnLogin from '@/components/auth/SyncOnLogin';
 
 export const metadata: Metadata = {
   title: 'HSK 4급',
@@ -52,6 +53,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen">
+        {/* 로그인 시 DB → localStorage 동기화 (UI 없음, 백그라운드) */}
+        <SyncOnLogin />
+
         <div className="mx-auto max-w-mobile min-h-screen">
           {children}
         </div>

@@ -96,3 +96,31 @@ export async function resetWrongNotes(): Promise<void> {
   clearWrongNotes();
   // TODO: DB도 동기화 (Step 4-D 이후 추가)
 }
+
+/**
+ * DB → localStorage 동기화
+ * 로그인 직후 또는 앱 첫 로드 시 호출
+ * 다른 기기에서 학습한 진도를 가져옴
+ */
+export async function syncFromDB(): Promise<{ synced: number }> {
+  try {
+    // 동적 import로 클라이언트 번들 분리
+    const { fetchAllProgressFromDBClient } = await import('@/lib/db/progress-client');
+    const dbProgress = await fetchAllProgressFromDBClient();
+
+    if (dbProgress.length === 0) {
+      console.log('[syncFromDB] DB에 진도 없음 (첫 사용자 또는 미로그인)');
+      return { synced: 0 };
+    }
+
+    // storage의 머지 함수 호출
+    const { mergeProgressFromDB } = await import('./storage');
+    mergeProgressFromDB(dbProgress);
+
+    console.log(`[syncFromDB] DB에서 ${dbProgress.length}개 단어 진도 머지 완료`);
+    return { synced: dbProgress.length };
+  } catch (e) {
+    console.error('[syncFromDB] 실패', e);
+    return { synced: 0 };
+  }
+}

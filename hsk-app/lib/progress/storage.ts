@@ -245,3 +245,50 @@ export function clearWrongNotes(): void {
     updatedAt: new Date().toISOString(),
   });
 }
+
+/**
+ * DB에서 가져온 진도를 localStorage와 머지
+ * 충돌 시 lastStudiedAt이 더 최근인 쪽이 이김
+ * 
+ * @param dbWords DB에서 fetchAllProgressFromDB로 가져온 단어별 진도
+ * @returns 머지 후 ProgressData
+ */
+export function mergeProgressFromDB(
+  dbWords: WordProgress[]
+): ProgressData {
+  const data = readProgress();
+  const newWords = { ...data.words };
+
+  for (const dbWord of dbWords) {
+    const localWord = newWords[dbWord.wordId];
+
+    if (!localWord) {
+      // 로컬에 없는 단어 → DB 것 그대로 추가
+      newWords[dbWord.wordId] = dbWord;
+      continue;
+    }
+
+    // 둘 다 있으면 lastStudiedAt 비교
+    const localTime = localWord.lastStudiedAt
+      ? new Date(localWord.lastStudiedAt).getTime()
+      : 0;
+    const dbTime = dbWord.lastStudiedAt
+      ? new Date(dbWord.lastStudiedAt).getTime()
+      : 0;
+
+    if (dbTime > localTime) {
+      // DB가 더 최근 → DB 데이터로 덮어쓰기
+      newWords[dbWord.wordId] = dbWord;
+    }
+    // 로컬이 더 최근 또는 같음 → 로컬 유지 (덮어쓰지 않음)
+  }
+
+  const newData: ProgressData = {
+    ...data,
+    words: newWords,
+    updatedAt: new Date().toISOString(),
+  };
+
+  writeProgress(newData);
+  return newData;
+}
