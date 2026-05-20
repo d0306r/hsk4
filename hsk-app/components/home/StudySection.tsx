@@ -1,7 +1,7 @@
 // components/home/StudySection.tsx
 import Link from 'next/link';
 import type { HSKLevel } from '@/types/word';
-import { fetchLevelStats } from '@/lib/db/progress';
+import { fetchLevelStats } from '@/lib/db/progress-server';
 
 interface StudySectionProps {
   level: HSKLevel;

@@ -32,7 +32,7 @@ export default function SessionSetup({ level }: SessionSetupProps) {
   }, [level]);
 
   const start = () => {
-    router.push(`/study/${level}/session`);
+    router.push(`/study/${level}/session?count=${defaultWordCount}`);
   };
 
   // 로딩
