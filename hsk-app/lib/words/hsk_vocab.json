@@ -1,0 +1,9618 @@
+{
+  "_meta": {
+    "source": "新HSK4급 필수 1200단어 (한나쌤)",
+    "total": 1203,
+    "level_distribution": {
+      "3": 603,
+      "4": 600
+    }
+  },
+  "words": [
+    {
+      "id": 1,
+      "hanzi": "啊",
+      "pinyin": "a",
+      "meaning": "문장 끝에 쓰여 긍정을 나타냄.",
+      "level": 3,
+      "partOfSpeech": "조사"
+    },
+    {
+      "id": 2,
+      "hanzi": "爱",
+      "pinyin": "ài",
+      "meaning": "(사람·사물 등을) 사랑하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 3,
+      "hanzi": "矮",
+      "pinyin": "ǎi",
+      "meaning": "(사람의 키가) 작다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 4,
+      "hanzi": "爱好",
+      "pinyin": "àihào",
+      "meaning": "애호하다. …하기를 즐기다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 5,
+      "hanzi": "安静",
+      "pinyin": "ānjìng",
+      "meaning": "조용하다. 잠잠하다. 고요하다. 적막하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 6,
+      "hanzi": "阿姨",
+      "pinyin": "āyí",
+      "meaning": "아주머니. 아줌마.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 7,
+      "hanzi": "吧",
+      "pinyin": "ba",
+      "meaning": "문장 맨 끝에 쓰여, 상의·제의·청유·기대·명령 등의 어기를 나타냄.",
+      "level": 3,
+      "partOfSpeech": "조사"
+    },
+    {
+      "id": 8,
+      "hanzi": "把",
+      "pinyin": "bǎ",
+      "meaning": "…으로. …을〔를〕 가지고.",
+      "level": 3,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 9,
+      "hanzi": "八",
+      "pinyin": "bā",
+      "meaning": "8. 팔. 여덟.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 10,
+      "hanzi": "爸爸",
+      "pinyin": "bàba",
+      "meaning": "아빠. 아버지.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 11,
+      "hanzi": "白",
+      "pinyin": "bái",
+      "meaning": "하얗다. 희다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 12,
+      "hanzi": "百",
+      "pinyin": "bǎi",
+      "meaning": "백. 100.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 13,
+      "hanzi": "半",
+      "pinyin": "bàn",
+      "meaning": "절반. 2분의 1.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 14,
+      "hanzi": "班",
+      "pinyin": "bān",
+      "meaning": "조. 그룹. 반.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 15,
+      "hanzi": "搬",
+      "pinyin": "bān",
+      "meaning": "(비교적 크거나 무거운 것을) 옮기다. 운반하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 16,
+      "hanzi": "办法",
+      "pinyin": "bànfǎ",
+      "meaning": "방법. 수단. 방식. 조치. 방책. 술책.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 17,
+      "hanzi": "帮忙",
+      "pinyin": "bāngmáng",
+      "meaning": "일(손)을 돕다. 도움을 주다. 원조하다. 거들어 주다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 18,
+      "hanzi": "办公室",
+      "pinyin": "bàngōngshì",
+      "meaning": "사무실. 오피스(office).",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 19,
+      "hanzi": "帮助",
+      "pinyin": "bāngzhù",
+      "meaning": "돕다. 원조하다. 보좌하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 20,
+      "hanzi": "饱",
+      "pinyin": "bǎo",
+      "meaning": "배부르다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 21,
+      "hanzi": "包",
+      "pinyin": "bāo",
+      "meaning": "(종이나 베 혹은 기타 얇은 것으로) 싸다. 싸매다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 22,
+      "hanzi": "报纸",
+      "pinyin": "bàozhǐ",
+      "meaning": "신문.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 23,
+      "hanzi": "被",
+      "pinyin": "bèi",
+      "meaning": "덮다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 24,
+      "hanzi": "北方",
+      "pinyin": "běifāng",
+      "meaning": "북방. 북쪽.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 25,
+      "hanzi": "北京",
+      "pinyin": "Běijīng",
+      "meaning": "베이징. [중국의 수도로서 ‘京’이라 약칭함]",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 26,
+      "hanzi": "杯子",
+      "pinyin": "bēizi",
+      "meaning": "(술·물·차 등 음료의) 잔. 컵.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 27,
+      "hanzi": "本",
+      "pinyin": "běn",
+      "meaning": "(～儿) 책. 공책.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 28,
+      "hanzi": "比",
+      "pinyin": "bǐ",
+      "meaning": "비교하다. 재다. 겨루다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 29,
+      "hanzi": "变化",
+      "pinyin": "biànhuà",
+      "meaning": "변화하다. 달라지다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 30,
+      "hanzi": "别",
+      "pinyin": "bié",
+      "meaning": "부사",
+      "level": 3
+    },
+    {
+      "id": 31,
+      "hanzi": "别人",
+      "pinyin": "biéren",
+      "meaning": "(일반적인) 남. 타인.",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 32,
+      "hanzi": "比较",
+      "pinyin": "bǐjiào",
+      "meaning": "비교하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 33,
+      "hanzi": "笔记本",
+      "pinyin": "bǐjìběn",
+      "meaning": "노트. 수첩. 비망록.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 34,
+      "hanzi": "宾馆",
+      "pinyin": "bīnguǎn",
+      "meaning": "(규모가 비교적 큰) 호텔.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 35,
+      "hanzi": "冰箱",
+      "pinyin": "bīngxiāng",
+      "meaning": "냉장고",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 36,
+      "hanzi": "比赛",
+      "pinyin": "bǐsài",
+      "meaning": "경기. 시합.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 37,
+      "hanzi": "必须",
+      "pinyin": "bìxū",
+      "meaning": "반드시 …해야 한다. 꼭 …해야 한다. 기필코 …해야 한다.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 38,
+      "hanzi": "鼻子",
+      "pinyin": "bízi",
+      "meaning": "코.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 39,
+      "hanzi": "不",
+      "pinyin": "bù",
+      "meaning": "(동사·형용사 또는 기타 부사 앞에서) 부정(否定)을 나타냄.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 40,
+      "hanzi": "不但",
+      "pinyin": "búdàn",
+      "meaning": "…뿐만 아니라.",
+      "level": 3,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 41,
+      "hanzi": "不客气",
+      "pinyin": "búkèqi",
+      "meaning": "않다. 체면 차리지 않다.",
+      "level": 3,
+      "partOfSpeech": "사양하지"
+    },
+    {
+      "id": 42,
+      "hanzi": "才",
+      "pinyin": "cái",
+      "meaning": "겨우. 비로소",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 43,
+      "hanzi": "菜",
+      "pinyin": "cài",
+      "meaning": "채소. 야채. 음식",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 44,
+      "hanzi": "菜单",
+      "pinyin": "càidān",
+      "meaning": "메뉴. 식단. 차림표.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 45,
+      "hanzi": "参加",
+      "pinyin": "cānjiā",
+      "meaning": "(어떤 조직이나 활동에) 참가하다. 가입하다. 참여하다. 참석하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 46,
+      "hanzi": "草",
+      "pinyin": "cǎo",
+      "meaning": "풀. [재배 식물을 제외한 초본 식물의 총칭]",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 47,
+      "hanzi": "层",
+      "pinyin": "céng",
+      "meaning": "층.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 48,
+      "hanzi": "茶",
+      "pinyin": "chá",
+      "meaning": "차.차나무",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 49,
+      "hanzi": "差",
+      "pinyin": "chà",
+      "meaning": "나쁘다. 표준에 못 미치다. 좋지 않다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 50,
+      "hanzi": "长",
+      "pinyin": "cháng",
+      "meaning": "(길이가) 길다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 51,
+      "hanzi": "唱歌",
+      "pinyin": "chànggē",
+      "meaning": "노래 부르다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 52,
+      "hanzi": "超市",
+      "pinyin": "chāoshì",
+      "meaning": "超级市场(슈퍼마켓)의 약칭.",
+      "level": 3
+    },
+    {
+      "id": 53,
+      "hanzi": "成绩",
+      "pinyin": "chéngjì",
+      "meaning": "(일·학업상의) 성적. 성과. 수확.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 54,
+      "hanzi": "城市",
+      "pinyin": "chéngshì",
+      "meaning": "도시.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 55,
+      "hanzi": "衬衫",
+      "pinyin": "chènshān",
+      "meaning": "와이셔츠. 셔츠. 블라우스.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 56,
+      "hanzi": "吃",
+      "pinyin": "chī",
+      "meaning": "먹다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 57,
+      "hanzi": "迟到",
+      "pinyin": "chídào",
+      "meaning": "지각하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 58,
+      "hanzi": "出",
+      "pinyin": "chū",
+      "meaning": "나가다. 나오다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 59,
+      "hanzi": "船",
+      "pinyin": "chuán",
+      "meaning": "배. 선박.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 60,
+      "hanzi": "穿",
+      "pinyin": "chuān",
+      "meaning": "(옷·신발·양말 등을) 입다. 신다",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 61,
+      "hanzi": "除了",
+      "pinyin": "chúle",
+      "meaning": "…을〔를〕 제외하고(는).",
+      "level": 3,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 62,
+      "hanzi": "春",
+      "pinyin": "chūn",
+      "meaning": "봄. 봄철. 춘계.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 63,
+      "hanzi": "出租车",
+      "pinyin": "chūzūchē",
+      "meaning": "택시.",
+      "level": 3
+    },
+    {
+      "id": 64,
+      "hanzi": "次",
+      "pinyin": "cì",
+      "meaning": "번(회).",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 65,
+      "hanzi": "词典",
+      "pinyin": "cídiǎn",
+      "meaning": "사전.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 66,
+      "hanzi": "从",
+      "pinyin": "cóng",
+      "meaning": "~로 부터.",
+      "level": 3,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 67,
+      "hanzi": "聪明",
+      "pinyin": "cōngming",
+      "meaning": "똑똑하다. 총명하다. 영리하다. 영민하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 68,
+      "hanzi": "错",
+      "pinyin": "cuò",
+      "meaning": "틀리다. 맞지 않다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 69,
+      "hanzi": "大",
+      "pinyin": "dà",
+      "meaning": "(부피·면적 등이) 크다. 넓다. (수량이) 많다. (힘·강도 등이) 세다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 70,
+      "hanzi": "打电话",
+      "pinyin": "dǎdiànhuà",
+      "meaning": "걸다. 전화하다.",
+      "level": 3,
+      "partOfSpeech": "전화를"
+    },
+    {
+      "id": 71,
+      "hanzi": "带",
+      "pinyin": "dài",
+      "meaning": "(명사) 띠. 벨트. 끈 (동사) 챙기다.지니다",
+      "level": 3,
+      "partOfSpeech": "명사/동사"
+    },
+    {
+      "id": 72,
+      "hanzi": "大家",
+      "pinyin": "dàjiā",
+      "meaning": "모두. 다들. [일정 범위 내의 모든 사람을 가리킴]",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 73,
+      "hanzi": "打篮球",
+      "pinyin": "dǎlánqiú",
+      "meaning": "하다",
+      "level": 3,
+      "partOfSpeech": "농구를"
+    },
+    {
+      "id": 74,
+      "hanzi": "蛋糕",
+      "pinyin": "dàngāo",
+      "meaning": "케이크.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 75,
+      "hanzi": "当然",
+      "pinyin": "dāngrán",
+      "meaning": "당연하다. 물론이다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 76,
+      "hanzi": "但是",
+      "pinyin": "dànshì",
+      "meaning": "그러나. 그렇지만. [주로 ‘       ’ 등과 호응하여 쓰임]",
+      "level": 3,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 77,
+      "hanzi": "担心",
+      "pinyin": "dānxīn",
+      "meaning": "염려하다. 걱정하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 78,
+      "hanzi": "到",
+      "pinyin": "dào",
+      "meaning": "도달하다. 도착하다. (어느 곳에) 이르다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 79,
+      "hanzi": "打扫",
+      "pinyin": "dǎsǎo",
+      "meaning": "청소하다. 소제하다. 깨끗이 정리〔처리〕하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 80,
+      "hanzi": "打算",
+      "pinyin": "dǎsuan",
+      "meaning": "…할 생각이다〔작정이다〕. …하려고 하다. 계획하다. 고려하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 81,
+      "hanzi": "地",
+      "pinyin": "de",
+      "meaning": "상황어(부사어)로 동사/형용사를 수식할 경우에 쓰임",
+      "level": 3,
+      "partOfSpeech": "조사"
+    },
+    {
+      "id": 82,
+      "hanzi": "的",
+      "pinyin": "de",
+      "meaning": "관형어 뒤에 쓰여, 관형어와 중심어 사이가 종속 관계임을 나타냄.",
+      "level": 3,
+      "partOfSpeech": "조사"
+    },
+    {
+      "id": 83,
+      "hanzi": "得",
+      "pinyin": "de",
+      "meaning": "동사 뒤에 쓰여 가능을 나타냄.",
+      "level": 3,
+      "partOfSpeech": "조사"
+    },
+    {
+      "id": 84,
+      "hanzi": "等",
+      "pinyin": "děng",
+      "meaning": "기다리다",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 85,
+      "hanzi": "灯",
+      "pinyin": "dēng",
+      "meaning": "등. 등롱. 램프. 라이트. 랜턴.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 86,
+      "hanzi": "点",
+      "pinyin": "diǎn",
+      "meaning": "주문하다",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 87,
+      "hanzi": "电脑",
+      "pinyin": "diànnǎo",
+      "meaning": "컴퓨터(computer).",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 88,
+      "hanzi": "电视",
+      "pinyin": "diànshì",
+      "meaning": "텔레비전.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 89,
+      "hanzi": "电梯",
+      "pinyin": "diàntī",
+      "meaning": "엘리베이터.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 90,
+      "hanzi": "电影",
+      "pinyin": "diànyǐng",
+      "meaning": "(종합 예술로서의) 영화.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 91,
+      "hanzi": "电子邮件",
+      "pinyin": "diànzǐyóujiàn",
+      "meaning": "전자 우편. 이메일.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 92,
+      "hanzi": "弟弟",
+      "pinyin": "dìdi",
+      "meaning": "친남동생.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 93,
+      "hanzi": "地方",
+      "pinyin": "dìfang",
+      "meaning": "부분. 점.곳.장소",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 94,
+      "hanzi": "地铁",
+      "pinyin": "dìtiě",
+      "meaning": "지하철.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 95,
+      "hanzi": "地图",
+      "pinyin": "dìtú",
+      "meaning": "지도.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 96,
+      "hanzi": "第一",
+      "pinyin": "dìyī",
+      "meaning": "제1. 최초. 첫(번)째. 맨 처음.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 97,
+      "hanzi": "懂",
+      "pinyin": "dǒng",
+      "meaning": "알다. 이해하다. 터득하다. 정통하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 98,
+      "hanzi": "东",
+      "pinyin": "dōng",
+      "meaning": "동쪽. 동녘. 동편. 동방.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 99,
+      "hanzi": "冬",
+      "pinyin": "dōng",
+      "meaning": "겨울. 겨울철. 동계.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 100,
+      "hanzi": "动物",
+      "pinyin": "dòngwù",
+      "meaning": "동물.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 101,
+      "hanzi": "东西",
+      "pinyin": "dōngxi",
+      "meaning": "(구체적인 혹은 추상적인) 것. 물건. 사물. 물품.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 102,
+      "hanzi": "都",
+      "pinyin": "dōu",
+      "meaning": "모두. 다. 전부. [일반적으로 총괄하는 내용앞에 쓰임]",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 103,
+      "hanzi": "读",
+      "pinyin": "dú",
+      "meaning": "글을 소리내어 읽다. 낭독하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 104,
+      "hanzi": "段",
+      "pinyin": "duàn",
+      "meaning": "단락. 토막. [사물의 한 부분을 나타냄]",
+      "level": 3,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 105,
+      "hanzi": "短",
+      "pinyin": "duǎn",
+      "meaning": "(공간적 거리가) 짧다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 106,
+      "hanzi": "锻炼",
+      "pinyin": "duànliàn",
+      "meaning": "단조하다. 제련하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 107,
+      "hanzi": "对",
+      "pinyin": "duì",
+      "meaning": "맞다. 옳다. 정확하다. 정상이다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 108,
+      "hanzi": "对",
+      "pinyin": "duì",
+      "meaning": "…에 대해(서). …에 대하여. [동작이나 행위의 대상을 이끌어 냄]",
+      "level": 3,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 109,
+      "hanzi": "对不起",
+      "pinyin": "duìbuqǐ",
+      "meaning": "미안합니다. 죄송합니다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 110,
+      "hanzi": "多",
+      "pinyin": "duō",
+      "meaning": "(수량이) 많다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 111,
+      "hanzi": "多么",
+      "pinyin": "duōme",
+      "meaning": "얼마나. [감탄문에서 정도가 심함을 나타냄]",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 112,
+      "hanzi": "多少",
+      "pinyin": "duōshǎo",
+      "meaning": "얼마간. 약간. 다소. 좀.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 113,
+      "hanzi": "饿",
+      "pinyin": "è",
+      "meaning": "배고프다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 114,
+      "hanzi": "二",
+      "pinyin": "èr",
+      "meaning": "2. 둘.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 115,
+      "hanzi": "耳朵",
+      "pinyin": "ěrduo",
+      "meaning": "귀.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 116,
+      "hanzi": "而且",
+      "pinyin": "érqiě",
+      "meaning": "게다가. 뿐만 아니라. 또한.",
+      "level": 3,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 117,
+      "hanzi": "儿子",
+      "pinyin": "érzi",
+      "meaning": "아들.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 118,
+      "hanzi": "发",
+      "pinyin": "fā",
+      "meaning": "보내다. 건네주다. 교부하다. 발급하다. 부치다. 발송하다. 치다. 내주다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 119,
+      "hanzi": "饭店",
+      "pinyin": "fàndiàn",
+      "meaning": "호텔.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 120,
+      "hanzi": "放",
+      "pinyin": "fàng",
+      "meaning": "(자유롭게) 놓아주다. 풀어 주다. 석방하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 121,
+      "hanzi": "方便",
+      "pinyin": "fāngbiàn",
+      "meaning": "편리하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 122,
+      "hanzi": "房间",
+      "pinyin": "fángjiān",
+      "meaning": "방.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 123,
+      "hanzi": "放心",
+      "pinyin": "fàngxīn",
+      "meaning": "마음을 놓다. 안심하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 124,
+      "hanzi": "发烧",
+      "pinyin": "fāshāo",
+      "meaning": "열이 나다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 125,
+      "hanzi": "发现",
+      "pinyin": "fāxiàn",
+      "meaning": "발견하다. 알아차리다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 126,
+      "hanzi": "非常",
+      "pinyin": "fēicháng",
+      "meaning": "대단히. 매우. 심히. 아주.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 127,
+      "hanzi": "飞机",
+      "pinyin": "fēijī",
+      "meaning": "비행기. 항공기.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 128,
+      "hanzi": "分",
+      "pinyin": "fēn",
+      "meaning": "나누다. 가르다. 분류하다. 분리하다. 구분하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 129,
+      "hanzi": "分钟",
+      "pinyin": "fēnzhōng",
+      "meaning": "분",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 130,
+      "hanzi": "附近",
+      "pinyin": "fùjìn",
+      "meaning": "가까운. 인접한.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 131,
+      "hanzi": "服务员",
+      "pinyin": "fúwùyuán",
+      "meaning": "(서비스업의) 종업원. 웨이터.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 132,
+      "hanzi": "复习",
+      "pinyin": "fùxí",
+      "meaning": "복습하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 133,
+      "hanzi": "刚才",
+      "pinyin": "gāngcái",
+      "meaning": "지금 막. 방금. 막. 이제 금방. 방금 전.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 134,
+      "hanzi": "干净",
+      "pinyin": "gānjìng",
+      "meaning": "깨끗하다. 청결하다. 말끔하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 135,
+      "hanzi": "感冒",
+      "pinyin": "gǎnmào",
+      "meaning": "감기.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 136,
+      "hanzi": "感兴趣",
+      "pinyin": "gǎnxìngqù",
+      "meaning": "있다, 흥미가 있다, 좋아하다",
+      "level": 3,
+      "partOfSpeech": "관심이"
+    },
+    {
+      "id": 137,
+      "hanzi": "高",
+      "pinyin": "gāo",
+      "meaning": "(높이가) 높다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 138,
+      "hanzi": "告诉",
+      "pinyin": "gàosu",
+      "meaning": "말하다. 알리다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 139,
+      "hanzi": "高兴",
+      "pinyin": "gāoxìng",
+      "meaning": "기쁘다. 즐겁다. 좋아하다. 유쾌하다. 흥겹다. 흐뭇하다. 신나다. 신명나다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 140,
+      "hanzi": "个",
+      "pinyin": "gè",
+      "meaning": "개. 사람. 명. [개개의 사람이나 물건에 쓰임]",
+      "level": 3,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 141,
+      "hanzi": "哥哥",
+      "pinyin": "gēge",
+      "meaning": "형. 오빠.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 142,
+      "hanzi": "给",
+      "pinyin": "gěi",
+      "meaning": "주다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 143,
+      "hanzi": "跟",
+      "pinyin": "gēn",
+      "meaning": "(명사) (～儿) 발뒤꿈치. (구두) 굽. 뒷굽. 양말 뒤축. (개사)~와",
+      "level": 3,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 144,
+      "hanzi": "更",
+      "pinyin": "gèng",
+      "meaning": "더욱. 더. 훨씬. 한층 더. 가일층. 더군다나. 보다 더.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 145,
+      "hanzi": "根据",
+      "pinyin": "gēnjù",
+      "meaning": "…에 의거하여. [동작 행위의 근거를 이끌어들임]",
+      "level": 3,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 146,
+      "hanzi": "个子",
+      "pinyin": "gèzi",
+      "meaning": "(사람의) 키. 체격.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 147,
+      "hanzi": "公共汽车",
+      "pinyin": "gōnggòngqìchē",
+      "meaning": "버스.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 148,
+      "hanzi": "公斤",
+      "pinyin": "gōngjīn",
+      "meaning": "킬로그램(kg).",
+      "level": 3
+    },
+    {
+      "id": 149,
+      "hanzi": "公司",
+      "pinyin": "gōngsī",
+      "meaning": "회사. 직장.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 150,
+      "hanzi": "公园",
+      "pinyin": "gōngyuán",
+      "meaning": "공원.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 151,
+      "hanzi": "工作",
+      "pinyin": "gōngzuò",
+      "meaning": "직업. 일자리.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 152,
+      "hanzi": "狗",
+      "pinyin": "gǒu",
+      "meaning": "개.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 153,
+      "hanzi": "刮风",
+      "pinyin": "guāfēng",
+      "meaning": "바람이 불다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 154,
+      "hanzi": "关",
+      "pinyin": "guān",
+      "meaning": "닫다. 덮다.끄다",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 155,
+      "hanzi": "关系",
+      "pinyin": "guānxi",
+      "meaning": "(사람과 사람 또는 사물 사이의) 관계. 연줄.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 156,
+      "hanzi": "关心",
+      "pinyin": "guānxīn",
+      "meaning": "(사람 또는 사물에 대해) 관심을 갖다. 관심을 기울이다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 157,
+      "hanzi": "关于",
+      "pinyin": "guānyú",
+      "meaning": "…에 관해서〔관하여〕.",
+      "level": 3,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 158,
+      "hanzi": "贵",
+      "pinyin": "guì",
+      "meaning": "(가격이나 가치가) 높다. 비싸다. 귀하다. 귀중하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 159,
+      "hanzi": "过",
+      "pinyin": "guo",
+      "meaning": "동사 뒤에 쓰여 동작의 경험을 나타냄.",
+      "level": 3,
+      "partOfSpeech": "조사"
+    },
+    {
+      "id": 160,
+      "hanzi": "过",
+      "pinyin": "guò",
+      "meaning": "가다. 건너다. (지점을) 지나다. 경과하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 161,
+      "hanzi": "国家",
+      "pinyin": "guójiā",
+      "meaning": "국가. 나라.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 162,
+      "hanzi": "过去",
+      "pinyin": "guòqù",
+      "meaning": "지나가다. [화자나 서술 대상이 있는 시점이나 지점을 거쳐 지나감을 나타냄]",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 163,
+      "hanzi": "故事",
+      "pinyin": "gùshi",
+      "meaning": "이야기. 옛날 이야기.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 164,
+      "hanzi": "还",
+      "pinyin": "hái",
+      "meaning": "여전히. 아직도. 아직.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 165,
+      "hanzi": "害怕",
+      "pinyin": "hàipà",
+      "meaning": "겁내다. 두려워하다. 무서워하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 166,
+      "hanzi": "还是",
+      "pinyin": "háishi",
+      "meaning": "여전히. 아직도. 그래도. 아니면.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 167,
+      "hanzi": "孩子",
+      "pinyin": "háizi",
+      "meaning": "애. 어린이. (어린)아이. 아동.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 168,
+      "hanzi": "汉语",
+      "pinyin": "Hànyǔ",
+      "meaning": "중국어. 한어. 한족(漢族)의 언어.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 169,
+      "hanzi": "号",
+      "pinyin": "hào",
+      "meaning": "(～儿) (차례나 순번을 표시하는) 번호.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 170,
+      "hanzi": "好",
+      "pinyin": "hǎo",
+      "meaning": "좋다. 아름답다. 훌륭하다. 만족하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 171,
+      "hanzi": "好吃",
+      "pinyin": "hǎochī",
+      "meaning": "맛있다. 맛나다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 172,
+      "hanzi": "和",
+      "pinyin": "hé",
+      "meaning": "접속사",
+      "level": 3
+    },
+    {
+      "id": 173,
+      "hanzi": "喝",
+      "pinyin": "hē",
+      "meaning": "마시다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 174,
+      "hanzi": "黑",
+      "pinyin": "hēi",
+      "meaning": "검다. 까맣다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 175,
+      "hanzi": "黑板",
+      "pinyin": "hēibǎn",
+      "meaning": "칠판.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 176,
+      "hanzi": "很",
+      "pinyin": "hěn",
+      "meaning": "매우. 대단히. 아주. 잘. 몹시. 퍽. 정말.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 177,
+      "hanzi": "红",
+      "pinyin": "hóng",
+      "meaning": "붉다. 빨갛다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 178,
+      "hanzi": "后来",
+      "pinyin": "hòulái",
+      "meaning": "그 후. 그 뒤. 그 다음.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 179,
+      "hanzi": "后面",
+      "pinyin": "hòumiàn",
+      "meaning": "뒤. 뒤쪽. 뒷면.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 180,
+      "hanzi": "画",
+      "pinyin": "huà",
+      "meaning": "(그림을) 그리다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 181,
+      "hanzi": "花",
+      "pinyin": "huā",
+      "meaning": "(～儿) 꽃.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 182,
+      "hanzi": "坏",
+      "pinyin": "huài",
+      "meaning": "나쁘다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 183,
+      "hanzi": "还",
+      "pinyin": "huán",
+      "meaning": "돌아가다. 돌아오다. (원상태로) 되돌아가다. 환원하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 184,
+      "hanzi": "换",
+      "pinyin": "huàn",
+      "meaning": "교환하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 185,
+      "hanzi": "黄河",
+      "pinyin": "Huánghé",
+      "meaning": "황허(黄河).",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 186,
+      "hanzi": "环境",
+      "pinyin": "huánjìng",
+      "meaning": "환경.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 187,
+      "hanzi": "欢迎",
+      "pinyin": "huānyíng",
+      "meaning": "환영하다. 기쁘게 맞이하다〔영접하다〕.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 188,
+      "hanzi": "回",
+      "pinyin": "huí",
+      "meaning": "(원래의 곳으로) 되돌리다. 되돌아가다. 되돌아오다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 189,
+      "hanzi": "会",
+      "pinyin": "huì",
+      "meaning": "(배워서) …를 할 수 있다. …할 줄 알다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 190,
+      "hanzi": "回答",
+      "pinyin": "huídá",
+      "meaning": "대답하다. 회답하다. 응답하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 191,
+      "hanzi": "会议",
+      "pinyin": "huìyì",
+      "meaning": "회의. [여럿이 모여 의논함. 또는 그런 모임]",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 192,
+      "hanzi": "火车站",
+      "pinyin": "huǒchēzhàn",
+      "meaning": "기차역.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 193,
+      "hanzi": "或者",
+      "pinyin": "huòzhě",
+      "meaning": "아마. 어쩌면. 혹시(…인지 모른다).",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 194,
+      "hanzi": "护照",
+      "pinyin": "hùzhào",
+      "meaning": "여권.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 195,
+      "hanzi": "极",
+      "pinyin": "jí",
+      "meaning": "정점. 절정. 최고점. 꼭대기. 끝.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 196,
+      "hanzi": "几",
+      "pinyin": "jǐ",
+      "meaning": "몇. [숫자가 그렇게 많지 않을 때 사용함]",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 197,
+      "hanzi": "家",
+      "pinyin": "jiā",
+      "meaning": "집.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 198,
+      "hanzi": "件",
+      "pinyin": "jiàn",
+      "meaning": "(～儿) (총체 중에서 하나하나 셀 수 있는) 일·사건·개체 등의 수량 단위.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 199,
+      "hanzi": "检查",
+      "pinyin": "jiǎnchá",
+      "meaning": "검사하다. 점검하다. 조사하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 200,
+      "hanzi": "简单",
+      "pinyin": "jiǎndān",
+      "meaning": "간단하다. 단순하다. 쉽다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 201,
+      "hanzi": "讲",
+      "pinyin": "jiǎng",
+      "meaning": "말하다. 이야기하다. 평론하다. 강연하다. 설명하다",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 202,
+      "hanzi": "健康",
+      "pinyin": "jiànkāng",
+      "meaning": "건강하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 203,
+      "hanzi": "见面",
+      "pinyin": "jiànmiàn",
+      "meaning": "만나다. 대면하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 204,
+      "hanzi": "叫",
+      "pinyin": "jiào",
+      "meaning": "외치다. 고함치다. 소리지르다. 소리치다. 부르짖다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 205,
+      "hanzi": "角",
+      "pinyin": "jiǎo",
+      "meaning": "(짐승의) 뿔.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 206,
+      "hanzi": "脚",
+      "pinyin": "jiǎo",
+      "meaning": "발.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 207,
+      "hanzi": "教",
+      "pinyin": "jiāo",
+      "meaning": "(지식 또는 기술을) 전수하다. 가르치다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 208,
+      "hanzi": "教室",
+      "pinyin": "jiàoshì",
+      "meaning": "교실.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 209,
+      "hanzi": "机场",
+      "pinyin": "jīchǎng",
+      "meaning": "공항. 비행장",
+      "level": 3
+    },
+    {
+      "id": 210,
+      "hanzi": "鸡蛋",
+      "pinyin": "jīdàn",
+      "meaning": "계란. 달걀.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 211,
+      "hanzi": "记得",
+      "pinyin": "jìde",
+      "meaning": "기억하고 있다. 잊지 않고 있다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 212,
+      "hanzi": "借",
+      "pinyin": "jiè",
+      "meaning": "빌리다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 213,
+      "hanzi": "接",
+      "pinyin": "jiē",
+      "meaning": "잇다. 이어지다. 연결하다. 연결되다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 214,
+      "hanzi": "街道",
+      "pinyin": "jiēdào",
+      "meaning": "거리. 가두. 길거리. 가로. 대로. 큰길.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 215,
+      "hanzi": "结婚",
+      "pinyin": "jiéhūn",
+      "meaning": "결혼하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 216,
+      "hanzi": "姐姐",
+      "pinyin": "jiějie",
+      "meaning": "누나. 언니.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 217,
+      "hanzi": "解决",
+      "pinyin": "jiějué",
+      "meaning": "해결하다. 풀다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 218,
+      "hanzi": "节目",
+      "pinyin": "jiémù",
+      "meaning": "프로그램(program). 프로. 종목. 항목.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 219,
+      "hanzi": "节日",
+      "pinyin": "jiérì",
+      "meaning": "(국경일 따위의 법정) 기념일. 경축일.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 220,
+      "hanzi": "介绍",
+      "pinyin": "jièshào",
+      "meaning": "소개하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 221,
+      "hanzi": "结束",
+      "pinyin": "jiéshù",
+      "meaning": "끝나다. 마치다. 종결하다. 종료하다. 마무르다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 222,
+      "hanzi": "几乎",
+      "pinyin": "jīhū",
+      "meaning": "거의. 거의 모두. 거진 다.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 223,
+      "hanzi": "机会",
+      "pinyin": "jīhuì",
+      "meaning": "기회. 시기. 찬스.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 224,
+      "hanzi": "季节",
+      "pinyin": "jìjié",
+      "meaning": "계절. 철. 절기.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 225,
+      "hanzi": "进",
+      "pinyin": "jìn",
+      "meaning": "(밖에서 안으로) 들다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 226,
+      "hanzi": "近",
+      "pinyin": "jìn",
+      "meaning": "(공간적·시간적 거리가) 가깝다. 짧다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 227,
+      "hanzi": "经常",
+      "pinyin": "jīngcháng",
+      "meaning": "평소. 평상. 보통. 일상.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 228,
+      "hanzi": "经过",
+      "pinyin": "jīngguò",
+      "meaning": "경유하다. 통과하다. 지나다. 거치다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 229,
+      "hanzi": "经理",
+      "pinyin": "jīnglǐ",
+      "meaning": "(기업의) 경영 관리 책임자. 지배인. 사장. 매니저(manager).",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 230,
+      "hanzi": "今天",
+      "pinyin": "jīntiān",
+      "meaning": "오늘.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 231,
+      "hanzi": "旧",
+      "pinyin": "jiù",
+      "meaning": "헐다. 낡다. 오래다. 오래 되다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 232,
+      "hanzi": "就",
+      "pinyin": "jiù",
+      "meaning": "곧. 즉시. 바로. 당장. [장차 아주 짧은 시간 내에 이루어짐을 나타냄]",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 233,
+      "hanzi": "久",
+      "pinyin": "jiǔ",
+      "meaning": "오래다. 시간이 길다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 234,
+      "hanzi": "九",
+      "pinyin": "jiǔ",
+      "meaning": "9. 아홉.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 235,
+      "hanzi": "觉得",
+      "pinyin": "juéde",
+      "meaning": "…라고 여기다〔생각하다〕.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 236,
+      "hanzi": "决定",
+      "pinyin": "juédìng",
+      "meaning": "결정〔결심·결의·의결〕하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 237,
+      "hanzi": "句子",
+      "pinyin": "jùzi",
+      "meaning": "문(文). 문장.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 238,
+      "hanzi": "咖啡",
+      "pinyin": "kāfēi",
+      "meaning": "커피(coffee)나무.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 239,
+      "hanzi": "开",
+      "pinyin": "kāi",
+      "meaning": "열다. 열치다. 틀다. 켜다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 240,
+      "hanzi": "开始",
+      "pinyin": "kāishǐ",
+      "meaning": "시작되다. 개시하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 241,
+      "hanzi": "看",
+      "pinyin": "kàn",
+      "meaning": "보다. 구경하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 242,
+      "hanzi": "看见",
+      "pinyin": "kànjiàn",
+      "meaning": "보다. 보이다. 눈에 띄다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 243,
+      "hanzi": "考试",
+      "pinyin": "kǎoshì",
+      "meaning": "시험을 치다. 고사를 치다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 244,
+      "hanzi": "刻",
+      "pinyin": "kè",
+      "meaning": "새기다. 조각하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 245,
+      "hanzi": "课",
+      "pinyin": "kè",
+      "meaning": "수업. 강의.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 246,
+      "hanzi": "渴",
+      "pinyin": "kě",
+      "meaning": "목이 타다. 목마르다. 갈증나다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 247,
+      "hanzi": "可爱",
+      "pinyin": "kě'ài",
+      "meaning": "사랑스럽다. 귀엽다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 248,
+      "hanzi": "可能",
+      "pinyin": "kěnéng",
+      "meaning": "가능하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 249,
+      "hanzi": "客人",
+      "pinyin": "kèrén",
+      "meaning": "손님. 방문객.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 250,
+      "hanzi": "可以",
+      "pinyin": "kěyǐ",
+      "meaning": "…할 수 있다. 가능하다. [가능이나 능력을 나타냄]",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 251,
+      "hanzi": "空调",
+      "pinyin": "kōngtiáo",
+      "meaning": "(에어컨으로) 공기를 조절하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 252,
+      "hanzi": "口",
+      "pinyin": "kǒu",
+      "meaning": "입.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 253,
+      "hanzi": "哭",
+      "pinyin": "kū",
+      "meaning": "(소리내어) 울다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 254,
+      "hanzi": "块",
+      "pinyin": "kuài",
+      "meaning": "덩이. 덩어리.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 255,
+      "hanzi": "快",
+      "pinyin": "kuài",
+      "meaning": "빠르다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 256,
+      "hanzi": "快乐",
+      "pinyin": "kuàilè",
+      "meaning": "즐겁다. 행복하다. 유쾌하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 257,
+      "hanzi": "筷子",
+      "pinyin": "kuàizi",
+      "meaning": "젓가락.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 258,
+      "hanzi": "裤子",
+      "pinyin": "kùzi",
+      "meaning": "바지.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 259,
+      "hanzi": "来",
+      "pinyin": "lái",
+      "meaning": "오다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 260,
+      "hanzi": "蓝",
+      "pinyin": "lán",
+      "meaning": "남색의. 남빛의.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 261,
+      "hanzi": "老",
+      "pinyin": "lǎo",
+      "meaning": "늙다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 262,
+      "hanzi": "老师",
+      "pinyin": "lǎoshī",
+      "meaning": "선생님. 스승.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 263,
+      "hanzi": "了",
+      "pinyin": "le",
+      "meaning": "동사 또는 형용사 뒤에 쓰여 동작 또는 변화가 이미 완료되었음을 나타냄.",
+      "level": 3,
+      "partOfSpeech": "조사"
+    },
+    {
+      "id": 264,
+      "hanzi": "累",
+      "pinyin": "lèi",
+      "meaning": "지치다. 피곤하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 265,
+      "hanzi": "冷",
+      "pinyin": "lěng",
+      "meaning": "춥다. 차다. 시리다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 266,
+      "hanzi": "离",
+      "pinyin": "lí",
+      "meaning": "…에서. …로부터. …까지. (거리가 얼만큼 떨어져있는지를 나타냄)",
+      "level": 3,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 267,
+      "hanzi": "里",
+      "pinyin": "lǐ",
+      "meaning": "~안에. 안쪽.",
+      "level": 3,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 268,
+      "hanzi": "脸",
+      "pinyin": "liǎn",
+      "meaning": "얼굴.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 269,
+      "hanzi": "辆",
+      "pinyin": "liàng",
+      "meaning": "대. 량. [차량을 세는 단위]",
+      "level": 3,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 270,
+      "hanzi": "两",
+      "pinyin": "liǎng",
+      "meaning": "둘. (양사 앞에서의 2)",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 271,
+      "hanzi": "练习",
+      "pinyin": "liànxí",
+      "meaning": "연습하다. 익히다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 272,
+      "hanzi": "了解",
+      "pinyin": "liǎojiě",
+      "meaning": "자세하게 알다. 이해하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 273,
+      "hanzi": "聊天",
+      "pinyin": "liáotiān",
+      "meaning": "잡담하다. 이야기하다. 수다떨다",
+      "level": 3
+    },
+    {
+      "id": 274,
+      "hanzi": "离开",
+      "pinyin": "líkāi",
+      "meaning": "떠나다. 벗어나다. 헤어지다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 275,
+      "hanzi": "零",
+      "pinyin": "líng",
+      "meaning": "영. 제로(zero).",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 276,
+      "hanzi": "邻居",
+      "pinyin": "línjū",
+      "meaning": "이웃집. 이웃 사람.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 277,
+      "hanzi": "历史",
+      "pinyin": "lìshǐ",
+      "meaning": "역사.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 278,
+      "hanzi": "六",
+      "pinyin": "liù",
+      "meaning": "6. 육. 여섯.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 279,
+      "hanzi": "留学",
+      "pinyin": "liúxué",
+      "meaning": "유학하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 280,
+      "hanzi": "礼物",
+      "pinyin": "lǐwù",
+      "meaning": "선물. 예물.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 281,
+      "hanzi": "楼",
+      "pinyin": "lóu",
+      "meaning": "(이층 이상의) 다층 건물. 층집. 층. 계단",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 282,
+      "hanzi": "路",
+      "pinyin": "lù",
+      "meaning": "길. 도로.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 283,
+      "hanzi": "绿",
+      "pinyin": "lǜ",
+      "meaning": "푸르다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 284,
+      "hanzi": "旅游",
+      "pinyin": "lǚyóu",
+      "meaning": "여행하다. 관광하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 285,
+      "hanzi": "吗",
+      "pinyin": "ma",
+      "meaning": "문장 끝에 쓰여 의문의 어기를 나타냄.",
+      "level": 3,
+      "partOfSpeech": "조사"
+    },
+    {
+      "id": 286,
+      "hanzi": "马",
+      "pinyin": "mǎ",
+      "meaning": "말.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 287,
+      "hanzi": "卖",
+      "pinyin": "mài",
+      "meaning": "팔다. 판매하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 288,
+      "hanzi": "买",
+      "pinyin": "mǎi",
+      "meaning": "사다. 매입하다. 구매하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 289,
+      "hanzi": "妈妈",
+      "pinyin": "māma",
+      "meaning": "엄마. 어머니.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 290,
+      "hanzi": "慢",
+      "pinyin": "màn",
+      "meaning": "느리다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 291,
+      "hanzi": "忙",
+      "pinyin": "máng",
+      "meaning": "바쁘다. 틈이 없다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 292,
+      "hanzi": "满意",
+      "pinyin": "mǎnyì",
+      "meaning": "만족하다. 만족스럽다. 흡족하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 293,
+      "hanzi": "猫",
+      "pinyin": "māo",
+      "meaning": "고양이.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 294,
+      "hanzi": "帽子",
+      "pinyin": "màozi",
+      "meaning": "모자.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 295,
+      "hanzi": "马上",
+      "pinyin": "mǎshàng",
+      "meaning": "곧. 즉시. 바로. 금방.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 296,
+      "hanzi": "每",
+      "pinyin": "měi",
+      "meaning": "매. 각. …마다. 모두.",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 297,
+      "hanzi": "没关系",
+      "pinyin": "méiguānxi",
+      "meaning": "괜찮다. 상관 없다. 문제 없다. 염려 없다.",
+      "level": 3
+    },
+    {
+      "id": 298,
+      "hanzi": "妹妹",
+      "pinyin": "mèimei",
+      "meaning": "(가족이나 친척 중 자기보다 나이가 어린) 여동생.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 299,
+      "hanzi": "没有",
+      "pinyin": "méiyǒu",
+      "meaning": "없다. 가지고〔갖추고〕 있지 않다. [소유·구비의 부정을 나타냄]",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 300,
+      "hanzi": "门",
+      "pinyin": "mén",
+      "meaning": "(출)입구. 현관. 문.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 301,
+      "hanzi": "米",
+      "pinyin": "mǐ",
+      "meaning": "쌀.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 302,
+      "hanzi": "面包",
+      "pinyin": "miànbāo",
+      "meaning": "빵.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 303,
+      "hanzi": "面条",
+      "pinyin": "miàntiáo",
+      "meaning": "국수.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 304,
+      "hanzi": "米饭",
+      "pinyin": "mǐfàn",
+      "meaning": "(입쌀이나 좁쌀로 지은) 밥.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 305,
+      "hanzi": "明白",
+      "pinyin": "míngbai",
+      "meaning": "알다. 이해하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 306,
+      "hanzi": "明天",
+      "pinyin": "míngtiān",
+      "meaning": "내일.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 307,
+      "hanzi": "名字",
+      "pinyin": "míngzi",
+      "meaning": "성과 이름. 성명.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 308,
+      "hanzi": "拿",
+      "pinyin": "ná",
+      "meaning": "(손으로) 쥐다. 잡다. 가지다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 309,
+      "hanzi": "那",
+      "pinyin": "nà",
+      "meaning": "그. 저. [비교적 멀리 떨어진 사람이나 사물을 가리킴]",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 310,
+      "hanzi": "哪",
+      "pinyin": "nǎ",
+      "meaning": "무엇. 어느 것. [의문을 나타내며, 단독으로 쓰임]",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 311,
+      "hanzi": "奶奶",
+      "pinyin": "nǎinai",
+      "meaning": "할머니. [자기 할머니를 가리킴]",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 312,
+      "hanzi": "南",
+      "pinyin": "nán",
+      "meaning": "남. 남쪽.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 313,
+      "hanzi": "难",
+      "pinyin": "nán",
+      "meaning": "어렵다. 힘들다. 곤란하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 314,
+      "hanzi": "男",
+      "pinyin": "nán",
+      "meaning": "남자. 사내. 남성.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 315,
+      "hanzi": "难过",
+      "pinyin": "nánguò",
+      "meaning": "고통스럽다. 괴롭다. 슬프다. 견디기 어렵다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 316,
+      "hanzi": "哪儿",
+      "pinyin": "nǎr",
+      "meaning": "어디. 어느 곳. [처소를 물음]",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 317,
+      "hanzi": "呢",
+      "pinyin": "ne",
+      "meaning": "서술문 뒤에 쓰여 동작이나 상황이 지속됨을 나타냄.",
+      "level": 3,
+      "partOfSpeech": "조사"
+    },
+    {
+      "id": 318,
+      "hanzi": "能",
+      "pinyin": "néng",
+      "meaning": "…할 수 있다. …할 줄 안다. …할 힘이 있다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 319,
+      "hanzi": "你",
+      "pinyin": "nǐ",
+      "meaning": "너. 자네. 당신.",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 320,
+      "hanzi": "年",
+      "pinyin": "nián",
+      "meaning": "년. 해.",
+      "level": 3,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 321,
+      "hanzi": "年级",
+      "pinyin": "niánjí",
+      "meaning": "학년.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 322,
+      "hanzi": "年轻",
+      "pinyin": "niánqīng",
+      "meaning": "젊다. 어리다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 323,
+      "hanzi": "鸟",
+      "pinyin": "niǎo",
+      "meaning": "새. 날짐승.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 324,
+      "hanzi": "您",
+      "pinyin": "nín",
+      "meaning": "당신. 선생님. 귀하. [2인칭 대명사 ‘你’의 존칭]",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 325,
+      "hanzi": "牛奶",
+      "pinyin": "niúnǎi",
+      "meaning": "우유.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 326,
+      "hanzi": "女",
+      "pinyin": "nǚ",
+      "meaning": "여자. 여성.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 327,
+      "hanzi": "女儿",
+      "pinyin": "nǚ'ér",
+      "meaning": "딸.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 328,
+      "hanzi": "努力",
+      "pinyin": "nǔlì",
+      "meaning": "노력하다. 힘쓰다. 열심히 하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 329,
+      "hanzi": "胖",
+      "pinyin": "pàng",
+      "meaning": "(몸이) 뚱뚱하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 330,
+      "hanzi": "旁边",
+      "pinyin": "pángbiān",
+      "meaning": "옆. 곁. 근처. 부근.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 331,
+      "hanzi": "盘子",
+      "pinyin": "pánzi",
+      "meaning": "쟁반.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 332,
+      "hanzi": "跑步",
+      "pinyin": "pǎobù",
+      "meaning": "달리다. 뛰다",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 333,
+      "hanzi": "爬山",
+      "pinyin": "páshān",
+      "meaning": "산을 오르다. 등산하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 334,
+      "hanzi": "朋友",
+      "pinyin": "péngyou",
+      "meaning": "친구. 벗.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 335,
+      "hanzi": "便宜",
+      "pinyin": "piányi",
+      "meaning": "(값이) 싸다. 헐하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 336,
+      "hanzi": "票",
+      "pinyin": "piào",
+      "meaning": "표. 티켓(ticket). 증서. 증명서. 어음. 수표. 주식. 유가 증권.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 337,
+      "hanzi": "漂亮",
+      "pinyin": "piàoliang",
+      "meaning": "예쁘다. 아름답다. 곱다. 어여쁘다. 아리땁다",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 338,
+      "hanzi": "啤酒",
+      "pinyin": "píjiǔ",
+      "meaning": "맥주.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 339,
+      "hanzi": "苹果",
+      "pinyin": "píngguǒ",
+      "meaning": "사과.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 340,
+      "hanzi": "瓶子",
+      "pinyin": "píngzi",
+      "meaning": "병.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 341,
+      "hanzi": "皮鞋",
+      "pinyin": "píxié",
+      "meaning": "가죽 구두.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 342,
+      "hanzi": "骑",
+      "pinyin": "qí",
+      "meaning": "(동물이나 자전거 등에) 타다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 343,
+      "hanzi": "七",
+      "pinyin": "qī",
+      "meaning": "7. 일곱.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 344,
+      "hanzi": "钱",
+      "pinyin": "qián",
+      "meaning": "화폐. 돈.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 345,
+      "hanzi": "千",
+      "pinyin": "qiān",
+      "meaning": "1,000. 천.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 346,
+      "hanzi": "铅笔",
+      "pinyin": "qiānbǐ",
+      "meaning": "연필.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 347,
+      "hanzi": "前面",
+      "pinyin": "qiánmian",
+      "meaning": "(공간·위치 상의) 앞.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 348,
+      "hanzi": "起床",
+      "pinyin": "qǐchuáng",
+      "meaning": "(잠자리에서) 일어나다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 349,
+      "hanzi": "起飞",
+      "pinyin": "qǐfēi",
+      "meaning": "(비행기·로켓 등이) 이륙하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 350,
+      "hanzi": "奇怪",
+      "pinyin": "qíguài",
+      "meaning": "기이하다. 이상하다. 괴이하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 351,
+      "hanzi": "起来",
+      "pinyin": "qǐlai",
+      "meaning": "(잠자리에서) 일어나다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 352,
+      "hanzi": "晴",
+      "pinyin": "qíng",
+      "meaning": "하늘이 맑다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 353,
+      "hanzi": "请",
+      "pinyin": "qǐng",
+      "meaning": "청하다. 부탁하다. 요구하다. 신청하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 354,
+      "hanzi": "清楚",
+      "pinyin": "qīngchu",
+      "meaning": "분명하다. 조리있다. 알기 쉽다. 명백하다. 뚜렷하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 355,
+      "hanzi": "请假",
+      "pinyin": "qǐngjià",
+      "meaning": "(휴가·조퇴·외출·결근·결석 등의 허락을) 신청하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 356,
+      "hanzi": "其实",
+      "pinyin": "qíshí",
+      "meaning": "기실. 사실.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 357,
+      "hanzi": "其他",
+      "pinyin": "qítā",
+      "meaning": "(사람·사물에 쓰여) 기타. 다른 사람〔사물〕.",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 358,
+      "hanzi": "秋",
+      "pinyin": "qiū",
+      "meaning": "가을.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 359,
+      "hanzi": "妻子",
+      "pinyin": "qīzi",
+      "meaning": "아내.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 360,
+      "hanzi": "去",
+      "pinyin": "qù",
+      "meaning": "(‘来(오다)’와 상대되는 말로) 가다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 361,
+      "hanzi": "去年",
+      "pinyin": "qùnián",
+      "meaning": "작년.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 362,
+      "hanzi": "裙子",
+      "pinyin": "qúnzi",
+      "meaning": "치마. 스커트.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 363,
+      "hanzi": "让",
+      "pinyin": "ràng",
+      "meaning": "사양하다. 양보하다. 시키다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 364,
+      "hanzi": "然后",
+      "pinyin": "ránhòu",
+      "meaning": "그런 후에. 연후에. 그 다음에.",
+      "level": 3,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 365,
+      "hanzi": "热",
+      "pinyin": "rè",
+      "meaning": "덥다. 뜨겁다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 366,
+      "hanzi": "人",
+      "pinyin": "rén",
+      "meaning": "사람. 인간.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 367,
+      "hanzi": "认识",
+      "pinyin": "rènshi",
+      "meaning": "알다. 인식하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 368,
+      "hanzi": "认为",
+      "pinyin": "rènwéi",
+      "meaning": "여기다. 생각하다. 보다. 인정하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 369,
+      "hanzi": "认真",
+      "pinyin": "rènzhēn",
+      "meaning": "진지하다. 착실하다. 진솔하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 370,
+      "hanzi": "热情",
+      "pinyin": "rèqíng",
+      "meaning": "열정적이다. 친절하다. 다정하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 371,
+      "hanzi": "日",
+      "pinyin": "rì",
+      "meaning": "태양. 해.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 372,
+      "hanzi": "容易",
+      "pinyin": "róngyì",
+      "meaning": "쉽다. 용이하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 373,
+      "hanzi": "如果",
+      "pinyin": "rúguǒ",
+      "meaning": "만약. 만일.",
+      "level": 3,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 374,
+      "hanzi": "伞",
+      "pinyin": "sǎn",
+      "meaning": "우산.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 375,
+      "hanzi": "三",
+      "pinyin": "sān",
+      "meaning": "삼. 셋. 3.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 376,
+      "hanzi": "上",
+      "pinyin": "shàng",
+      "meaning": "위.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 377,
+      "hanzi": "上班",
+      "pinyin": "shàngbān",
+      "meaning": "출근하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 378,
+      "hanzi": "商店",
+      "pinyin": "shāngdiàn",
+      "meaning": "상점. 판매점.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 379,
+      "hanzi": "上网",
+      "pinyin": "shàngwǎng",
+      "meaning": "인터넷을 하다. 인터넷을 연결하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 380,
+      "hanzi": "上午",
+      "pinyin": "shàngwǔ",
+      "meaning": "오전. [밤 0시부터 낮 12시까지의 시간]",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 381,
+      "hanzi": "少",
+      "pinyin": "shǎo",
+      "meaning": "적다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 382,
+      "hanzi": "谁",
+      "pinyin": "shéi",
+      "meaning": "누. 누구.",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 383,
+      "hanzi": "生病",
+      "pinyin": "shēngbìng",
+      "meaning": "병이 나다. 발병하다. 병에 걸리다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 384,
+      "hanzi": "生气",
+      "pinyin": "shēngqì",
+      "meaning": "화내다. 성나다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 385,
+      "hanzi": "生日",
+      "pinyin": "shēngrì",
+      "meaning": "생일.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 386,
+      "hanzi": "声音",
+      "pinyin": "shēngyīn",
+      "meaning": "소리. 목소리.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 387,
+      "hanzi": "什么",
+      "pinyin": "shénme",
+      "meaning": "무엇 (의문을 나타냄).",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 388,
+      "hanzi": "身体",
+      "pinyin": "shēntǐ",
+      "meaning": "몸. 신체.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 389,
+      "hanzi": "十",
+      "pinyin": "shí",
+      "meaning": "열. 십. 10.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 390,
+      "hanzi": "试",
+      "pinyin": "shì",
+      "meaning": "시험삼아 해 보다. 시험하다. 시도하다",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 391,
+      "hanzi": "是",
+      "pinyin": "shì",
+      "meaning": "~이다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 392,
+      "hanzi": "时候",
+      "pinyin": "shíhou",
+      "meaning": "때. 시각. 무렵.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 393,
+      "hanzi": "时间",
+      "pinyin": "shíjiān",
+      "meaning": "시간.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 394,
+      "hanzi": "世界",
+      "pinyin": "shìjiè",
+      "meaning": "세계. [지구상의 모든 곳]",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 395,
+      "hanzi": "事情",
+      "pinyin": "shìqing",
+      "meaning": "일. 사건.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 396,
+      "hanzi": "瘦",
+      "pinyin": "shòu",
+      "meaning": "마르다. 여위다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 397,
+      "hanzi": "手表",
+      "pinyin": "shǒubiǎo",
+      "meaning": "손목시계.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 398,
+      "hanzi": "手机",
+      "pinyin": "shǒujī",
+      "meaning": "휴대폰. 휴대 전화기.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 399,
+      "hanzi": "树",
+      "pinyin": "shù",
+      "meaning": "나무. 수목.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 400,
+      "hanzi": "书",
+      "pinyin": "shū",
+      "meaning": "책.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 401,
+      "hanzi": "双",
+      "pinyin": "shuāng",
+      "meaning": "짝. 켤레. 쌍. 매.",
+      "level": 3,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 402,
+      "hanzi": "刷牙",
+      "pinyin": "shuāyá",
+      "meaning": "이를 닦다. 양치질하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 403,
+      "hanzi": "舒服",
+      "pinyin": "shūfu",
+      "meaning": "(몸·마음이) 편안하다. 쾌적하다. 가볍다. 가뿐하다. 홀가분하다. 유쾌하다...",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 404,
+      "hanzi": "水",
+      "pinyin": "shuǐ",
+      "meaning": "물.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 405,
+      "hanzi": "水果",
+      "pinyin": "shuǐguǒ",
+      "meaning": "과일. 과실.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 406,
+      "hanzi": "睡觉",
+      "pinyin": "shuìjiào",
+      "meaning": "(잠을) 자다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 407,
+      "hanzi": "水平",
+      "pinyin": "shuǐpíng",
+      "meaning": "실력. 수준. 능력.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 408,
+      "hanzi": "说",
+      "pinyin": "shuō",
+      "meaning": "말하다. 이야기하다. 꾸짖다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 409,
+      "hanzi": "说话",
+      "pinyin": "shuōhuà",
+      "meaning": "말하다. 이야기하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 410,
+      "hanzi": "叔叔",
+      "pinyin": "shūshu",
+      "meaning": "숙부. 작은아버지. 삼촌.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 411,
+      "hanzi": "数学",
+      "pinyin": "shùxué",
+      "meaning": "수학.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 412,
+      "hanzi": "四",
+      "pinyin": "sì",
+      "meaning": "4. 사. 넷.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 413,
+      "hanzi": "司机",
+      "pinyin": "sījī",
+      "meaning": "(자동차·전차·기차 등의) 기사. 운전사. 기관사. 조종사.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 414,
+      "hanzi": "送",
+      "pinyin": "sòng",
+      "meaning": "배웅하다. 전송하다. 데려다 주다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 415,
+      "hanzi": "岁",
+      "pinyin": "suì",
+      "meaning": "살. 세. [연령을 세는 단위]",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 416,
+      "hanzi": "虽然",
+      "pinyin": "suīrán",
+      "meaning": "비록 …하지만〔일지라도〕. 설령 …일지라도.",
+      "level": 3,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 417,
+      "hanzi": "所以",
+      "pinyin": "suǒyǐ",
+      "meaning": "그래서. 그러므로. 그런 까닭에. 때문에.",
+      "level": 3,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 418,
+      "hanzi": "他",
+      "pinyin": "tā",
+      "meaning": "그. 그 사람. 그이.",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 419,
+      "hanzi": "她",
+      "pinyin": "tā",
+      "meaning": "그녀. 그 여자.",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 420,
+      "hanzi": "它",
+      "pinyin": "tā",
+      "meaning": "그. 저. 그것. 저것. [사람 이외의 것을 가리킴]",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 421,
+      "hanzi": "太",
+      "pinyin": "tài",
+      "meaning": "너무. 매우.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 422,
+      "hanzi": "太阳",
+      "pinyin": "tàiyáng",
+      "meaning": "태양. 해.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 423,
+      "hanzi": "特别",
+      "pinyin": "tèbié",
+      "meaning": "특별하다. 특이하다. 별다르다. 보통이 아니다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 424,
+      "hanzi": "疼",
+      "pinyin": "téng",
+      "meaning": "아프다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 425,
+      "hanzi": "题",
+      "pinyin": "tí",
+      "meaning": "제목.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 426,
+      "hanzi": "甜",
+      "pinyin": "tián",
+      "meaning": "(설탕이나 꿀처럼) 달다. 달콤하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 427,
+      "hanzi": "天气",
+      "pinyin": "tiānqì",
+      "meaning": "날씨. 일기.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 428,
+      "hanzi": "条",
+      "pinyin": "tiáo",
+      "meaning": "(～儿) 가늘고 긴 것. 폭이 좁고 긴 것.",
+      "level": 3,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 429,
+      "hanzi": "跳舞",
+      "pinyin": "tiàowǔ",
+      "meaning": "춤을 추다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 430,
+      "hanzi": "提高",
+      "pinyin": "tígāo",
+      "meaning": "(위치·수준·질·수량 등을) 제고하다. 향상시키다. 높이다. 끌어올리다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 431,
+      "hanzi": "听",
+      "pinyin": "tīng",
+      "meaning": "듣다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 432,
+      "hanzi": "体育",
+      "pinyin": "tǐyù",
+      "meaning": "체육.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 433,
+      "hanzi": "踢足球",
+      "pinyin": "tīzúqiú",
+      "meaning": "하다.",
+      "level": 3,
+      "partOfSpeech": "축구를"
+    },
+    {
+      "id": 434,
+      "hanzi": "同事",
+      "pinyin": "tóngshì",
+      "meaning": "동료",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 435,
+      "hanzi": "同学",
+      "pinyin": "tóngxué",
+      "meaning": "동창. 학우. 학급 친구",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 436,
+      "hanzi": "同意",
+      "pinyin": "tóngyì",
+      "meaning": "동의하다. 찬성하다. 승인하다. 허락하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 437,
+      "hanzi": "头发",
+      "pinyin": "tóufa",
+      "meaning": "머리카락. 두발. 머리털.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 438,
+      "hanzi": "腿",
+      "pinyin": "tuǐ",
+      "meaning": "다리.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 439,
+      "hanzi": "突然",
+      "pinyin": "tūrán",
+      "meaning": "갑자기. 문득. 난데없이. 느닷없이. 불쑥. 돌연히. 홀연히.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 440,
+      "hanzi": "图书馆",
+      "pinyin": "túshūguǎn",
+      "meaning": "도서관.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 441,
+      "hanzi": "外",
+      "pinyin": "wài",
+      "meaning": "겉. 밖. 바깥.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 442,
+      "hanzi": "完",
+      "pinyin": "wán",
+      "meaning": "다 소모하다. 다하다. 없어지다. 다 떨어지다. 완료하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 443,
+      "hanzi": "玩",
+      "pinyin": "wán",
+      "meaning": "(손에 가지고) 놀다. 장난하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 444,
+      "hanzi": "万",
+      "pinyin": "wàn",
+      "meaning": "만. 10000.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 445,
+      "hanzi": "碗",
+      "pinyin": "wǎn",
+      "meaning": "사발. 공기. 주발. 그릇.",
+      "level": 3,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 446,
+      "hanzi": "完成",
+      "pinyin": "wánchéng",
+      "meaning": "완성하다. (예정대로) 끝내다. 완수하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 447,
+      "hanzi": "往",
+      "pinyin": "wǎng",
+      "meaning": "(…로) 향하다.",
+      "level": 3,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 448,
+      "hanzi": "忘记",
+      "pinyin": "wàngjì",
+      "meaning": "(지난 일을) 잊어버리다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 449,
+      "hanzi": "晚上",
+      "pinyin": "wǎnshang",
+      "meaning": "저녁. [17시〜20시]",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 450,
+      "hanzi": "喂",
+      "pinyin": "wéi",
+      "meaning": "(전화상에서) 여보세요.",
+      "level": 3,
+      "partOfSpeech": "감탄사"
+    },
+    {
+      "id": 451,
+      "hanzi": "为",
+      "pinyin": "wèi",
+      "meaning": "동사",
+      "level": 3
+    },
+    {
+      "id": 452,
+      "hanzi": "位",
+      "pinyin": "wèi",
+      "meaning": "~분",
+      "level": 3,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 453,
+      "hanzi": "为了",
+      "pinyin": "wèile",
+      "meaning": "…을〔를〕 하기 위하여.",
+      "level": 3,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 454,
+      "hanzi": "为什么",
+      "pinyin": "wèishénme",
+      "meaning": "왜. 무엇 때문에. 어째서. [원인이나 목적을 묻는 데 쓰임]",
+      "level": 3,
+      "partOfSpeech": "의문사"
+    },
+    {
+      "id": 455,
+      "hanzi": "问",
+      "pinyin": "wèn",
+      "meaning": "묻다. 질문하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 456,
+      "hanzi": "文化",
+      "pinyin": "wénhuà",
+      "meaning": "문화.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 457,
+      "hanzi": "问题",
+      "pinyin": "wèntí",
+      "meaning": "(해답·해석 등을 요구하는) 문제.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 458,
+      "hanzi": "我",
+      "pinyin": "wǒ",
+      "meaning": "나. 저.",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 459,
+      "hanzi": "我们",
+      "pinyin": "wǒmen",
+      "meaning": "우리(들).",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 460,
+      "hanzi": "五",
+      "pinyin": "wǔ",
+      "meaning": "5. 다섯. 다섯째.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 461,
+      "hanzi": "洗",
+      "pinyin": "xǐ",
+      "meaning": "씻다. 빨다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 462,
+      "hanzi": "西",
+      "pinyin": "xī",
+      "meaning": "서쪽.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 463,
+      "hanzi": "夏",
+      "pinyin": "xià",
+      "meaning": "여름.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 464,
+      "hanzi": "下",
+      "pinyin": "xià",
+      "meaning": "밑. 아래.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 465,
+      "hanzi": "先",
+      "pinyin": "xiān",
+      "meaning": "원래. 처음.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 466,
+      "hanzi": "向",
+      "pinyin": "xiàng",
+      "meaning": "…(으)로. …에게. …을〔를〕 향하여.",
+      "level": 3,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 467,
+      "hanzi": "像",
+      "pinyin": "xiàng",
+      "meaning": "같다. 비슷하다. 닮다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 468,
+      "hanzi": "想",
+      "pinyin": "xiǎng",
+      "meaning": "생각하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 469,
+      "hanzi": "香蕉",
+      "pinyin": "xiāngjiāo",
+      "meaning": "바나나.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 470,
+      "hanzi": "相信",
+      "pinyin": "xiāngxìn",
+      "meaning": "믿다. 신임하다. 신뢰하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 471,
+      "hanzi": "先生",
+      "pinyin": "xiānsheng",
+      "meaning": "선생님. 씨. [성인 남성에 대한 경칭]",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 472,
+      "hanzi": "现在",
+      "pinyin": "xiànzài",
+      "meaning": "지금. 현재. 이제.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 473,
+      "hanzi": "笑",
+      "pinyin": "xiào",
+      "meaning": "웃다. 웃음을 짓다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 474,
+      "hanzi": "小",
+      "pinyin": "xiǎo",
+      "meaning": "(부피·면적·나이·수량·규모·역량·정도 등이) 작다. 적다. 약하다. 어리다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 475,
+      "hanzi": "小姐",
+      "pinyin": "xiǎojiě",
+      "meaning": "아씨. 아가씨. [하인이 주인집의 시집 가지 않은 딸을 부르던 말]",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 476,
+      "hanzi": "小时",
+      "pinyin": "xiǎoshí",
+      "meaning": "시간. [시간 단위]",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 477,
+      "hanzi": "小心",
+      "pinyin": "xiǎoxīn",
+      "meaning": "조심하다. 주의하다. 신중하게 하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 478,
+      "hanzi": "校长",
+      "pinyin": "xiàozhǎng",
+      "meaning": "학교장. [(초·중·고교의) 교장. (단과대학의) 학장. (대학의) 총장]",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 479,
+      "hanzi": "下午",
+      "pinyin": "xiàwǔ",
+      "meaning": "오후. [정오부터 해가 질 때 까지의 동안]",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 480,
+      "hanzi": "下雨",
+      "pinyin": "xiàyǔ",
+      "meaning": "비가 오다〔내리다〕.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 481,
+      "hanzi": "写",
+      "pinyin": "xiě",
+      "meaning": "글씨를 쓰다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 482,
+      "hanzi": "些",
+      "pinyin": "xiē",
+      "meaning": "조금. 약간. 몇. [명사 앞에 쓰여 확정적이지 않은 적은 수량을 나타냄]",
+      "level": 3,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 483,
+      "hanzi": "谢谢",
+      "pinyin": "xièxie",
+      "meaning": "감사합니다. 고맙습니다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 484,
+      "hanzi": "西瓜",
+      "pinyin": "xīguā",
+      "meaning": "수박.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 485,
+      "hanzi": "习惯",
+      "pinyin": "xíguàn",
+      "meaning": "버릇. 습관. 습성. 풍습. 관습.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 486,
+      "hanzi": "喜欢",
+      "pinyin": "xǐhuan",
+      "meaning": "좋아하다. 호감을 가지다. 흥미를 느끼다. 마음에 들다. 애호하다. 사랑하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 487,
+      "hanzi": "新",
+      "pinyin": "xīn",
+      "meaning": "새롭다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 488,
+      "hanzi": "姓",
+      "pinyin": "xìng",
+      "meaning": "성. 성씨.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 489,
+      "hanzi": "行李箱",
+      "pinyin": "xínglǐxiāng",
+      "meaning": "트렁크，화물칸，여행용 가방.",
+      "level": 3
+    },
+    {
+      "id": 490,
+      "hanzi": "星期",
+      "pinyin": "xīngqī",
+      "meaning": "요일. 주",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 491,
+      "hanzi": "新闻",
+      "pinyin": "xīnwén",
+      "meaning": "(매스컴의) 뉴스.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 492,
+      "hanzi": "新鲜",
+      "pinyin": "xīnxiān",
+      "meaning": "(야채·과일 등을 갓 따서) 신선하다. 싱싱하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 493,
+      "hanzi": "信用卡",
+      "pinyin": "xìnyòngkǎ",
+      "meaning": "신용 카드. 크레디트 카드(credit card).",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 494,
+      "hanzi": "熊猫",
+      "pinyin": "xióngmāo",
+      "meaning": "팬더",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 495,
+      "hanzi": "洗手间",
+      "pinyin": "xǐshǒujiān",
+      "meaning": "화장실.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 496,
+      "hanzi": "休息",
+      "pinyin": "xiūxi",
+      "meaning": "휴식〔휴양〕하다. 휴식을 취하다. 쉬다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 497,
+      "hanzi": "希望",
+      "pinyin": "xīwàng",
+      "meaning": "희망. 소망. 원망. 바람. 소원.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 498,
+      "hanzi": "洗澡",
+      "pinyin": "xǐzǎo",
+      "meaning": "목욕하다. 몸을 씻다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 499,
+      "hanzi": "选择",
+      "pinyin": "xuǎnzé",
+      "meaning": "고르다. 선택하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 500,
+      "hanzi": "雪",
+      "pinyin": "xuě",
+      "meaning": "눈.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 501,
+      "hanzi": "学生",
+      "pinyin": "xuésheng",
+      "meaning": "학생.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 502,
+      "hanzi": "学习",
+      "pinyin": "xuéxí",
+      "meaning": "학습하다. 공부하다. 배우다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 503,
+      "hanzi": "学校",
+      "pinyin": "xuéxiào",
+      "meaning": "학교.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 504,
+      "hanzi": "需要",
+      "pinyin": "xūyào",
+      "meaning": "필요하다. 요구되다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 505,
+      "hanzi": "羊肉",
+      "pinyin": "yángròu",
+      "meaning": "양고기.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 506,
+      "hanzi": "眼睛",
+      "pinyin": "yǎnjing",
+      "meaning": "눈.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 507,
+      "hanzi": "颜色",
+      "pinyin": "yánsè",
+      "meaning": "색. 색깔.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 508,
+      "hanzi": "药",
+      "pinyin": "yào",
+      "meaning": "약. 약물.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 509,
+      "hanzi": "要",
+      "pinyin": "yào",
+      "meaning": "능원동사",
+      "level": 3
+    },
+    {
+      "id": 510,
+      "hanzi": "要求",
+      "pinyin": "yāoqiú",
+      "meaning": "요구하다. 요망하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 511,
+      "hanzi": "也",
+      "pinyin": "yě",
+      "meaning": "…도. [하나만 쓰여 같음을 나타냄]",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 512,
+      "hanzi": "爷爷",
+      "pinyin": "yéye",
+      "meaning": "할아버지. 조부.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 513,
+      "hanzi": "一",
+      "pinyin": "yī",
+      "meaning": "하나. 일.",
+      "level": 3,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 514,
+      "hanzi": "一般",
+      "pinyin": "yìbān",
+      "meaning": "보통이다. 일반적이다. 평범하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 515,
+      "hanzi": "一边",
+      "pinyin": "yìbiān",
+      "meaning": "한쪽. 한 편. 한 면.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 516,
+      "hanzi": "一点儿",
+      "pinyin": "yìdiǎnr",
+      "meaning": "조금. [불확정적인 수량]",
+      "level": 3,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 517,
+      "hanzi": "一定",
+      "pinyin": "yídìng",
+      "meaning": "반드시. 필히. 꼭.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 518,
+      "hanzi": "衣服",
+      "pinyin": "yīfu",
+      "meaning": "옷. 의복.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 519,
+      "hanzi": "一共",
+      "pinyin": "yígòng",
+      "meaning": "모두. 전부. 합계.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 520,
+      "hanzi": "一会儿",
+      "pinyin": "yíhuìr",
+      "meaning": "짧은 시간. 잠깐 동안. 잠시.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 521,
+      "hanzi": "已经",
+      "pinyin": "yǐjing",
+      "meaning": "이미. 벌써.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 522,
+      "hanzi": "阴",
+      "pinyin": "yīn",
+      "meaning": "흐리다. 음하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 523,
+      "hanzi": "应该",
+      "pinyin": "yīnggāi",
+      "meaning": "…해야 한다. …하는 것이 마땅하다.",
+      "level": 3,
+      "partOfSpeech": "능원동사"
+    },
+    {
+      "id": 524,
+      "hanzi": "影响",
+      "pinyin": "yǐngxiǎng",
+      "meaning": "영향을 주다〔끼치다〕.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 525,
+      "hanzi": "银行",
+      "pinyin": "yínháng",
+      "meaning": "은행.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 526,
+      "hanzi": "饮料",
+      "pinyin": "yǐnliào",
+      "meaning": "음료.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 527,
+      "hanzi": "因为",
+      "pinyin": "yīnwèi",
+      "meaning": "왜냐하면.",
+      "level": 3,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 528,
+      "hanzi": "音乐",
+      "pinyin": "yīnyuè",
+      "meaning": "음악.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 529,
+      "hanzi": "一起",
+      "pinyin": "yìqǐ",
+      "meaning": "같이. 더불어. 함께.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 530,
+      "hanzi": "以前",
+      "pinyin": "yǐqián",
+      "meaning": "과거. 이전. 예전.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 531,
+      "hanzi": "医生",
+      "pinyin": "yīshēng",
+      "meaning": "의사. 의원.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 532,
+      "hanzi": "意思",
+      "pinyin": "yìsi",
+      "meaning": "의미. 뜻.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 533,
+      "hanzi": "一下",
+      "pinyin": "yíxià",
+      "meaning": "단시간에. 갑자기.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 534,
+      "hanzi": "一样",
+      "pinyin": "yíyàng",
+      "meaning": "같다. 동일하다. 한 가지이다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 535,
+      "hanzi": "医院",
+      "pinyin": "yīyuàn",
+      "meaning": "병원.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 536,
+      "hanzi": "一直",
+      "pinyin": "yìzhí",
+      "meaning": "계속. 줄곧. [동작 혹은 상태가 지속됨을 나타냄]",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 537,
+      "hanzi": "椅子",
+      "pinyin": "yǐzi",
+      "meaning": "의자.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 538,
+      "hanzi": "用",
+      "pinyin": "yòng",
+      "meaning": "쓰다. 사용하다. 고용하다. 임용하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 539,
+      "hanzi": "又",
+      "pinyin": "yòu",
+      "meaning": "또. 다시. 거듭. [어떤 동작이나 상황이 중복되거나 계속됨을 나타냄]",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 540,
+      "hanzi": "有",
+      "pinyin": "yǒu",
+      "meaning": "있다. [존재를 나타냄]",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 541,
+      "hanzi": "右边",
+      "pinyin": "yòubian",
+      "meaning": "오른쪽. 우측(右側).",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 542,
+      "hanzi": "有名",
+      "pinyin": "yǒumíng",
+      "meaning": "유명하다. 명성이 높다. 이름이 널리 알려지다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 543,
+      "hanzi": "游戏",
+      "pinyin": "yóuxì",
+      "meaning": "게임.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 544,
+      "hanzi": "游泳",
+      "pinyin": "yóuyǒng",
+      "meaning": "수영하다. 헤엄치다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 545,
+      "hanzi": "鱼",
+      "pinyin": "yú",
+      "meaning": "물고기.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 546,
+      "hanzi": "元",
+      "pinyin": "yuán",
+      "meaning": "시작의. 처음의. 첫째의.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 547,
+      "hanzi": "远",
+      "pinyin": "yuǎn",
+      "meaning": "(공간적·시간적으로) 멀다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 548,
+      "hanzi": "愿意",
+      "pinyin": "yuànyì",
+      "meaning": "동의하다. 달가워하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 549,
+      "hanzi": "遇到",
+      "pinyin": "yùdào",
+      "meaning": "만나다. 마주치다. 부딪치다. 부닥치다. 맞닥뜨리다. 봉착하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 550,
+      "hanzi": "越",
+      "pinyin": "yuè",
+      "meaning": "넘다. 뛰어넘다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 551,
+      "hanzi": "月",
+      "pinyin": "yuè",
+      "meaning": "달.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 552,
+      "hanzi": "月亮",
+      "pinyin": "yuèliang",
+      "meaning": "달.",
+      "level": 3
+    },
+    {
+      "id": 553,
+      "hanzi": "运动",
+      "pinyin": "yùndòng",
+      "meaning": "(물체의) 운동.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 554,
+      "hanzi": "在",
+      "pinyin": "zài",
+      "meaning": "존재하다. 생존하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 555,
+      "hanzi": "再",
+      "pinyin": "zài",
+      "meaning": "재차. 또. [같은 동작·행위의 중복이나 계속을 나타냄, 주로 아직 실현되지 않은 일]",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 556,
+      "hanzi": "再见",
+      "pinyin": "zàijiàn",
+      "meaning": "(인사말로) 또 뵙겠습니다. 안녕히 계십시오〔가십시오〕. 안녕.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 557,
+      "hanzi": "早上",
+      "pinyin": "zǎoshang",
+      "meaning": "아침.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 558,
+      "hanzi": "怎么",
+      "pinyin": "zěnme",
+      "meaning": "어떻게. 어째서. 왜. [방식·원인·성질·사정 등을 물음]",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 559,
+      "hanzi": "怎么样",
+      "pinyin": "zěnmeyàng",
+      "meaning": "별로〔그리〕 …않다. [주로 부정형과 반문형으로 쓰여 완곡한 어기를 나타냄]",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 560,
+      "hanzi": "站",
+      "pinyin": "zhàn",
+      "meaning": "서다. 바로 서다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 561,
+      "hanzi": "长",
+      "pinyin": "zhǎng",
+      "meaning": "자라다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 562,
+      "hanzi": "张",
+      "pinyin": "zhāng",
+      "meaning": "열다. 펼치다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 563,
+      "hanzi": "丈夫",
+      "pinyin": "zhàngfu",
+      "meaning": "남편.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 564,
+      "hanzi": "找",
+      "pinyin": "zhǎo",
+      "meaning": "찾다. 구하다. 물색하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 565,
+      "hanzi": "照顾",
+      "pinyin": "zhàogù",
+      "meaning": "보살피다. 돌보다. 간호하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 566,
+      "hanzi": "着急",
+      "pinyin": "zháojí",
+      "meaning": "조급해하다. 안달하다. 안타까워하다. 초조해하다. 마음을 졸이다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 567,
+      "hanzi": "照片",
+      "pinyin": "zhàopiàn",
+      "meaning": "사진.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 568,
+      "hanzi": "照相机",
+      "pinyin": "zhàoxiàngjī",
+      "meaning": "사진기. 카메라.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 569,
+      "hanzi": "着",
+      "pinyin": "zhe",
+      "meaning": "…하고 있다. …하고 있는 중이다. [동사 뒤에 쓰여 동작이 지속되고 있음을 나타냄]",
+      "level": 3,
+      "partOfSpeech": "조사"
+    },
+    {
+      "id": 570,
+      "hanzi": "这",
+      "pinyin": "zhè",
+      "meaning": "이것.",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 571,
+      "hanzi": "真",
+      "pinyin": "zhēn",
+      "meaning": "확실히. 진정으로. 참으로. 진실로. 실제로.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 572,
+      "hanzi": "正在",
+      "pinyin": "zhèngzài",
+      "meaning": "지금〔한창〕 …하고 있다. [동작이나 행위가 진행 중임을 나타냄]",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 573,
+      "hanzi": "只",
+      "pinyin": "zhǐ",
+      "meaning": "단지. 다만. 오직. 겨우.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 574,
+      "hanzi": "只",
+      "pinyin": "zhī",
+      "meaning": "마리(동물을 세는 단위)",
+      "level": 3,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 575,
+      "hanzi": "知道",
+      "pinyin": "zhīdào",
+      "meaning": "알다. 이해하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 576,
+      "hanzi": "只有",
+      "pinyin": "zhǐyǒu",
+      "meaning": "…만 있다. …밖에 없다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 577,
+      "hanzi": "种",
+      "pinyin": "zhǒng",
+      "meaning": "종자. 열매. 씨(앗).",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 578,
+      "hanzi": "中国",
+      "pinyin": "Zhōngguó",
+      "meaning": "중국(국가명)",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 579,
+      "hanzi": "中间",
+      "pinyin": "zhōngjiān",
+      "meaning": "중간.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 580,
+      "hanzi": "中文",
+      "pinyin": "Zhōngwén",
+      "meaning": "중국의 언어와 문자.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 581,
+      "hanzi": "中午",
+      "pinyin": "zhōngwǔ",
+      "meaning": "정오. 낮 12시 전후.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 582,
+      "hanzi": "重要",
+      "pinyin": "zhòngyào",
+      "meaning": "중요하다.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 583,
+      "hanzi": "终于",
+      "pinyin": "zhōngyú",
+      "meaning": "마침내. 결국. 끝내.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 584,
+      "hanzi": "周末",
+      "pinyin": "zhōumò",
+      "meaning": "주말.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 585,
+      "hanzi": "住",
+      "pinyin": "zhù",
+      "meaning": "숙박하다. 묵다. 유숙하다. 정착하다. 살다. 거주하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 586,
+      "hanzi": "准备",
+      "pinyin": "zhǔnbèi",
+      "meaning": "준비하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 587,
+      "hanzi": "桌子",
+      "pinyin": "zhuōzi",
+      "meaning": "탁자. 테이블.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 588,
+      "hanzi": "主要",
+      "pinyin": "zhǔyào",
+      "meaning": "주요한. 주된.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 589,
+      "hanzi": "注意",
+      "pinyin": "zhùyì",
+      "meaning": "주의하다. 조심하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 590,
+      "hanzi": "字",
+      "pinyin": "zì",
+      "meaning": "문자. 글자.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 591,
+      "hanzi": "自己",
+      "pinyin": "zìjǐ",
+      "meaning": "자기. 자신. 스스로.",
+      "level": 3,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 592,
+      "hanzi": "自行车",
+      "pinyin": "zìxíngchē",
+      "meaning": "자전거.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 593,
+      "hanzi": "总是",
+      "pinyin": "zǒngshì",
+      "meaning": "늘. 줄곧. 언제나.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 594,
+      "hanzi": "走",
+      "pinyin": "zǒu",
+      "meaning": "걷다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 595,
+      "hanzi": "最",
+      "pinyin": "zuì",
+      "meaning": "가장. 제일. 아주. 매우.",
+      "level": 3,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 596,
+      "hanzi": "嘴",
+      "pinyin": "zuǐ",
+      "meaning": "입",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 597,
+      "hanzi": "最后",
+      "pinyin": "zuìhòu",
+      "meaning": "최후의. 맨 마지막의.",
+      "level": 3,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 598,
+      "hanzi": "最近",
+      "pinyin": "zuìjìn",
+      "meaning": "최근. 요즈음. 일간.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 599,
+      "hanzi": "坐",
+      "pinyin": "zuò",
+      "meaning": "앉다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 600,
+      "hanzi": "做",
+      "pinyin": "zuò",
+      "meaning": "하다. 종사하다.",
+      "level": 3,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 601,
+      "hanzi": "左边",
+      "pinyin": "zuǒbian",
+      "meaning": "좌(측). 왼쪽. 왼편.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 602,
+      "hanzi": "昨天",
+      "pinyin": "zuótiān",
+      "meaning": "어제.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 603,
+      "hanzi": "作业",
+      "pinyin": "zuòyè",
+      "meaning": "숙제. 과제.",
+      "level": 3,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 604,
+      "hanzi": "爱情",
+      "pinyin": "àiqíng",
+      "meaning": "남녀 간의 사랑. 애정.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 605,
+      "hanzi": "安排",
+      "pinyin": "ānpái",
+      "meaning": "(인원·시간 등을) 안배하다. 일을 처리하다. 준비하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 606,
+      "hanzi": "安全",
+      "pinyin": "ānquán",
+      "meaning": "안전하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 607,
+      "hanzi": "按时",
+      "pinyin": "ànshí",
+      "meaning": "제때에. 시간에 맞추어.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 608,
+      "hanzi": "按照",
+      "pinyin": "ànzhào",
+      "meaning": "…에 따르다. …의거하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 609,
+      "hanzi": "百分之",
+      "pinyin": "bǎifēnzhī",
+      "meaning": "퍼센트.",
+      "level": 4
+    },
+    {
+      "id": 610,
+      "hanzi": "棒",
+      "pinyin": "bàng",
+      "meaning": "몽둥이. 막대기. 방망이. 곤봉.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 611,
+      "hanzi": "抱",
+      "pinyin": "bào",
+      "meaning": "안다. 껴안다. 포옹하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 612,
+      "hanzi": "保护",
+      "pinyin": "bǎohù",
+      "meaning": "보호하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 613,
+      "hanzi": "报名",
+      "pinyin": "bàomíng",
+      "meaning": "신청하다. 등록하다. 지원하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 614,
+      "hanzi": "抱歉",
+      "pinyin": "bàoqiàn",
+      "meaning": "미안해하다. 미안하게 생각하다. 죄송합니다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 615,
+      "hanzi": "保证",
+      "pinyin": "bǎozhèng",
+      "meaning": "보증하다. 담보하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 616,
+      "hanzi": "包子",
+      "pinyin": "bāozi",
+      "meaning": "(소가 든) 찐빵. 바오쯔.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 617,
+      "hanzi": "倍",
+      "pinyin": "bèi",
+      "meaning": "배. 배수. 곱절. 갑절.",
+      "level": 4,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 618,
+      "hanzi": "笨",
+      "pinyin": "bèn",
+      "meaning": "멍청하다. 우둔하다. 어리석다. 미련하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 619,
+      "hanzi": "本来",
+      "pinyin": "běnlái",
+      "meaning": "본래. 원래.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 620,
+      "hanzi": "遍",
+      "pinyin": "biàn",
+      "meaning": "번. 차례. 회. [한 동작의 처음부터 끝까지의 전 과정을 가리킴]",
+      "level": 4,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 621,
+      "hanzi": "表格",
+      "pinyin": "biǎogé",
+      "meaning": "표. 양식. 도표. 서식.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 622,
+      "hanzi": "表示",
+      "pinyin": "biǎoshì",
+      "meaning": "의미하다. 가리키다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 623,
+      "hanzi": "表演",
+      "pinyin": "biǎoyǎn",
+      "meaning": "공연하다. 연기하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 624,
+      "hanzi": "表扬",
+      "pinyin": "biǎoyáng",
+      "meaning": "칭찬하다. 표창하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 625,
+      "hanzi": "标准",
+      "pinyin": "biāozhǔn",
+      "meaning": "표준. 기준. 잣대.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 626,
+      "hanzi": "饼干",
+      "pinyin": "bǐnggān",
+      "meaning": "비스킷. 과자.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 627,
+      "hanzi": "并且",
+      "pinyin": "bìngqiě",
+      "meaning": "게다가. 나아가. 그리고.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 628,
+      "hanzi": "比如",
+      "pinyin": "bǐrú",
+      "meaning": "예를 들어. 예를 들면. 예컨대.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 629,
+      "hanzi": "毕业",
+      "pinyin": "bìyè",
+      "meaning": "졸업(하다).",
+      "level": 4,
+      "partOfSpeech": "명사,동사"
+    },
+    {
+      "id": 630,
+      "hanzi": "博士",
+      "pinyin": "bóshì",
+      "meaning": "박사(학위).",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 631,
+      "hanzi": "不得不",
+      "pinyin": "bùdébù",
+      "meaning": "어쩔 수 없이. 부득불. 반드시.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 632,
+      "hanzi": "部分",
+      "pinyin": "bùfen",
+      "meaning": "(전체 중의) 부분. 일부(분).",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 633,
+      "hanzi": "不管",
+      "pinyin": "bùguǎn",
+      "meaning": "…을 막론하고. …에 관계없이",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 634,
+      "hanzi": "不过",
+      "pinyin": "búguò",
+      "meaning": "(반전을 나타내어) 그러나. 그런데. 하지만.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 635,
+      "hanzi": "不仅",
+      "pinyin": "bùjǐn",
+      "meaning": "…뿐만 아니라.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 636,
+      "hanzi": "擦",
+      "pinyin": "cā",
+      "meaning": "(천·수건 등으로) 닦다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 637,
+      "hanzi": "猜",
+      "pinyin": "cāi",
+      "meaning": "추측하다. 알아맞히다. 추정하다. (짐작하여) 맞추다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 638,
+      "hanzi": "材料",
+      "pinyin": "cáiliào",
+      "meaning": "재료. 원료. 감. 자재.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 639,
+      "hanzi": "参观",
+      "pinyin": "cānguān",
+      "meaning": "(전람회·공장·명승 고적 등을) 참관하다. 견학하다. 시찰하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 640,
+      "hanzi": "餐厅",
+      "pinyin": "cāntīng",
+      "meaning": "식당.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 641,
+      "hanzi": "厕所",
+      "pinyin": "cèsuǒ",
+      "meaning": "변소. 뒷간.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 642,
+      "hanzi": "差不多",
+      "pinyin": "chàbuduō",
+      "meaning": "(시간·정도·거리 등이) 비슷하다. 큰 차이가 없다. 가깝다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 643,
+      "hanzi": "尝",
+      "pinyin": "cháng",
+      "meaning": "맛보다. 시험삼아 먹어 보다. 시식하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 644,
+      "hanzi": "场",
+      "pinyin": "chǎng",
+      "meaning": "장소. 곳.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 645,
+      "hanzi": "长城",
+      "pinyin": "Chángchéng",
+      "meaning": "견고하고 튼튼한 힘, 혹은 넘기 어려운 장애.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 646,
+      "hanzi": "长江",
+      "pinyin": "Chángjiāng",
+      "meaning": "장강, 양쯔강",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 647,
+      "hanzi": "超过",
+      "pinyin": "chāoguò",
+      "meaning": "초과하다. 넘다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 648,
+      "hanzi": "成功",
+      "pinyin": "chénggōng",
+      "meaning": "성공하다. 이루다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 649,
+      "hanzi": "诚实",
+      "pinyin": "chéngshí",
+      "meaning": "진실하다. 참되다. 성실하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 650,
+      "hanzi": "成为",
+      "pinyin": "chéngwéi",
+      "meaning": "…이〔가〕 되다. …(으)로 되다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 651,
+      "hanzi": "乘坐",
+      "pinyin": "chéngzuò",
+      "meaning": "(자동차·배·비행기 등을) 타다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 652,
+      "hanzi": "吃惊",
+      "pinyin": "chījīng",
+      "meaning": "놀라다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 653,
+      "hanzi": "重新",
+      "pinyin": "chóngxīn",
+      "meaning": "다시. 재차.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 654,
+      "hanzi": "抽烟",
+      "pinyin": "chōuyān",
+      "meaning": "연기를 빼내다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 655,
+      "hanzi": "窗户",
+      "pinyin": "chuānghu",
+      "meaning": "창문. 창",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 656,
+      "hanzi": "传真",
+      "pinyin": "chuánzhēn",
+      "meaning": "팩스",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 657,
+      "hanzi": "出差",
+      "pinyin": "chūchāi",
+      "meaning": "(외지로) 출장 가다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 658,
+      "hanzi": "出发",
+      "pinyin": "chūfā",
+      "meaning": "출발하다. 떠나다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 659,
+      "hanzi": "厨房",
+      "pinyin": "chúfáng",
+      "meaning": "주방. 부엌.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 660,
+      "hanzi": "出生",
+      "pinyin": "chūshēng",
+      "meaning": "출생하다. 태어나다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 661,
+      "hanzi": "出现",
+      "pinyin": "chūxiàn",
+      "meaning": "출현하다. 나타나다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 662,
+      "hanzi": "词语",
+      "pinyin": "cíyǔ",
+      "meaning": "단어와 어구. 어휘. 글자.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 663,
+      "hanzi": "从来",
+      "pinyin": "cónglái",
+      "meaning": "(과거부터) 지금까지. 여태껏. 이제까지. [주로 부정형으로 쓰임]",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 664,
+      "hanzi": "存",
+      "pinyin": "cún",
+      "meaning": "생존하다. 존재하다. 있다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 665,
+      "hanzi": "错误",
+      "pinyin": "cuòwù",
+      "meaning": "착오. 잘못. 잘못된 사물이나 행위.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 666,
+      "hanzi": "粗心",
+      "pinyin": "cūxīn",
+      "meaning": "세심하지 못하다. 소홀하다. 부주의하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 667,
+      "hanzi": "答案",
+      "pinyin": "dá'àn",
+      "meaning": "답안. 답. 해답.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 668,
+      "hanzi": "打扮",
+      "pinyin": "dǎban",
+      "meaning": "화장하다. 치장하다. 단장하다. 꾸미다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 669,
+      "hanzi": "大概",
+      "pinyin": "dàgài",
+      "meaning": "아마(도). 대개.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 670,
+      "hanzi": "戴",
+      "pinyin": "dài",
+      "meaning": "(머리·얼굴·가슴·팔·손 등에) 착용하다. 쓰다. 차다. 달다. 끼다. 두르다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 671,
+      "hanzi": "大夫",
+      "pinyin": "dàifu",
+      "meaning": "의사.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 672,
+      "hanzi": "当",
+      "pinyin": "dāng",
+      "meaning": "담당하다. 맡다. …이〔가〕 되다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 673,
+      "hanzi": "当时",
+      "pinyin": "dāngshí",
+      "meaning": "당시. 그 때.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 674,
+      "hanzi": "倒",
+      "pinyin": "dào",
+      "meaning": "(상하·전후가) 거꾸로 되다. 반대로 되다. 뒤집히다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 675,
+      "hanzi": "刀",
+      "pinyin": "dāo",
+      "meaning": "칼.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 676,
+      "hanzi": "到处",
+      "pinyin": "dàochù",
+      "meaning": "도처. 곳곳. 이르는 곳. 가는 곳.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 677,
+      "hanzi": "到底",
+      "pinyin": "dàodǐ",
+      "meaning": "도대체. [의문문에 쓰여 깊이 따지는 것을 나타냄]",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 678,
+      "hanzi": "道歉",
+      "pinyin": "dàoqiàn",
+      "meaning": "사과하다. 사죄하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 679,
+      "hanzi": "导游",
+      "pinyin": "dǎoyóu",
+      "meaning": "관광 안내원. 가이드.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 680,
+      "hanzi": "打扰",
+      "pinyin": "dǎrǎo",
+      "meaning": "방해하다. 지장을 주다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 681,
+      "hanzi": "大使馆",
+      "pinyin": "dàshǐguǎn",
+      "meaning": "대사관.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 682,
+      "hanzi": "打印",
+      "pinyin": "dǎyìn",
+      "meaning": "(프린터로) 인쇄하다. 프린트하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 683,
+      "hanzi": "大约",
+      "pinyin": "dàyuē",
+      "meaning": "아마. 다분히. 대개는.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 684,
+      "hanzi": "打招呼",
+      "pinyin": "dǎzhāohu",
+      "meaning": "(말이나 행동으로) 인사하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 685,
+      "hanzi": "打折",
+      "pinyin": "dǎzhé",
+      "meaning": "꺾다. 끊다. 절단하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 686,
+      "hanzi": "打针",
+      "pinyin": "dǎzhēn",
+      "meaning": "주사를 놓다. 주사를 맞다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 687,
+      "hanzi": "得",
+      "pinyin": "dé",
+      "meaning": "얻다. 획득하다. 받다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 688,
+      "hanzi": "等",
+      "pinyin": "děng",
+      "meaning": "등. 따위. [열거한 후에 그 대상들을 한정함을 나타냄]",
+      "level": 4,
+      "partOfSpeech": "조사"
+    },
+    {
+      "id": 689,
+      "hanzi": "登机牌",
+      "pinyin": "dēngjīpái",
+      "meaning": "탑승권",
+      "level": 4
+    },
+    {
+      "id": 690,
+      "hanzi": "得意",
+      "pinyin": "déyì",
+      "meaning": "득의하다. 대단히 만족하다. 마음에 꼭 들다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 691,
+      "hanzi": "底",
+      "pinyin": "dǐ",
+      "meaning": "(～儿) 밑. 바닥.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 692,
+      "hanzi": "低",
+      "pinyin": "dī",
+      "meaning": "(높이가) 낮다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 693,
+      "hanzi": "掉",
+      "pinyin": "diào",
+      "meaning": "떨어지다. 떨어뜨리다. 떨구다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 694,
+      "hanzi": "调查",
+      "pinyin": "diàochá",
+      "meaning": "(현장에서) 조사하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 695,
+      "hanzi": "地点",
+      "pinyin": "dìdiǎn",
+      "meaning": "지점. 장소. 위치. 소재지.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 696,
+      "hanzi": "地球",
+      "pinyin": "dìqiú",
+      "meaning": "지구.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 697,
+      "hanzi": "丢",
+      "pinyin": "diū",
+      "meaning": "잃다. 잃어버리다. 분실〔유실〕하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 698,
+      "hanzi": "地址",
+      "pinyin": "dìzhǐ",
+      "meaning": "소재지. 주소.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 699,
+      "hanzi": "动作",
+      "pinyin": "dòngzuò",
+      "meaning": "동작. 행동. 움직임. 몸놀림.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 700,
+      "hanzi": "短信",
+      "pinyin": "duǎnxìn",
+      "meaning": "짧은 편지.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 701,
+      "hanzi": "堵车",
+      "pinyin": "dǔchē",
+      "meaning": "교통이 꽉 막히다. 교통이 체증되다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 702,
+      "hanzi": "对话",
+      "pinyin": "duìhuà",
+      "meaning": "대화하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 703,
+      "hanzi": "对面",
+      "pinyin": "duìmiàn",
+      "meaning": "(～儿) 맞은편. 건너편. 반대편.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 704,
+      "hanzi": "对于",
+      "pinyin": "duìyú",
+      "meaning": "…에 대해(서). …에 대하여.",
+      "level": 4,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 705,
+      "hanzi": "肚子",
+      "pinyin": "dùzi",
+      "meaning": "(사람이나 동물의) 복부.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 706,
+      "hanzi": "而",
+      "pinyin": "ér",
+      "meaning": "…(하)고(도). 그리고. 그러나 [순접/역접]",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 707,
+      "hanzi": "儿童",
+      "pinyin": "értóng",
+      "meaning": "아동. 어린이.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 708,
+      "hanzi": "法律",
+      "pinyin": "fǎlǜ",
+      "meaning": "법률.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 709,
+      "hanzi": "反对",
+      "pinyin": "fǎnduì",
+      "meaning": "반대하다. 찬성〔동의〕하지 않다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 710,
+      "hanzi": "房东",
+      "pinyin": "fángdōng",
+      "meaning": "집주인.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 711,
+      "hanzi": "方法",
+      "pinyin": "fāngfǎ",
+      "meaning": "방법. 수단. 방식.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 712,
+      "hanzi": "方面",
+      "pinyin": "fāngmiàn",
+      "meaning": "방면. 부분. 분야. 영역. 측(면). 쪽.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 713,
+      "hanzi": "放弃",
+      "pinyin": "fàngqì",
+      "meaning": "(권리나 주장·의견 등을) 버리다. 포기하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 714,
+      "hanzi": "放暑假",
+      "pinyin": "fàngshǔjià",
+      "meaning": "하다",
+      "level": 4,
+      "partOfSpeech": "여름방학을"
+    },
+    {
+      "id": 715,
+      "hanzi": "放松",
+      "pinyin": "fàngsōng",
+      "meaning": "늦추다. 느슨하게 하다. 이완시키다. 정신적 긴장을 풀다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 716,
+      "hanzi": "方向",
+      "pinyin": "fāngxiàng",
+      "meaning": "방향.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 717,
+      "hanzi": "烦恼",
+      "pinyin": "fánnǎo",
+      "meaning": "번뇌하다. 걱정하다. 마음을 졸이다. 걱정스럽다. 근심스럽다. 고민스럽다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 718,
+      "hanzi": "翻译",
+      "pinyin": "fānyì",
+      "meaning": "번역하다. 통역하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 719,
+      "hanzi": "发生",
+      "pinyin": "fāshēng",
+      "meaning": "(원래 없던 현상이) 생기다. 일어나다. 발생하다. 벌어지다. 출현하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 720,
+      "hanzi": "发展",
+      "pinyin": "fāzhǎn",
+      "meaning": "발전하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 721,
+      "hanzi": "份",
+      "pinyin": "fèn",
+      "meaning": "전체 중의 일부분. …의 부분. 몫. 배당.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 722,
+      "hanzi": "丰富",
+      "pinyin": "fēngfù",
+      "meaning": "많다. 풍부하다. 넉넉하다. 풍족하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 723,
+      "hanzi": "否则",
+      "pinyin": "fǒuzé",
+      "meaning": "만약 그렇지 않으면.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 724,
+      "hanzi": "富",
+      "pinyin": "fù",
+      "meaning": "많다. 풍부하다. 넉넉하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 725,
+      "hanzi": "符合",
+      "pinyin": "fúhé",
+      "meaning": "부합〔상합〕하다. (들어)맞다. 일치하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 726,
+      "hanzi": "付款",
+      "pinyin": "fùkuǎn",
+      "meaning": "돈을 지불하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 727,
+      "hanzi": "父亲",
+      "pinyin": "fùqīn",
+      "meaning": "부친. 아버지.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 728,
+      "hanzi": "复印",
+      "pinyin": "fùyìn",
+      "meaning": "(복사기로) 복사하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 729,
+      "hanzi": "复杂",
+      "pinyin": "fùzá",
+      "meaning": "(사물의 종류나 두서가) 복잡하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 730,
+      "hanzi": "负责",
+      "pinyin": "fùzé",
+      "meaning": "책임지다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 731,
+      "hanzi": "改变",
+      "pinyin": "gǎibiàn",
+      "meaning": "변하다. 바뀌다. 달라지다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 732,
+      "hanzi": "干",
+      "pinyin": "gàn",
+      "meaning": "(사물의) 주요 부분. 주체. 줄기.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 733,
+      "hanzi": "赶",
+      "pinyin": "gǎn",
+      "meaning": "뒤쫓다. 따라가다. 추적하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 734,
+      "hanzi": "敢",
+      "pinyin": "gǎn",
+      "meaning": "용기가 있다. 용감하다. 담력이 세다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 735,
+      "hanzi": "干杯",
+      "pinyin": "gānbēi",
+      "meaning": "건배하다. 잔을 비우다. 축배를 들다. [술을 권하거나 축배를 들 때 쓰임]",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 736,
+      "hanzi": "感动",
+      "pinyin": "gǎndòng",
+      "meaning": "감동하다. 감동되다. 감격하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 737,
+      "hanzi": "刚",
+      "pinyin": "gāng",
+      "meaning": "단단하다. 딱딱하다. 강하다. 굳다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 738,
+      "hanzi": "感觉",
+      "pinyin": "gǎnjué",
+      "meaning": "감각. 느낌.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 739,
+      "hanzi": "感情",
+      "pinyin": "gǎnqíng",
+      "meaning": "감정.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 740,
+      "hanzi": "感谢",
+      "pinyin": "gǎnxiè",
+      "meaning": "고맙다. 감사하다. 고맙게 여기다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 741,
+      "hanzi": "高速公路",
+      "pinyin": "gāosùgōnglù",
+      "meaning": "고속 도로.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 742,
+      "hanzi": "各",
+      "pinyin": "gè",
+      "meaning": "각. 여러. 갖가지. 여러 가지. [일정 범위 내의 모든 개체를 가리킴]",
+      "level": 4,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 743,
+      "hanzi": "胳膊",
+      "pinyin": "gēbo",
+      "meaning": "팔.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 744,
+      "hanzi": "功夫",
+      "pinyin": "gōngfu",
+      "meaning": "시간",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 745,
+      "hanzi": "公里",
+      "pinyin": "gōnglǐ",
+      "meaning": "킬로미터(km).",
+      "level": 4
+    },
+    {
+      "id": 746,
+      "hanzi": "共同",
+      "pinyin": "gòngtóng",
+      "meaning": "공동의. 공통의.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 747,
+      "hanzi": "工资",
+      "pinyin": "gōngzī",
+      "meaning": "월급. 임금. 노임.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 748,
+      "hanzi": "够",
+      "pinyin": "gòu",
+      "meaning": "필요한 수량·기준 등을 만족시키다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 749,
+      "hanzi": "购物",
+      "pinyin": "gòuwù",
+      "meaning": "물품을 구입하다. 물건을 사다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 750,
+      "hanzi": "挂",
+      "pinyin": "guà",
+      "meaning": "(물체 표면에) 붙어 있다. 덮여 있다. 띠고 있다. 칠해져 있다. 발라져 있다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 751,
+      "hanzi": "逛",
+      "pinyin": "guàng",
+      "meaning": "거닐다. 배회하다. 돌아다니다. 산보하다. 구경하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 752,
+      "hanzi": "光",
+      "pinyin": "guāng",
+      "meaning": "빛. 광선.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 753,
+      "hanzi": "广播",
+      "pinyin": "guǎngbō",
+      "meaning": "방송하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 754,
+      "hanzi": "广告",
+      "pinyin": "guǎnggào",
+      "meaning": "광고. 선전.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 755,
+      "hanzi": "关键",
+      "pinyin": "guānjiàn",
+      "meaning": "관건. 열쇠. 키포인트.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 756,
+      "hanzi": "管理",
+      "pinyin": "guǎnlǐ",
+      "meaning": "보관하고 처리하다. 관리하다. 관할하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 757,
+      "hanzi": "观众",
+      "pinyin": "guānzhòng",
+      "meaning": "관중. 구경꾼. 시청자.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 758,
+      "hanzi": "规定",
+      "pinyin": "guīdìng",
+      "meaning": "규정하다. 정하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 759,
+      "hanzi": "估计",
+      "pinyin": "gūjì",
+      "meaning": "추측하다. 예측하다. 어림잡다. 헤아리다. 짐작하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 760,
+      "hanzi": "顾客",
+      "pinyin": "gùkè",
+      "meaning": "고객. 손님.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 761,
+      "hanzi": "鼓励",
+      "pinyin": "gǔlì",
+      "meaning": "격려하다. (용기를) 북돋우다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 762,
+      "hanzi": "过程",
+      "pinyin": "guòchéng",
+      "meaning": "과정.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 763,
+      "hanzi": "国籍",
+      "pinyin": "guójí",
+      "meaning": "(사람의) 국적.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 764,
+      "hanzi": "国际",
+      "pinyin": "guójì",
+      "meaning": "국제.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 765,
+      "hanzi": "果汁",
+      "pinyin": "guǒzhī",
+      "meaning": "과일즙.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 766,
+      "hanzi": "故意",
+      "pinyin": "gùyì",
+      "meaning": "고의로. 일부러.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 767,
+      "hanzi": "害羞",
+      "pinyin": "hàixiū",
+      "meaning": "부끄러워하다. 수줍어하다. 겸연쩍어하다. 쑥스러워하다. 창피스러워하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 768,
+      "hanzi": "海洋",
+      "pinyin": "hǎiyáng",
+      "meaning": "해양. 바다. 근해와 원양.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 769,
+      "hanzi": "汗",
+      "pinyin": "hàn",
+      "meaning": "땀.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 770,
+      "hanzi": "航班",
+      "pinyin": "hángbān",
+      "meaning": "(배나 비행기의) 운항편. 항공편.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 771,
+      "hanzi": "寒假",
+      "pinyin": "hánjià",
+      "meaning": "겨울 방학.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 772,
+      "hanzi": "好处",
+      "pinyin": "hǎochu",
+      "meaning": "이로운 점. 이점. 장점. 좋은 점. 뛰어난 점. 은혜. 도움. 혜택.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 773,
+      "hanzi": "号码",
+      "pinyin": "hàomǎ",
+      "meaning": "번호. 숫자.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 774,
+      "hanzi": "好像",
+      "pinyin": "hǎoxiàng",
+      "meaning": "마치 …과 같다〔비슷하다〕.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 775,
+      "hanzi": "合格",
+      "pinyin": "hégé",
+      "meaning": "규격〔표준〕에 맞다. 합격이다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 776,
+      "hanzi": "合适",
+      "pinyin": "héshì",
+      "meaning": "적당〔적합〕하다. 알맞다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 777,
+      "hanzi": "盒子",
+      "pinyin": "hézi",
+      "meaning": "작은 상자. 합. 곽.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 778,
+      "hanzi": "厚",
+      "pinyin": "hòu",
+      "meaning": "두껍다. 두텁다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 779,
+      "hanzi": "后悔",
+      "pinyin": "hòuhuǐ",
+      "meaning": "후회하다. 뉘우치다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 780,
+      "hanzi": "怀疑",
+      "pinyin": "huáiyí",
+      "meaning": "의심하다. 의심을 품다. 회의하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 781,
+      "hanzi": "回忆",
+      "pinyin": "huíyì",
+      "meaning": "회상하다. 추억하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 782,
+      "hanzi": "互联网",
+      "pinyin": "hùliánwǎng",
+      "meaning": "인터넷.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 783,
+      "hanzi": "火",
+      "pinyin": "huǒ",
+      "meaning": "(～儿) 불. 화염.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 784,
+      "hanzi": "获得",
+      "pinyin": "huòdé",
+      "meaning": "얻다. 취득하다. 획득하다. 손에 넣다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 785,
+      "hanzi": "活动",
+      "pinyin": "huódòng",
+      "meaning": "(몸을) 움직이다. 운동하다. 놀리다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 786,
+      "hanzi": "活泼",
+      "pinyin": "huópo",
+      "meaning": "활발하다. 활달하다. 활기차다. 생동감이 있다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 787,
+      "hanzi": "护士",
+      "pinyin": "hùshi",
+      "meaning": "간호사.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 788,
+      "hanzi": "互相",
+      "pinyin": "hùxiāng",
+      "meaning": "서로. 상호.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 789,
+      "hanzi": "寄",
+      "pinyin": "jì",
+      "meaning": "(우편으로) 부치다. 보내다. 우송하다. 송달하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 790,
+      "hanzi": "假",
+      "pinyin": "jiǎ",
+      "meaning": "거짓의. 가짜의. 위조의. 인조의. 모조의.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 791,
+      "hanzi": "加班",
+      "pinyin": "jiābān",
+      "meaning": "초과 근무를 하다. 시간 외 근무를 하다. 특근하다. 잔업하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 792,
+      "hanzi": "价格",
+      "pinyin": "jiàgé",
+      "meaning": "가격. 값.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 793,
+      "hanzi": "家具",
+      "pinyin": "jiājù",
+      "meaning": "가구.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 794,
+      "hanzi": "坚持",
+      "pinyin": "jiānchí",
+      "meaning": "견지하다. 굳건히 보지하다. 어떤 상태나 행위를 계속 지속하게 하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 795,
+      "hanzi": "减肥",
+      "pinyin": "jiǎnféi",
+      "meaning": "살을 빼다. 감량하다. 체중을 줄이다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 796,
+      "hanzi": "降低",
+      "pinyin": "jiàngdī",
+      "meaning": "내리다. 낮추다. 인하하다. 절하하다. 줄이다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 797,
+      "hanzi": "奖金",
+      "pinyin": "jiǎngjīn",
+      "meaning": "상금. 상여금. 장려금. 포상금. 보너스.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 798,
+      "hanzi": "将来",
+      "pinyin": "jiānglái",
+      "meaning": "장래. 미래. [‘过去(과거)’·‘现在(현재)’ 와 구분됨]",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 799,
+      "hanzi": "降落",
+      "pinyin": "jiàngluò",
+      "meaning": "내려오다. 착륙하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 800,
+      "hanzi": "减少",
+      "pinyin": "jiǎnshǎo",
+      "meaning": "감소하다. 줄다. 줄이다. 축소하다. 삭감하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 801,
+      "hanzi": "建议",
+      "pinyin": "jiànyì",
+      "meaning": "(자기의 주장·의견을) 제기하다. 제안하다. 건의하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 802,
+      "hanzi": "交",
+      "pinyin": "jiāo",
+      "meaning": "서로 교차하다. 서로 맞닿다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 803,
+      "hanzi": "骄傲",
+      "pinyin": "jiāo'ào",
+      "meaning": "오만하다. 거만하다. 자부심이 강하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 804,
+      "hanzi": "交流",
+      "pinyin": "jiāoliú",
+      "meaning": "서로 소통하다. 교류하다. (정보 따위를) 교환하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 805,
+      "hanzi": "郊区",
+      "pinyin": "jiāoqū",
+      "meaning": "(도시의) 변두리. [시 외곽에 위치하며 시 관할 구역에 속하는 지역]",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 806,
+      "hanzi": "教授",
+      "pinyin": "jiàoshòu",
+      "meaning": "교수.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 807,
+      "hanzi": "交通",
+      "pinyin": "jiāotōng",
+      "meaning": "교통.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 808,
+      "hanzi": "教育",
+      "pinyin": "jiàoyù",
+      "meaning": "교육.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 809,
+      "hanzi": "饺子",
+      "pinyin": "jiǎozi",
+      "meaning": "만두. 교자.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 810,
+      "hanzi": "加油站",
+      "pinyin": "jiāyóuzhàn",
+      "meaning": "주유소.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 811,
+      "hanzi": "基础",
+      "pinyin": "jīchǔ",
+      "meaning": "(건축물의) 토대. 기초.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 812,
+      "hanzi": "激动",
+      "pinyin": "jīdòng",
+      "meaning": "(감정 등이) 격하게 움직이다. 감격하다. 감동하다. 흥분하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 813,
+      "hanzi": "节",
+      "pinyin": "jié",
+      "meaning": "기념일. 명절. 축제일.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 814,
+      "hanzi": "结果",
+      "pinyin": "jiéguǒ",
+      "meaning": "결과. 결실. 열매. 성과. 결론. 끝.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 815,
+      "hanzi": "解释",
+      "pinyin": "jiěshì",
+      "meaning": "해석하다. 분석하다. 밝히다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 816,
+      "hanzi": "接受",
+      "pinyin": "jiēshòu",
+      "meaning": "받아들이다. 받다. 수락하다. 접수하다. 영수하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 817,
+      "hanzi": "节约",
+      "pinyin": "jiéyuē",
+      "meaning": "절약하다. 줄이다. 아끼다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 818,
+      "hanzi": "接着",
+      "pinyin": "jiēzhe",
+      "meaning": "이어서. 연이어. 잇따라. 계속하여. 연속하여. 뒤따라. 뒤이어.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 819,
+      "hanzi": "计划",
+      "pinyin": "jìhuà",
+      "meaning": "계획하다. 기획하다. 꾸미다. …할 계획이다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 820,
+      "hanzi": "积极",
+      "pinyin": "jījí",
+      "meaning": "적극적이다. 열성적이다. 의욕적이다. 진취적이다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 821,
+      "hanzi": "积累",
+      "pinyin": "jīlěi",
+      "meaning": "(조금씩) 쌓이다. 누적되다. 축적되다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 822,
+      "hanzi": "精彩",
+      "pinyin": "jīngcǎi",
+      "meaning": "뛰어나다. 훌륭하다. 근사하다. 멋지다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 823,
+      "hanzi": "警察",
+      "pinyin": "jǐngchá",
+      "meaning": "경찰.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 824,
+      "hanzi": "经济",
+      "pinyin": "jīngjì",
+      "meaning": "경제. 국민 경제.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 825,
+      "hanzi": "京剧",
+      "pinyin": "jīngjù",
+      "meaning": "경극.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 826,
+      "hanzi": "经历",
+      "pinyin": "jīnglì",
+      "meaning": "몸소 겪다. 체험하다. 경험하다. 경과하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 827,
+      "hanzi": "竟然",
+      "pinyin": "jìngrán",
+      "meaning": "뜻밖에도. 의외로. 상상 외로. 놀랍게도.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 828,
+      "hanzi": "景色",
+      "pinyin": "jǐngsè",
+      "meaning": "풍경. 경치.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 829,
+      "hanzi": "尽管",
+      "pinyin": "jǐnguǎn",
+      "meaning": "비록〔설령〕 …라 하더라도. …에도 불구하고.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 830,
+      "hanzi": "经验",
+      "pinyin": "jīngyàn",
+      "meaning": "경험. 체험.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 831,
+      "hanzi": "竞争",
+      "pinyin": "jìngzhēng",
+      "meaning": "경쟁하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 832,
+      "hanzi": "镜子",
+      "pinyin": "jìngzi",
+      "meaning": "거울.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 833,
+      "hanzi": "进行",
+      "pinyin": "jìnxíng",
+      "meaning": "앞으로 나아가다. 전진하다. 행진하다. 진행하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 834,
+      "hanzi": "紧张",
+      "pinyin": "jǐnzhāng",
+      "meaning": "(정신적으로) 긴장해 있다. 불안하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 835,
+      "hanzi": "禁止",
+      "pinyin": "jìnzhǐ",
+      "meaning": "금지하다. 불허하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 836,
+      "hanzi": "既然",
+      "pinyin": "jìrán",
+      "meaning": "…된 바에야. …인〔된〕 이상. …만큼.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 837,
+      "hanzi": "及时",
+      "pinyin": "jíshí",
+      "meaning": "시기 적절하다. 때가 맞다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 838,
+      "hanzi": "即使",
+      "pinyin": "jíshǐ",
+      "meaning": "설령 …하더라도〔할지라도·일지라도〕",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 839,
+      "hanzi": "技术",
+      "pinyin": "jìshù",
+      "meaning": "기술.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 840,
+      "hanzi": "究竟",
+      "pinyin": "jiūjìng",
+      "meaning": "도대체. 대관절.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 841,
+      "hanzi": "继续",
+      "pinyin": "jìxù",
+      "meaning": "계속하다. 끊임없이 하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 842,
+      "hanzi": "记者",
+      "pinyin": "jìzhě",
+      "meaning": "기자.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 843,
+      "hanzi": "举",
+      "pinyin": "jǔ",
+      "meaning": "들다. 들어올리다. 위로 받치다. 위로 펼치다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 844,
+      "hanzi": "举办",
+      "pinyin": "jǔbàn",
+      "meaning": "거행하다. 개최하다. 열다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 845,
+      "hanzi": "聚会",
+      "pinyin": "jùhuì",
+      "meaning": "모임. 회합. 집회.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 846,
+      "hanzi": "拒绝",
+      "pinyin": "jùjué",
+      "meaning": "(부탁·의견·선물 등을) 거절하다. 거부하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 847,
+      "hanzi": "距离",
+      "pinyin": "jùlí",
+      "meaning": "거리. 간격.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 848,
+      "hanzi": "举行",
+      "pinyin": "jǔxíng",
+      "meaning": "거행하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 849,
+      "hanzi": "开玩笑",
+      "pinyin": "kāiwánxiào",
+      "meaning": "농담하다. 웃기다. 놀리다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 850,
+      "hanzi": "开心",
+      "pinyin": "kāixīn",
+      "meaning": "기쁘다. 즐겁다. 좋다. 유쾌하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 851,
+      "hanzi": "看法",
+      "pinyin": "kànfǎ",
+      "meaning": "견해.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 852,
+      "hanzi": "考虑",
+      "pinyin": "kǎolǜ",
+      "meaning": "고려하다. 생각하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 853,
+      "hanzi": "烤鸭",
+      "pinyin": "kǎoyā",
+      "meaning": "(통)오리구이.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 854,
+      "hanzi": "棵",
+      "pinyin": "kē",
+      "meaning": "그루. 포기. [식물을 세는 단위]",
+      "level": 4,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 855,
+      "hanzi": "可怜",
+      "pinyin": "kělián",
+      "meaning": "가련하다. 불쌍하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 856,
+      "hanzi": "肯定",
+      "pinyin": "kěndìng",
+      "meaning": "확실히. 틀림없이. 의심할 여지없이.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 857,
+      "hanzi": "可是",
+      "pinyin": "kěshì",
+      "meaning": "그러나. 하지만. 그렇지만.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 858,
+      "hanzi": "咳嗽",
+      "pinyin": "késou",
+      "meaning": "기침하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 859,
+      "hanzi": "客厅",
+      "pinyin": "kètīng",
+      "meaning": "객실. 응접실.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 860,
+      "hanzi": "可惜",
+      "pinyin": "kěxī",
+      "meaning": "섭섭하다. 아쉽다. 애석하다. 아깝다. 유감스럽다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 861,
+      "hanzi": "科学",
+      "pinyin": "kēxué",
+      "meaning": "과학(적이다).",
+      "level": 4,
+      "partOfSpeech": "명사,형용사"
+    },
+    {
+      "id": 862,
+      "hanzi": "空",
+      "pinyin": "kōng",
+      "meaning": "(속이) 비다. 텅 비다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 863,
+      "hanzi": "恐怕",
+      "pinyin": "kǒngpà",
+      "meaning": "아마 …일것이다. [추측과 짐작을 나타냄]",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 864,
+      "hanzi": "空气",
+      "pinyin": "kōngqì",
+      "meaning": "공기.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 865,
+      "hanzi": "苦",
+      "pinyin": "kǔ",
+      "meaning": "쓰다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 866,
+      "hanzi": "矿泉水",
+      "pinyin": "kuàngquánshuǐ",
+      "meaning": "광천수. 생수. 미네랄 워터(mineral water).",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 867,
+      "hanzi": "困",
+      "pinyin": "kùn",
+      "meaning": "포위하다. 가두어 놓다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 868,
+      "hanzi": "困难",
+      "pinyin": "kùnnan",
+      "meaning": "빈곤. 곤란. 애로. 어려움.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 869,
+      "hanzi": "辣",
+      "pinyin": "là",
+      "meaning": "맵다. 아리다. 얼얼하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 870,
+      "hanzi": "拉",
+      "pinyin": "lā",
+      "meaning": "끌다. 당기다. 견인하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 871,
+      "hanzi": "来不及",
+      "pinyin": "láibují",
+      "meaning": "(시간이 부족하여) 돌볼〔손쓸〕 틈이 없다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 872,
+      "hanzi": "来得及",
+      "pinyin": "láidejí",
+      "meaning": "늦지 않다. (시간이 있어서) 돌볼〔손쓸〕 수가 있다. 생각할 겨를이 있다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 873,
+      "hanzi": "来自",
+      "pinyin": "láizì",
+      "meaning": "…(로)부터 오다. …에서 나오다. …에서 생겨나다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 874,
+      "hanzi": "垃圾桶",
+      "pinyin": "lājītǒng",
+      "meaning": "쓰레기통.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 875,
+      "hanzi": "懒",
+      "pinyin": "lǎn",
+      "meaning": "게으르다. 나태하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 876,
+      "hanzi": "浪费",
+      "pinyin": "làngfèi",
+      "meaning": "낭비하다. 허비하다. 헛되이쓰다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 877,
+      "hanzi": "浪漫",
+      "pinyin": "làngmàn",
+      "meaning": "낭만적이다. 로맨틱하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 878,
+      "hanzi": "老虎",
+      "pinyin": "lǎohǔ",
+      "meaning": "범. 호랑이.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 879,
+      "hanzi": "冷静",
+      "pinyin": "lěngjìng",
+      "meaning": "냉정하다. 침착하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 880,
+      "hanzi": "俩",
+      "pinyin": "liǎ",
+      "meaning": "두 개. 두 사람.",
+      "level": 4,
+      "partOfSpeech": "수사"
+    },
+    {
+      "id": 881,
+      "hanzi": "连",
+      "pinyin": "lián",
+      "meaning": "잇다. 붙이다. 잇대다. 잇닿다. 연(連)하다. 이어지다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 882,
+      "hanzi": "凉快",
+      "pinyin": "liángkuai",
+      "meaning": "시원하다. 서늘하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 883,
+      "hanzi": "联系",
+      "pinyin": "liánxì",
+      "meaning": "연락하다. 연결하다. 결합하다. 결부하다. 연관짓다. 관계하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 884,
+      "hanzi": "礼拜天",
+      "pinyin": "lǐbàitiān",
+      "meaning": "일요일.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 885,
+      "hanzi": "理发",
+      "pinyin": "lǐfà",
+      "meaning": "이발하다. 머리를 깎다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 886,
+      "hanzi": "厉害",
+      "pinyin": "lìhai",
+      "meaning": "무섭다. 사납다. 무시무시하다. 상대하기 어렵다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 887,
+      "hanzi": "理解",
+      "pinyin": "lǐjiě",
+      "meaning": "알다. 이해하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 888,
+      "hanzi": "礼貌",
+      "pinyin": "lǐmào",
+      "meaning": "예의. 예의범절.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 889,
+      "hanzi": "零钱",
+      "pinyin": "língqián",
+      "meaning": "푼돈. 잔돈.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 890,
+      "hanzi": "另外",
+      "pinyin": "lìngwài",
+      "meaning": "다른〔그 밖의·그 외의〕 사람이나 사물.",
+      "level": 4,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 891,
+      "hanzi": "力气",
+      "pinyin": "lìqi",
+      "meaning": "힘. 역량.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 892,
+      "hanzi": "例如",
+      "pinyin": "lìrú",
+      "meaning": "예〔보기〕를 들다. 예를 들면. 예컨대.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 893,
+      "hanzi": "留",
+      "pinyin": "liú",
+      "meaning": "보관하다. 보존하다. 간수하다. 보류하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 894,
+      "hanzi": "流利",
+      "pinyin": "liúlì",
+      "meaning": "막힘이 없다. 미끈하다. 거침없다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 895,
+      "hanzi": "流行",
+      "pinyin": "liúxíng",
+      "meaning": "유행하다. 성행하다. 널리 퍼지다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 896,
+      "hanzi": "理想",
+      "pinyin": "lǐxiǎng",
+      "meaning": "이상.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 897,
+      "hanzi": "乱",
+      "pinyin": "luàn",
+      "meaning": "어지럽다. 무질서하다. 혼란하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 898,
+      "hanzi": "律师",
+      "pinyin": "lǜshī",
+      "meaning": "변호사.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 899,
+      "hanzi": "旅行",
+      "pinyin": "lǚxíng",
+      "meaning": "여행하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 900,
+      "hanzi": "麻烦",
+      "pinyin": "máfan",
+      "meaning": "귀찮다. 성가시다. 번거롭다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 901,
+      "hanzi": "马虎",
+      "pinyin": "mǎhu",
+      "meaning": "적당히하다. 대강〔대충·데면데면〕하다. 건성으로 하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 902,
+      "hanzi": "满",
+      "pinyin": "mǎn",
+      "meaning": "가득〔꽉〕 차다. 가득하다. 그득하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 903,
+      "hanzi": "毛",
+      "pinyin": "máo",
+      "meaning": "(동식물의 표피에 나 있는) 털. 깃. 깃털.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 904,
+      "hanzi": "毛巾",
+      "pinyin": "máojīn",
+      "meaning": "수건. 타월.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 905,
+      "hanzi": "美丽",
+      "pinyin": "měilì",
+      "meaning": "아름답다. 예쁘다. 곱다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 906,
+      "hanzi": "梦",
+      "pinyin": "mèng",
+      "meaning": "꿈.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 907,
+      "hanzi": "免费",
+      "pinyin": "miǎnfèi",
+      "meaning": "돈을 받지 않다. 무료로 하다. 돈 낼 필요가 없다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 908,
+      "hanzi": "秒",
+      "pinyin": "miǎo",
+      "meaning": "초. [시간 계량 단위로, 60초를 1분(分)이라 함]",
+      "level": 4,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 909,
+      "hanzi": "迷路",
+      "pinyin": "mílù",
+      "meaning": "길을 잃다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 910,
+      "hanzi": "密码",
+      "pinyin": "mìmǎ",
+      "meaning": "암호. 비밀 번호. 비밀 전보 코드.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 911,
+      "hanzi": "民族",
+      "pinyin": "mínzú",
+      "meaning": "민족.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 912,
+      "hanzi": "目的",
+      "pinyin": "mùdì",
+      "meaning": "목적.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 913,
+      "hanzi": "母亲",
+      "pinyin": "mǔqīn",
+      "meaning": "(자신을 낳아 준) 모친. 엄마. 어머니.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 914,
+      "hanzi": "耐心",
+      "pinyin": "nàixīn",
+      "meaning": "참을성이 있다. 인내심이 강하다. 인내성이 있다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 915,
+      "hanzi": "难道",
+      "pinyin": "nándào",
+      "meaning": "설마 …란 말인가? 설마 …하겠는가? 설마 …이겠어요? 설마 …는 아니겠지요.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 916,
+      "hanzi": "难受",
+      "pinyin": "nánshòu",
+      "meaning": "(몸이) 불편하다. 견딜〔참을〕 수 없다. 괴롭다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 917,
+      "hanzi": "内",
+      "pinyin": "nèi",
+      "meaning": "안. 안쪽. 속. 내부",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 918,
+      "hanzi": "内容",
+      "pinyin": "nèiróng",
+      "meaning": "내용.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 919,
+      "hanzi": "能力",
+      "pinyin": "nénglì",
+      "meaning": "(일을 할 수 있는) 능력. 역량.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 920,
+      "hanzi": "年龄",
+      "pinyin": "niánlíng",
+      "meaning": "연령. 나이. 연세.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 921,
+      "hanzi": "弄",
+      "pinyin": "nòng",
+      "meaning": "(방법을 강구하여) 손에 넣다. 장만하다. 마련하다. 구하다. 갖추다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 922,
+      "hanzi": "暖和",
+      "pinyin": "nuǎnhuo",
+      "meaning": "따뜻하다. 따사롭다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 923,
+      "hanzi": "偶尔",
+      "pinyin": "ǒu'ěr",
+      "meaning": "때때로. 간혹. 이따금.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 924,
+      "hanzi": "排队",
+      "pinyin": "páiduì",
+      "meaning": "순서대로 정렬하다. 줄을 서다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 925,
+      "hanzi": "排列",
+      "pinyin": "páiliè",
+      "meaning": "배열하다. 정렬하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 926,
+      "hanzi": "判断",
+      "pinyin": "pànduàn",
+      "meaning": "판단하다. 판정하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 927,
+      "hanzi": "陪",
+      "pinyin": "péi",
+      "meaning": "모시다. 동반하다. 안내하다. 수행하다. 배석하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 928,
+      "hanzi": "骗",
+      "pinyin": "piàn",
+      "meaning": "속이다. 기만하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 929,
+      "hanzi": "篇",
+      "pinyin": "piān",
+      "meaning": "편. 장. [문장·종이 등을 세는 단위]",
+      "level": 4,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 930,
+      "hanzi": "皮肤",
+      "pinyin": "pífū",
+      "meaning": "피부.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 931,
+      "hanzi": "乒乓球",
+      "pinyin": "pīngpāngqiú",
+      "meaning": "탁구.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 932,
+      "hanzi": "平时",
+      "pinyin": "píngshí",
+      "meaning": "평소. 평상시. 보통 때.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 933,
+      "hanzi": "批评",
+      "pinyin": "pīpíng",
+      "meaning": "비판하다. 지적하다. 질책하다. 꾸짖다. 나무라다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 934,
+      "hanzi": "脾气",
+      "pinyin": "píqi",
+      "meaning": "성격. 성질. 성미. 기질.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 935,
+      "hanzi": "破",
+      "pinyin": "pò",
+      "meaning": "파손되다. 찢어지다. 망가지다. 깨지다. 해지다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 936,
+      "hanzi": "普遍",
+      "pinyin": "pǔbiàn",
+      "meaning": "보편적인. 일반적인. 전면적인. 널리 퍼져 있는.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 937,
+      "hanzi": "葡萄",
+      "pinyin": "pútáo",
+      "meaning": "포도.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 938,
+      "hanzi": "普通话",
+      "pinyin": "pǔtōnghuà",
+      "meaning": "현대 중국 표준어.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 939,
+      "hanzi": "千万",
+      "pinyin": "qiānwàn",
+      "meaning": "부디. 제발. 아무쪼록. 꼭. 절대로. 반드시.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 940,
+      "hanzi": "签证",
+      "pinyin": "qiānzhèng",
+      "meaning": "비자(visa). 사증(査證).",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 941,
+      "hanzi": "桥",
+      "pinyin": "qiáo",
+      "meaning": "다리. 교량.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 942,
+      "hanzi": "敲",
+      "pinyin": "qiāo",
+      "meaning": "치다. 두드리다. 때리다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 943,
+      "hanzi": "巧克力",
+      "pinyin": "qiǎokèlì",
+      "meaning": "초콜릿(chocolate).",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 944,
+      "hanzi": "其次",
+      "pinyin": "qícì",
+      "meaning": "다음. 그 다음. 버금.",
+      "level": 4,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 945,
+      "hanzi": "气候",
+      "pinyin": "qìhòu",
+      "meaning": "기후.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 946,
+      "hanzi": "轻",
+      "pinyin": "qīng",
+      "meaning": "(무게가) 가볍다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 947,
+      "hanzi": "情况",
+      "pinyin": "qíngkuàng",
+      "meaning": "상황. 정황. 형편. 사정.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 948,
+      "hanzi": "轻松",
+      "pinyin": "qīngsōng",
+      "meaning": "수월하다. 가볍다. 부담이 없다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 949,
+      "hanzi": "亲戚",
+      "pinyin": "qīnqi",
+      "meaning": "친척.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 950,
+      "hanzi": "穷",
+      "pinyin": "qióng",
+      "meaning": "빈곤하다. 가난하다. 궁하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 951,
+      "hanzi": "其中",
+      "pinyin": "qízhōng",
+      "meaning": "그 중에. 그 안에.",
+      "level": 4,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 952,
+      "hanzi": "取",
+      "pinyin": "qǔ",
+      "meaning": "가지다. 취하다. 찾다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 953,
+      "hanzi": "全部",
+      "pinyin": "quánbù",
+      "meaning": "전부. 전체. 모두.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 954,
+      "hanzi": "区别",
+      "pinyin": "qūbié",
+      "meaning": "구별. 차이.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 955,
+      "hanzi": "却",
+      "pinyin": "què",
+      "meaning": "후퇴하다. 퇴각하다. 물러나다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 956,
+      "hanzi": "缺点",
+      "pinyin": "quēdiǎn",
+      "meaning": "결점. 단점. 부족한 점.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 957,
+      "hanzi": "缺少",
+      "pinyin": "quēshǎo",
+      "meaning": "(인원이나 물건의 수량이) 부족하다. 모자라다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 958,
+      "hanzi": "确实",
+      "pinyin": "quèshí",
+      "meaning": "확실하다. 믿을 만하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 959,
+      "hanzi": "然而",
+      "pinyin": "rán'ér",
+      "meaning": "그러나. 하지만. 그렇지만.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 960,
+      "hanzi": "热闹",
+      "pinyin": "rènao",
+      "meaning": "(광경이나 분위기가) 번화하다. 흥성거리다. 떠들썩하다. 시끌벅적하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 961,
+      "hanzi": "扔",
+      "pinyin": "rēng",
+      "meaning": "던지다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 962,
+      "hanzi": "仍然",
+      "pinyin": "réngrán",
+      "meaning": "변함없이. 여전히. 아직도. 원래대로.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 963,
+      "hanzi": "任何",
+      "pinyin": "rènhé",
+      "meaning": "어떠한. 무슨. [주로 ‘都(dōu)’와 호응하여 쓰임]",
+      "level": 4,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 964,
+      "hanzi": "任务",
+      "pinyin": "rènwu",
+      "meaning": "임무.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 965,
+      "hanzi": "日记",
+      "pinyin": "rìjì",
+      "meaning": "일기. 일지.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 966,
+      "hanzi": "入口",
+      "pinyin": "rùkǒu",
+      "meaning": "수입하다. 외지 물건이 들어오다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 967,
+      "hanzi": "散步",
+      "pinyin": "sànbù",
+      "meaning": "산보하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 968,
+      "hanzi": "森林",
+      "pinyin": "sēnlín",
+      "meaning": "삼림. 숲. 산림.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 969,
+      "hanzi": "沙发",
+      "pinyin": "shāfā",
+      "meaning": "소파(sofa).",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 970,
+      "hanzi": "商量",
+      "pinyin": "shāngliang",
+      "meaning": "(주로 말로 일반적인 문제를) 상의하다. 의논하다. 협의하다. 토의하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 971,
+      "hanzi": "伤心",
+      "pinyin": "shāngxīn",
+      "meaning": "상심하다. 슬퍼하다. 마음아파하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 972,
+      "hanzi": "稍微",
+      "pinyin": "shāowēi",
+      "meaning": "조금. 약간. 다소.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 973,
+      "hanzi": "勺子",
+      "pinyin": "sháozi",
+      "meaning": "(조금 큰) 국자. 주걱. 수저.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 974,
+      "hanzi": "社会",
+      "pinyin": "shèhuì",
+      "meaning": "사회.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 975,
+      "hanzi": "深",
+      "pinyin": "shēn",
+      "meaning": "깊다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 976,
+      "hanzi": "剩",
+      "pinyin": "shèng",
+      "meaning": "남다. 남기다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 977,
+      "hanzi": "省",
+      "pinyin": "shěng",
+      "meaning": "아끼다. 절약하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 978,
+      "hanzi": "生活",
+      "pinyin": "shēnghuó",
+      "meaning": "생활.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 979,
+      "hanzi": "生命",
+      "pinyin": "shēngmìng",
+      "meaning": "생명. 목숨.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 980,
+      "hanzi": "生意",
+      "pinyin": "shēngyi",
+      "meaning": "장사. 영업. 사업. 비즈니스(business). 거래.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 981,
+      "hanzi": "申请",
+      "pinyin": "shēnqǐng",
+      "meaning": "신청하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 982,
+      "hanzi": "甚至",
+      "pinyin": "shènzhì",
+      "meaning": "심지어. …까지도. …조차도.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 983,
+      "hanzi": "使",
+      "pinyin": "shǐ",
+      "meaning": "(…에게) …시키다. …하게 하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 984,
+      "hanzi": "失败",
+      "pinyin": "shībài",
+      "meaning": "(일이나 사업을) 실패하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 985,
+      "hanzi": "十分",
+      "pinyin": "shífēn",
+      "meaning": "매우. 아주. 대단히. 충분히.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 986,
+      "hanzi": "是否",
+      "pinyin": "shìfǒu",
+      "meaning": "…인지 아닌지.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 987,
+      "hanzi": "师傅",
+      "pinyin": "shīfu",
+      "meaning": "기사님. 선생님. [기예·기능을 가진 사람에 대한 존칭]",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 988,
+      "hanzi": "适合",
+      "pinyin": "shìhé",
+      "meaning": "적합하다. 부합하다. 알맞다. 적절하다. 어울리다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 989,
+      "hanzi": "实际",
+      "pinyin": "shíjì",
+      "meaning": "실제.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 990,
+      "hanzi": "世纪",
+      "pinyin": "shìjì",
+      "meaning": "세기.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 991,
+      "hanzi": "失望",
+      "pinyin": "shīwàng",
+      "meaning": "실망하다. 희망을 잃다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 992,
+      "hanzi": "适应",
+      "pinyin": "shìyìng",
+      "meaning": "적응하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 993,
+      "hanzi": "使用",
+      "pinyin": "shǐyòng",
+      "meaning": "사용하다. 쓰다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 994,
+      "hanzi": "实在",
+      "pinyin": "shízai",
+      "meaning": "착실하다. 성실하다. 건실하다. 꼼꼼하다. 알차다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 995,
+      "hanzi": "收",
+      "pinyin": "shōu",
+      "meaning": "받다. 접수하다. 받아들이다. 용납하다. 수용하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 996,
+      "hanzi": "受不了",
+      "pinyin": "shòubuliǎo",
+      "meaning": "견딜 수 없다. 참을 수 없다. 배길 수 없다. 못 봐주다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 997,
+      "hanzi": "受到",
+      "pinyin": "shòudào",
+      "meaning": "얻다. 받다. 만나다. 부딪치다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 998,
+      "hanzi": "首都",
+      "pinyin": "shǒudū",
+      "meaning": "수도.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 999,
+      "hanzi": "售货员",
+      "pinyin": "shòuhuòyuán",
+      "meaning": "판매원. 점원.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1000,
+      "hanzi": "收入",
+      "pinyin": "shōurù",
+      "meaning": "수입. 소득.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1001,
+      "hanzi": "收拾",
+      "pinyin": "shōushi",
+      "meaning": "거두다. 정리하다. 정돈하다. 치우다. 수습하다. 꾸리다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1002,
+      "hanzi": "首先",
+      "pinyin": "shǒuxiān",
+      "meaning": "가장 먼저. 맨 먼저. 우선. 무엇보다 먼저.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 1003,
+      "hanzi": "输",
+      "pinyin": "shū",
+      "meaning": "패하다. 지다. 잃다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1004,
+      "hanzi": "帅",
+      "pinyin": "shuài",
+      "meaning": "잘생기다. 멋지다. 영준하다. 스마트하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1005,
+      "hanzi": "数量",
+      "pinyin": "shùliàng",
+      "meaning": "수량. 양. 수효.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1006,
+      "hanzi": "顺便",
+      "pinyin": "shùnbiàn",
+      "meaning": "…하는 김에. 겸사겸사. 차제에.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 1007,
+      "hanzi": "顺利",
+      "pinyin": "shùnlì",
+      "meaning": "순조롭다. 일이 잘 되어가다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1008,
+      "hanzi": "顺序",
+      "pinyin": "shùnxù",
+      "meaning": "순서. 차례. 순번. 순차.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1009,
+      "hanzi": "说明",
+      "pinyin": "shuōmíng",
+      "meaning": "설명하다. 해설하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1010,
+      "hanzi": "硕士",
+      "pinyin": "shuòshì",
+      "meaning": "석사.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1011,
+      "hanzi": "熟悉",
+      "pinyin": "shúxī",
+      "meaning": "잘 알다. 익숙하다. 생소하지 않다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1012,
+      "hanzi": "数字",
+      "pinyin": "shùzì",
+      "meaning": "숫자.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1013,
+      "hanzi": "死",
+      "pinyin": "sǐ",
+      "meaning": "(생물이) 죽다. 생명을 잃다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1014,
+      "hanzi": "酸",
+      "pinyin": "suān",
+      "meaning": "(맛·냄새 등이) 시큼하다. 시다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1015,
+      "hanzi": "速度",
+      "pinyin": "sùdù",
+      "meaning": "속도.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1016,
+      "hanzi": "随便",
+      "pinyin": "suíbiàn",
+      "meaning": "마음대로. 좋을 대로. 자유로이. 함부로. 제멋대로",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 1017,
+      "hanzi": "随着",
+      "pinyin": "suízhe",
+      "meaning": "(…에) 따르다. …따라서. …뒤이어. …에 따라.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1018,
+      "hanzi": "塑料袋",
+      "pinyin": "sùliàodài",
+      "meaning": "비닐봉지",
+      "level": 4
+    },
+    {
+      "id": 1019,
+      "hanzi": "孙子",
+      "pinyin": "sūnzi",
+      "meaning": "손자.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1020,
+      "hanzi": "所有",
+      "pinyin": "suǒyǒu",
+      "meaning": "모든. 전부의. 일체의. 전체의.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1021,
+      "hanzi": "台",
+      "pinyin": "tái",
+      "meaning": "높고 평평한 건축물. 대.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1022,
+      "hanzi": "抬",
+      "pinyin": "tái",
+      "meaning": "(두 사람 이상이) 맞들다. 함께 들다. 맞메다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1023,
+      "hanzi": "态度",
+      "pinyin": "tàidu",
+      "meaning": "태도.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1024,
+      "hanzi": "谈",
+      "pinyin": "tán",
+      "meaning": "말하다. 이야기하다. 토론하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1025,
+      "hanzi": "糖",
+      "pinyin": "táng",
+      "meaning": "설탕의 총칭.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1026,
+      "hanzi": "趟",
+      "pinyin": "tàng",
+      "meaning": "차례. 번. [왕래한 횟수를 세는 데 쓰임]",
+      "level": 4,
+      "partOfSpeech": "양사"
+    },
+    {
+      "id": 1027,
+      "hanzi": "躺",
+      "pinyin": "tǎng",
+      "meaning": "눕다. 드러눕다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1028,
+      "hanzi": "汤",
+      "pinyin": "tāng",
+      "meaning": "(음식물을 끓인 후 나오는) 국물.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1029,
+      "hanzi": "弹钢琴",
+      "pinyin": "tángāngqín",
+      "meaning": "피아노를 치다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1030,
+      "hanzi": "讨论",
+      "pinyin": "tǎolùn",
+      "meaning": "토론하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1031,
+      "hanzi": "讨厌",
+      "pinyin": "tǎoyàn",
+      "meaning": "싫어하다. 미워하다. 혐오하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1032,
+      "hanzi": "特点",
+      "pinyin": "tèdiǎn",
+      "meaning": "특징. 특색. 특점. 특성.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1033,
+      "hanzi": "提",
+      "pinyin": "tí",
+      "meaning": "(아래에서 위로) 끌어올리다. 높이다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1034,
+      "hanzi": "填空",
+      "pinyin": "tiánkòng",
+      "meaning": "빈 자리〔직위〕를 메우다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1035,
+      "hanzi": "条件",
+      "pinyin": "tiáojiàn",
+      "meaning": "조건.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1036,
+      "hanzi": "提供",
+      "pinyin": "tígōng",
+      "meaning": "(자료·물자·의견·조건 등을) 제공하다. 공급하다. 내놓다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1037,
+      "hanzi": "停",
+      "pinyin": "tíng",
+      "meaning": "정지하다. 멎다. 서다. 멈추다. 중지하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1038,
+      "hanzi": "挺",
+      "pinyin": "tǐng",
+      "meaning": "꼿꼿하다. 빳빳하다. 곧다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1039,
+      "hanzi": "提前",
+      "pinyin": "tíqián",
+      "meaning": "(예정된 시간·위치를) 앞당기다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1040,
+      "hanzi": "提醒",
+      "pinyin": "tíxǐng",
+      "meaning": "일깨우다. 깨우치다. 주의를 환기시키다",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1041,
+      "hanzi": "通过",
+      "pinyin": "tōngguò",
+      "meaning": "(한쪽에서 다른 한쪽으로) 건너가다. 통과하다. 지나가다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1042,
+      "hanzi": "同情",
+      "pinyin": "tóngqíng",
+      "meaning": "동정하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1043,
+      "hanzi": "同时",
+      "pinyin": "tóngshí",
+      "meaning": "동시. 같은 시간. 동일한 시기. 같은 때.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1044,
+      "hanzi": "通知",
+      "pinyin": "tōngzhī",
+      "meaning": "통지. 통지서. 통고서.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1045,
+      "hanzi": "推",
+      "pinyin": "tuī",
+      "meaning": "밀다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1046,
+      "hanzi": "推迟",
+      "pinyin": "tuīchí",
+      "meaning": "뒤로 미루다. 늦추다. 연기하다. 지연시키다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1047,
+      "hanzi": "脱",
+      "pinyin": "tuō",
+      "meaning": "(몸에서) 벗다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1048,
+      "hanzi": "网球",
+      "pinyin": "wǎngqiú",
+      "meaning": "테니스. 정구.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1049,
+      "hanzi": "往往",
+      "pinyin": "wǎngwǎng",
+      "meaning": "왕왕. 자주. 흔히. 종종. 때때로. 이따금.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 1050,
+      "hanzi": "网站",
+      "pinyin": "wǎngzhàn",
+      "meaning": "(인터넷) 웹사이트.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1051,
+      "hanzi": "完全",
+      "pinyin": "wánquán",
+      "meaning": "완전히. 전적으로. 전혀. 아주. 참으로. 절대로. 전연. 전부.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 1052,
+      "hanzi": "袜子",
+      "pinyin": "wàzi",
+      "meaning": "양말. 스타킹.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1053,
+      "hanzi": "味道",
+      "pinyin": "wèidao",
+      "meaning": "맛.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1054,
+      "hanzi": "卫生间",
+      "pinyin": "wèishēngjiān",
+      "meaning": "화장실. 세면장.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1055,
+      "hanzi": "危险",
+      "pinyin": "wēixiǎn",
+      "meaning": "위험하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1056,
+      "hanzi": "温度",
+      "pinyin": "wēndù",
+      "meaning": "온도.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1057,
+      "hanzi": "文章",
+      "pinyin": "wénzhāng",
+      "meaning": "독립된 한 편의 글. 문장. 글월.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1058,
+      "hanzi": "无",
+      "pinyin": "wú",
+      "meaning": "없다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1059,
+      "hanzi": "误会",
+      "pinyin": "wùhuì",
+      "meaning": "오해하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1060,
+      "hanzi": "无聊",
+      "pinyin": "wúliáo",
+      "meaning": "무료하다. 따분하다. 지루하다. 심심하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1061,
+      "hanzi": "无论",
+      "pinyin": "wúlùn",
+      "meaning": "…을〔를〕 막론하고. …을〔를〕 따지지 않고. …에 관계 없이. …든지.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 1062,
+      "hanzi": "污染",
+      "pinyin": "wūrǎn",
+      "meaning": "오염시키다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1063,
+      "hanzi": "咸",
+      "pinyin": "xián",
+      "meaning": "전부. 모두. 다.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 1064,
+      "hanzi": "响",
+      "pinyin": "xiǎng",
+      "meaning": "소리가 나다. 울리다. 소리를 내다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1065,
+      "hanzi": "香",
+      "pinyin": "xiāng",
+      "meaning": "향기롭다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1066,
+      "hanzi": "相反",
+      "pinyin": "xiāngfǎn",
+      "meaning": "반대로. 거꾸로. 오히려. 도리어.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 1067,
+      "hanzi": "橡皮",
+      "pinyin": "xiàngpí",
+      "meaning": "지우개.",
+      "level": 4
+    },
+    {
+      "id": 1068,
+      "hanzi": "相同",
+      "pinyin": "xiāngtóng",
+      "meaning": "서로 같다. 똑같다. 일치하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1069,
+      "hanzi": "详细",
+      "pinyin": "xiángxì",
+      "meaning": "상세하다. 자세하다. 세세하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1070,
+      "hanzi": "现金",
+      "pinyin": "xiànjīn",
+      "meaning": "현금.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1071,
+      "hanzi": "羡慕",
+      "pinyin": "xiànmù",
+      "meaning": "흠모하다. 부러워하다. 탐내다. 선망(羨望)하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1072,
+      "hanzi": "小吃",
+      "pinyin": "xiǎochī",
+      "meaning": "간단한 음식. 가벼운 식사. 양이 적고 값싼 요리.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1073,
+      "hanzi": "效果",
+      "pinyin": "xiàoguǒ",
+      "meaning": "효과.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1074,
+      "hanzi": "笑话",
+      "pinyin": "xiàohua",
+      "meaning": "(～儿) 우스운 이야기. 우스갯소리. 농담.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1075,
+      "hanzi": "小伙子",
+      "pinyin": "xiǎohuǒzi",
+      "meaning": "젊은이. 청년. 총각.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1076,
+      "hanzi": "小说",
+      "pinyin": "xiǎoshuō",
+      "meaning": "소설.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1077,
+      "hanzi": "消息",
+      "pinyin": "xiāoxi",
+      "meaning": "소식. 기별. 편지.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1078,
+      "hanzi": "西红柿",
+      "pinyin": "xīhóngshì",
+      "meaning": "토마토.",
+      "level": 4
+    },
+    {
+      "id": 1079,
+      "hanzi": "信封",
+      "pinyin": "xìnfēng",
+      "meaning": "편지봉투. 봉투.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1080,
+      "hanzi": "行",
+      "pinyin": "xíng",
+      "meaning": "좋다. …해도 좋다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1081,
+      "hanzi": "醒",
+      "pinyin": "xǐng",
+      "meaning": "잠에서 깨다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1082,
+      "hanzi": "性别",
+      "pinyin": "xìngbié",
+      "meaning": "성별.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1083,
+      "hanzi": "兴奋",
+      "pinyin": "xīngfèn",
+      "meaning": "(감정을) 불러일으키다. 격동하다. 격분하다. 흥분하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1084,
+      "hanzi": "幸福",
+      "pinyin": "xìngfú",
+      "meaning": "행복하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1085,
+      "hanzi": "性格",
+      "pinyin": "xìnggé",
+      "meaning": "성격.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1086,
+      "hanzi": "辛苦",
+      "pinyin": "xīnkǔ",
+      "meaning": "고생스럽다. 수고롭다. 고되다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1087,
+      "hanzi": "心情",
+      "pinyin": "xīnqíng",
+      "meaning": "심정. 감정. 마음. 기분. 정서.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1088,
+      "hanzi": "信息",
+      "pinyin": "xìnxī",
+      "meaning": "정보.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1089,
+      "hanzi": "信心",
+      "pinyin": "xìnxīn",
+      "meaning": "자신(감). 확신. 신념. 믿음.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1090,
+      "hanzi": "修理",
+      "pinyin": "xiūlǐ",
+      "meaning": "수리하다. 수선하다. 손질하다. 고치다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1091,
+      "hanzi": "吸引",
+      "pinyin": "xīyǐn",
+      "meaning": "흡인하다. 빨아당기다〔빨아들이다〕. 잡아끌다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1092,
+      "hanzi": "许多",
+      "pinyin": "xǔduō",
+      "meaning": "매우 많다. 허다하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1093,
+      "hanzi": "学期",
+      "pinyin": "xuéqī",
+      "meaning": "학기.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1094,
+      "hanzi": "呀",
+      "pinyin": "ya",
+      "meaning": "어조사 ‘啊(·a)’가 앞 음절의 모음(a·e·i·o·u)의 영향을 받아 변화된 형태",
+      "level": 4,
+      "partOfSpeech": "조사"
+    },
+    {
+      "id": 1095,
+      "hanzi": "牙膏",
+      "pinyin": "yágāo",
+      "meaning": "치약.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1096,
+      "hanzi": "压力",
+      "pinyin": "yālì",
+      "meaning": "압력.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1097,
+      "hanzi": "盐",
+      "pinyin": "yán",
+      "meaning": "소금. 식염.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1098,
+      "hanzi": "演出",
+      "pinyin": "yǎnchū",
+      "meaning": "공연하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1099,
+      "hanzi": "养成",
+      "pinyin": "yǎngchéng",
+      "meaning": "습관이 되다. 길러지다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1100,
+      "hanzi": "严格",
+      "pinyin": "yángé",
+      "meaning": "엄격하다. 엄하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1101,
+      "hanzi": "阳光",
+      "pinyin": "yángguāng",
+      "meaning": "양광. 햇빛. 태양의 빛〔광선〕.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1102,
+      "hanzi": "样子",
+      "pinyin": "yàngzi",
+      "meaning": "모양. 모습. 꼴. 형태.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1103,
+      "hanzi": "眼镜",
+      "pinyin": "yǎnjìng",
+      "meaning": "안경.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1104,
+      "hanzi": "研究",
+      "pinyin": "yánjiū",
+      "meaning": "(사물의 본질·규율 등을) 연구하다. 탐구하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1105,
+      "hanzi": "演员",
+      "pinyin": "yǎnyuán",
+      "meaning": "배우. 연기자.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1106,
+      "hanzi": "严重",
+      "pinyin": "yánzhòng",
+      "meaning": "(정세·추세·정황 등이) 위급하다. 심각하다. (영향이) 엄중하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1107,
+      "hanzi": "邀请",
+      "pinyin": "yāoqǐng",
+      "meaning": "초청하다. 초대하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1108,
+      "hanzi": "要是",
+      "pinyin": "yàoshi",
+      "meaning": "만약. 만약 …이라면〔하면〕.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 1109,
+      "hanzi": "钥匙",
+      "pinyin": "yàoshi",
+      "meaning": "열쇠.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1110,
+      "hanzi": "亚洲",
+      "pinyin": "Yàzhōu",
+      "meaning": "아시아주.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1111,
+      "hanzi": "页",
+      "pinyin": "yè",
+      "meaning": "(책의) 쪽. 면.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1112,
+      "hanzi": "也许",
+      "pinyin": "yěxǔ",
+      "meaning": "어쩌면. 아마도. [추측이나 짐작을 하여 단정하지 못함을 나타냄]",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 1113,
+      "hanzi": "叶子",
+      "pinyin": "yèzi",
+      "meaning": "잎. 잎사귀.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1114,
+      "hanzi": "以",
+      "pinyin": "yǐ",
+      "meaning": "…(으)로(써). …을〔를〕 가지고. …을〔를〕 근거로.",
+      "level": 4,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 1115,
+      "hanzi": "意见",
+      "pinyin": "yìjiàn",
+      "meaning": "견해. 의견.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1116,
+      "hanzi": "因此",
+      "pinyin": "yīncǐ",
+      "meaning": "이로 인하여. 그래서. 이 때문에.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 1117,
+      "hanzi": "赢",
+      "pinyin": "yíng",
+      "meaning": "이익을 얻다. 이윤을 남기다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1118,
+      "hanzi": "应聘",
+      "pinyin": "yìngpìn",
+      "meaning": "초빙에 응하다. 지원하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1119,
+      "hanzi": "引起",
+      "pinyin": "yǐnqǐ",
+      "meaning": "(주의를) 끌다. 야기하다. 불러 일으키다. (사건 등을) 일으키다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1120,
+      "hanzi": "印象",
+      "pinyin": "yìnxiàng",
+      "meaning": "인상.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1121,
+      "hanzi": "一切",
+      "pinyin": "yíqiè",
+      "meaning": "일체. 전부. 모든.",
+      "level": 4,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 1122,
+      "hanzi": "艺术",
+      "pinyin": "yìshù",
+      "meaning": "예술.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1123,
+      "hanzi": "以为",
+      "pinyin": "yǐwéi",
+      "meaning": "여기다. 생각하다. 간주하다. 알다. 인정하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1124,
+      "hanzi": "勇敢",
+      "pinyin": "yǒnggǎn",
+      "meaning": "용감하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1125,
+      "hanzi": "永远",
+      "pinyin": "yǒngyuǎn",
+      "meaning": "영원히. 길이길이. 언제까지나. 언제나. 항상.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 1126,
+      "hanzi": "由",
+      "pinyin": "yóu",
+      "meaning": "유래. 원인. 까닭. 이유.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1127,
+      "hanzi": "优点",
+      "pinyin": "yōudiǎn",
+      "meaning": "장점.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1128,
+      "hanzi": "友好",
+      "pinyin": "yǒuhǎo",
+      "meaning": "우호적이다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1129,
+      "hanzi": "邮局",
+      "pinyin": "yóujú",
+      "meaning": "우체국.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1130,
+      "hanzi": "幽默",
+      "pinyin": "yōumò",
+      "meaning": "유머(humor)러스한.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1131,
+      "hanzi": "尤其",
+      "pinyin": "yóuqí",
+      "meaning": "더욱이. 특히.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 1132,
+      "hanzi": "有趣",
+      "pinyin": "yǒuqù",
+      "meaning": "재미있다. 흥미가 있다. 흥미를 끌다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1133,
+      "hanzi": "优秀",
+      "pinyin": "yōuxiù",
+      "meaning": "(품행이나 학업·성적 등이) 아주 뛰어나다. 우수하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1134,
+      "hanzi": "友谊",
+      "pinyin": "yǒuyì",
+      "meaning": "우의. 우정.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1135,
+      "hanzi": "由于",
+      "pinyin": "yóuyú",
+      "meaning": "…때문에. …(으)로 인하여. [동작 행위의 원인이나 이유를 이끌어 냄]",
+      "level": 4,
+      "partOfSpeech": "개사"
+    },
+    {
+      "id": 1136,
+      "hanzi": "与",
+      "pinyin": "yǔ",
+      "meaning": "…와〔과〕.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 1137,
+      "hanzi": "原来",
+      "pinyin": "yuánlái",
+      "meaning": "이전에. 당초. 처음에. 원래. 본래.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 1138,
+      "hanzi": "原谅",
+      "pinyin": "yuánliàng",
+      "meaning": "양해하다. 이해하다. 용서하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1139,
+      "hanzi": "原因",
+      "pinyin": "yuányīn",
+      "meaning": "원인.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1140,
+      "hanzi": "阅读",
+      "pinyin": "yuèdú",
+      "meaning": "열독하다. (책이나 신문을) 보다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1141,
+      "hanzi": "约会",
+      "pinyin": "yuēhuì",
+      "meaning": "만날 약속을 하다. 데이트하다",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1142,
+      "hanzi": "语法",
+      "pinyin": "yǔfǎ",
+      "meaning": "어법.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1143,
+      "hanzi": "愉快",
+      "pinyin": "yúkuài",
+      "meaning": "기쁘다. 유쾌하다. 즐겁다. 기분이 상쾌하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1144,
+      "hanzi": "羽毛球",
+      "pinyin": "yǔmáoqiú",
+      "meaning": "배드민턴.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1145,
+      "hanzi": "云",
+      "pinyin": "yún",
+      "meaning": "구름.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1146,
+      "hanzi": "允许",
+      "pinyin": "yǔnxǔ",
+      "meaning": "동의하다. 허가하다. 응낙하다. 허락하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1147,
+      "hanzi": "于是",
+      "pinyin": "yúshì",
+      "meaning": "그래서. 이리하여. 그리하여. 이에. 이 때문에.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 1148,
+      "hanzi": "预习",
+      "pinyin": "yùxí",
+      "meaning": "예습하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1149,
+      "hanzi": "语言",
+      "pinyin": "yǔyán",
+      "meaning": "언어. [구어와 문어가 있음]",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1150,
+      "hanzi": "脏",
+      "pinyin": "zāng",
+      "meaning": "더럽다. 불결하다. 지저분하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1151,
+      "hanzi": "咱们",
+      "pinyin": "zánmen",
+      "meaning": "우리(들).",
+      "level": 4,
+      "partOfSpeech": "대명사"
+    },
+    {
+      "id": 1152,
+      "hanzi": "暂时",
+      "pinyin": "zànshí",
+      "meaning": "잠깐. 잠시. 일시.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1153,
+      "hanzi": "杂志",
+      "pinyin": "zázhì",
+      "meaning": "잡지.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1154,
+      "hanzi": "增加",
+      "pinyin": "zēngjiā",
+      "meaning": "증가하다. 더하다. 늘리다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1155,
+      "hanzi": "责任",
+      "pinyin": "zérèn",
+      "meaning": "책임.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1156,
+      "hanzi": "占线",
+      "pinyin": "zhànxiàn",
+      "meaning": "(전화 선로가) 통화 중이다. 사용 중이다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1157,
+      "hanzi": "照",
+      "pinyin": "zhào",
+      "meaning": "비추다. 비치다. 빛나다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1158,
+      "hanzi": "招聘",
+      "pinyin": "zhāopìn",
+      "meaning": "(공모의 방식으로) 모집하다. 초빙하다. 초청하다. 채용하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1159,
+      "hanzi": "正常",
+      "pinyin": "zhèngcháng",
+      "meaning": "정상적인.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1160,
+      "hanzi": "正好",
+      "pinyin": "zhènghǎo",
+      "meaning": "딱맞다. 꼭 맞다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1161,
+      "hanzi": "整理",
+      "pinyin": "zhěnglǐ",
+      "meaning": "정리하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1162,
+      "hanzi": "证明",
+      "pinyin": "zhèngmíng",
+      "meaning": "증명하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1163,
+      "hanzi": "正确",
+      "pinyin": "zhèngquè",
+      "meaning": "정확하다. 올바르다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1164,
+      "hanzi": "正式",
+      "pinyin": "zhèngshì",
+      "meaning": "정식의. 공식의. 정규의.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1165,
+      "hanzi": "真正",
+      "pinyin": "zhēnzhèng",
+      "meaning": "진정한. 참된. 순수한. 진짜의. 명실상부한.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1166,
+      "hanzi": "指",
+      "pinyin": "zhǐ",
+      "meaning": "손가락.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1167,
+      "hanzi": "之",
+      "pinyin": "zhī",
+      "meaning": "가다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1168,
+      "hanzi": "支持",
+      "pinyin": "zhīchí",
+      "meaning": "지지하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1169,
+      "hanzi": "值得",
+      "pinyin": "zhídé",
+      "meaning": "값에 상응하다. 값이 맞다. 값이 …할 만하다. …할 만한 가치가 있다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1170,
+      "hanzi": "只好",
+      "pinyin": "zhǐhǎo",
+      "meaning": "부득이. 부득불. 할 수 없이. 어쩔 수 없이. …할 수밖에 없다.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 1171,
+      "hanzi": "直接",
+      "pinyin": "zhíjiē",
+      "meaning": "직접적인.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1172,
+      "hanzi": "质量",
+      "pinyin": "zhìliàng",
+      "meaning": "(생산품이나 일의) 질. 품질.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1173,
+      "hanzi": "至少",
+      "pinyin": "zhìshǎo",
+      "meaning": "적어도. 최소한.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 1174,
+      "hanzi": "知识",
+      "pinyin": "zhīshi",
+      "meaning": "지식.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1175,
+      "hanzi": "植物",
+      "pinyin": "zhíwù",
+      "meaning": "식물.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1176,
+      "hanzi": "只要",
+      "pinyin": "zhǐyào",
+      "meaning": "…하기만 하면.",
+      "level": 4,
+      "partOfSpeech": "접속사"
+    },
+    {
+      "id": 1177,
+      "hanzi": "职业",
+      "pinyin": "zhíyè",
+      "meaning": "직업.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1178,
+      "hanzi": "重",
+      "pinyin": "zhòng",
+      "meaning": "무겁다. 비중이 크다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1179,
+      "hanzi": "重点",
+      "pinyin": "zhòngdiǎn",
+      "meaning": "중점.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1180,
+      "hanzi": "重视",
+      "pinyin": "zhòngshì",
+      "meaning": "중시하다. 중요시하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1181,
+      "hanzi": "周围",
+      "pinyin": "zhōuwéi",
+      "meaning": "주위. 주변.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1182,
+      "hanzi": "转",
+      "pinyin": "zhuàn",
+      "meaning": "돌다. 회전하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1183,
+      "hanzi": "赚",
+      "pinyin": "zhuàn",
+      "meaning": "(돈을) 벌다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1184,
+      "hanzi": "专门",
+      "pinyin": "zhuānmén",
+      "meaning": "전문적이다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1185,
+      "hanzi": "专业",
+      "pinyin": "zhuānyè",
+      "meaning": "전공.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1186,
+      "hanzi": "祝贺",
+      "pinyin": "zhùhè",
+      "meaning": "축하하다. 경하하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1187,
+      "hanzi": "著名",
+      "pinyin": "zhùmíng",
+      "meaning": "저명하다. 유명하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1188,
+      "hanzi": "准确",
+      "pinyin": "zhǔnquè",
+      "meaning": "확실하다. 정확하다. 틀림없다. 꼭 맞다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1189,
+      "hanzi": "准时",
+      "pinyin": "zhǔnshí",
+      "meaning": "정시에. 제때에.",
+      "level": 4,
+      "partOfSpeech": "부사"
+    },
+    {
+      "id": 1190,
+      "hanzi": "主意",
+      "pinyin": "zhǔyi",
+      "meaning": "방법. 생각. 아이디어.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1191,
+      "hanzi": "自然",
+      "pinyin": "zìrán",
+      "meaning": "자연.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1192,
+      "hanzi": "仔细",
+      "pinyin": "zǐxì",
+      "meaning": "세심하다. 꼼꼼하다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1193,
+      "hanzi": "自信",
+      "pinyin": "zìxìn",
+      "meaning": "자신하다. 자부하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1194,
+      "hanzi": "总结",
+      "pinyin": "zǒngjié",
+      "meaning": "총괄하다. 총화하다. 총결산하다. 총정리하다. 전체를 묶어 매듭짓다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1195,
+      "hanzi": "租",
+      "pinyin": "zū",
+      "meaning": "세내다. 임차하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1196,
+      "hanzi": "最好",
+      "pinyin": "zuìhǎo",
+      "meaning": "가장〔제일〕 좋다.",
+      "level": 4,
+      "partOfSpeech": "형용사"
+    },
+    {
+      "id": 1197,
+      "hanzi": "尊重",
+      "pinyin": "zūnzhòng",
+      "meaning": "존중하다.",
+      "level": 4,
+      "partOfSpeech": "동사"
+    },
+    {
+      "id": 1198,
+      "hanzi": "座",
+      "pinyin": "zuò",
+      "meaning": "좌석, 자리",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1199,
+      "hanzi": "作家",
+      "pinyin": "zuòjiā",
+      "meaning": "작가.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1200,
+      "hanzi": "座位",
+      "pinyin": "zuòwèi",
+      "meaning": "좌석. [주로 공공 장소에 쓰임]",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1201,
+      "hanzi": "作用",
+      "pinyin": "zuòyòng",
+      "meaning": "(사람과 사물에 끼치는) 작용. 영향. 효과. 효용. 역할.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1202,
+      "hanzi": "左右",
+      "pinyin": "zuǒyòu",
+      "meaning": "좌와 우. 왼쪽과 오른쪽.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    },
+    {
+      "id": 1203,
+      "hanzi": "作者",
+      "pinyin": "zuòzhě",
+      "meaning": "지은이. 저자. 작자. 필자.",
+      "level": 4,
+      "partOfSpeech": "명사"
+    }
+  ]
+}
