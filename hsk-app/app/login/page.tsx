@@ -11,7 +11,9 @@ export default function LoginPage() {
           <p className="text-sm text-slate-500">학습 진도를 클라우드에 저장하려면 로그인하세요</p>
         </div>
 
-        <LoginForm />
+        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 p-6">
+          <LoginForm />
+        </div>
 
         <p className="text-center text-sm text-slate-500 mt-6">
           계정이 없으신가요?{' '}

@@ -4,7 +4,7 @@ import { BottomNav } from '@/components/home/BottomNav';
 
 export default function StatsPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen md:pt-16">
       <StatsOverview />
       <BottomNav />
     </main>

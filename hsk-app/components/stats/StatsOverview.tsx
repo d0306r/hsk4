@@ -3,21 +3,21 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Flame, Sparkles, BookOpen, GraduationCap, LucideIcon } from 'lucide-react';
+import { Flame } from 'lucide-react';
 import {
   getRecentDailyStats,
   getCurrentStreak,
   getOverallStats,
   getMostWrongWords,
-  getSRSStageStats,
 } from '@/lib/progress/stats';
 import { DailyStats, WordProgress } from '@/lib/progress/types';
 import { Word } from '@/lib/words/types';
 import { useSettingsStore } from '@/stores/settingsStore';
 import DailyChart from './DailyChart';
+import StudyHeatmap from './StudyHeatmap';
+import { PageContainer } from '@/components/ui/PageContainer';
 
 type Overall = ReturnType<typeof getOverallStats>;
-type SRSStats = ReturnType<typeof getSRSStageStats>;
 type WrongItem = { word: Word; progress: WordProgress };
 
 export default function StatsOverview() {
@@ -28,7 +28,6 @@ export default function StatsOverview() {
     streak: number;
     overall: Overall;
     mostWrong: WrongItem[];
-    srs: SRSStats;
   } | null>(null);
 
   useEffect(() => {
@@ -38,7 +37,6 @@ export default function StatsOverview() {
         streak: getCurrentStreak(),
         overall: getOverallStats(),
         mostWrong: getMostWrongWords(5),
-        srs: getSRSStageStats(),
       });
     }
     load();
@@ -49,20 +47,20 @@ export default function StatsOverview() {
 
   if (data === null) {
     return (
-      <div className="max-w-md mx-auto px-4 py-6">
+      <PageContainer width="wide" className="px-4 py-6">
         <div className="animate-pulse space-y-3">
           <div className="h-10 bg-slate-100 dark:bg-slate-700 rounded" />
           <div className="h-24 bg-slate-100 dark:bg-slate-700 rounded" />
           <div className="h-40 bg-slate-100 dark:bg-slate-700 rounded" />
         </div>
-      </div>
+      </PageContainer>
     );
   }
 
-  const { daily, streak, overall, mostWrong, srs } = data;
+  const { daily, streak, overall, mostWrong } = data;
 
   return (
-    <div className="max-w-md mx-auto px-4 py-6 pb-24">
+    <PageContainer width="wide" className="px-4 py-6 pb-24">
       {/* 헤더 */}
       <h1 className="text-2xl font-bold mb-1">통계</h1>
       <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
@@ -87,7 +85,7 @@ export default function StatsOverview() {
       )}
 
       {/* 통계 카드 4개 */}
-      <div className="grid grid-cols-2 gap-3 mb-4">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
         <StatCard
           label="학습한 단어"
           value={overall.totalStudied}
@@ -112,39 +110,13 @@ export default function StatsOverview() {
         />
       </div>
 
-      {/* SRS 학습 단계 */}
-      <section className="card mb-4">
-        <h2 className="text-base font-bold mb-3">학습 단계</h2>
-        <div className="space-y-3">
-          <SRSStageRow
-            Icon={Sparkles}
-            label="신규"
-            description="아직 학습 안 한 단어"
-            count={srs.new}
-            total={srs.total}
-            color="blue"
-          />
-          <SRSStageRow
-            Icon={BookOpen}
-            label="학습 중"
-            description="복습 간격이 짧은 단어"
-            count={srs.learning}
-            total={srs.total}
-            color="orange"
-          />
-          <SRSStageRow
-            Icon={GraduationCap}
-            label="숙달"
-            description="3주 이상 안 봐도 되는 단어"
-            count={srs.mature}
-            total={srs.total}
-            color="green"
-          />
-        </div>
-      </section>
-
+      {/* PC에서 2열 대시보드 — 폰에서는 1열로 기존 순서 유지 */}
+      <div className="grid lg:grid-cols-2 gap-4 items-start mb-4">
       {/* 7일 그래프 */}
       <DailyChart data={daily} />
+
+      {/* 학습 잔디 (최근 3개월) */}
+      <StudyHeatmap />
 
       {/* 자주 틀린 단어 */}
       {mostWrong.length > 0 && (
@@ -178,6 +150,7 @@ export default function StatsOverview() {
           </div>
         </section>
       )}
+      </div>
 
       {/* 데이터 없음 안내 */}
       {overall.totalStudied === 0 && (
@@ -196,7 +169,7 @@ export default function StatsOverview() {
           </Link>
         </section>
       )}
-    </div>
+    </PageContainer>
   );
 }
 
@@ -224,79 +197,6 @@ function StatCard({ label, value, suffix, color }: StatCardProps) {
         <span className={colorClass}>{value}</span>
         {suffix && <span className="text-sm text-slate-400 dark:text-slate-500 ml-1">{suffix}</span>}
       </p>
-    </div>
-  );
-}
-
-interface SRSStageRowProps {
-  Icon: LucideIcon;
-  label: string;
-  description: string;
-  count: number;
-  total: number;
-  color: 'blue' | 'orange' | 'green';
-}
-
-function SRSStageRow({
-  Icon,
-  label,
-  description,
-  count,
-  total,
-  color,
-}: SRSStageRowProps) {
-  const percent = total > 0 ? (count / total) * 100 : 0;
-  
-  const colorClass = {
-    blue: 'bg-blue-500 dark:bg-blue-400',
-    orange: 'bg-orange-500 dark:bg-orange-400',
-    green: 'bg-green-500 dark:bg-green-400',
-  }[color];
-  
-  const textColorClass = {
-    blue: 'text-blue-600 dark:text-blue-400',
-    orange: 'text-orange-600 dark:text-orange-400',
-    green: 'text-green-600 dark:text-green-400',
-  }[color];
-  
-  const iconBgClass = {
-    blue: 'bg-blue-100 dark:bg-blue-900/30',
-    orange: 'bg-orange-100 dark:bg-orange-900/30',
-    green: 'bg-green-100 dark:bg-green-900/30',
-  }[color];
-
-  return (
-    <div>
-      <div className="flex items-center justify-between mb-1.5">
-        <div className="flex items-center gap-2.5">
-          <div className={`w-8 h-8 rounded-full ${iconBgClass} flex items-center justify-center`}>
-            <Icon size={16} className={textColorClass} />
-          </div>
-          <div>
-            <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
-              {label}
-            </p>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              {description}
-            </p>
-          </div>
-        </div>
-        <div className="text-right">
-          <p className={`text-lg font-bold ${textColorClass}`}>
-            {count}
-          </p>
-          <p className="text-xs text-slate-400 dark:text-slate-500">
-            {percent.toFixed(1)}%
-          </p>
-        </div>
-      </div>
-      {/* 진도 바 */}
-      <div className="h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
-        <div
-          className={`h-full ${colorClass} transition-all duration-700`}
-          style={{ width: `${percent}%` }}
-        />
-      </div>
     </div>
   );
 }

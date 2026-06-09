@@ -38,7 +38,7 @@ export default function SessionSetup({ level }: SessionSetupProps) {
   // 로딩
   if (counts === null) {
     return (
-      <div className="max-w-md mx-auto">
+      <div className="max-w-xl mx-auto">
         <div className="mb-3">
           <button
             onClick={() => router.back()}
@@ -69,7 +69,7 @@ export default function SessionSetup({ level }: SessionSetupProps) {
   const isEmpty = totalCount === 0;
 
   return (
-    <div className="max-w-md mx-auto">
+    <div className="max-w-xl mx-auto">
       {/* 헤더 */}
       <div className="mb-3">
         <button

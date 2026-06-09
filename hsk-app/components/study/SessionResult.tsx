@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useStudyStore } from '@/stores/studyStore';
 import { useSettingsStore } from '@/stores/settingsStore';
-import { syncSessionResults } from '@/lib/progress/api';
+import { syncSessionResults, saveStudySession } from '@/lib/progress/api';
 import { Word } from '@/lib/words/types';
 import { BottomNav } from '@/components/home/BottomNav';
 
@@ -27,8 +27,17 @@ export default function SessionResult({ level, allWords }: SessionResultProps) {
   const rate = total > 0 ? Math.round((known / total) * 100) : 0;
 
   useEffect(() => {
+    const now = new Date().toISOString();
     syncSessionResults(records).finally(() => setSyncing(false));
-  }, [records]);
+    saveStudySession({
+      level,
+      wordCount: total,
+      knownCount: known,
+      unknownCount: unknown,
+      startedAt: now, // MVP: 시작 시각 미추적 → 종료 시각으로 폴백
+      endedAt: now,
+    });
+  }, [records, level, total, known, unknown]);
 
   const handleRetry = () => {
     retryUnknown(allWords, quizDirection);
@@ -40,7 +49,7 @@ export default function SessionResult({ level, allWords }: SessionResultProps) {
   };
 
   return (
-    <div className="max-w-md mx-auto pt-12 pb-24">
+    <div className="max-w-xl mx-auto pt-12 pb-24">
       <h1 className="text-3xl font-bold text-center mb-2">
         학습 완료!
       </h1>

@@ -9,6 +9,7 @@ import { allWords } from '@/lib/words/mock';
 import { Word } from '@/lib/words/types';
 import { getWrongNoteIds } from '@/lib/progress/api';
 import StudySession from '@/components/study/StudySession';
+import { PageContainer } from '@/components/ui/PageContainer';
 
 export default function NotesReviewPage() {
   const router = useRouter();
@@ -32,7 +33,8 @@ export default function NotesReviewPage() {
   if (words === null) {
     return (
       <main className="min-h-screen px-4 py-6">
-        <div className="max-w-md mx-auto">
+        <PageContainer width="narrow">
+          <div className="max-w-xl mx-auto">
           <div className="mb-3">
             <Link
               href="/notes"
@@ -46,6 +48,7 @@ export default function NotesReviewPage() {
             오답 노트 불러오는 중...
           </div>
         </div>
+        </PageContainer>
       </main>
     );
   }
@@ -54,7 +57,8 @@ export default function NotesReviewPage() {
   if (words.length === 0) {
     return (
       <main className="min-h-screen px-4 py-6">
-        <div className="max-w-md mx-auto">
+        <PageContainer width="narrow">
+          <div className="max-w-xl mx-auto">
           <div className="mb-3">
             <Link
               href="/notes"
@@ -80,6 +84,7 @@ export default function NotesReviewPage() {
             </button>
           </div>
         </div>
+        </PageContainer>
       </main>
     );
   }
@@ -87,11 +92,13 @@ export default function NotesReviewPage() {
   // 학습 세션
   return (
     <main className="min-h-screen px-4 py-6">
-      <StudySession
-        initialWords={words}
-        allWords={allWords}
-        level={0}
-      />
+      <PageContainer width="narrow">
+        <StudySession
+          initialWords={words}
+          allWords={allWords}
+          level={0}
+        />
+      </PageContainer>
     </main>
   );
 }

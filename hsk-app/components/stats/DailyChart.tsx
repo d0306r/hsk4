@@ -19,7 +19,7 @@ export default function DailyChart({ data }: DailyChartProps) {
   const avg = Math.round(total / data.length);
 
   return (
-    <section className="card mb-4">
+    <section className="card">
       <div className="flex items-baseline justify-between mb-4">
         <h2 className="text-base font-bold">최근 7일 학습량</h2>
         <div className="text-xs text-slate-500">

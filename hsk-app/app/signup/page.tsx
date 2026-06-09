@@ -11,7 +11,9 @@ export default function SignupPage() {
           <p className="text-sm text-slate-500">시작하려면 계정을 만들어주세요</p>
         </div>
 
-        <SignupForm />
+        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 p-6">
+          <SignupForm />
+        </div>
 
         <p className="text-center text-sm text-slate-500 mt-6">
           이미 계정이 있으신가요?{' '}

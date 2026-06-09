@@ -5,7 +5,7 @@ import { allWords } from '@/lib/words/mock';
 
 export default function NotesPage() {
   return (
-    <main>
+    <main className="md:pt-16">
       <WrongNoteList allWords={allWords} />
       <BottomNav />
     </main>

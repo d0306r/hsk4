@@ -15,6 +15,7 @@ node_modules
 out/
 build
 dist
+*.tsbuildinfo
 
 # 환경 변수 (🔴 절대 올리면 안 됨!)
 .env*

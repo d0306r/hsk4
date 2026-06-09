@@ -5,7 +5,7 @@ import { readProgress } from './storage';
 import { DailyStats, WordProgress } from './types';
 import { allWords } from '@/lib/words/mock';
 import { Word } from '@/lib/words/types';
-import { getSRSStage, SRSStage } from '@/lib/srs/algorithm';
+import { getSRSStage } from '@/lib/srs/algorithm';
 
 /**
  * 'YYYY-MM-DD' 포맷으로 변환

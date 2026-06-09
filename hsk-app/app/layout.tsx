@@ -56,7 +56,9 @@ export default function RootLayout({
         {/* 로그인 시 DB → localStorage 동기화 (UI 없음, 백그라운드) */}
         <SyncOnLogin />
 
-        <div className="mx-auto max-w-mobile min-h-screen">
+        {/* 폭 제한은 각 페이지의 PageContainer가 담당.
+            폰(<430px)에서는 화면이 더 좁아 기존과 동일하게 보임 */}
+        <div className="min-h-screen">
           {children}
         </div>
       </body>

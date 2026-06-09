@@ -54,7 +54,7 @@ export default function StudySession({
   const isCorrect = isAnswered && selectedIndex === question.correctIndex;
 
   return (
-    <div className="max-w-md mx-auto">
+    <div className="max-w-xl mx-auto">
       {/* 헤더 */}
       <div className="flex items-center justify-between mb-4">
         <button

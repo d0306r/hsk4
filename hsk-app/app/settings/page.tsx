@@ -3,12 +3,13 @@
 
 import { useEffect, useState } from 'react';
 import { BottomNav } from '@/components/home/BottomNav';
-import { useSettingsStore } from '@/stores/settingsStore';
+import { useSettingsStore, type QuizDirection } from '@/stores/settingsStore';
 import { useThemeStore } from '@/stores/themeStore';
 import { resetAllProgress, resetWrongNotes } from '@/lib/progress/api';
 import { createClient } from '@/lib/supabase/client';
 import { signOut } from '@/app/auth/actions';
 import ConfirmModal from '@/components/ui/ConfirmModal';
+import { PageContainer } from '@/components/ui/PageContainer';
 
 export default function SettingsPage() {
   const {
@@ -56,7 +57,9 @@ export default function SettingsPage() {
   };
 
   return (
-    <main className="pb-24 px-5 pt-6 max-w-md mx-auto">
+    <main className="pb-24 px-5 pt-6 md:pt-20">
+      <PageContainer width="narrow">
+      <div className="max-w-xl mx-auto">
       <h1 className="text-2xl font-bold mb-1">설정</h1>
       <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
         학습 환경을 맞춤 설정할 수 있어요
@@ -84,7 +87,7 @@ export default function SettingsPage() {
         <SettingsRow label="퀴즈 방향">
           <select
             value={quizDirection}
-            onChange={(e) => setQuizDirection(e.target.value as any)}
+            onChange={(e) => setQuizDirection(e.target.value as QuizDirection)}
             className="px-3 py-1.5 rounded-lg
                        border border-slate-200 dark:border-slate-700
                        bg-white dark:bg-slate-800
@@ -186,6 +189,8 @@ export default function SettingsPage() {
       )}
 
       <BottomNav />
+      </div>
+      </PageContainer>
     </main>
   );
 }

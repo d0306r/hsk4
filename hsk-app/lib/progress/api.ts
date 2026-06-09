@@ -9,6 +9,7 @@ import {
   clearWrongNotes,
 } from './storage';
 import { syncBatchProgressToDB } from '@/lib/db/progress-client';
+import { insertStudySession, type StudySessionInput } from '@/lib/db/sessions-client';
 
 /**
  * 학습 결과를 진도 저장소에 동기화
@@ -43,9 +44,9 @@ export async function syncSessionResults(
 }
 
 /**
- * 특정 레벨의 학습 진도 통계
+ * 전체 학습 진도 통계
  */
-export async function getProgress(level: number): Promise<{
+export async function getProgress(): Promise<{
   totalStudied: number;
   mastered: number;
   inWrongNote: number;
@@ -122,5 +123,22 @@ export async function syncFromDB(): Promise<{ synced: number }> {
   } catch (e) {
     console.error('[syncFromDB] 실패', e);
     return { synced: 0 };
+  }
+}
+
+/**
+ * 세션 요약을 study_sessions 테이블에 기록 (Step 4-D)
+ * 스트릭/통계 추적용. 단어별 진도(syncSessionResults)와는 별개.
+ * 실패해도 앱은 멈추지 않음 (옵션 A).
+ */
+export async function saveStudySession(
+  input: StudySessionInput
+): Promise<{ success: boolean }> {
+  try {
+    await insertStudySession(input);
+    return { success: true };
+  } catch (e) {
+    console.error('[saveStudySession] 실패', e);
+    return { success: false };
   }
 }
