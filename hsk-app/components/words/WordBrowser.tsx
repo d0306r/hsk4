@@ -1,8 +1,8 @@
 // components/words/WordBrowser.tsx
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Search, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Search, X, Volume2 } from 'lucide-react';
 import { allWords } from '@/lib/words/mock';
 import { Word } from '@/lib/words/types';
 import { getAllProgress } from '@/lib/progress/api';
@@ -10,6 +10,7 @@ import { getSRSStage } from '@/lib/srs/algorithm';
 import { WordProgress } from '@/lib/progress/types';
 import { SRSStageBadge } from '@/components/ui/SRSStageBadge';
 import { PageContainer } from '@/components/ui/PageContainer';
+import { isTTSAvailable, speakChinese } from '@/lib/tts';
 import WordDetail from './WordDetail';
 
 const PAGE_SIZE = 24;
@@ -63,12 +64,18 @@ function normalize(s: string): string {
 export default function WordBrowser() {
   const [query, setQuery] = useState('');
   const [level, setLevel] = useState<LevelFilter>('all');
-  const [page, setPage] = useState(1);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [progressMap, setProgressMap] = useState<Record<number, WordProgress>>({});
   const [selected, setSelected] = useState<Word | null>(null);
   const [status, setStatus] = useState<StatusFilter>('all');
   const [exampleOnly, setExampleOnly] = useState(false);
   const [sort, setSort] = useState<SortKey>('default');
+  const [ttsOk, setTtsOk] = useState(false);
+  useEffect(() => setTtsOk(isTTSAvailable()), []);
+
+  // 무한 스크롤용 — 센티넬 관찰, 현재 결과 길이는 ref로 최신값 참조
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  const filteredLenRef = useRef(0);
 
   // SRS 상태 배지용 진도 로드 (학습한 단어 표시) — 모달의 노트 토글 후에도 재호출
   const loadProgress = useCallback(async () => {
@@ -122,20 +129,33 @@ export default function WordBrowser() {
     return list; // 사전순(데이터 기본 순서)
   }, [query, level, status, exampleOnly, sort, progressMap]);
 
-  // 필터/검색/정렬이 바뀌면 첫 페이지로
+  filteredLenRef.current = filtered.length;
+
+  // 필터/검색/정렬이 바뀌면 처음부터 다시 보여줌
   useEffect(() => {
-    setPage(1);
+    setVisibleCount(PAGE_SIZE);
   }, [query, level, status, exampleOnly, sort]);
 
-  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
-
-  // 페이지 수가 줄어 현재 페이지가 범위를 벗어나면 보정
+  // 무한 스크롤: 하단 센티넬이 보이면 PAGE_SIZE만큼 더 노출
   useEffect(() => {
-    if (page > totalPages) setPage(totalPages);
-  }, [page, totalPages]);
+    const el = sentinelRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleCount((c) =>
+            Math.min(c + PAGE_SIZE, filteredLenRef.current)
+          );
+        }
+      },
+      { rootMargin: '300px' }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
-  const start = (page - 1) * PAGE_SIZE;
-  const pageItems = filtered.slice(start, start + PAGE_SIZE);
+  const pageItems = filtered.slice(0, visibleCount);
+  const hasMore = visibleCount < filtered.length;
 
   return (
     <PageContainer width="wide" className="px-4 py-6 pb-24">
@@ -176,72 +196,57 @@ export default function WordBrowser() {
         )}
       </div>
 
-      {/* 레벨 필터 + 결과 수 */}
-      <div className="flex items-center justify-between gap-3 mb-4">
-        <div className="flex gap-1.5">
-          {LEVEL_TABS.map(([val, label]) => (
-            <button
-              key={String(val)}
-              onClick={() => setLevel(val)}
-              className={`px-3.5 py-1.5 rounded-full text-sm font-semibold transition ${
-                level === val
-                  ? 'bg-brand-600 dark:bg-brand-500 text-white'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
-              }`}
-            >
-              {label}
-            </button>
-          ))}
+      {/* 필터(급수·상태) + 예문 토글 + 정렬 */}
+      <div className="space-y-2.5 mb-5">
+        <div className="flex items-center gap-3">
+          <span className="w-8 flex-shrink-0 text-xs font-bold text-slate-400 dark:text-slate-500">
+            급수
+          </span>
+          <Segmented options={LEVEL_TABS} value={level} onChange={setLevel} />
         </div>
-        <span className="text-xs text-slate-400 dark:text-slate-500 flex-shrink-0">
-          {filtered.length.toLocaleString()}개
-        </span>
-      </div>
 
-      {/* 상태 필터 + 예문 토글 + 정렬 */}
-      <div className="flex flex-wrap items-center gap-1.5 mb-4">
-        {STATUS_TABS.map(([val, label]) => (
-          <button
-            key={val}
-            onClick={() => setStatus(val)}
-            className={`px-3 py-1.5 rounded-full text-xs font-semibold transition ${
-              status === val
-                ? 'bg-brand-600 dark:bg-brand-500 text-white'
-                : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
-            }`}
-          >
-            {label}
-          </button>
-        ))}
+        <div className="flex items-center gap-3">
+          <span className="w-8 flex-shrink-0 text-xs font-bold text-slate-400 dark:text-slate-500">
+            상태
+          </span>
+          <Segmented options={STATUS_TABS} value={status} onChange={setStatus} />
+        </div>
 
-        <button
-          onClick={() => setExampleOnly((v) => !v)}
-          aria-pressed={exampleOnly}
-          className={`px-3 py-1.5 rounded-full text-xs font-semibold transition ${
-            exampleOnly
-              ? 'bg-brand-600 dark:bg-brand-500 text-white'
-              : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
-          }`}
-        >
-          예문 있는 것
-        </button>
+        <div className="flex items-center justify-between gap-2 flex-wrap pt-0.5">
+          <label className="inline-flex items-center gap-1.5 cursor-pointer select-none">
+            <input
+              type="checkbox"
+              checked={exampleOnly}
+              onChange={(e) => setExampleOnly(e.target.checked)}
+              className="w-4 h-4 rounded accent-brand-600 cursor-pointer"
+            />
+            <span className="text-xs font-medium text-slate-600 dark:text-slate-300">
+              예문 있는 것만
+            </span>
+          </label>
 
-        <select
-          value={sort}
-          onChange={(e) => setSort(e.target.value as SortKey)}
-          aria-label="정렬"
-          className="ml-auto px-2.5 py-1.5 rounded-lg text-xs font-medium
-                     border border-slate-200 dark:border-slate-700
-                     bg-white dark:bg-slate-800
-                     text-slate-600 dark:text-slate-300
-                     focus:border-brand-500 focus:outline-none"
-        >
-          {SORT_OPTIONS.map(([val, label]) => (
-            <option key={val} value={val}>
-              {label}
-            </option>
-          ))}
-        </select>
+          <div className="flex items-center gap-2 ml-auto">
+            <span className="text-xs text-slate-400 dark:text-slate-500">
+              {filtered.length.toLocaleString()}개
+            </span>
+            <select
+              value={sort}
+              onChange={(e) => setSort(e.target.value as SortKey)}
+              aria-label="정렬"
+              className="px-2.5 py-1.5 rounded-lg text-xs font-medium
+                         border border-slate-200 dark:border-slate-700
+                         bg-white dark:bg-slate-800
+                         text-slate-600 dark:text-slate-300
+                         focus:border-brand-500 focus:outline-none"
+            >
+              {SORT_OPTIONS.map(([val, label]) => (
+                <option key={val} value={val}>
+                  {label}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
       </div>
 
       {/* 결과 그리드 */}
@@ -257,40 +262,53 @@ export default function WordBrowser() {
           {pageItems.map((w) => {
             const prog = progressMap[w.id];
             return (
-              <button
-                key={w.id}
-                onClick={() => setSelected(w)}
-                className="h-full flex flex-col text-left bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-4 hover:border-brand-300 dark:hover:border-brand-500 hover:shadow-sm transition active:scale-[0.99]"
-              >
-                <div className="flex items-baseline gap-2 flex-wrap mb-1.5">
-                  <span className="hanzi text-xl font-bold text-slate-900 dark:text-white whitespace-nowrap">
-                    {w.hanzi}
-                  </span>
-                  <span className="text-sm text-slate-500 dark:text-slate-400">
-                    [{w.pinyin}]
-                  </span>
-                  {w.partOfSpeech && (
-                    <span className="text-xs text-slate-400 dark:text-slate-500 font-semibold whitespace-nowrap">
-                      {w.partOfSpeech}
+              <div key={w.id} className="relative h-full">
+                <button
+                  onClick={() => setSelected(w)}
+                  className="w-full h-full flex flex-col text-left bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-4 hover:border-brand-300 dark:hover:border-brand-500 hover:shadow-sm transition active:scale-[0.99]"
+                >
+                  <div className="flex items-baseline gap-2 flex-wrap mb-1.5 pr-7">
+                    <span className="hanzi text-xl font-bold text-slate-900 dark:text-white whitespace-nowrap">
+                      {w.hanzi}
                     </span>
-                  )}
-                </div>
-                <div className="text-sm text-slate-700 dark:text-slate-300 flex-1">
-                  {w.meaning}
-                </div>
-                <div className="flex items-center gap-2 mt-2 text-xs text-slate-400 dark:text-slate-500">
-                  <span className="whitespace-nowrap">HSK {w.level}급</span>
-                  {prog && <SRSStageBadge stage={getSRSStage(prog.srs)} />}
-                </div>
-              </button>
+                    <span className="text-sm text-slate-500 dark:text-slate-400">
+                      [{w.pinyin}]
+                    </span>
+                    {w.partOfSpeech && (
+                      <span className="text-xs text-slate-400 dark:text-slate-500 font-semibold whitespace-nowrap">
+                        {w.partOfSpeech}
+                      </span>
+                    )}
+                  </div>
+                  <div className="text-sm text-slate-700 dark:text-slate-300 flex-1">
+                    {w.meaning}
+                  </div>
+                  <div className="flex items-center gap-2 mt-2 text-xs text-slate-400 dark:text-slate-500">
+                    <span className="whitespace-nowrap">HSK {w.level}급</span>
+                    {prog && <SRSStageBadge stage={getSRSStage(prog.srs)} />}
+                  </div>
+                </button>
+                {ttsOk && (
+                  <button
+                    onClick={() => speakChinese(w.hanzi)}
+                    aria-label={`${w.hanzi} 발음 듣기`}
+                    className="absolute top-2.5 right-2.5 p-1.5 rounded-full text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-900/30 transition active:scale-95"
+                  >
+                    <Volume2 size={16} />
+                  </button>
+                )}
+              </div>
             );
           })}
         </div>
       )}
 
-      {/* 페이지네이션 */}
-      {totalPages > 1 && (
-        <Pagination page={page} totalPages={totalPages} onChange={setPage} />
+      {/* 무한 스크롤 센티넬 */}
+      <div ref={sentinelRef} className="h-8" />
+      {hasMore && (
+        <p className="text-center text-xs text-slate-400 dark:text-slate-500 -mt-4 pb-2">
+          스크롤하면 더 불러와요
+        </p>
       )}
 
       {/* 상세 모달 */}
@@ -306,79 +324,35 @@ export default function WordBrowser() {
   );
 }
 
-// ─────── 페이지네이션 ───────
+// ─────── 세그먼트 컨트롤 ───────
 
-function Pagination({
-  page,
-  totalPages,
+function Segmented<T extends string | number>({
+  options,
+  value,
   onChange,
 }: {
-  page: number;
-  totalPages: number;
-  onChange: (p: number) => void;
+  options: [T, string][];
+  value: T;
+  onChange: (v: T) => void;
 }) {
   return (
-    <div className="flex items-center justify-center gap-1 mt-8">
-      <button
-        onClick={() => onChange(Math.max(1, page - 1))}
-        disabled={page === 1}
-        className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 disabled:opacity-30 disabled:cursor-not-allowed transition"
-        aria-label="이전 페이지"
-      >
-        <ChevronLeft size={20} />
-      </button>
-
-      {getPageNumbers(page, totalPages).map((p, i) =>
-        p === '...' ? (
-          <span
-            key={`ellipsis-${i}`}
-            className="px-2 text-slate-400 dark:text-slate-500 select-none"
-          >
-            …
-          </span>
-        ) : (
+    <div className="inline-flex items-center gap-0.5 p-0.5 rounded-lg bg-slate-100 dark:bg-slate-800">
+      {options.map(([val, label]) => {
+        const active = val === value;
+        return (
           <button
-            key={p}
-            onClick={() => onChange(p as number)}
-            className={`min-w-[2.25rem] h-9 px-2 rounded-lg text-sm font-semibold transition ${
-              p === page
-                ? 'bg-brand-600 dark:bg-brand-500 text-white'
-                : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'
+            key={String(val)}
+            onClick={() => onChange(val)}
+            className={`px-3 py-1.5 rounded-md text-xs font-semibold whitespace-nowrap transition ${
+              active
+                ? 'bg-white dark:bg-slate-600 text-brand-700 dark:text-white shadow-sm'
+                : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
             }`}
           >
-            {p}
+            {label}
           </button>
-        )
-      )}
-
-      <button
-        onClick={() => onChange(Math.min(totalPages, page + 1))}
-        disabled={page === totalPages}
-        className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 disabled:opacity-30 disabled:cursor-not-allowed transition"
-        aria-label="다음 페이지"
-      >
-        <ChevronRight size={20} />
-      </button>
+        );
+      })}
     </div>
   );
-}
-
-/**
- * 페이지 번호 배열 (현재 주변 + 양 끝, 사이는 …)
- */
-function getPageNumbers(current: number, total: number): Array<number | '...'> {
-  if (total <= 7) {
-    return Array.from({ length: total }, (_, i) => i + 1);
-  }
-
-  const pages: Array<number | '...'> = [1];
-  const left = Math.max(2, current - 1);
-  const right = Math.min(total - 1, current + 1);
-
-  if (left > 2) pages.push('...');
-  for (let i = left; i <= right; i++) pages.push(i);
-  if (right < total - 1) pages.push('...');
-  pages.push(total);
-
-  return pages;
 }
