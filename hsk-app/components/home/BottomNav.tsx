@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BarChart3, Settings, Home, NotebookPen } from 'lucide-react';
+import { BarChart3, Settings, Home, NotebookPen, BookText } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
 
 interface NavItem {
@@ -19,6 +19,12 @@ const navItems: NavItem[] = [
     label: '홈',
     icon: Home,
     isActive: (p) => p === '/',
+  },
+  {
+    href: '/words',
+    label: '단어장',
+    icon: BookText,
+    isActive: (p) => p.startsWith('/words'),
   },
   {
     href: '/notes',
@@ -90,7 +96,7 @@ export function BottomNav() {
               <Link
                 key={href}
                 href={href}
-                className={`flex flex-col items-center gap-1 px-4 py-2 transition-colors ${
+                className={`flex flex-col items-center gap-1 px-1.5 py-2 transition-colors ${
                   active
                     ? 'text-brand-600 dark:text-brand-400'
                     : 'text-slate-500 dark:text-slate-400'
