@@ -78,7 +78,7 @@ export default function NotesReviewPage() {
             </p>
             <button
               onClick={() => router.push('/')}
-              className="px-6 py-3 bg-blue-600 dark:bg-blue-500 text-white font-bold rounded-xl"
+              className="px-6 py-3 bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white font-bold rounded-xl transition-colors"
             >
               홈으로
             </button>

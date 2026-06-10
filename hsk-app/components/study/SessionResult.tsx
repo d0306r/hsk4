@@ -59,8 +59,8 @@ export default function SessionResult({ level, allWords }: SessionResultProps) {
 
       {/* 정답률 원형 */}
       <div className="flex justify-center mb-10">
-        <div className="w-40 h-40 rounded-full bg-blue-50 dark:bg-blue-900/30 border-4 border-blue-500 dark:border-blue-400 flex flex-col items-center justify-center">
-          <div className="text-4xl font-bold text-blue-600 dark:text-blue-300">
+        <div className="w-40 h-40 rounded-full bg-brand-50 dark:bg-brand-900/30 border-4 border-brand-500 dark:border-brand-400 flex flex-col items-center justify-center">
+          <div className="text-4xl font-bold text-brand-600 dark:text-brand-300">
             {rate}%
           </div>
           <div className="text-xs text-gray-500 dark:text-slate-400 mt-1">
@@ -94,7 +94,7 @@ export default function SessionResult({ level, allWords }: SessionResultProps) {
         {unknown > 0 && (
           <button
             onClick={handleRetry}
-            className="w-full py-4 bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-400 text-white font-bold rounded-xl transition"
+            className="w-full py-4 bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white font-bold rounded-xl transition"
           >
             모르는 단어 {unknown}개 다시 보기
           </button>

@@ -43,7 +43,7 @@ export default function QuizCard({
         ) : (
           <>
             {word.partOfSpeech && (
-              <div className="inline-block text-xs text-blue-500 dark:text-blue-300 font-semibold mb-3 px-2 py-1 bg-blue-50 dark:bg-blue-900/40 rounded-full">
+              <div className="inline-block text-xs text-brand-600 dark:text-brand-300 font-semibold mb-3 px-2 py-1 bg-brand-50 dark:bg-brand-900/40 rounded-full">
                 {word.partOfSpeech}
               </div>
             )}
@@ -62,7 +62,7 @@ export default function QuizCard({
 
           if (!isAnswered) {
             buttonClass +=
-              'bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-500 text-gray-900 dark:text-slate-100';
+              'bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-brand-500 text-gray-900 dark:text-slate-100';
           } else if (index === correctIndex) {
             buttonClass +=
               'bg-green-50 dark:bg-green-900/30 border-green-500 dark:border-green-400 text-green-900 dark:text-green-100';
@@ -117,18 +117,18 @@ export default function QuizCard({
 
       {/* 정답 후 단어 정보 */}
       {isAnswered && (
-        <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-xl">
+        <div className="mt-6 p-4 bg-brand-50 dark:bg-brand-900/30 rounded-xl">
           <div className="flex items-baseline gap-3 mb-1">
-            <span className="hanzi text-2xl font-bold text-blue-900 dark:text-blue-100">
+            <span className="hanzi text-2xl font-bold text-brand-900 dark:text-brand-100">
               {word.hanzi}
             </span>
             {showPinyin && (
-              <span className="text-sm text-blue-600 dark:text-blue-300">
+              <span className="text-sm text-brand-600 dark:text-brand-300">
                 [{word.pinyin}]
               </span>
             )}
             {word.partOfSpeech && (
-              <span className="text-xs text-blue-500 dark:text-blue-300 font-semibold">
+              <span className="text-xs text-brand-500 dark:text-brand-300 font-semibold">
                 {word.partOfSpeech}
               </span>
             )}

@@ -59,7 +59,7 @@ export default function SettingsPage() {
   return (
     <main className="pb-24 px-5 pt-6 md:pt-20">
       <PageContainer width="narrow">
-      <div className="max-w-xl mx-auto">
+      <div className="max-w-3xl mx-auto">
       <h1 className="text-2xl font-bold mb-1">설정</h1>
       <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
         학습 환경을 맞춤 설정할 수 있어요
@@ -80,7 +80,7 @@ export default function SettingsPage() {
                        border border-slate-200 dark:border-slate-700
                        bg-white dark:bg-slate-800
                        text-slate-900 dark:text-slate-100
-                       focus:border-blue-500 focus:outline-none"
+                       focus:border-brand-500 focus:outline-none"
           />
         </SettingsRow>
 
@@ -92,7 +92,7 @@ export default function SettingsPage() {
                        border border-slate-200 dark:border-slate-700
                        bg-white dark:bg-slate-800
                        text-slate-900 dark:text-slate-100
-                       focus:border-blue-500 focus:outline-none"
+                       focus:border-brand-500 focus:outline-none"
           >
             <option value="mixed">섞기</option>
             <option value="hanzi-to-meaning">한자 → 뜻</option>
@@ -245,7 +245,7 @@ function Toggle({
       onClick={onChange}
       className={`relative w-12 h-7 rounded-full transition-colors flex-shrink-0 ${
         checked
-          ? 'bg-blue-500 dark:bg-blue-400'
+          ? 'bg-brand-500 dark:bg-brand-400'
           : 'bg-slate-300 dark:bg-slate-600'
       }`}
       aria-checked={checked}

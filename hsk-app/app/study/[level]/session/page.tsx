@@ -75,7 +75,7 @@ export default function StudySessionPage() {
           </p>
           <button
             onClick={() => router.push(`/study/${level}`)}
-            className="mt-6 px-5 py-2.5 bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-400 text-white font-bold rounded-xl active:scale-[0.98] transition"
+            className="mt-6 px-5 py-2.5 bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white font-bold rounded-xl active:scale-[0.98] transition"
           >
             돌아가기
           </button>

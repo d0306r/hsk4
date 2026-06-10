@@ -24,10 +24,10 @@ function levelForCount(count: number): number {
 
 const CELL_COLORS = [
   'bg-slate-100 dark:bg-slate-800',
-  'bg-green-200 dark:bg-green-900/50',
-  'bg-green-300 dark:bg-green-700/70',
-  'bg-green-400 dark:bg-green-600',
-  'bg-green-500 dark:bg-green-400',
+  'bg-brand-200 dark:bg-brand-900/60',
+  'bg-brand-300 dark:bg-brand-700/80',
+  'bg-brand-500 dark:bg-brand-500',
+  'bg-brand-700 dark:bg-brand-300',
 ];
 
 export default function StudyHeatmap() {

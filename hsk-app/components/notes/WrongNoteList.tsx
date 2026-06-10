@@ -3,7 +3,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, RotateCcw } from 'lucide-react';
 import { Word } from '@/lib/words/types';
 import { WordProgress } from '@/lib/progress/types';
 import { getWrongNoteIds, getAllProgress } from '@/lib/progress/api';
@@ -22,35 +22,15 @@ interface NoteItem {
   progress: WordProgress;
 }
 
-/**
- * 화면 폭에 따라 페이지당 개수 결정
- * 폰(<768): 10개, 태블릿(768~1024): 12개, PC(≥1024): 18개
- * (그리드 열 수는 CSS가 처리: 1 / 2 / 3열)
- */
-function usePageSize() {
-  const [pageSize, setPageSize] = useState(10);
-
-  useEffect(() => {
-    function update() {
-      const w = window.innerWidth;
-      if (w >= 1024) setPageSize(18);
-      else if (w >= 768) setPageSize(12);
-      else setPageSize(10);
-    }
-    update();
-    window.addEventListener('resize', update);
-    return () => window.removeEventListener('resize', update);
-  }, []);
-
-  return pageSize;
-}
+// 페이지당 9개 (PC 3열 × 3행). 9개 초과면 다음 페이지로 넘어감
+const PAGE_SIZE = 9;
 
 export default function WrongNoteList({ allWords }: WrongNoteListProps) {
   const [items, setItems] = useState<NoteItem[] | null>(null);
   const [selectedItem, setSelectedItem] = useState<NoteItem | null>(null);
   const [page, setPage] = useState(1);
   const showPinyin = useSettingsStore((s) => s.showPinyin);
-  const pageSize = usePageSize();
+  const pageSize = PAGE_SIZE;
 
   const loadItems = useCallback(async () => {
     const ids = await getWrongNoteIds();
@@ -122,21 +102,22 @@ export default function WrongNoteList({ allWords }: WrongNoteListProps) {
   return (
     <>
       <PageContainer width="wide" className="px-4 py-6 pb-24">
-        {/* 헤더 */}
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold mb-1">오답 노트</h1>
-          <p className="text-sm text-gray-500 dark:text-slate-400">
-            {items.length}개의 단어를 더 외워야 해요
-          </p>
+        {/* 헤더 + 복습 CTA (제목 우측) */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+          <div>
+            <h1 className="text-2xl font-bold mb-1">오답 노트</h1>
+            <p className="text-sm text-gray-500 dark:text-slate-400">
+              {items.length}개의 단어를 더 외워야 해요
+            </p>
+          </div>
+          <Link
+            href="/notes/review"
+            className="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto flex-shrink-0 px-5 py-2.5 bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white text-sm font-semibold rounded-lg active:scale-[0.98] transition whitespace-nowrap"
+          >
+            <RotateCcw size={16} />
+            복습하기
+          </Link>
         </div>
-
-        {/* 다시 학습 버튼 */}
-        <Link
-          href="/notes/review"
-          className="block w-full md:max-w-xs py-4 mb-6 bg-blue-600 dark:bg-blue-500 text-white text-center font-bold rounded-xl active:scale-[0.98] transition"
-        >
-          오답 노트 복습하기
-        </Link>
 
         {/* 단어 목록 — 반응형 그리드 (PC 3열) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 items-stretch">
@@ -151,7 +132,7 @@ export default function WrongNoteList({ allWords }: WrongNoteListProps) {
               <button
                 key={word.id}
                 onClick={() => setSelectedItem(item)}
-                className="h-full flex flex-col text-left bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-4 hover:border-blue-300 dark:hover:border-blue-500 hover:shadow-sm transition active:scale-[0.99]"
+                className="h-full flex flex-col text-left bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-4 hover:border-brand-300 dark:hover:border-brand-500 hover:shadow-sm transition active:scale-[0.99]"
               >
                 {/* 한자 + 병음 + 품사 */}
                 <div className="mb-2">
@@ -165,7 +146,7 @@ export default function WrongNoteList({ allWords }: WrongNoteListProps) {
                       </span>
                     )}
                     {word.partOfSpeech && (
-                      <span className="text-xs text-blue-500 dark:text-blue-300 font-semibold whitespace-nowrap">
+                      <span className="text-xs text-slate-400 dark:text-slate-500 font-semibold whitespace-nowrap">
                         {word.partOfSpeech}
                       </span>
                     )}
@@ -232,7 +213,7 @@ export default function WrongNoteList({ allWords }: WrongNoteListProps) {
                   onClick={() => setPage(p as number)}
                   className={`min-w-[2.25rem] h-9 px-2 rounded-lg text-sm font-semibold transition ${
                     p === page
-                      ? 'bg-blue-600 dark:bg-blue-500 text-white'
+                      ? 'bg-brand-600 dark:bg-brand-500 text-white'
                       : 'text-gray-600 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-700'
                   }`}
                 >

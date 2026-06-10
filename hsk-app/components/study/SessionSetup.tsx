@@ -95,7 +95,7 @@ export default function SessionSetup({ level }: SessionSetupProps) {
         {/* 복습 */}
         <div className="flex items-center justify-between py-3">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-brand-100 dark:bg-brand-800/40 flex items-center justify-center">
               <span className="text-lg">🔄</span>
             </div>
             <div>
@@ -108,7 +108,7 @@ export default function SessionSetup({ level }: SessionSetupProps) {
             </div>
           </div>
           <div className="text-right">
-            <p className="text-2xl font-bold text-orange-600 dark:text-orange-400">
+            <p className="text-2xl font-bold text-brand-700 dark:text-brand-300">
               {actualReview}
             </p>
             {reviewDue > actualReview && (
@@ -125,7 +125,7 @@ export default function SessionSetup({ level }: SessionSetupProps) {
         {/* 신규 */}
         <div className="flex items-center justify-between py-3">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-brand-50 dark:bg-brand-900/40 flex items-center justify-center">
               <span className="text-lg">✨</span>
             </div>
             <div>
@@ -138,7 +138,7 @@ export default function SessionSetup({ level }: SessionSetupProps) {
             </div>
           </div>
           <div className="text-right">
-            <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+            <p className="text-2xl font-bold text-brand-500 dark:text-brand-400">
               {actualNew}
             </p>
             {newAvailable > actualNew && (
@@ -178,7 +178,7 @@ export default function SessionSetup({ level }: SessionSetupProps) {
       ) : (
         <button
           onClick={start}
-          className="w-full py-4 bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-400
+          className="w-full py-4 bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400
                      text-white font-bold rounded-xl
                      active:scale-[0.98] transition"
         >

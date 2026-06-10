@@ -17,23 +17,24 @@ interface StageConfig {
 }
 
 const STAGE_CONFIG: Record<SRSStage, StageConfig> = {
+  // 단계별 구분은 인디고(brand) 강도 램프로 — 신규(옅음) → 숙달(짙음)
   new: {
     label: '신규',
     Icon: Sparkles,
-    textColor: 'text-blue-600 dark:text-blue-400',
-    bgColor: 'bg-blue-50 dark:bg-blue-900/30',
+    textColor: 'text-brand-600 dark:text-brand-300',
+    bgColor: 'bg-brand-50 dark:bg-brand-900/40',
   },
   learning: {
     label: '학습 중',
     Icon: BookOpen,
-    textColor: 'text-orange-600 dark:text-orange-400',
-    bgColor: 'bg-orange-50 dark:bg-orange-900/30',
+    textColor: 'text-brand-700 dark:text-brand-200',
+    bgColor: 'bg-brand-100 dark:bg-brand-800/50',
   },
   mature: {
     label: '숙달',
     Icon: GraduationCap,
-    textColor: 'text-green-600 dark:text-green-400',
-    bgColor: 'bg-green-50 dark:bg-green-900/30',
+    textColor: 'text-brand-800 dark:text-brand-100',
+    bgColor: 'bg-brand-200 dark:bg-brand-700/60',
   },
 };
 

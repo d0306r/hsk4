@@ -71,7 +71,7 @@ export default function StudySession({
       {/* 진행바 */}
       <div className="w-full h-2 bg-gray-100 dark:bg-slate-700 rounded-full mb-6 overflow-hidden">
         <div
-          className="h-full bg-blue-500 dark:bg-blue-400 transition-all duration-300"
+          className="h-full bg-brand-500 dark:bg-brand-400 transition-all duration-300"
           style={{ width: `${progress}%` }}
         />
       </div>
@@ -97,7 +97,7 @@ export default function StudySession({
           </div>
           <button
             onClick={nextQuestion}
-            className="w-full py-4 bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-400 text-white font-bold rounded-xl active:scale-[0.98] transition"
+            className="w-full py-4 bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white font-bold rounded-xl active:scale-[0.98] transition"
           >
             {currentIndex >= questions.length - 1
               ? '결과 보기'

@@ -37,7 +37,7 @@ export function SrsStageCard() {
           description="아직 학습 안 한 단어"
           count={srs.new}
           total={srs.total}
-          color="blue"
+          color="new"
         />
         <SRSStageRow
           Icon={BookOpen}
@@ -45,7 +45,7 @@ export function SrsStageCard() {
           description="복습 간격이 짧은 단어"
           count={srs.learning}
           total={srs.total}
-          color="orange"
+          color="learning"
         />
         <SRSStageRow
           Icon={GraduationCap}
@@ -53,7 +53,7 @@ export function SrsStageCard() {
           description="3주 이상 안 봐도 되는 단어"
           count={srs.mature}
           total={srs.total}
-          color="green"
+          color="mature"
         />
       </div>
     </section>
@@ -68,7 +68,7 @@ interface SRSStageRowProps {
   description: string;
   count: number;
   total: number;
-  color: 'blue' | 'orange' | 'green';
+  color: 'new' | 'learning' | 'mature';
 }
 
 function SRSStageRow({
@@ -81,22 +81,23 @@ function SRSStageRow({
 }: SRSStageRowProps) {
   const percent = total > 0 ? (count / total) * 100 : 0;
 
+  // 파스텔 강도 램프 — 신규(옅음) → 숙달(살짝 진함). 쨍하지 않게 옅은 단계 사용
   const colorClass = {
-    blue: 'bg-blue-500 dark:bg-blue-400',
-    orange: 'bg-orange-500 dark:bg-orange-400',
-    green: 'bg-green-500 dark:bg-green-400',
+    new: 'bg-brand-200 dark:bg-brand-700',
+    learning: 'bg-brand-300 dark:bg-brand-600',
+    mature: 'bg-brand-400 dark:bg-brand-500',
   }[color];
 
   const textColorClass = {
-    blue: 'text-blue-600 dark:text-blue-400',
-    orange: 'text-orange-600 dark:text-orange-400',
-    green: 'text-green-600 dark:text-green-400',
+    new: 'text-brand-600 dark:text-brand-300',
+    learning: 'text-brand-700 dark:text-brand-200',
+    mature: 'text-brand-800 dark:text-brand-100',
   }[color];
 
   const iconBgClass = {
-    blue: 'bg-blue-100 dark:bg-blue-900/30',
-    orange: 'bg-orange-100 dark:bg-orange-900/30',
-    green: 'bg-green-100 dark:bg-green-900/30',
+    new: 'bg-brand-50 dark:bg-brand-900/40',
+    learning: 'bg-brand-100 dark:bg-brand-800/50',
+    mature: 'bg-brand-200 dark:bg-brand-700/60',
   }[color];
 
   return (

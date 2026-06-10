@@ -28,8 +28,8 @@ export function WelcomeHint() {
   return (
     <section
       className="card mx-5 mb-4
-                 bg-gradient-to-br from-brand-50 to-indigo-50
-                 dark:from-brand-900/20 dark:to-indigo-900/20
+                 bg-gradient-to-br from-brand-50 to-brand-100
+                 dark:from-brand-900/20 dark:to-brand-800/20
                  border border-brand-100 dark:border-brand-900/30"
     >
       <div className="flex items-start gap-3">

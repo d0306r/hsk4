@@ -4,13 +4,13 @@ import './globals.css';
 import SyncOnLogin from '@/components/auth/SyncOnLogin';
 
 export const metadata: Metadata = {
-  title: 'HSK 4급',
-  description: 'HSK 4급 단어 학습 앱',
+  title: 'HSK 4급 필수 단어',
+  description: 'HSK 4급 필수 단어를 매일 조금씩 외우고, 틀린 단어는 복습으로 오래 기억하세요',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'HSK 4급',
+    title: 'HSK 4급 필수 단어',
   },
   icons: {
     icon: '/icons/icon-192.png',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#4f46e5',
+  themeColor: '#0284c7',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
@@ -42,7 +42,7 @@ export default function RootLayout({
               (function() {
                 try {
                   var stored = localStorage.getItem('hsk-theme');
-                  var theme = stored ? JSON.parse(stored).state.theme : 'system';
+                  var theme = stored ? JSON.parse(stored).state.theme : 'light';
                   var isDark = theme === 'dark' || 
                     (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
                   if (isDark) document.documentElement.classList.add('dark');

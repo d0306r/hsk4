@@ -66,7 +66,7 @@ export default function WordDetailModal({
       >
         {/* 헤더 */}
         <div className="sticky top-0 bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-700 px-5 py-3 flex items-center justify-between z-10">
-          <span className="text-xs font-semibold text-blue-600 dark:text-blue-400">
+          <span className="text-xs font-semibold text-brand-600 dark:text-brand-400">
             HSK {word.level}급
           </span>
           <button
@@ -89,7 +89,7 @@ export default function WordDetailModal({
             </div>
           )}
           {word.partOfSpeech && (
-            <div className="inline-block text-xs text-blue-600 dark:text-blue-300 font-semibold mb-3 px-2 py-1 bg-blue-50 dark:bg-blue-900/30 rounded-full">
+            <div className="inline-block text-xs text-brand-600 dark:text-brand-300 font-semibold mb-3 px-2 py-1 bg-brand-50 dark:bg-brand-900/30 rounded-full">
               {word.partOfSpeech}
             </div>
           )}
@@ -209,7 +209,7 @@ export default function WordDetailModal({
         <div className="px-5 py-4 space-y-2">
           <button
             onClick={handleRetry}
-            className="w-full py-3 bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-400 text-white font-semibold rounded-xl flex items-center justify-center gap-2 active:scale-[0.98] transition"
+            className="w-full py-3 bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white font-semibold rounded-xl flex items-center justify-center gap-2 active:scale-[0.98] transition"
           >
             <RotateCcw size={18} />
             이 단어 다시 학습하기

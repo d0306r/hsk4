@@ -81,8 +81,8 @@ export function UpcomingReviewChart() {
                   <div
                     className={`h-full rounded-md transition-all duration-700 ${
                       isToday
-                        ? 'bg-gradient-to-r from-orange-400 to-orange-500 dark:from-orange-500 dark:to-orange-400'
-                        : 'bg-gradient-to-r from-blue-400 to-blue-500 dark:from-blue-500 dark:to-blue-400'
+                        ? 'bg-gradient-to-r from-brand-500 to-brand-600 dark:from-brand-500 dark:to-brand-400'
+                        : 'bg-gradient-to-r from-brand-300 to-brand-400 dark:from-brand-700 dark:to-brand-600'
                     }`}
                     style={{ width: `${widthPercent}%` }}
                   />
@@ -94,7 +94,7 @@ export function UpcomingReviewChart() {
                 isEmpty
                   ? 'text-slate-300 dark:text-slate-600'
                   : isToday
-                    ? 'text-orange-600 dark:text-orange-400'
+                    ? 'text-brand-600 dark:text-brand-400'
                     : 'text-slate-700 dark:text-slate-300'
               }`}>
                 {item.count}

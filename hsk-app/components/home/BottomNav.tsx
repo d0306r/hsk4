@@ -54,7 +54,7 @@ export function BottomNav() {
             href="/"
             className="font-bold text-lg text-brand-600 dark:text-brand-400"
           >
-            HSK 4급
+            HSK 4급 필수 단어
           </Link>
           <div className="flex items-center gap-1">
             {navItems.map(({ href, label, icon: Icon, isActive }) => {
