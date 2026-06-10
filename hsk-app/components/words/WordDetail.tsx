@@ -113,6 +113,35 @@ export default function WordDetail({
           </div>
         </div>
 
+        {/* 예문 */}
+        {word.example && (
+          <div className="px-6 py-5 border-b border-slate-100 dark:border-slate-700">
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wide">
+                예문
+              </h3>
+              {ttsOk && (
+                <button
+                  onClick={() => speakChinese(word.example!.sentence)}
+                  aria-label="예문 발음 듣기"
+                  className="p-1.5 -mr-1.5 rounded-full text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-900/30 transition active:scale-95"
+                >
+                  <Volume2 size={18} />
+                </button>
+              )}
+            </div>
+            <p className="hanzi text-base font-medium text-slate-900 dark:text-white leading-relaxed mb-1">
+              {word.example.sentence}
+            </p>
+            <p className="text-sm text-slate-500 dark:text-slate-400 mb-1">
+              {word.example.pinyin}
+            </p>
+            <p className="text-sm text-slate-700 dark:text-slate-300">
+              {word.example.translation}
+            </p>
+          </div>
+        )}
+
         {/* 학습 현황 */}
         <div className="px-6 py-5 border-b border-slate-100 dark:border-slate-700">
           <h3 className="text-xs font-semibold text-slate-400 dark:text-slate-500 mb-3 uppercase tracking-wide">

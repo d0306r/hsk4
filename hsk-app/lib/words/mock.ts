@@ -1,9 +1,15 @@
 import { Word, VocabFile } from './types';
 import vocabData from './hsk_vocab.json';
+import examplesData from './examples.json';
 import { getAllProgress } from '@/lib/progress/api';
 // JSON 파일을 타입과 함께 import
 const vocab = vocabData as VocabFile;
-export const allWords: Word[] = vocab.words;
+const examples = examplesData as Record<string, NonNullable<Word['example']>>;
+
+// 예문(examples.json)이 있는 단어에만 example 필드를 병합
+export const allWords: Word[] = vocab.words.map((w) =>
+  examples[String(w.id)] ? { ...w, example: examples[String(w.id)] } : w
+);
 
 /**
  * 레벨별 단어 가져오기 (랜덤 셔플 후 limit개)

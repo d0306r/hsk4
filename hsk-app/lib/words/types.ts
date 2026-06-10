@@ -6,6 +6,11 @@ export interface Word {
   pinyin: string;          // hàn zì
   meaning: string;         // 한국어 뜻
   partOfSpeech?: string;   // 품사 (동사/명사/형용사 등) - 옵션
+  example?: {              // 예문 (있는 단어만) - examples.json에서 병합
+    sentence: string;      // 중국어 문장
+    pinyin: string;        // 병음
+    translation: string;   // 한국어 번역
+  };
   level: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
