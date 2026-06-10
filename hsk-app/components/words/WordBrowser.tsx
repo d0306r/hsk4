@@ -2,6 +2,7 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import Link from 'next/link';
 import { Search, X, Volume2, Star } from 'lucide-react';
 import { allWords } from '@/lib/words/mock';
 import { Word } from '@/lib/words/types';
@@ -168,11 +169,25 @@ export default function WordBrowser() {
   return (
     <PageContainer width="wide" className="px-4 py-6 pb-24">
       {/* 헤더 */}
-      <div className="mb-4">
-        <h1 className="text-2xl font-bold mb-1">단어장</h1>
-        <p className="text-sm text-slate-500 dark:text-slate-400">
-          HSK 3·4급 전체 단어를 둘러보고 검색하세요
-        </p>
+      <div className="flex items-start justify-between gap-3 mb-4">
+        <div>
+          <h1 className="text-2xl font-bold mb-1">단어장</h1>
+          <p className="text-sm text-slate-500 dark:text-slate-400">
+            HSK 3·4급 전체 단어를 둘러보고 검색하세요
+          </p>
+        </div>
+        {favIds.length > 0 && (
+          <Link
+            href="/study/favorites"
+            className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white text-sm font-semibold transition active:scale-[0.98]"
+          >
+            <Star size={15} fill="currentColor" />
+            즐겨찾기 학습
+            <span className="ml-0.5 px-1.5 py-0.5 rounded-full bg-white/20 text-[11px] leading-none">
+              {favIds.length}
+            </span>
+          </Link>
+        )}
       </div>
 
       {/* 검색 */}
