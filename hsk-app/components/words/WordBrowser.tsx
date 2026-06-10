@@ -22,6 +22,28 @@ const LEVEL_TABS: [LevelFilter, string][] = [
   [4, '4급'],
 ];
 
+type StatusFilter = 'all' | 'notMastered' | 'mastered' | 'wrong';
+
+const STATUS_TABS: [StatusFilter, string][] = [
+  ['all', '전체'],
+  ['notMastered', '안 외운'],
+  ['mastered', '외운'],
+  ['wrong', '오답노트'],
+];
+
+type SortKey = 'default' | 'wrong' | 'recent';
+
+const SORT_OPTIONS: [SortKey, string][] = [
+  ['default', '사전순'],
+  ['wrong', '많이 틀린 순'],
+  ['recent', '최근 학습순'],
+];
+
+// 외운 단어 = 한 번이라도 맞혔고 오답 노트에 없음
+function isMastered(p?: WordProgress): boolean {
+  return !!p && p.correctCount > 0 && !p.inWrongNote;
+}
+
 /**
  * 병음 검색을 관대하게: 성조 부호·공백 제거 후 소문자화
  * 예) "hàn zì" → "hanzi" 이므로 사용자가 "hanzi"로 검색해도 매칭됨.
@@ -44,6 +66,9 @@ export default function WordBrowser() {
   const [page, setPage] = useState(1);
   const [progressMap, setProgressMap] = useState<Record<number, WordProgress>>({});
   const [selected, setSelected] = useState<Word | null>(null);
+  const [status, setStatus] = useState<StatusFilter>('all');
+  const [exampleOnly, setExampleOnly] = useState(false);
+  const [sort, setSort] = useState<SortKey>('default');
 
   // SRS 상태 배지용 진도 로드 (학습한 단어 표시) — 모달의 노트 토글 후에도 재호출
   const loadProgress = useCallback(async () => {
@@ -57,12 +82,19 @@ export default function WordBrowser() {
     return () => window.removeEventListener('focus', loadProgress);
   }, [loadProgress]);
 
-  // 필터 + 검색
+  // 필터 + 검색 + 정렬
   const filtered = useMemo(() => {
     const q = query.trim();
     const nq = normalize(q);
-    return allWords.filter((w) => {
+    const list = allWords.filter((w) => {
       if (level !== 'all' && w.level !== level) return false;
+      if (exampleOnly && !w.example) return false;
+
+      const p = progressMap[w.id];
+      if (status === 'mastered' && !isMastered(p)) return false;
+      if (status === 'notMastered' && isMastered(p)) return false;
+      if (status === 'wrong' && !(p && p.inWrongNote)) return false;
+
       if (!q) return true;
       return (
         w.hanzi.includes(q) ||
@@ -70,12 +102,30 @@ export default function WordBrowser() {
         w.meaning.includes(q)
       );
     });
-  }, [query, level]);
 
-  // 필터/검색이 바뀌면 첫 페이지로
+    if (sort === 'wrong') {
+      // 많이 틀린 순 (틀린 기록 없으면 뒤로)
+      return [...list].sort(
+        (a, b) =>
+          (progressMap[b.id]?.wrongCount ?? 0) -
+          (progressMap[a.id]?.wrongCount ?? 0)
+      );
+    }
+    if (sort === 'recent') {
+      // 최근 학습순 (학습 기록 없으면 뒤로)
+      return [...list].sort((a, b) => {
+        const ta = progressMap[a.id]?.lastStudiedAt ?? '';
+        const tb = progressMap[b.id]?.lastStudiedAt ?? '';
+        return tb.localeCompare(ta);
+      });
+    }
+    return list; // 사전순(데이터 기본 순서)
+  }, [query, level, status, exampleOnly, sort, progressMap]);
+
+  // 필터/검색/정렬이 바뀌면 첫 페이지로
   useEffect(() => {
     setPage(1);
-  }, [query, level]);
+  }, [query, level, status, exampleOnly, sort]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
 
@@ -148,12 +198,58 @@ export default function WordBrowser() {
         </span>
       </div>
 
+      {/* 상태 필터 + 예문 토글 + 정렬 */}
+      <div className="flex flex-wrap items-center gap-1.5 mb-4">
+        {STATUS_TABS.map(([val, label]) => (
+          <button
+            key={val}
+            onClick={() => setStatus(val)}
+            className={`px-3 py-1.5 rounded-full text-xs font-semibold transition ${
+              status === val
+                ? 'bg-brand-600 dark:bg-brand-500 text-white'
+                : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+            }`}
+          >
+            {label}
+          </button>
+        ))}
+
+        <button
+          onClick={() => setExampleOnly((v) => !v)}
+          aria-pressed={exampleOnly}
+          className={`px-3 py-1.5 rounded-full text-xs font-semibold transition ${
+            exampleOnly
+              ? 'bg-brand-600 dark:bg-brand-500 text-white'
+              : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+          }`}
+        >
+          예문 있는 것
+        </button>
+
+        <select
+          value={sort}
+          onChange={(e) => setSort(e.target.value as SortKey)}
+          aria-label="정렬"
+          className="ml-auto px-2.5 py-1.5 rounded-lg text-xs font-medium
+                     border border-slate-200 dark:border-slate-700
+                     bg-white dark:bg-slate-800
+                     text-slate-600 dark:text-slate-300
+                     focus:border-brand-500 focus:outline-none"
+        >
+          {SORT_OPTIONS.map(([val, label]) => (
+            <option key={val} value={val}>
+              {label}
+            </option>
+          ))}
+        </select>
+      </div>
+
       {/* 결과 그리드 */}
       {pageItems.length === 0 ? (
         <div className="text-center py-16">
           <div className="text-4xl mb-3">🔍</div>
           <p className="text-sm text-slate-500 dark:text-slate-400">
-            검색 결과가 없어요
+            조건에 맞는 단어가 없어요
           </p>
         </div>
       ) : (
