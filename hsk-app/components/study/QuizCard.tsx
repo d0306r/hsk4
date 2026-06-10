@@ -1,8 +1,11 @@
 // components/study/QuizCard.tsx
 'use client';
 
+import { useEffect, useState } from 'react';
+import { Volume2 } from 'lucide-react';
 import { QuizQuestion } from '@/stores/studyStore';
 import { useSettingsStore } from '@/stores/settingsStore';
+import { isTTSAvailable, speakChinese } from '@/lib/tts';
 
 interface QuizCardProps {
   question: QuizQuestion;
@@ -18,6 +21,8 @@ export default function QuizCard({
   const { word, direction, options, correctIndex } = question;
   const isAnswered = selectedIndex !== null;
   const showPinyin = useSettingsStore((s) => s.showPinyin);
+  const [ttsOk, setTtsOk] = useState(false);
+  useEffect(() => setTtsOk(isTTSAvailable()), []);
 
   return (
     <div className="w-full">
@@ -134,6 +139,34 @@ export default function QuizCard({
             )}
           </div>
           <div className="text-sm text-gray-700 dark:text-slate-300">{word.meaning}</div>
+
+          {word.example && (
+            <div className="mt-3 pt-3 border-t border-brand-100 dark:border-brand-800/50">
+              <div className="flex items-start justify-between gap-2">
+                <p className="hanzi text-sm font-medium text-brand-900 dark:text-brand-100">
+                  {word.example.sentence}
+                </p>
+                {ttsOk && (
+                  <button
+                    type="button"
+                    onClick={() => speakChinese(word.example!.sentence)}
+                    aria-label="예문 발음 듣기"
+                    className="flex-shrink-0 p-1 -mr-1 rounded-full text-brand-600 dark:text-brand-300 hover:bg-brand-100 dark:hover:bg-brand-800/50 transition active:scale-95"
+                  >
+                    <Volume2 size={16} />
+                  </button>
+                )}
+              </div>
+              {showPinyin && (
+                <p className="text-xs text-brand-600 dark:text-brand-300 mt-0.5">
+                  {word.example.pinyin}
+                </p>
+              )}
+              <p className="text-xs text-gray-600 dark:text-slate-400 mt-0.5">
+                {word.example.translation}
+              </p>
+            </div>
+          )}
         </div>
       )}
     </div>
