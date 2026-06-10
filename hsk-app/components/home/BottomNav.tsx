@@ -58,7 +58,8 @@ export function BottomNav() {
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link
             href="/"
-            className="font-bold text-lg text-brand-600 dark:text-brand-400"
+            aria-label="홈으로"
+            className="font-bold text-lg text-brand-600 dark:text-brand-400 hover:opacity-80 transition-opacity cursor-pointer"
           >
             HSK 4급 필수 단어
           </Link>

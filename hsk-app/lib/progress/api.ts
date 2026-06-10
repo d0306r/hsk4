@@ -5,6 +5,7 @@ import {
   getAllWordProgress,
   getWrongNoteWordIds,
   markAsMastered as markAsMasteredStorage,
+  addToWrongNote as addToWrongNoteStorage,
   clearAllProgress,
   clearWrongNotes,
 } from './storage';
@@ -80,6 +81,13 @@ export async function getAllProgress() {
  */
 export async function markWordAsMastered(wordId: number): Promise<void> {
   markAsMasteredStorage(wordId);
+}
+
+/**
+ * 단어를 오답 노트에 수동 추가
+ */
+export async function addWordToWrongNote(wordId: number): Promise<void> {
+  addToWrongNoteStorage(wordId);
 }
 
 /**

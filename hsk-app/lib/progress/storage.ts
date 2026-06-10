@@ -194,6 +194,33 @@ export function getWrongNoteWordIds(): number[] {
 }
 
 /**
+ * 단어를 수동으로 오답 노트에 추가
+ * - 진도가 없던 단어(미학습)면 새 진도를 만들어 등록
+ * - 이미 진도가 있으면 inWrongNote=true, 연속 정답 0으로 리셋(다시 졸업 필요)
+ */
+export function addToWrongNote(wordId: number): void {
+  const data = readProgress();
+  const existing = data.words[wordId];
+  const now = new Date().toISOString();
+
+  data.words[wordId] = existing
+    ? { ...existing, inWrongNote: true, currentStreak: 0 }
+    : {
+        wordId,
+        totalAttempts: 0,
+        correctCount: 0,
+        wrongCount: 0,
+        currentStreak: 0,
+        inWrongNote: true,
+        lastStudiedAt: now,
+        srs: createInitialSRS(),
+      };
+
+  data.updatedAt = now;
+  writeProgress(data);
+}
+
+/**
  * 단어를 수동으로 오답 노트에서 졸업
  */
 export function markAsMastered(wordId: number): void {

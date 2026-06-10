@@ -1,14 +1,16 @@
 // components/words/WordBrowser.tsx
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Search, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { allWords } from '@/lib/words/mock';
+import { Word } from '@/lib/words/types';
 import { getAllProgress } from '@/lib/progress/api';
 import { getSRSStage } from '@/lib/srs/algorithm';
 import { WordProgress } from '@/lib/progress/types';
 import { SRSStageBadge } from '@/components/ui/SRSStageBadge';
 import { PageContainer } from '@/components/ui/PageContainer';
+import WordDetail from './WordDetail';
 
 const PAGE_SIZE = 24;
 
@@ -41,21 +43,19 @@ export default function WordBrowser() {
   const [level, setLevel] = useState<LevelFilter>('all');
   const [page, setPage] = useState(1);
   const [progressMap, setProgressMap] = useState<Record<number, WordProgress>>({});
+  const [selected, setSelected] = useState<Word | null>(null);
 
-  // SRS 상태 배지용 진도 로드 (학습한 단어 표시)
-  useEffect(() => {
-    let cancelled = false;
-    async function load() {
-      const p = await getAllProgress();
-      if (!cancelled) setProgressMap(p);
-    }
-    load();
-    window.addEventListener('focus', load);
-    return () => {
-      cancelled = true;
-      window.removeEventListener('focus', load);
-    };
+  // SRS 상태 배지용 진도 로드 (학습한 단어 표시) — 모달의 노트 토글 후에도 재호출
+  const loadProgress = useCallback(async () => {
+    const p = await getAllProgress();
+    setProgressMap(p);
   }, []);
+
+  useEffect(() => {
+    loadProgress();
+    window.addEventListener('focus', loadProgress);
+    return () => window.removeEventListener('focus', loadProgress);
+  }, [loadProgress]);
 
   // 필터 + 검색
   const filtered = useMemo(() => {
@@ -161,9 +161,10 @@ export default function WordBrowser() {
           {pageItems.map((w) => {
             const prog = progressMap[w.id];
             return (
-              <div
+              <button
                 key={w.id}
-                className="h-full flex flex-col bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-4"
+                onClick={() => setSelected(w)}
+                className="h-full flex flex-col text-left bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-4 hover:border-brand-300 dark:hover:border-brand-500 hover:shadow-sm transition active:scale-[0.99]"
               >
                 <div className="flex items-baseline gap-2 flex-wrap mb-1.5">
                   <span className="hanzi text-xl font-bold text-slate-900 dark:text-white whitespace-nowrap">
@@ -185,7 +186,7 @@ export default function WordBrowser() {
                   <span className="whitespace-nowrap">HSK {w.level}급</span>
                   {prog && <SRSStageBadge stage={getSRSStage(prog.srs)} />}
                 </div>
-              </div>
+              </button>
             );
           })}
         </div>
@@ -194,6 +195,16 @@ export default function WordBrowser() {
       {/* 페이지네이션 */}
       {totalPages > 1 && (
         <Pagination page={page} totalPages={totalPages} onChange={setPage} />
+      )}
+
+      {/* 상세 모달 */}
+      {selected && (
+        <WordDetail
+          word={selected}
+          progress={progressMap[selected.id]}
+          onClose={() => setSelected(null)}
+          onChanged={loadProgress}
+        />
       )}
     </PageContainer>
   );
