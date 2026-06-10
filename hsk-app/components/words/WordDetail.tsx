@@ -3,13 +3,21 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { X, Volume2, BookOpen, BookmarkPlus, BookmarkMinus } from 'lucide-react';
+import {
+  X,
+  Star,
+  Volume2,
+  BookOpen,
+  BookmarkPlus,
+  BookmarkMinus,
+} from 'lucide-react';
 import { Word } from '@/lib/words/types';
 import { WordProgress } from '@/lib/progress/types';
 import { getSRSStage, formatNextReview } from '@/lib/srs/algorithm';
 import { SRSStageBadge } from '@/components/ui/SRSStageBadge';
 import { markWordAsMastered, addWordToWrongNote } from '@/lib/progress/api';
 import { isTTSAvailable, speakChinese } from '@/lib/tts';
+import { useFavoritesStore } from '@/stores/favoritesStore';
 
 interface WordDetailProps {
   word: Word;
@@ -28,6 +36,8 @@ export default function WordDetail({
   const router = useRouter();
   const [busy, setBusy] = useState(false);
   const [ttsOk, setTtsOk] = useState(false);
+  const fav = useFavoritesStore((s) => s.ids.includes(word.id));
+  const toggleFav = useFavoritesStore((s) => s.toggle);
 
   // ESC 닫기 + 배경 스크롤 잠금
   useEffect(() => {
@@ -75,13 +85,27 @@ export default function WordDetail({
           <span className="text-xs font-semibold text-brand-600 dark:text-brand-400">
             HSK {word.level}급
           </span>
-          <button
-            onClick={onClose}
-            className="p-2 -mr-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition active:scale-95"
-            aria-label="닫기"
-          >
-            <X size={20} className="text-slate-700 dark:text-slate-200" />
-          </button>
+          <div className="flex items-center gap-1 -mr-2">
+            <button
+              onClick={() => toggleFav(word.id)}
+              aria-label={fav ? '즐겨찾기 해제' : '즐겨찾기 추가'}
+              aria-pressed={fav}
+              className={`p-2 rounded-full transition active:scale-95 ${
+                fav
+                  ? 'text-brand-500 dark:text-brand-400'
+                  : 'text-slate-300 dark:text-slate-500 hover:text-brand-500 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800'
+              }`}
+            >
+              <Star size={20} fill={fav ? 'currentColor' : 'none'} />
+            </button>
+            <button
+              onClick={onClose}
+              className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition active:scale-95"
+              aria-label="닫기"
+            >
+              <X size={20} className="text-slate-700 dark:text-slate-200" />
+            </button>
+          </div>
         </div>
 
         {/* 단어 정보 */}

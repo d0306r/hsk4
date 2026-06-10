@@ -2,7 +2,7 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Search, X, Volume2 } from 'lucide-react';
+import { Search, X, Volume2, Star } from 'lucide-react';
 import { allWords } from '@/lib/words/mock';
 import { Word } from '@/lib/words/types';
 import { getAllProgress } from '@/lib/progress/api';
@@ -11,6 +11,7 @@ import { WordProgress } from '@/lib/progress/types';
 import { SRSStageBadge } from '@/components/ui/SRSStageBadge';
 import { PageContainer } from '@/components/ui/PageContainer';
 import { isTTSAvailable, speakChinese } from '@/lib/tts';
+import { useFavoritesStore } from '@/stores/favoritesStore';
 import WordDetail from './WordDetail';
 
 const PAGE_SIZE = 24;
@@ -69,9 +70,14 @@ export default function WordBrowser() {
   const [selected, setSelected] = useState<Word | null>(null);
   const [status, setStatus] = useState<StatusFilter>('all');
   const [exampleOnly, setExampleOnly] = useState(false);
+  const [favoritesOnly, setFavoritesOnly] = useState(false);
   const [sort, setSort] = useState<SortKey>('default');
   const [ttsOk, setTtsOk] = useState(false);
   useEffect(() => setTtsOk(isTTSAvailable()), []);
+
+  // 즐겨찾기(내 단어장)
+  const favIds = useFavoritesStore((s) => s.ids);
+  const toggleFav = useFavoritesStore((s) => s.toggle);
 
   // 무한 스크롤용 — 센티넬 관찰, 현재 결과 길이는 ref로 최신값 참조
   const sentinelRef = useRef<HTMLDivElement>(null);
@@ -93,9 +99,11 @@ export default function WordBrowser() {
   const filtered = useMemo(() => {
     const q = query.trim();
     const nq = normalize(q);
+    const favSet = new Set(favIds);
     const list = allWords.filter((w) => {
       if (level !== 'all' && w.level !== level) return false;
       if (exampleOnly && !w.example) return false;
+      if (favoritesOnly && !favSet.has(w.id)) return false;
 
       const p = progressMap[w.id];
       if (status === 'mastered' && !isMastered(p)) return false;
@@ -127,14 +135,14 @@ export default function WordBrowser() {
       });
     }
     return list; // 사전순(데이터 기본 순서)
-  }, [query, level, status, exampleOnly, sort, progressMap]);
+  }, [query, level, status, exampleOnly, favoritesOnly, favIds, sort, progressMap]);
 
   filteredLenRef.current = filtered.length;
 
   // 필터/검색/정렬이 바뀌면 처음부터 다시 보여줌
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [query, level, status, exampleOnly, sort]);
+  }, [query, level, status, exampleOnly, favoritesOnly, sort]);
 
   // 무한 스크롤: 하단 센티넬이 보이면 PAGE_SIZE만큼 더 노출
   useEffect(() => {
@@ -213,17 +221,31 @@ export default function WordBrowser() {
         </div>
 
         <div className="flex items-center justify-between gap-2 flex-wrap pt-0.5">
-          <label className="inline-flex items-center gap-1.5 cursor-pointer select-none">
-            <input
-              type="checkbox"
-              checked={exampleOnly}
-              onChange={(e) => setExampleOnly(e.target.checked)}
-              className="w-4 h-4 rounded accent-brand-600 cursor-pointer"
-            />
-            <span className="text-xs font-medium text-slate-600 dark:text-slate-300">
-              예문 있는 것만
-            </span>
-          </label>
+          <div className="flex items-center gap-4 flex-wrap">
+            <label className="inline-flex items-center gap-1.5 cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={favoritesOnly}
+                onChange={(e) => setFavoritesOnly(e.target.checked)}
+                className="w-4 h-4 rounded accent-brand-600 cursor-pointer"
+              />
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-slate-600 dark:text-slate-300">
+                <Star size={12} className="text-brand-500 dark:text-brand-400" fill="currentColor" />
+                즐겨찾기만
+              </span>
+            </label>
+            <label className="inline-flex items-center gap-1.5 cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={exampleOnly}
+                onChange={(e) => setExampleOnly(e.target.checked)}
+                className="w-4 h-4 rounded accent-brand-600 cursor-pointer"
+              />
+              <span className="text-xs font-medium text-slate-600 dark:text-slate-300">
+                예문 있는 것만
+              </span>
+            </label>
+          </div>
 
           <div className="flex items-center gap-2 ml-auto">
             <span className="text-xs text-slate-400 dark:text-slate-500">
@@ -261,13 +283,14 @@ export default function WordBrowser() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 items-stretch">
           {pageItems.map((w) => {
             const prog = progressMap[w.id];
+            const fav = favIds.includes(w.id);
             return (
               <div key={w.id} className="relative h-full">
                 <button
                   onClick={() => setSelected(w)}
                   className="w-full h-full flex flex-col text-left bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-4 hover:border-brand-300 dark:hover:border-brand-500 hover:shadow-sm transition active:scale-[0.99]"
                 >
-                  <div className="flex items-baseline gap-2 flex-wrap mb-1.5 pr-7">
+                  <div className="flex items-baseline gap-2 flex-wrap mb-1.5 pr-14">
                     <span className="hanzi text-xl font-bold text-slate-900 dark:text-white whitespace-nowrap">
                       {w.hanzi}
                     </span>
@@ -288,15 +311,29 @@ export default function WordBrowser() {
                     {prog && <SRSStageBadge stage={getSRSStage(prog.srs)} />}
                   </div>
                 </button>
-                {ttsOk && (
+                <div className="absolute top-2 right-2 flex items-center gap-0.5">
+                  {ttsOk && (
+                    <button
+                      onClick={() => speakChinese(w.hanzi)}
+                      aria-label={`${w.hanzi} 발음 듣기`}
+                      className="p-1.5 rounded-full text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-900/30 transition active:scale-95"
+                    >
+                      <Volume2 size={16} />
+                    </button>
+                  )}
                   <button
-                    onClick={() => speakChinese(w.hanzi)}
-                    aria-label={`${w.hanzi} 발음 듣기`}
-                    className="absolute top-2.5 right-2.5 p-1.5 rounded-full text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-900/30 transition active:scale-95"
+                    onClick={() => toggleFav(w.id)}
+                    aria-label={fav ? '즐겨찾기 해제' : '즐겨찾기 추가'}
+                    aria-pressed={fav}
+                    className={`p-1.5 rounded-full transition active:scale-95 ${
+                      fav
+                        ? 'text-brand-500 dark:text-brand-400'
+                        : 'text-slate-300 dark:text-slate-600 hover:text-brand-500 dark:hover:text-brand-400'
+                    }`}
                   >
-                    <Volume2 size={16} />
+                    <Star size={16} fill={fav ? 'currentColor' : 'none'} />
                   </button>
-                )}
+                </div>
               </div>
             );
           })}
