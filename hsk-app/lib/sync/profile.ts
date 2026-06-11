@@ -3,6 +3,7 @@
 // 별도 테이블 없이 기기 간 동기화 — 로그인 시 내려받고, 변경 시 올린다.
 import { createClient } from '@/lib/supabase/client';
 import type { QuizDirection } from '@/stores/settingsStore';
+import type { Theme } from '@/stores/themeStore';
 
 export interface SyncedProfile {
   nickname: string;
@@ -10,6 +11,7 @@ export interface SyncedProfile {
   dailyGoal: number;
   quizDirection: QuizDirection;
   showPinyin: boolean;
+  theme?: Theme; // 기존 프로필엔 없을 수 있어 optional
   favorites: number[];
 }
 

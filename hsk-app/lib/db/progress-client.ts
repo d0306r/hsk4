@@ -16,11 +16,13 @@ function wordIdToDbId(wordId: number): string {
  * WordProgress → DB row 변환
  */
 function progressToDbRow(progress: WordProgress, userId: string) {
+  // inWrongNote를 먼저 검사해야 한다. (totalAttempts===0을 먼저 보면
+  // 미학습 단어를 수동으로 오답 추가했을 때 'new'로 저장돼 inWrongNote가 유실됨)
   let dbStatus: 'new' | 'learning' | 'review' | 'mastered';
-  if (progress.totalAttempts === 0) {
-    dbStatus = 'new';
-  } else if (progress.inWrongNote) {
+  if (progress.inWrongNote) {
     dbStatus = 'learning';
+  } else if (progress.totalAttempts === 0) {
+    dbStatus = 'new';
   } else if (progress.correctCount >= 3) {
     dbStatus = 'mastered';
   } else {

@@ -11,6 +11,7 @@ import {
 } from './storage';
 import {
   syncBatchProgressToDB,
+  syncWordProgressToDB,
   clearAllProgressFromDB,
 } from '@/lib/db/progress-client';
 import { insertStudySession, type StudySessionInput } from '@/lib/db/sessions-client';
@@ -80,10 +81,24 @@ export async function getAllProgress() {
 }
 
 /**
+ * 변경된 단어 하나의 최종 진도를 DB에 반영 (수동 오답 조작 동기화용).
+ * 실패해도 앱은 안 멈춤 (옵션 A).
+ */
+async function pushWordToDB(wordId: number): Promise<void> {
+  try {
+    const p = getAllWordProgress()[wordId];
+    if (p) await syncWordProgressToDB(p);
+  } catch (e) {
+    console.error('[pushWordToDB] 실패', e);
+  }
+}
+
+/**
  * 단어를 오답 노트에서 졸업시킴 (수동)
  */
 export async function markWordAsMastered(wordId: number): Promise<void> {
   markAsMasteredStorage(wordId);
+  await pushWordToDB(wordId); // DB에도 반영 → 기기 간 동기화
 }
 
 /**
@@ -91,6 +106,7 @@ export async function markWordAsMastered(wordId: number): Promise<void> {
  */
 export async function addWordToWrongNote(wordId: number): Promise<void> {
   addToWrongNoteStorage(wordId);
+  await pushWordToDB(wordId); // DB에도 반영 → 기기 간 동기화
 }
 
 /**
