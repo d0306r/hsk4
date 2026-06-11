@@ -94,6 +94,30 @@ export async function syncBatchProgressToDB(
 }
 
 /**
+ * 본인의 전체 진도·오답 노트를 DB에서 삭제 (학습 기록 전체 초기화용)
+ * 로컬만 비우면 다음 로그인/동기화 때 DB에서 다시 돌아오므로 DB도 함께 비운다.
+ */
+export async function clearAllProgressFromDB(): Promise<void> {
+  const supabase = createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return;
+
+  const { error: e1 } = await supabase
+    .from('user_progress')
+    .delete()
+    .eq('user_id', user.id);
+  if (e1) console.error('[clearAllProgressFromDB] user_progress 삭제 실패:', e1);
+
+  const { error: e2 } = await supabase
+    .from('notes')
+    .delete()
+    .eq('user_id', user.id);
+  if (e2) console.error('[clearAllProgressFromDB] notes 삭제 실패:', e2);
+}
+
+/**
  * 클라이언트에서 본인의 전체 진도를 DB에서 가져오기
  * (서버용 fetchAllProgressFromDB와 같지만 브라우저 클라이언트 사용)
  */

@@ -7,6 +7,7 @@ interface FavoritesState {
   ids: number[];
   toggle: (id: number) => void;
   isFavorite: (id: number) => boolean;
+  setAll: (ids: number[]) => void;
 }
 
 export const useFavoritesStore = create<FavoritesState>()(
@@ -20,6 +21,7 @@ export const useFavoritesStore = create<FavoritesState>()(
             : [...s.ids, id],
         })),
       isFavorite: (id) => get().ids.includes(id),
+      setAll: (ids) => set({ ids }),
     }),
     { name: 'hsk-favorites' }
   )

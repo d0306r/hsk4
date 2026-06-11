@@ -9,7 +9,10 @@ import {
   clearAllProgress,
   clearWrongNotes,
 } from './storage';
-import { syncBatchProgressToDB } from '@/lib/db/progress-client';
+import {
+  syncBatchProgressToDB,
+  clearAllProgressFromDB,
+} from '@/lib/db/progress-client';
 import { insertStudySession, type StudySessionInput } from '@/lib/db/sessions-client';
 
 /**
@@ -95,7 +98,10 @@ export async function addWordToWrongNote(wordId: number): Promise<void> {
  */
 export async function resetAllProgress(): Promise<void> {
   clearAllProgress();
-  // TODO: DB도 비우기 (Step 4-D 이후 추가)
+  // 로컬만 비우면 다음 동기화 때 부활하므로 DB도 비움 (실패해도 앱은 안 멈춤)
+  await clearAllProgressFromDB().catch((e) =>
+    console.error('[resetAllProgress] DB 초기화 실패:', e)
+  );
 }
 
 /**
