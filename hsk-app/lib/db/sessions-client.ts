@@ -81,6 +81,55 @@ export async function fetchSessionHeatmap(
   return map;
 }
 
+/**
+ * study_sessions에서 날짜별 통계(daily)를 재구성 (기기 간 통계 동기화용)
+ * 키는 applySessionRecords와 동일하게 started_at의 날짜 부분(UTC slice)을 사용해
+ * 로컬에 저장된 daily 키와 정렬되도록 한다.
+ * 반환: { 'YYYY-MM-DD': { date, studied, correct, wrong }, ... }
+ */
+export async function fetchDailyStatsFromDB(
+  days: number
+): Promise<Record<string, { date: string; studied: number; correct: number; wrong: number }>> {
+  const supabase = createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) {
+    console.warn('[fetchDailyStatsFromDB] 로그인 안 됨 - 빈 결과');
+    return {};
+  }
+
+  const since = new Date();
+  since.setHours(0, 0, 0, 0);
+  since.setDate(since.getDate() - (days - 1));
+
+  const { data, error } = await supabase
+    .from('study_sessions')
+    .select('started_at, ended_at, word_count, known_count, unknown_count')
+    .eq('user_id', user.id)
+    .gte('started_at', since.toISOString());
+
+  if (error) {
+    console.error('[fetchDailyStatsFromDB] DB 에러:', error);
+    return {};
+  }
+
+  const map: Record<
+    string,
+    { date: string; studied: number; correct: number; wrong: number }
+  > = {};
+  for (const row of data ?? []) {
+    const key = (row.started_at ?? row.ended_at ?? '').slice(0, 10);
+    if (!key) continue;
+    const e = map[key] ?? { date: key, studied: 0, correct: 0, wrong: 0 };
+    e.studied += row.word_count ?? 0;
+    e.correct += row.known_count ?? 0;
+    e.wrong += row.unknown_count ?? 0;
+    map[key] = e;
+  }
+  return map;
+}
+
 /** Date → 'YYYY-MM-DD' (로컬 타임존) */
 function toLocalDateKey(date: Date): string {
   const y = date.getFullYear();

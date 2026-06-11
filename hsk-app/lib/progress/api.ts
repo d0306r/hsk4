@@ -123,16 +123,32 @@ export async function syncFromDB(): Promise<{ synced: number }> {
     const { fetchAllProgressFromDBClient } = await import('@/lib/db/progress-client');
     const dbProgress = await fetchAllProgressFromDBClient();
 
-    if (dbProgress.length === 0) {
+    // 1) 단어별 진도(words) 머지
+    if (dbProgress.length > 0) {
+      const { mergeProgressFromDB } = await import('./storage');
+      mergeProgressFromDB(dbProgress);
+      console.log(`[syncFromDB] DB에서 ${dbProgress.length}개 단어 진도 머지 완료`);
+    } else {
       console.log('[syncFromDB] DB에 진도 없음 (첫 사용자 또는 미로그인)');
-      return { synced: 0 };
     }
 
-    // storage의 머지 함수 호출
-    const { mergeProgressFromDB } = await import('./storage');
-    mergeProgressFromDB(dbProgress);
+    // 2) 날짜별 통계(daily) 머지 — study_sessions에서 재구성
+    //    통계(주간 리포트·정답률 추이·스트릭·학습일수)가 기기 간 일치하도록.
+    //    진도가 없어도 세션 기록이 있을 수 있으니 별도로 실행.
+    try {
+      const { fetchDailyStatsFromDB } = await import('@/lib/db/sessions-client');
+      const dbDaily = await fetchDailyStatsFromDB(365);
+      if (Object.keys(dbDaily).length > 0) {
+        const { mergeDailyFromDB } = await import('./storage');
+        mergeDailyFromDB(dbDaily);
+        console.log(
+          `[syncFromDB] DB에서 ${Object.keys(dbDaily).length}일치 통계 머지 완료`
+        );
+      }
+    } catch (e) {
+      console.error('[syncFromDB] daily 통계 동기화 실패', e);
+    }
 
-    console.log(`[syncFromDB] DB에서 ${dbProgress.length}개 단어 진도 머지 완료`);
     return { synced: dbProgress.length };
   } catch (e) {
     console.error('[syncFromDB] 실패', e);

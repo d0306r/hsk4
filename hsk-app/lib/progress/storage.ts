@@ -319,3 +319,38 @@ export function mergeProgressFromDB(
   writeProgress(newData);
   return newData;
 }
+
+/**
+ * DB(study_sessions)에서 재구성한 날짜별 통계를 로컬 daily와 머지.
+ * study_sessions는 모든 기기의 세션을 빠짐없이 담으므로 사실상 상위집합이다.
+ * 충돌 시 필드별 max를 취해, 오프라인으로 아직 DB에 못 올라간 로컬 기록도 보존한다.
+ */
+export function mergeDailyFromDB(
+  dbDaily: Record<string, DailyStats>
+): ProgressData {
+  const data = readProgress();
+  const newDaily = { ...data.daily };
+
+  for (const [key, db] of Object.entries(dbDaily)) {
+    const local = newDaily[key];
+    if (!local) {
+      newDaily[key] = db;
+      continue;
+    }
+    newDaily[key] = {
+      date: key,
+      studied: Math.max(local.studied, db.studied),
+      correct: Math.max(local.correct, db.correct),
+      wrong: Math.max(local.wrong, db.wrong),
+    };
+  }
+
+  const newData: ProgressData = {
+    ...data,
+    daily: newDaily,
+    updatedAt: new Date().toISOString(),
+  };
+
+  writeProgress(newData);
+  return newData;
+}
