@@ -10,6 +10,15 @@ import { createClient } from '@/lib/supabase/client';
 import { signOut } from '@/app/auth/actions';
 import ConfirmModal from '@/components/ui/ConfirmModal';
 import { PageContainer } from '@/components/ui/PageContainer';
+import { AppGreeting } from '@/components/ui/AppGreeting';
+
+// 퀴즈 방향별 도움말 (선택한 방향이 무슨 의미인지 설명)
+const QUIZ_DIRECTION_HELP: Record<QuizDirection, string> = {
+  mixed: '‘한자→뜻 · 뜻→한자 · 듣기’ 세 방식을 번갈아 가며 출제해요',
+  'hanzi-to-meaning': '한자(汉字)를 보고 알맞은 뜻을 골라요',
+  'meaning-to-hanzi': '한국어 뜻을 보고 알맞은 한자를 골라요',
+  listening: '발음을 듣고 알맞은 뜻을 골라요',
+};
 
 export default function SettingsPage() {
   const {
@@ -58,10 +67,7 @@ export default function SettingsPage() {
     <main className="pb-24 px-5 pt-6 md:pt-20">
       <PageContainer width="narrow">
       <div className="max-w-3xl mx-auto">
-      <h1 className="text-2xl font-bold mb-1">설정</h1>
-      <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
-        학습 환경을 맞춤 설정할 수 있어요
-      </p>
+      <AppGreeting subtitle="학습 환경을 맞춤 설정할 수 있어요" />
 
       {/* 학습 그룹 */}
       <SettingsGroup title="학습">
@@ -89,6 +95,13 @@ export default function SettingsPage() {
             <option value="listening">듣기 (발음 → 뜻)</option>
           </select>
         </SettingsRow>
+
+        {/* 선택한 퀴즈 방향 도움말 */}
+        <div className="px-4 py-2.5 bg-slate-50/70 dark:bg-slate-800/40">
+          <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            💡 {QUIZ_DIRECTION_HELP[quizDirection]}
+          </p>
+        </div>
       </SettingsGroup>
 
       {/* 표시 그룹 */}

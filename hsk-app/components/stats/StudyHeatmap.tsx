@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { fetchSessionHeatmap } from '@/lib/db/sessions-client';
 import { getRecentDailyStats } from '@/lib/progress/stats';
 
-const DAYS = 91; // 약 3개월
+const DAYS = 182; // 약 6개월 (가로 폭을 채우기 충분한 주 수)
 
 function dateKey(date: Date): string {
   const y = date.getFullYear();
@@ -86,11 +86,11 @@ export default function StudyHeatmap() {
       : Object.values(counts).filter((c) => c > 0).length;
 
   return (
-    <section className="card">
+    <section className="card border border-slate-200/70 dark:border-slate-700/60 flex flex-col">
       <div className="flex items-center justify-between mb-3">
         <h2 className="text-base font-bold">학습 잔디</h2>
         <span className="text-xs text-slate-400 dark:text-slate-500">
-          최근 3개월 · {totalDays}일 학습
+          최근 6개월 · {totalDays}일 학습
         </span>
       </div>
 
@@ -98,9 +98,13 @@ export default function StudyHeatmap() {
         <div className="h-24 animate-pulse bg-slate-100 dark:bg-slate-700 rounded" />
       ) : (
         <>
+          {/* 주 칸을 flex-1로 늘려 카드 폭을 꽉 채움 (칸은 정사각 유지) */}
           <div className="flex gap-[3px] overflow-x-auto pb-1">
             {weeks.map((week, wi) => (
-              <div key={wi} className="flex flex-col gap-[3px]">
+              <div
+                key={wi}
+                className="flex-1 min-w-[8px] flex flex-col gap-[3px]"
+              >
                 {week.map((day, di) => {
                   const isFuture = day > today;
                   const key = dateKey(day);
@@ -110,7 +114,7 @@ export default function StudyHeatmap() {
                     <div
                       key={di}
                       title={isFuture ? '' : `${key} · ${count}개 학습`}
-                      className={`w-3 h-3 rounded-sm ${
+                      className={`aspect-square rounded-sm ${
                         isFuture ? 'bg-transparent' : CELL_COLORS[lvl]
                       }`}
                     />
@@ -120,7 +124,7 @@ export default function StudyHeatmap() {
             ))}
           </div>
 
-          <div className="flex items-center justify-end gap-1 mt-3">
+          <div className="flex items-center justify-end gap-1 mt-auto pt-3">
             <span className="text-xs text-slate-400 dark:text-slate-500 mr-1">
               적음
             </span>

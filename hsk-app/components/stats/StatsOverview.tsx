@@ -4,7 +4,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import {
-  Flame,
   BookOpen,
   GraduationCap,
   NotebookPen,
@@ -13,6 +12,7 @@ import {
   TrendingDown,
   LucideIcon,
 } from 'lucide-react';
+import { AppGreeting } from '@/components/ui/AppGreeting';
 import {
   getRecentDailyStats,
   getCurrentStreak,
@@ -77,40 +77,33 @@ export default function StatsOverview() {
     );
   }
 
-  const { daily, daily14, weekly, streak, overall, mostWrong } = data;
+  const { daily, daily14, weekly, overall, mostWrong } = data;
 
   return (
     <PageContainer width="wide" className="px-4 py-6 pb-24">
-      {/* 헤더 */}
-      <h1 className="text-2xl font-bold mb-1">통계</h1>
-      <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
-        지금까지의 학습 현황이에요
-      </p>
+      {/* 헤더 — 닉네임 인사 (공용) */}
+      <AppGreeting subtitle="지금까지의 학습 현황이에요" />
 
       {overall.totalStudied === 0 ? (
         <EmptyState />
       ) : (
-        <>
-          {/* 이번 주 — 요약 + 7일 학습량 (상단 강조) */}
-          <WeeklyReportCard weekly={weekly} daily={daily} />
+        <div className="space-y-4">
+          {/* 이번 주 — 요약 + 7일 막대 + 정답률 추이 (빈 공간 없이 한 카드에) */}
+          <WeeklyReportCard weekly={weekly} daily={daily} daily14={daily14} />
 
-          <div className="lg:grid lg:grid-cols-[1fr_20rem] lg:gap-5 lg:items-start">
-            {/* 사이드바 — 폰에서는 맨 위(요약), PC에서는 오른쪽 */}
-            <aside className="space-y-4 mb-4 lg:mb-0 lg:order-2">
-              {streak > 0 && <StreakCard streak={streak} />}
-              <KeyMetrics overall={overall} />
-              {mostWrong.length > 0 && (
-                <MostWrongCard items={mostWrong} showPinyin={showPinyin} />
-              )}
-            </aside>
+          {/* 핵심 수치 — 가로 4칸 strip */}
+          <KeyMetrics overall={overall} />
 
-            {/* 메인 — 정답률 추이 + 잔디 */}
-            <div className="space-y-4 lg:order-1 lg:min-w-0">
-              <AccuracyTrend data={daily14} />
+          {/* 잔디 + 자주 틀린 단어 (PC에서 좌우) */}
+          {mostWrong.length > 0 ? (
+            <div className="lg:grid lg:grid-cols-[1fr_20rem] lg:gap-4 lg:items-stretch space-y-4 lg:space-y-0">
               <StudyHeatmap />
+              <MostWrongCard items={mostWrong} showPinyin={showPinyin} />
             </div>
-          </div>
-        </>
+          ) : (
+            <StudyHeatmap />
+          )}
+        </div>
       )}
     </PageContainer>
   );
@@ -121,16 +114,18 @@ export default function StatsOverview() {
 function WeeklyReportCard({
   weekly,
   daily,
+  daily14,
 }: {
   weekly: Weekly;
   daily: DailyStats[];
+  daily14: DailyStats[];
 }) {
   return (
-    <section className={`${CARD} mb-4`}>
+    <section className={CARD}>
       <h2 className="text-sm font-bold text-slate-500 dark:text-slate-400 mb-3">
         이번 주
       </h2>
-      <div className="grid grid-cols-3 gap-3 mb-5">
+      <div className="grid grid-cols-3 gap-3 mb-4">
         <WeekMetric
           label="학습"
           value={weekly.studied}
@@ -147,8 +142,18 @@ function WeeklyReportCard({
         <WeekMetric label="학습일" value={weekly.daysStudied} suffix="/ 7일" />
       </div>
 
-      {/* 최근 7일 학습량 막대 */}
-      <DailyChart data={daily} bare />
+      {/* 최근 7일 막대 + 정답률 추이 — PC에서 좌우로 빈 공간 채움 */}
+      <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+        <div>
+          <p className="text-xs text-slate-400 dark:text-slate-500 mb-2">
+            최근 7일 학습량
+          </p>
+          <DailyChart data={daily} bare />
+        </div>
+        <div className="mt-6 lg:mt-0">
+          <AccuracyTrend data={daily14} bare />
+        </div>
+      </div>
     </section>
   );
 }
@@ -208,27 +213,6 @@ function DeltaChip({ delta, suffix }: { delta: number; suffix?: string }) {
   );
 }
 
-// ─────── 스트릭 ───────
-
-function StreakCard({ streak }: { streak: number }) {
-  return (
-    <section className={`${CARD} flex items-center gap-3`}>
-      <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center">
-        <Flame size={22} className="text-brand-600 dark:text-brand-400" />
-      </div>
-      <div className="min-w-0">
-        <p className="text-xs text-slate-500 dark:text-slate-400">연속 학습</p>
-        <p className="text-lg font-bold leading-tight">
-          <span className="text-brand-600 dark:text-brand-400">{streak}일</span>
-          <span className="ml-1 text-sm font-medium text-slate-500 dark:text-slate-400">
-            연속 도전 중
-          </span>
-        </p>
-      </div>
-    </section>
-  );
-}
-
 // ─────── 핵심 수치 (2×2) ───────
 
 function KeyMetrics({ overall }: { overall: Overall }) {
@@ -261,7 +245,7 @@ function KeyMetrics({ overall }: { overall: Overall }) {
       <h2 className="text-sm font-bold text-slate-500 dark:text-slate-400 mb-4">
         핵심 수치
       </h2>
-      <div className="grid grid-cols-2 gap-x-4 gap-y-5">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-5">
         {items.map(({ Icon, label, value, suffix, accent }) => (
           <div key={label}>
             <div className="flex items-center gap-1.5 mb-1.5 text-slate-400 dark:text-slate-500">

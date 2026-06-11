@@ -20,44 +20,44 @@ export default function DailyChart({ data, bare = false }: DailyChartProps) {
   const chart = (
     <>
       {/* 그래프 */}
-      <div className="flex items-end justify-between gap-2 h-32 mb-2">
+      <div className="flex items-end justify-between gap-2 h-28 mb-2">
         {data.map((day, idx) => {
-          const heightPct = (day.studied / maxStudied) * 100;
+          // 막대 위 값 라벨이 들어갈 공간을 남기려 최대 80%까지만 채움
+          const heightPct = (day.studied / maxStudied) * 80;
           const date = new Date(day.date);
           const weekday = WEEKDAY_KO[date.getDay()];
           const isToday = idx === data.length - 1;
           const isEmpty = day.studied === 0;
 
           return (
+            // h-full + justify-end: 열이 그래프 높이를 채우고 라벨·막대를 바닥 정렬
             <div
               key={day.date}
-              className="flex-1 flex flex-col items-center gap-1"
+              className="flex-1 h-full flex flex-col justify-end items-center gap-1"
             >
-              {/* 숫자 표시 (학습한 날만) */}
-              <div className="text-xs font-semibold h-4 flex items-end">
-                {!isEmpty && (
-                  <span className={isToday ? 'text-brand-600' : 'text-slate-500'}>
-                    {day.studied}
-                  </span>
-                )}
-              </div>
+              {/* 값 라벨 — 막대 바로 위 (학습한 날만) */}
+              <span
+                className={`h-4 flex items-end text-xs font-semibold leading-none ${
+                  isToday ? 'text-brand-600' : 'text-slate-500'
+                }`}
+              >
+                {isEmpty ? '' : day.studied}
+              </span>
 
-              {/* 막대 */}
-              <div className="w-full flex-1 flex items-end">
-                <div
-                  className={`w-full rounded-t-md transition-all duration-300 ${
-                    isToday
-                      ? 'bg-brand-500'
-                      : isEmpty
-                      ? 'bg-slate-100 dark:bg-slate-700'
-                      : 'bg-brand-200 dark:bg-brand-900/50'
-                  }`}
-                  style={{
-                    height: isEmpty ? '4px' : `${Math.max(heightPct, 5)}%`,
-                  }}
-                  aria-label={`${weekday}요일 ${day.studied}개 학습`}
-                />
-              </div>
+              {/* 막대 — 폭 제한(슬림) + 높이는 열(고정 높이) 기준 % */}
+              <div
+                className={`w-full max-w-[1.75rem] rounded-t-md transition-all duration-300 ${
+                  isToday
+                    ? 'bg-brand-400'
+                    : isEmpty
+                    ? 'bg-slate-100 dark:bg-slate-700'
+                    : 'bg-brand-200 dark:bg-brand-900/50'
+                }`}
+                style={{
+                  height: isEmpty ? '4px' : `${Math.max(heightPct, 6)}%`,
+                }}
+                aria-label={`${weekday}요일 ${day.studied}개 학습`}
+              />
             </div>
           );
         })}

@@ -11,6 +11,7 @@ import { getSRSStage, formatNextReview } from '@/lib/srs/algorithm';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { SRSStageBadge } from '@/components/ui/SRSStageBadge';
 import { PageContainer } from '@/components/ui/PageContainer';
+import { AppGreeting } from '@/components/ui/AppGreeting';
 import WordDetailModal from './WordDetailModal';
 
 interface WrongNoteListProps {
@@ -80,17 +81,20 @@ export default function WrongNoteList({ allWords }: WrongNoteListProps) {
   // 빈 상태
   if (items.length === 0) {
     return (
-      <div className="text-center mt-12 px-6">
-        <div className="text-5xl mb-4">🎉</div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-slate-100 mb-2">
-          오답 노트가 비어있어요
-        </h2>
-        <p className="text-gray-500 dark:text-slate-400 mb-8 text-sm leading-relaxed">
-          학습 중 틀린 단어가 여기에 모입니다.
-          <br />
-          연속 2회 맞히면 노트에서 졸업해요!
-        </p>
-      </div>
+      <PageContainer width="wide" className="px-4 py-6 pb-24">
+        <AppGreeting subtitle="틀린 단어가 모이는 곳이에요" />
+        <div className="text-center mt-12 px-6">
+          <div className="text-5xl mb-4">🎉</div>
+          <h2 className="text-xl font-bold text-gray-900 dark:text-slate-100 mb-2">
+            오답 노트가 비어있어요
+          </h2>
+          <p className="text-gray-500 dark:text-slate-400 mb-8 text-sm leading-relaxed">
+            학습 중 틀린 단어가 여기에 모입니다.
+            <br />
+            연속 2회 맞히면 노트에서 졸업해요!
+          </p>
+        </div>
+      </PageContainer>
     );
   }
 
@@ -102,22 +106,19 @@ export default function WrongNoteList({ allWords }: WrongNoteListProps) {
   return (
     <>
       <PageContainer width="wide" className="px-4 py-6 pb-24">
-        {/* 헤더 + 복습 CTA (제목 우측) */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
-          <div>
-            <h1 className="text-2xl font-bold mb-1">오답 노트</h1>
-            <p className="text-sm text-gray-500 dark:text-slate-400">
-              {items.length}개의 단어를 더 외워야 해요
-            </p>
-          </div>
-          <Link
-            href="/notes/review"
-            className="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto flex-shrink-0 px-5 py-2.5 bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white text-sm font-semibold rounded-lg active:scale-[0.98] transition whitespace-nowrap"
-          >
-            <RotateCcw size={16} />
-            복습하기
-          </Link>
-        </div>
+        {/* 헤더 — 공용 인사 + 복습 CTA(우측) */}
+        <AppGreeting
+          subtitle={`${items.length}개의 단어를 더 외워야 해요`}
+          right={
+            <Link
+              href="/notes/review"
+              className="inline-flex items-center justify-center gap-1.5 flex-shrink-0 px-5 py-2.5 bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white text-sm font-semibold rounded-lg active:scale-[0.98] transition whitespace-nowrap"
+            >
+              <RotateCcw size={16} />
+              복습하기
+            </Link>
+          }
+        />
 
         {/* 단어 목록 — 반응형 그리드 (PC 3열) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 items-stretch">
