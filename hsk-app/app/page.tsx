@@ -1,4 +1,5 @@
 // app/page.tsx
+import { HomeGreeting } from '@/components/home/HomeGreeting';
 import { ProgressHeader } from '@/components/home/ProgressHeader';
 import { WelcomeHint } from '@/components/home/WelcomeHint';
 import { StreakBanner } from '@/components/home/StreakBanner';
@@ -11,6 +12,7 @@ export default function HomePage() {
   return (
     <main className="pb-24 md:pt-16 md:pb-8">
       <PageContainer width="narrow">
+        <HomeGreeting />
         <ProgressHeader />
 
         {/* 첫 방문자 시작 안내 (학습 기록 있으면 자동 숨김) */}
@@ -29,9 +31,8 @@ export default function HomePage() {
 
           <StudySection
             level={3}
-            title="3급 복습"
+            title="3급 학습"
             href="/study/3"
-            reviewOnly
           />
         </div>
 

@@ -13,10 +13,8 @@ import { PageContainer } from '@/components/ui/PageContainer';
 
 export default function SettingsPage() {
   const {
-    defaultWordCount,
     quizDirection,
     showPinyin,
-    setDefaultWordCount,
     setQuizDirection,
     togglePinyin,
   } = useSettingsStore();
@@ -68,20 +66,7 @@ export default function SettingsPage() {
       {/* 학습 그룹 */}
       <SettingsGroup title="학습">
         <SettingsRow label="세션당 기본 단어 수">
-          <input
-            type="number"
-            min={1}
-            max={100}
-            value={defaultWordCount}
-            onChange={(e) =>
-              setDefaultWordCount(parseInt(e.target.value || '20', 10))
-            }
-            className="w-20 px-3 py-1.5 text-right rounded-lg
-                       border border-slate-200 dark:border-slate-700
-                       bg-white dark:bg-slate-800
-                       text-slate-900 dark:text-slate-100
-                       focus:border-brand-500 focus:outline-none"
-          />
+          <WordCountInput />
         </SettingsRow>
 
         <SettingsRow label="퀴즈 방향">
@@ -133,6 +118,9 @@ export default function SettingsPage() {
 
       {/* 계정 그룹 */}
       <SettingsGroup title="계정">
+        <SettingsRow label="이름">
+          <NicknameInput />
+        </SettingsRow>
         <SettingsRow label="이메일">
           <span className="text-sm text-slate-500 dark:text-slate-400">
             {userEmail ?? '로딩 중...'}
@@ -230,6 +218,69 @@ function SettingsRow({
       </span>
       {children}
     </div>
+  );
+}
+
+// 이름(호칭) 입력 — 홈 인사·"OO님" 호칭에 사용
+function NicknameInput() {
+  const value = useSettingsStore((s) => s.nickname);
+  const setValue = useSettingsStore((s) => s.setNickname);
+
+  return (
+    <input
+      type="text"
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+      placeholder="이름을 입력"
+      maxLength={20}
+      className="w-36 px-3 py-1.5 text-right rounded-lg
+                 border border-slate-200 dark:border-slate-700
+                 bg-white dark:bg-slate-800
+                 text-slate-900 dark:text-slate-100
+                 placeholder:text-slate-400 dark:placeholder:text-slate-500
+                 focus:border-brand-500 focus:outline-none"
+    />
+  );
+}
+
+// 세션당 기본 단어 수 입력 — 자유 입력 후 blur/Enter 시 1~100으로 정리·저장
+function WordCountInput() {
+  const value = useSettingsStore((s) => s.defaultWordCount);
+  const setValue = useSettingsStore((s) => s.setDefaultWordCount);
+  const [text, setText] = useState(String(value));
+
+  // 스토어 값이 외부에서 바뀌면 동기화
+  useEffect(() => {
+    setText(String(value));
+  }, [value]);
+
+  const commit = () => {
+    const n = parseInt(text, 10);
+    const clamped = Number.isNaN(n)
+      ? value
+      : Math.min(100, Math.max(1, n));
+    setValue(clamped);
+    setText(String(clamped));
+  };
+
+  return (
+    <input
+      type="number"
+      inputMode="numeric"
+      min={1}
+      max={100}
+      value={text}
+      onChange={(e) => setText(e.target.value)}
+      onBlur={commit}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') e.currentTarget.blur();
+      }}
+      className="w-20 px-3 py-1.5 text-right rounded-lg
+                 border border-slate-200 dark:border-slate-700
+                 bg-white dark:bg-slate-800
+                 text-slate-900 dark:text-slate-100
+                 focus:border-brand-500 focus:outline-none"
+    />
   );
 }
 

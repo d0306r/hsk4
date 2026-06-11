@@ -22,7 +22,7 @@ export function ProgressHeader() {
   // 로딩 중
   if (progress === null) {
     return (
-      <header className="px-5 pt-6 pb-4">
+      <header className="px-5 pt-2 pb-4">
         <div className="animate-pulse space-y-3">
           <div className="h-4 w-24 bg-slate-200 dark:bg-slate-700 rounded" />
           <div className="h-10 w-48 bg-slate-200 dark:bg-slate-700 rounded" />
@@ -36,7 +36,7 @@ export function ProgressHeader() {
   const totalPercent = totalWords > 0 ? (totalLearned / totalWords) * 100 : 0;
 
   return (
-    <header className="px-5 pt-6 pb-4">
+    <header className="px-5 pt-2 pb-4">
       <p className="text-sm text-slate-500 dark:text-slate-400 mb-1">
         전체 학습 진도
       </p>

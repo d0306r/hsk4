@@ -130,9 +130,24 @@ export function getMostWrongWords(limit: number = 5): Array<{
   const { words } = readProgress();
   const wordMap = new Map(allWords.map((w) => [w.id, w]));
 
+  // 정답률 (시도 없으면 0으로 간주)
+  const accuracy = (p: WordProgress) =>
+    p.totalAttempts > 0 ? p.correctCount / p.totalAttempts : 0;
+
   return Object.values(words)
     .filter((p) => p.wrongCount > 0)
-    .sort((a, b) => b.wrongCount - a.wrongCount)
+    .sort((a, b) => {
+      // 1) 많이 틀린 순
+      if (b.wrongCount !== a.wrongCount) return b.wrongCount - a.wrongCount;
+      // 2) 동점이면 정답률 낮은 순 (덜 외워진 단어를 위로)
+      const accDiff = accuracy(a) - accuracy(b);
+      if (accDiff !== 0) return accDiff;
+      // 3) 그래도 같으면 최근에 틀린(=학습한) 순
+      const recency = (b.lastStudiedAt || '').localeCompare(a.lastStudiedAt || '');
+      if (recency !== 0) return recency;
+      // 4) 완전 결정적: id 오름차순
+      return a.wordId - b.wordId;
+    })
     .slice(0, limit)
     .map((progress) => {
       const word = wordMap.get(progress.wordId);

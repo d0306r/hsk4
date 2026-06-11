@@ -29,8 +29,8 @@ type StatusFilter = 'all' | 'notMastered' | 'mastered' | 'wrong';
 
 const STATUS_TABS: [StatusFilter, string][] = [
   ['all', '전체'],
-  ['notMastered', '안 외운'],
-  ['mastered', '외운'],
+  ['notMastered', '미암기'],
+  ['mastered', '암기'],
   ['wrong', '오답노트'],
 ];
 
@@ -388,14 +388,15 @@ function Segmented<T extends string | number>({
   onChange: (v: T) => void;
 }) {
   return (
-    <div className="inline-flex items-center gap-0.5 p-0.5 rounded-lg bg-slate-100 dark:bg-slate-800">
+    // 모바일: 남은 너비를 꽉 채워 균등 분배(넘침 방지) / sm+: 내용 너비
+    <div className="flex flex-1 sm:flex-none sm:inline-flex items-center gap-0.5 p-0.5 rounded-lg bg-slate-100 dark:bg-slate-800">
       {options.map(([val, label]) => {
         const active = val === value;
         return (
           <button
             key={String(val)}
             onClick={() => onChange(val)}
-            className={`px-3 py-1.5 rounded-md text-xs font-semibold whitespace-nowrap transition ${
+            className={`flex-1 sm:flex-none px-3 py-1.5 rounded-md text-xs font-semibold whitespace-nowrap transition ${
               active
                 ? 'bg-white dark:bg-slate-600 text-brand-700 dark:text-white shadow-sm'
                 : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'

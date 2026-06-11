@@ -85,19 +85,20 @@ export function BottomNav() {
         </div>
       </nav>
 
-      {/* 모바일: 하단 바 (기존 레이아웃 유지) */}
-      <nav className="md:hidden fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-mobile
+      {/* 모바일: 하단 바 */}
+      <nav className="md:hidden fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-mobile z-40
                       bg-white/90 dark:bg-slate-900/90 backdrop-blur-md
                       border-t border-slate-200 dark:border-slate-700
                       pb-[env(safe-area-inset-bottom)]">
-        <div className="flex justify-around items-center h-16">
+        {/* items-stretch + flex-1: 각 탭이 전체 높이·균등 너비를 차지해 빈틈 없이 탭됨 */}
+        <div className="flex items-stretch h-16">
           {navItems.map(({ href, label, icon: Icon, isActive }) => {
             const active = isActive(pathname);
             return (
               <Link
                 key={href}
                 href={href}
-                className={`flex flex-col items-center gap-1 px-1.5 py-2 transition-colors ${
+                className={`flex-1 flex flex-col items-center justify-center gap-1 transition-colors active:bg-slate-100 dark:active:bg-slate-800 ${
                   active
                     ? 'text-brand-600 dark:text-brand-400'
                     : 'text-slate-500 dark:text-slate-400'
