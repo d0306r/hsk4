@@ -30,16 +30,15 @@
     touch-action: manipulation;
   }
 
-  /* 탭 하이라이트를 끈 대신, 터치 기기에서 즉시 누름 피드백을 준다.
-     (transition 없이 즉시 반응 → 느리게 느껴지던 체감 개선) */
-  @media (hover: none) and (pointer: coarse) {
-    button:active,
-    a:active,
-    label:active,
-    summary:active,
-    [role='button']:active {
-      opacity: 0.55;
-    }
+  /* 즉시 누름 피드백 — 데스크톱 클릭·모바일 탭 모두.
+     (탭 하이라이트를 꺼서 사라졌던 "눌림" 신호를 즉시 opacity로 대체)
+     transition 없이 즉시 반응 → 클릭이 느리게 느껴지던 체감 개선 */
+  button:active,
+  a:active,
+  label:active,
+  summary:active,
+  [role='button']:active {
+    opacity: 0.6;
   }
 
   .hanzi {
