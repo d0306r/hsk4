@@ -20,6 +20,7 @@ const FIXES = {
   750: { meaning: '(고리·못 등에) 걸다. 매달다; (전화를) 끊다.' }, // 挂
   802: { meaning: '내다. 제출하다. (친구를) 사귀다.' }, // 交 (交作业·交朋友)
   813: { meaning: '명절. 축제일; (수업의) 교시.' }, // 节
+  881: { meaning: '…조차(도). 마저 (连…都/也); 잇다. 연결하다.' }, // 连
 };
 
 const vocab = JSON.parse(readFileSync(PATH, 'utf8'));
