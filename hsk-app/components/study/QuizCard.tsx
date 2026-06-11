@@ -34,7 +34,7 @@ export default function QuizCard({
   return (
     <div className="w-full">
       {/* 문제 영역 */}
-      <div className="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-700 rounded-2xl p-8 mb-6 text-center shadow-sm">
+      <div className="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-700 rounded-2xl p-5 mb-4 text-center shadow-sm">
         <div className="text-xs text-gray-400 dark:text-slate-500 mb-3 font-semibold">
           {direction === 'meaning-to-hanzi'
             ? '이 뜻에 해당하는 한자는?'
@@ -71,7 +71,7 @@ export default function QuizCard({
           )
         ) : direction === 'hanzi-to-meaning' ? (
           <>
-            <div className="hanzi text-5xl font-bold mb-3 text-gray-900 dark:text-slate-100">
+            <div className="hanzi text-4xl font-bold mb-2 text-gray-900 dark:text-slate-100">
               {word.hanzi}
             </div>
             {showPinyin && (
@@ -87,7 +87,7 @@ export default function QuizCard({
                 {word.partOfSpeech}
               </div>
             )}
-            <div className="text-2xl font-bold text-gray-900 dark:text-slate-100 leading-relaxed">
+            <div className="text-xl font-bold text-gray-900 dark:text-slate-100 leading-relaxed">
               {word.meaning}
             </div>
           </>

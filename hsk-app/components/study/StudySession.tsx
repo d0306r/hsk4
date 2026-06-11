@@ -54,7 +54,7 @@ export default function StudySession({
   const isCorrect = isAnswered && selectedIndex === question.correctIndex;
 
   return (
-    <div className="max-w-xl mx-auto">
+    <div className={`max-w-xl mx-auto ${isAnswered ? 'pb-36' : ''}`}>
       {/* 헤더 */}
       <div className="flex items-center justify-between mb-4">
         <button
@@ -83,26 +83,30 @@ export default function StudySession({
         onSelect={selectOption}
       />
 
-      {/* 답한 후 "다음 문제" 버튼 */}
+      {/* 답한 후: 하단 고정 바 — 스크롤 없이 바로 다음 문제로 */}
       {isAnswered && (
-        <div className="mt-6">
-          <div
-            className={`text-center mb-3 font-bold text-lg ${
-              isCorrect 
-                ? 'text-green-600 dark:text-green-400' 
-                : 'text-red-600 dark:text-red-400'
-            }`}
-          >
-            {isCorrect ? '✓ 정답!' : '✗ 틀렸어요'}
+        <div
+          className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 dark:border-slate-700
+                     bg-white/95 dark:bg-slate-900/95 backdrop-blur-md
+                     px-4 pt-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)]"
+        >
+          <div className="max-w-xl mx-auto">
+            <div
+              className={`text-center mb-2 font-bold ${
+                isCorrect
+                  ? 'text-green-600 dark:text-green-400'
+                  : 'text-red-600 dark:text-red-400'
+              }`}
+            >
+              {isCorrect ? '✓ 정답!' : '✗ 틀렸어요'}
+            </div>
+            <button
+              onClick={nextQuestion}
+              className="w-full py-3.5 bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white font-bold rounded-xl active:scale-[0.98] transition"
+            >
+              {currentIndex >= questions.length - 1 ? '결과 보기' : '다음 문제'}
+            </button>
           </div>
-          <button
-            onClick={nextQuestion}
-            className="w-full py-4 bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white font-bold rounded-xl active:scale-[0.98] transition"
-          >
-            {currentIndex >= questions.length - 1
-              ? '결과 보기'
-              : '다음 문제'}
-          </button>
         </div>
       )}
     </div>

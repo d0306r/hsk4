@@ -3,9 +3,12 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Volume2, Star } from 'lucide-react';
 import { useStudyStore } from '@/stores/studyStore';
 import { useSettingsStore } from '@/stores/settingsStore';
+import { useFavoritesStore } from '@/stores/favoritesStore';
 import { syncSessionResults, saveStudySession } from '@/lib/progress/api';
+import { isTTSAvailable, speakChinese } from '@/lib/tts';
 import { Word } from '@/lib/words/types';
 import { BottomNav } from '@/components/home/BottomNav';
 
@@ -18,13 +21,25 @@ export default function SessionResult({ level, allWords }: SessionResultProps) {
   const router = useRouter();
   const { records, retryUnknown, reset } = useStudyStore();
   const quizDirection = useSettingsStore((s) => s.quizDirection);
+  const showPinyin = useSettingsStore((s) => s.showPinyin);
+  const favIds = useFavoritesStore((s) => s.ids);
+  const toggleFav = useFavoritesStore((s) => s.toggle);
   const [syncing, setSyncing] = useState(true);
+  const [ttsOk, setTtsOk] = useState(false);
+  useEffect(() => setTtsOk(isTTSAvailable()), []);
 
   // 통계 계산
   const known = records.filter((r) => r.result === 'known').length;
   const unknown = records.filter((r) => r.result === 'unknown').length;
   const total = records.length;
   const rate = total > 0 ? Math.round((known / total) * 100) : 0;
+
+  // 틀린 단어 목록
+  const wordMap = new Map(allWords.map((w) => [w.id, w]));
+  const wrongWords = records
+    .filter((r) => r.result === 'unknown')
+    .map((r) => wordMap.get(r.wordId))
+    .filter((w): w is Word => w !== undefined);
 
   useEffect(() => {
     const now = new Date().toISOString();
@@ -49,16 +64,16 @@ export default function SessionResult({ level, allWords }: SessionResultProps) {
   };
 
   return (
-    <div className="max-w-xl mx-auto pt-12 pb-24">
-      <h1 className="text-3xl font-bold text-center mb-2">
+    <div className="max-w-xl mx-auto pt-8 pb-24">
+      <h1 className="text-2xl font-bold text-center mb-1">
         학습 완료!
       </h1>
-      <p className="text-center text-gray-500 dark:text-slate-400 mb-10">
+      <p className="text-center text-gray-500 dark:text-slate-400 mb-6">
         {syncing ? '결과 저장 중...' : '결과가 저장되었어요'}
       </p>
 
       {/* 정답률 원형 */}
-      <div className="flex justify-center mb-10">
+      <div className="flex justify-center mb-6">
         <div className="w-40 h-40 rounded-full bg-brand-50 dark:bg-brand-900/30 border-4 border-brand-500 dark:border-brand-400 flex flex-col items-center justify-center">
           <div className="text-4xl font-bold text-brand-600 dark:text-brand-300">
             {rate}%
@@ -70,7 +85,7 @@ export default function SessionResult({ level, allWords }: SessionResultProps) {
       </div>
 
       {/* 안다/모른다 통계 */}
-      <div className="grid grid-cols-2 gap-3 mb-10">
+      <div className="grid grid-cols-2 gap-3 mb-6">
         <div className="bg-green-50 dark:bg-green-900/30 rounded-xl p-4 text-center">
           <div className="text-2xl font-bold text-green-600 dark:text-green-400">
             {known}
@@ -88,6 +103,65 @@ export default function SessionResult({ level, allWords }: SessionResultProps) {
           </div>
         </div>
       </div>
+
+      {/* 틀린 단어 목록 */}
+      {wrongWords.length > 0 ? (
+        <div className="mb-8">
+          <h2 className="text-sm font-bold text-slate-500 dark:text-slate-400 mb-2">
+            틀린 단어 {wrongWords.length}개
+          </h2>
+          <div className="space-y-1.5">
+            {wrongWords.map((w) => {
+              const fav = favIds.includes(w.id);
+              return (
+                <div
+                  key={w.id}
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
+                >
+                  <span className="hanzi text-base font-bold text-slate-900 dark:text-white flex-shrink-0">
+                    {w.hanzi}
+                  </span>
+                  {showPinyin && (
+                    <span className="text-xs text-slate-400 dark:text-slate-500 flex-shrink-0">
+                      [{w.pinyin}]
+                    </span>
+                  )}
+                  <span className="text-sm text-slate-600 dark:text-slate-300 truncate flex-1">
+                    {w.meaning}
+                  </span>
+                  {ttsOk && (
+                    <button
+                      onClick={() => speakChinese(w.hanzi)}
+                      aria-label="발음 듣기"
+                      className="flex-shrink-0 p-1.5 rounded-full text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-900/30 transition active:scale-95"
+                    >
+                      <Volume2 size={16} />
+                    </button>
+                  )}
+                  <button
+                    onClick={() => toggleFav(w.id)}
+                    aria-label={fav ? '즐겨찾기 해제' : '즐겨찾기 추가'}
+                    className={`flex-shrink-0 p-1.5 rounded-full transition active:scale-95 ${
+                      fav
+                        ? 'text-brand-500 dark:text-brand-400'
+                        : 'text-slate-300 dark:text-slate-600 hover:text-brand-500 dark:hover:text-brand-400'
+                    }`}
+                  >
+                    <Star size={16} fill={fav ? 'currentColor' : 'none'} />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ) : (
+        <div className="text-center mb-8 py-2">
+          <div className="text-3xl mb-1">🎉</div>
+          <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">
+            모두 맞혔어요!
+          </p>
+        </div>
+      )}
 
       {/* 액션 버튼 */}
       <div className="space-y-3">
