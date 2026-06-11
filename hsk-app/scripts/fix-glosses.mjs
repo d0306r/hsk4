@@ -21,6 +21,9 @@ const FIXES = {
   802: { meaning: '내다. 제출하다. (친구를) 사귀다.' }, // 交 (交作业·交朋友)
   813: { meaning: '명절. 축제일; (수업의) 교시.' }, // 节
   881: { meaning: '…조차(도). 마저 (连…都/也); 잇다. 연결하다.' }, // 连
+  921: { meaning: '(어떤 일을) 하다. 다루다. (~한 상태로) 만들다. 망가뜨리다.', partOfSpeech: '동사' }, // 弄 (弄坏·弄脏)
+  955: { meaning: '오히려. 도리어. 그러나.', partOfSpeech: '부사' }, // 却
+  966: { meaning: '입구.', partOfSpeech: '명사' }, // 入口 (진입구; '수입'은 进口)
 };
 
 const vocab = JSON.parse(readFileSync(PATH, 'utf8'));

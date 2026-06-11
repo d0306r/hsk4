@@ -7357,7 +7357,7 @@
       "id": 921,
       "hanzi": "弄",
       "pinyin": "nòng",
-      "meaning": "(방법을 강구하여) 손에 넣다. 장만하다. 마련하다. 구하다. 갖추다.",
+      "meaning": "(어떤 일을) 하다. 다루다. (~한 상태로) 만들다. 망가뜨리다.",
       "level": 4,
       "partOfSpeech": "동사"
     },
@@ -7629,9 +7629,9 @@
       "id": 955,
       "hanzi": "却",
       "pinyin": "què",
-      "meaning": "후퇴하다. 퇴각하다. 물러나다.",
+      "meaning": "오히려. 도리어. 그러나.",
       "level": 4,
-      "partOfSpeech": "동사"
+      "partOfSpeech": "부사"
     },
     {
       "id": 956,
@@ -7717,9 +7717,9 @@
       "id": 966,
       "hanzi": "入口",
       "pinyin": "rùkǒu",
-      "meaning": "수입하다. 외지 물건이 들어오다.",
+      "meaning": "입구.",
       "level": 4,
-      "partOfSpeech": "동사"
+      "partOfSpeech": "명사"
     },
     {
       "id": 967,

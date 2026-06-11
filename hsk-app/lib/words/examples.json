@@ -2664,6 +2664,31 @@
     "pinyin": "Zhège háizi hěn yǒu lǐmào.",
     "translation": "이 아이는 아주 예의 바르다."
   },
+  "889": {
+    "sentence": "我身上没有零钱了。",
+    "pinyin": "Wǒ shēnshang méiyǒu língqián le.",
+    "translation": "나는 가진 잔돈이 없다."
+  },
+  "890": {
+    "sentence": "我还有另外一件事想跟你说。",
+    "pinyin": "Wǒ hái yǒu lìngwài yí jiàn shì xiǎng gēn nǐ shuō.",
+    "translation": "나는 너에게 말하고 싶은 다른 일이 하나 더 있다."
+  },
+  "891": {
+    "sentence": "搬这个箱子需要很大的力气。",
+    "pinyin": "Bān zhège xiāngzi xūyào hěn dà de lìqi.",
+    "translation": "이 상자를 옮기는 데는 큰 힘이 필요하다."
+  },
+  "892": {
+    "sentence": "我喜欢水果，例如苹果和香蕉。",
+    "pinyin": "Wǒ xǐhuan shuǐguǒ, lìrú píngguǒ hé xiāngjiāo.",
+    "translation": "나는 사과와 바나나 같은 과일을 좋아한다."
+  },
+  "893": {
+    "sentence": "他给我留了一张纸条。",
+    "pinyin": "Tā gěi wǒ liúle yì zhāng zhǐtiáo.",
+    "translation": "그는 나에게 쪽지 한 장을 남겼다."
+  },
   "894": {
     "sentence": "他汉语说得很流利。",
     "pinyin": "Tā Hànyǔ shuō de hěn liúlì.",
@@ -2673,6 +2698,26 @@
     "sentence": "这首歌很流行。",
     "pinyin": "Zhè shǒu gē hěn liúxíng.",
     "translation": "이 노래는 아주 유행한다."
+  },
+  "896": {
+    "sentence": "我的理想是当一名科学家。",
+    "pinyin": "Wǒ de lǐxiǎng shì dāng yì míng kēxuéjiā.",
+    "translation": "나의 꿈은 과학자가 되는 것이다."
+  },
+  "897": {
+    "sentence": "你的房间太乱了，快收拾一下。",
+    "pinyin": "Nǐ de fángjiān tài luàn le, kuài shōushi yíxià.",
+    "translation": "네 방이 너무 어지러워, 빨리 좀 치워."
+  },
+  "898": {
+    "sentence": "遇到法律问题，最好咨询律师。",
+    "pinyin": "Yùdào fǎlǜ wèntí, zuìhǎo zīxún lǜshī.",
+    "translation": "법률 문제가 생기면, 변호사에게 상담하는 게 좋다."
+  },
+  "899": {
+    "sentence": "暑假我打算去南方旅行。",
+    "pinyin": "Shǔjià wǒ dǎsuàn qù nánfāng lǚxíng.",
+    "translation": "여름방학에 나는 남쪽으로 여행 갈 계획이다."
   },
   "900": {
     "sentence": "不好意思，麻烦你了。",
@@ -2689,25 +2734,105 @@
     "pinyin": "Bēizi lǐ de shuǐ mǎn le.",
     "translation": "컵 안의 물이 가득 찼다."
   },
+  "903": {
+    "sentence": "这只猫的毛是白色的。",
+    "pinyin": "Zhè zhī māo de máo shì báisè de.",
+    "translation": "이 고양이의 털은 흰색이다."
+  },
+  "904": {
+    "sentence": "请用这条毛巾擦手。",
+    "pinyin": "Qǐng yòng zhè tiáo máojīn cā shǒu.",
+    "translation": "이 수건으로 손을 닦으세요."
+  },
   "905": {
     "sentence": "这里的风景很美丽。",
     "pinyin": "Zhèlǐ de fēngjǐng hěn měilì.",
     "translation": "이곳의 경치는 아주 아름답다."
+  },
+  "906": {
+    "sentence": "我昨晚做了一个奇怪的梦。",
+    "pinyin": "Wǒ zuówǎn zuòle yí gè qíguài de mèng.",
+    "translation": "나는 어젯밤에 이상한 꿈을 꿨다."
+  },
+  "907": {
+    "sentence": "这个博物馆对学生免费。",
+    "pinyin": "Zhège bówùguǎn duì xuéshēng miǎnfèi.",
+    "translation": "이 박물관은 학생에게 무료이다."
+  },
+  "908": {
+    "sentence": "这个红灯还有三十秒。",
+    "pinyin": "Zhège hóngdēng háiyǒu sānshí miǎo.",
+    "translation": "이 빨간불은 아직 30초 남았다."
+  },
+  "909": {
+    "sentence": "我在这个城市迷路了。",
+    "pinyin": "Wǒ zài zhège chéngshì mílù le.",
+    "translation": "나는 이 도시에서 길을 잃었다."
   },
   "910": {
     "sentence": "我忘了我的密码。",
     "pinyin": "Wǒ wàng le wǒ de mìmǎ.",
     "translation": "나는 비밀번호를 잊어버렸다."
   },
+  "911": {
+    "sentence": "中国有五十六个民族。",
+    "pinyin": "Zhōngguó yǒu wǔshíliù gè mínzú.",
+    "translation": "중국에는 56개의 민족이 있다."
+  },
+  "912": {
+    "sentence": "他这次来中国的目的是学习汉语。",
+    "pinyin": "Tā zhè cì lái Zhōngguó de mùdì shì xuéxí Hànyǔ.",
+    "translation": "그가 이번에 중국에 온 목적은 중국어를 배우기 위해서다."
+  },
+  "913": {
+    "sentence": "我的母亲是一位老师。",
+    "pinyin": "Wǒ de mǔqīn shì yí wèi lǎoshī.",
+    "translation": "나의 어머니는 선생님이시다."
+  },
   "914": {
     "sentence": "老师很有耐心。",
     "pinyin": "Lǎoshī hěn yǒu nàixīn.",
     "translation": "선생님은 아주 인내심이 많다."
   },
+  "915": {
+    "sentence": "这么简单的问题，难道你不会吗？",
+    "pinyin": "Zhème jiǎndān de wèntí, nándào nǐ bú huì ma?",
+    "translation": "이렇게 간단한 문제를, 설마 못 푸는 거야?"
+  },
+  "916": {
+    "sentence": "我今天感冒了，身体很难受。",
+    "pinyin": "Wǒ jīntiān gǎnmào le, shēntǐ hěn nánshòu.",
+    "translation": "나는 오늘 감기에 걸려서, 몸이 매우 안 좋다."
+  },
+  "917": {
+    "sentence": "请在一周内完成这项工作。",
+    "pinyin": "Qǐng zài yì zhōu nèi wánchéng zhè xiàng gōngzuò.",
+    "translation": "일주일 안에 이 일을 완성해 주세요."
+  },
   "918": {
     "sentence": "这本书的内容很有意思。",
     "pinyin": "Zhè běn shū de nèiróng hěn yǒu yìsi.",
     "translation": "이 책의 내용은 아주 재미있다."
+  },
+  "919": {
+    "sentence": "他有很强的工作能力。",
+    "pinyin": "Tā yǒu hěn qiáng de gōngzuò nénglì.",
+    "translation": "그는 매우 뛰어난 업무 능력을 가지고 있다."
+  },
+  "920": {
+    "sentence": "这两个孩子的年龄差不多。",
+    "pinyin": "Zhè liǎng gè háizi de niánlíng chàbuduō.",
+    "translation": "이 두 아이의 나이는 비슷하다."
+  },
+  "921": {
+    "sentence": "我不小心把电脑弄坏了。",
+    "pinyin": "Wǒ bù xiǎoxīn bǎ diànnǎo nòng huài le.",
+    "translation": "나는 실수로 컴퓨터를 망가뜨렸다."
+  },
+  "922": {
+    "sentence": "春天到了，天气越来越暖和。",
+    "pinyin": "Chūntiān dào le, tiānqì yuèláiyuè nuǎnhuo.",
+    "translation": "봄이 와서, 날씨가 점점 따뜻해진다."
   },
   "923": {
     "sentence": "我偶尔去看电影。",
@@ -2719,10 +2844,60 @@
     "pinyin": "Mǎi piào de rén dōu zài páiduì.",
     "translation": "표 사는 사람들이 모두 줄을 서 있다."
   },
+  "925": {
+    "sentence": "请按字母顺序排列这些名字。",
+    "pinyin": "Qǐng àn zìmǔ shùnxù páiliè zhèxiē míngzi.",
+    "translation": "알파벳 순서에 따라 이 이름들을 배열해 주세요."
+  },
+  "926": {
+    "sentence": "很难判断他说的是不是真的。",
+    "pinyin": "Hěn nán pànduàn tā shuō de shì bú shì zhēn de.",
+    "translation": "그가 한 말이 진짜인지 판단하기 어렵다."
+  },
+  "927": {
+    "sentence": "周末我要陪妈妈去买东西。",
+    "pinyin": "Zhōumò wǒ yào péi māma qù mǎi dōngxi.",
+    "translation": "주말에 나는 엄마를 모시고 장을 보러 갈 것이다."
+  },
+  "928": {
+    "sentence": "他骗了我很多钱。",
+    "pinyin": "Tā piànle wǒ hěn duō qián.",
+    "translation": "그는 나를 속여 많은 돈을 가져갔다."
+  },
+  "929": {
+    "sentence": "我写了一篇关于旅行的文章。",
+    "pinyin": "Wǒ xiěle yì piān guānyú lǚxíng de wénzhāng.",
+    "translation": "나는 여행에 관한 글 한 편을 썼다."
+  },
+  "930": {
+    "sentence": "多喝水对皮肤很好。",
+    "pinyin": "Duō hē shuǐ duì pífū hěn hǎo.",
+    "translation": "물을 많이 마시면 피부에 좋다."
+  },
+  "931": {
+    "sentence": "他每个周末都去打乒乓球。",
+    "pinyin": "Tā měi gè zhōumò dōu qù dǎ pīngpāngqiú.",
+    "translation": "그는 주말마다 탁구를 치러 간다."
+  },
+  "932": {
+    "sentence": "我平时很少看电视。",
+    "pinyin": "Wǒ píngshí hěn shǎo kàn diànshì.",
+    "translation": "나는 평소에 텔레비전을 거의 안 본다."
+  },
   "933": {
     "sentence": "他被老师批评了。",
     "pinyin": "Tā bèi lǎoshī pīpíng le.",
     "translation": "그는 선생님께 혼났다."
+  },
+  "934": {
+    "sentence": "他的脾气很好，从不生气。",
+    "pinyin": "Tā de píqi hěn hǎo, cóng bù shēngqì.",
+    "translation": "그는 성격이 좋아서, 결코 화를 내지 않는다."
+  },
+  "935": {
+    "sentence": "我的衣服破了一个洞。",
+    "pinyin": "Wǒ de yīfu pòle yí gè dòng.",
+    "translation": "내 옷에 구멍이 하나 났다."
   },
   "936": {
     "sentence": "这是一个很普遍的现象。",
@@ -2734,10 +2909,70 @@
     "pinyin": "Zhè zhǒng pútáo hěn tián.",
     "translation": "이 포도는 아주 달다."
   },
+  "938": {
+    "sentence": "他的普通话说得非常流利。",
+    "pinyin": "Tā de pǔtōnghuà shuō de fēicháng liúlì.",
+    "translation": "그의 표준 중국어는 매우 유창하다."
+  },
+  "939": {
+    "sentence": "过马路的时候千万要小心。",
+    "pinyin": "Guò mǎlù de shíhou qiānwàn yào xiǎoxīn.",
+    "translation": "길을 건널 때는 부디 조심해야 한다."
+  },
+  "940": {
+    "sentence": "去那个国家旅行需要签证吗？",
+    "pinyin": "Qù nàge guójiā lǚxíng xūyào qiānzhèng ma?",
+    "translation": "그 나라로 여행 가려면 비자가 필요한가요?"
+  },
+  "941": {
+    "sentence": "河上有一座漂亮的桥。",
+    "pinyin": "Hé shàng yǒu yí zuò piàoliang de qiáo.",
+    "translation": "강 위에 아름다운 다리가 하나 있다."
+  },
+  "942": {
+    "sentence": "有人在敲门。",
+    "pinyin": "Yǒu rén zài qiāo mén.",
+    "translation": "누군가 문을 두드리고 있다."
+  },
+  "943": {
+    "sentence": "她最喜欢吃黑巧克力。",
+    "pinyin": "Tā zuì xǐhuan chī hēi qiǎokèlì.",
+    "translation": "그녀는 다크 초콜릿을 가장 좋아한다."
+  },
+  "944": {
+    "sentence": "学习中，理解最重要，其次是练习。",
+    "pinyin": "Xuéxí zhōng, lǐjiě zuì zhòngyào, qícì shì liànxí.",
+    "translation": "공부에서 이해가 가장 중요하고, 그 다음이 연습이다."
+  },
+  "945": {
+    "sentence": "这个地方的气候很适合旅游。",
+    "pinyin": "Zhège dìfang de qìhòu hěn shìhé lǚyóu.",
+    "translation": "이 지역의 기후는 여행하기에 적합하다."
+  },
   "946": {
     "sentence": "这个包很轻。",
     "pinyin": "Zhège bāo hěn qīng.",
     "translation": "이 가방은 아주 가볍다."
+  },
+  "947": {
+    "sentence": "请把这里的情况告诉我。",
+    "pinyin": "Qǐng bǎ zhèlǐ de qíngkuàng gàosu wǒ.",
+    "translation": "이곳의 상황을 나에게 알려 주세요."
+  },
+  "948": {
+    "sentence": "考完试以后，我感觉很轻松。",
+    "pinyin": "Kǎo wán shì yǐhòu, wǒ gǎnjué hěn qīngsōng.",
+    "translation": "시험을 다 보고 나니, 나는 매우 홀가분하다."
+  },
+  "949": {
+    "sentence": "过年的时候，我们要去看亲戚。",
+    "pinyin": "Guònián de shíhou, wǒmen yào qù kàn qīnqi.",
+    "translation": "설에는 우리가 친척을 보러 간다."
+  },
+  "950": {
+    "sentence": "他小时候家里很穷。",
+    "pinyin": "Tā xiǎoshíhou jiālǐ hěn qióng.",
+    "translation": "그는 어렸을 때 집이 매우 가난했다."
   },
   "951": {
     "sentence": "这些书我都看过，其中这本最好。",
@@ -2749,30 +2984,90 @@
     "pinyin": "Wǒ xiàwǔ qù qǔ kuàidì.",
     "translation": "나는 오후에 택배를 찾으러 간다."
   },
+  "953": {
+    "sentence": "我把全部的钱都花光了。",
+    "pinyin": "Wǒ bǎ quánbù de qián dōu huāguāng le.",
+    "translation": "나는 가진 돈을 전부 다 써 버렸다."
+  },
+  "954": {
+    "sentence": "这两个词的区别很大。",
+    "pinyin": "Zhè liǎng gè cí de qūbié hěn dà.",
+    "translation": "이 두 단어의 차이는 매우 크다."
+  },
+  "955": {
+    "sentence": "我给他打了电话，他却没接。",
+    "pinyin": "Wǒ gěi tā dǎle diànhuà, tā què méi jiē.",
+    "translation": "내가 그에게 전화했는데, 그는 오히려 받지 않았다."
+  },
   "956": {
     "sentence": "粗心是他的缺点。",
     "pinyin": "Cūxīn shì tā de quēdiǎn.",
     "translation": "부주의함이 그의 단점이다."
+  },
+  "957": {
+    "sentence": "这道菜还缺少一点盐。",
+    "pinyin": "Zhè dào cài hái quēshǎo yìdiǎn yán.",
+    "translation": "이 요리는 소금이 조금 부족하다."
   },
   "958": {
     "sentence": "这件事确实是我的错。",
     "pinyin": "Zhè jiàn shì quèshí shì wǒ de cuò.",
     "translation": "이 일은 확실히 내 잘못이다."
   },
+  "959": {
+    "sentence": "他很努力，然而结果并不理想。",
+    "pinyin": "Tā hěn nǔlì, rán’ér jiéguǒ bìng bù lǐxiǎng.",
+    "translation": "그는 매우 노력했지만, 결과는 그다지 이상적이지 않았다."
+  },
   "960": {
     "sentence": "节日的时候街上很热闹。",
     "pinyin": "Jiérì de shíhou jiē shàng hěn rènao.",
     "translation": "명절 때 거리는 아주 떠들썩하다."
+  },
+  "961": {
+    "sentence": "请不要随便扔垃圾。",
+    "pinyin": "Qǐng búyào suíbiàn rēng lājī.",
+    "translation": "함부로 쓰레기를 버리지 마세요."
   },
   "962": {
     "sentence": "他仍然在等她。",
     "pinyin": "Tā réngrán zài děng tā.",
     "translation": "그는 여전히 그녀를 기다리고 있다."
   },
+  "963": {
+    "sentence": "任何人都不能迟到。",
+    "pinyin": "Rènhé rén dōu bùnéng chídào.",
+    "translation": "어떤 사람도 지각하면 안 된다."
+  },
   "964": {
     "sentence": "我们必须完成这个任务。",
     "pinyin": "Wǒmen bìxū wánchéng zhège rènwu.",
     "translation": "우리는 이 임무를 반드시 완수해야 한다."
+  },
+  "965": {
+    "sentence": "我有每天写日记的习惯。",
+    "pinyin": "Wǒ yǒu měitiān xiě rìjì de xíguàn.",
+    "translation": "나는 매일 일기를 쓰는 습관이 있다."
+  },
+  "966": {
+    "sentence": "电影院的入口在那边。",
+    "pinyin": "Diànyǐngyuàn de rùkǒu zài nàbiān.",
+    "translation": "영화관 입구는 저쪽에 있다."
+  },
+  "967": {
+    "sentence": "晚饭后我喜欢去公园散步。",
+    "pinyin": "Wǎnfàn hòu wǒ xǐhuan qù gōngyuán sànbù.",
+    "translation": "저녁 식사 후에 나는 공원에 산책하러 가는 걸 좋아한다."
+  },
+  "968": {
+    "sentence": "这片森林里有很多动物。",
+    "pinyin": "Zhè piàn sēnlín lǐ yǒu hěn duō dòngwù.",
+    "translation": "이 숲에는 많은 동물이 있다."
+  },
+  "969": {
+    "sentence": "他累得躺在沙发上睡着了。",
+    "pinyin": "Tā lèi de tǎng zài shāfā shàng shuìzháo le.",
+    "translation": "그는 피곤해서 소파에 누워 잠들었다."
   },
   "970": {
     "sentence": "这件事我们再商量一下。",
@@ -2784,6 +3079,16 @@
     "pinyin": "Bié wèi zhè jiàn shì shāngxīn le.",
     "translation": "이 일로 슬퍼하지 마."
   },
+  "972": {
+    "sentence": "这件衣服稍微有点儿大。",
+    "pinyin": "Zhè jiàn yīfu shāowēi yǒudiǎnr dà.",
+    "translation": "이 옷은 약간 좀 크다."
+  },
+  "973": {
+    "sentence": "请给我一个勺子喝汤。",
+    "pinyin": "Qǐng gěi wǒ yí gè sháozi hē tāng.",
+    "translation": "국을 먹게 숟가락 하나 주세요."
+  },
   "974": {
     "sentence": "这是一个很重要的社会问题。",
     "pinyin": "Zhè shì yí ge hěn zhòngyào de shèhuì wèntí.",
@@ -2794,30 +3099,125 @@
     "pinyin": "Zhè tiáo hé hěn shēn.",
     "translation": "이 강은 아주 깊다."
   },
+  "976": {
+    "sentence": "桌子上还剩下一些菜。",
+    "pinyin": "Zhuōzi shàng hái shèngxià yìxiē cài.",
+    "translation": "식탁에 음식이 좀 남아 있다."
+  },
+  "977": {
+    "sentence": "坐公交车比打车省钱。",
+    "pinyin": "Zuò gōngjiāochē bǐ dǎchē shěng qián.",
+    "translation": "버스를 타는 게 택시 타는 것보다 돈을 아낀다."
+  },
   "978": {
     "sentence": "我喜欢现在的生活。",
     "pinyin": "Wǒ xǐhuan xiànzài de shēnghuó.",
     "translation": "나는 지금의 생활을 좋아한다."
+  },
+  "979": {
+    "sentence": "医生救了他的生命。",
+    "pinyin": "Yīshēng jiùle tā de shēngmìng.",
+    "translation": "의사가 그의 생명을 구했다."
+  },
+  "980": {
+    "sentence": "他的生意做得很成功。",
+    "pinyin": "Tā de shēngyi zuò de hěn chénggōng.",
+    "translation": "그의 사업은 매우 성공적이다."
   },
   "981": {
     "sentence": "他申请了奖学金。",
     "pinyin": "Tā shēnqǐng le jiǎngxuéjīn.",
     "translation": "그는 장학금을 신청했다."
   },
+  "982": {
+    "sentence": "他忙得甚至没时间吃饭。",
+    "pinyin": "Tā máng de shènzhì méi shíjiān chīfàn.",
+    "translation": "그는 너무 바빠서 심지어 밥 먹을 시간도 없다."
+  },
+  "983": {
+    "sentence": "这个好消息使大家都很高兴。",
+    "pinyin": "Zhège hǎo xiāoxi shǐ dàjiā dōu hěn gāoxìng.",
+    "translation": "이 좋은 소식은 모두를 기쁘게 했다."
+  },
   "984": {
     "sentence": "失败是成功之母。",
     "pinyin": "Shībài shì chénggōng zhī mǔ.",
     "translation": "실패는 성공의 어머니다."
+  },
+  "985": {
+    "sentence": "他对这个结果十分满意。",
+    "pinyin": "Tā duì zhège jiéguǒ shífēn mǎnyì.",
+    "translation": "그는 이 결과에 매우 만족한다."
+  },
+  "986": {
+    "sentence": "我不知道他是否会来。",
+    "pinyin": "Wǒ bù zhīdào tā shìfǒu huì lái.",
+    "translation": "나는 그가 올지 안 올지 모른다."
+  },
+  "987": {
+    "sentence": "师傅，请到火车站。",
+    "pinyin": "Shīfu, qǐng dào huǒchēzhàn.",
+    "translation": "기사님, 기차역으로 가 주세요."
+  },
+  "988": {
+    "sentence": "这件衣服很适合你。",
+    "pinyin": "Zhè jiàn yīfu hěn shìhé nǐ.",
+    "translation": "이 옷은 너에게 잘 어울린다."
   },
   "989": {
     "sentence": "我们要从实际出发。",
     "pinyin": "Wǒmen yào cóng shíjì chūfā.",
     "translation": "우리는 실제에서 출발해야 한다."
   },
+  "990": {
+    "sentence": "我们生活在二十一世纪。",
+    "pinyin": "Wǒmen shēnghuó zài èrshíyī shìjì.",
+    "translation": "우리는 21세기에 살고 있다."
+  },
   "991": {
     "sentence": "这个结果让我很失望。",
     "pinyin": "Zhège jiéguǒ ràng wǒ hěn shīwàng.",
     "translation": "이 결과는 나를 아주 실망시켰다."
+  },
+  "992": {
+    "sentence": "我已经适应了这里的生活。",
+    "pinyin": "Wǒ yǐjīng shìyìngle zhèlǐ de shēnghuó.",
+    "translation": "나는 이미 이곳의 생활에 적응했다."
+  },
+  "993": {
+    "sentence": "使用前请仔细阅读说明书。",
+    "pinyin": "Shǐyòng qián qǐng zǐxì yuèdú shuōmíngshū.",
+    "translation": "사용 전에 설명서를 자세히 읽어 주세요."
+  },
+  "994": {
+    "sentence": "他是一个很实在的人。",
+    "pinyin": "Tā shì yí gè hěn shízai de rén.",
+    "translation": "그는 매우 진실한(꾸밈없는) 사람이다."
+  },
+  "995": {
+    "sentence": "我收到了一封朋友的来信。",
+    "pinyin": "Wǒ shōudàole yì fēng péngyou de láixìn.",
+    "translation": "나는 친구의 편지 한 통을 받았다."
+  },
+  "996": {
+    "sentence": "今天热得让人受不了。",
+    "pinyin": "Jīntiān rè de ràng rén shòubuliǎo.",
+    "translation": "오늘은 더워서 견딜 수가 없다."
+  },
+  "997": {
+    "sentence": "他的表演受到了大家的欢迎。",
+    "pinyin": "Tā de biǎoyǎn shòudàole dàjiā de huānyíng.",
+    "translation": "그의 공연은 모두의 환영을 받았다."
+  },
+  "998": {
+    "sentence": "北京是中国的首都。",
+    "pinyin": "Běijīng shì Zhōngguó de shǒudū.",
+    "translation": "베이징은 중국의 수도이다."
+  },
+  "999": {
+    "sentence": "售货员热情地向我介绍商品。",
+    "pinyin": "Shòuhuòyuán rèqíng de xiàng wǒ jièshào shāngpǐn.",
+    "translation": "점원이 친절하게 나에게 상품을 소개했다."
   },
   "1000": {
     "sentence": "他的收入不高。",
