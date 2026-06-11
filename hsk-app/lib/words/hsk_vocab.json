@@ -4871,9 +4871,9 @@
       "id": 610,
       "hanzi": "棒",
       "pinyin": "bàng",
-      "meaning": "몽둥이. 막대기. 방망이. 곤봉.",
+      "meaning": "대단하다. 훌륭하다. 멋지다. (명사) 막대기. 몽둥이.",
       "level": 4,
-      "partOfSpeech": "명사"
+      "partOfSpeech": "형용사"
     },
     {
       "id": 611,
@@ -5151,7 +5151,7 @@
       "id": 645,
       "hanzi": "长城",
       "pinyin": "Chángchéng",
-      "meaning": "견고하고 튼튼한 힘, 혹은 넘기 어려운 장애.",
+      "meaning": "만리장성.",
       "level": 4,
       "partOfSpeech": "명사"
     },
@@ -5223,7 +5223,7 @@
       "id": 654,
       "hanzi": "抽烟",
       "pinyin": "chōuyān",
-      "meaning": "연기를 빼내다.",
+      "meaning": "담배를 피우다.",
       "level": 4,
       "partOfSpeech": "동사"
     },
@@ -5303,7 +5303,7 @@
       "id": 664,
       "hanzi": "存",
       "pinyin": "cún",
-      "meaning": "생존하다. 존재하다. 있다.",
+      "meaning": "(돈·물건을) 저금하다. 맡기다. 보관하다. 존재하다.",
       "level": 4,
       "partOfSpeech": "동사"
     },
@@ -5383,9 +5383,9 @@
       "id": 674,
       "hanzi": "倒",
       "pinyin": "dào",
-      "meaning": "(상하·전후가) 거꾸로 되다. 반대로 되다. 뒤집히다.",
+      "meaning": "(액체를) 붓다. 따르다; 거꾸로 되다. 뒤집히다.",
       "level": 4,
-      "partOfSpeech": "형용사"
+      "partOfSpeech": "동사"
     },
     {
       "id": 675,
@@ -5471,7 +5471,7 @@
       "id": 685,
       "hanzi": "打折",
       "pinyin": "dǎzhé",
-      "meaning": "꺾다. 끊다. 절단하다.",
+      "meaning": "할인하다. 세일하다.",
       "level": 4,
       "partOfSpeech": "동사"
     },
@@ -5702,9 +5702,9 @@
       "id": 714,
       "hanzi": "放暑假",
       "pinyin": "fàngshǔjià",
-      "meaning": "하다",
+      "meaning": "여름 방학을 하다.",
       "level": 4,
-      "partOfSpeech": "여름방학을"
+      "partOfSpeech": "동사"
     },
     {
       "id": 715,
@@ -5846,9 +5846,9 @@
       "id": 732,
       "hanzi": "干",
       "pinyin": "gàn",
-      "meaning": "(사물의) 주요 부분. 주체. 줄기.",
+      "meaning": "(일을) 하다. 종사하다.",
       "level": 4,
-      "partOfSpeech": "명사"
+      "partOfSpeech": "동사"
     },
     {
       "id": 733,
@@ -5886,9 +5886,9 @@
       "id": 737,
       "hanzi": "刚",
       "pinyin": "gāng",
-      "meaning": "단단하다. 딱딱하다. 강하다. 굳다.",
+      "meaning": "방금. 막. 마침.",
       "level": 4,
-      "partOfSpeech": "형용사"
+      "partOfSpeech": "부사"
     },
     {
       "id": 738,
@@ -5942,7 +5942,7 @@
       "id": 744,
       "hanzi": "功夫",
       "pinyin": "gōngfu",
-      "meaning": "시간",
+      "meaning": "(들인) 시간과 노력. 솜씨.",
       "level": 4,
       "partOfSpeech": "명사"
     },
@@ -5989,7 +5989,7 @@
       "id": 750,
       "hanzi": "挂",
       "pinyin": "guà",
-      "meaning": "(물체 표면에) 붙어 있다. 덮여 있다. 띠고 있다. 칠해져 있다. 발라져 있다.",
+      "meaning": "(고리·못 등에) 걸다. 매달다; (전화를) 끊다.",
       "level": 4,
       "partOfSpeech": "동사"
     },
@@ -6405,7 +6405,7 @@
       "id": 802,
       "hanzi": "交",
       "pinyin": "jiāo",
-      "meaning": "서로 교차하다. 서로 맞닿다.",
+      "meaning": "내다. 제출하다. (친구를) 사귀다.",
       "level": 4,
       "partOfSpeech": "동사"
     },
@@ -6493,7 +6493,7 @@
       "id": 813,
       "hanzi": "节",
       "pinyin": "jié",
-      "meaning": "기념일. 명절. 축제일.",
+      "meaning": "명절. 축제일; (수업의) 교시.",
       "level": 4,
       "partOfSpeech": "명사"
     },
