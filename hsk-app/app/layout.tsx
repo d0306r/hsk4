@@ -6,10 +6,11 @@ import SyncOnLogin from '@/components/auth/SyncOnLogin';
 export const metadata: Metadata = {
   title: 'HSK 4급 필수 단어',
   description: 'HSK 4급 필수 단어를 매일 조금씩 외우고, 틀린 단어는 복습으로 오래 기억하세요',
-  // manifest는 app/manifest.ts가 자동 주입. 아이콘은 SVG 하나로 통일
+  // manifest는 app/manifest.ts가 자동 주입.
+  // 파비콘은 SVG, iOS 홈 화면은 PNG(apple-touch-icon, SVG 미지원)
   icons: {
     icon: '/icon.svg',
-    apple: '/icon.svg',
+    apple: '/icons/apple-icon-180.png',
   },
   appleWebApp: {
     capable: true,
