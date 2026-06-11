@@ -36,7 +36,7 @@ export async function StudySection({
         </div>
         <div className="text-right flex-shrink-0">
           <p className="text-2xl font-bold">{total}</p>
-          <p className="text-xs text-slate-500">카드</p>
+          <p className="text-xs text-slate-500">단어</p>
         </div>
       </div>
 

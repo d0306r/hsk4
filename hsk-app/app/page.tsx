@@ -1,10 +1,8 @@
 // app/page.tsx
 import { HomeGreeting } from '@/components/home/HomeGreeting';
-import { ProgressHeader } from '@/components/home/ProgressHeader';
 import { WelcomeHint } from '@/components/home/WelcomeHint';
-import { StreakBanner } from '@/components/home/StreakBanner';
 import { StudySection } from '@/components/home/StudySection';
-import { SrsStageCard } from '@/components/home/SrsStageCard';
+import { LearningStatusCard } from '@/components/home/LearningStatusCard';
 import { BottomNav } from '@/components/home/BottomNav';
 import { PageContainer } from '@/components/ui/PageContainer';
 
@@ -12,17 +10,17 @@ export default function HomePage() {
   return (
     <main className="pb-24 md:pt-16 md:pb-8">
       <PageContainer width="narrow">
+        {/* 인사 + 연속 학습 칩 */}
         <HomeGreeting />
-        <ProgressHeader />
+
+        {/* 학습 현황 — 접힘 기본(전체 진도만), 펼치면 SRS 단계 */}
+        <LearningStatusCard />
 
         {/* 첫 방문자 시작 안내 (학습 기록 있으면 자동 숨김) */}
         <WelcomeHint />
 
-        {/* 연속 학습 배너 (스트릭 0이면 자동 숨김) */}
-        <StreakBanner />
-
-        {/* 학습 카드 — PC에서 2열, 폰에서 1열 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-5 pt-2">
+        {/* 학습 카드 — 가장 먼저 보이게 위로. PC 2열 / 폰 1열 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-5 pt-4">
           <StudySection
             level={4}
             title="4급 신규 학습"
@@ -34,11 +32,6 @@ export default function HomePage() {
             title="3급 학습"
             href="/study/3"
           />
-        </div>
-
-        {/* 학습 단계 — SRS 분포 (통계에서 이동) */}
-        <div className="pt-2">
-          <SrsStageCard />
         </div>
       </PageContainer>
 

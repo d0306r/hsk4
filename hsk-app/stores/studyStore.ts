@@ -2,8 +2,11 @@
 import { create } from 'zustand';
 import { Word, SessionRecord } from '@/lib/words/types';
 
-// 퀴즈 문제 방향: 한자→뜻 / 뜻→한자
-export type QuizDirection = 'hanzi-to-meaning' | 'meaning-to-hanzi';
+// 퀴즈 문제 방향: 한자→뜻 / 뜻→한자 / 듣기(발음→뜻)
+export type QuizDirection =
+  | 'hanzi-to-meaning'
+  | 'meaning-to-hanzi'
+  | 'listening';
 
 // 한 문제의 정보
 export interface QuizQuestion {

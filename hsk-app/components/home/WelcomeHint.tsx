@@ -41,7 +41,7 @@ export function WelcomeHint() {
             HSK 4급 학습을 시작해볼까요?
           </p>
           <p className="text-sm text-slate-500 dark:text-slate-400 mb-3">
-            아래 카드에서 학습을 시작하면 진도와 통계가 차곡차곡 쌓여요.
+            아래에서 학습을 시작하면 진도와 통계가 차곡차곡 쌓여요.
           </p>
           <Link
             href="/study/4"

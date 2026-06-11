@@ -69,6 +69,10 @@ export default function SettingsPage() {
           <WordCountInput />
         </SettingsRow>
 
+        <SettingsRow label="하루 목표 단어 수">
+          <DailyGoalInput />
+        </SettingsRow>
+
         <SettingsRow label="퀴즈 방향">
           <select
             value={quizDirection}
@@ -82,6 +86,7 @@ export default function SettingsPage() {
             <option value="mixed">섞기</option>
             <option value="hanzi-to-meaning">한자 → 뜻</option>
             <option value="meaning-to-hanzi">뜻 → 한자</option>
+            <option value="listening">듣기 (발음 → 뜻)</option>
           </select>
         </SettingsRow>
       </SettingsGroup>
@@ -238,6 +243,44 @@ function NicknameInput() {
                  bg-white dark:bg-slate-800
                  text-slate-900 dark:text-slate-100
                  placeholder:text-slate-400 dark:placeholder:text-slate-500
+                 focus:border-brand-500 focus:outline-none"
+    />
+  );
+}
+
+// 하루 목표 단어 수 입력 — 자유 입력 후 blur/Enter 시 1~200으로 정리·저장
+function DailyGoalInput() {
+  const value = useSettingsStore((s) => s.dailyGoal);
+  const setValue = useSettingsStore((s) => s.setDailyGoal);
+  const [text, setText] = useState(String(value));
+
+  useEffect(() => {
+    setText(String(value));
+  }, [value]);
+
+  const commit = () => {
+    const n = parseInt(text, 10);
+    const clamped = Number.isNaN(n) ? value : Math.min(200, Math.max(1, n));
+    setValue(clamped);
+    setText(String(clamped));
+  };
+
+  return (
+    <input
+      type="number"
+      inputMode="numeric"
+      min={1}
+      max={200}
+      value={text}
+      onChange={(e) => setText(e.target.value)}
+      onBlur={commit}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') e.currentTarget.blur();
+      }}
+      className="w-20 px-3 py-1.5 text-right rounded-lg
+                 border border-slate-200 dark:border-slate-700
+                 bg-white dark:bg-slate-800
+                 text-slate-900 dark:text-slate-100
                  focus:border-brand-500 focus:outline-none"
     />
   );

@@ -24,17 +24,52 @@ export default function QuizCard({
   const [ttsOk, setTtsOk] = useState(false);
   useEffect(() => setTtsOk(isTTSAvailable()), []);
 
+  // 듣기 문제: 새 문제마다 발음 자동 재생
+  useEffect(() => {
+    if (direction === 'listening' && isTTSAvailable()) {
+      speakChinese(word.hanzi);
+    }
+  }, [word.hanzi, direction]);
+
   return (
     <div className="w-full">
       {/* 문제 영역 */}
       <div className="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-700 rounded-2xl p-8 mb-6 text-center shadow-sm">
         <div className="text-xs text-gray-400 dark:text-slate-500 mb-3 font-semibold">
-          {direction === 'hanzi-to-meaning'
-            ? '이 단어의 뜻은?'
-            : '이 뜻에 해당하는 한자는?'}
+          {direction === 'meaning-to-hanzi'
+            ? '이 뜻에 해당하는 한자는?'
+            : direction === 'listening'
+            ? '발음을 듣고 뜻을 고르세요'
+            : '이 단어의 뜻은?'}
         </div>
 
-        {direction === 'hanzi-to-meaning' ? (
+        {direction === 'listening' ? (
+          ttsOk ? (
+            <div className="flex flex-col items-center">
+              <button
+                type="button"
+                onClick={() => speakChinese(word.hanzi)}
+                aria-label="발음 다시 듣기"
+                className="w-20 h-20 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 flex items-center justify-center hover:bg-brand-100 dark:hover:bg-brand-900/50 active:scale-95 transition shadow-sm"
+              >
+                <Volume2 size={36} />
+              </button>
+              <p className="text-xs text-gray-400 dark:text-slate-500 mt-3">
+                탭하면 다시 들어요
+              </p>
+            </div>
+          ) : (
+            // TTS 미지원 폴백: 병음 표시
+            <div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-slate-100">
+                {word.pinyin}
+              </div>
+              <p className="text-xs text-gray-400 dark:text-slate-500 mt-2">
+                이 브라우저는 발음 재생을 지원하지 않아 병음을 표시해요
+              </p>
+            </div>
+          )
+        ) : direction === 'hanzi-to-meaning' ? (
           <>
             <div className="hanzi text-5xl font-bold mb-3 text-gray-900 dark:text-slate-100">
               {word.hanzi}
@@ -92,9 +127,7 @@ export default function QuizCard({
                 </span>
 
                 <span className="flex-1">
-                  {direction === 'hanzi-to-meaning' ? (
-                    <span className="text-base">{option.meaning}</span>
-                  ) : (
+                  {direction === 'meaning-to-hanzi' ? (
                     <span>
                       <span className="hanzi text-xl font-bold">{option.hanzi}</span>
                       {showPinyin && (
@@ -103,6 +136,8 @@ export default function QuizCard({
                         </span>
                       )}
                     </span>
+                  ) : (
+                    <span className="text-base">{option.meaning}</span>
                   )}
                 </span>
 
