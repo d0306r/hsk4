@@ -18,6 +18,30 @@
     padding-bottom: env(safe-area-inset-bottom);
   }
 
+  /* 더블탭 줌 대기(잔여 탭 지연) 제거 — 모든 인터랙션 요소 */
+  button,
+  a,
+  label,
+  summary,
+  [role='button'],
+  input,
+  select,
+  textarea {
+    touch-action: manipulation;
+  }
+
+  /* 탭 하이라이트를 끈 대신, 터치 기기에서 즉시 누름 피드백을 준다.
+     (transition 없이 즉시 반응 → 느리게 느껴지던 체감 개선) */
+  @media (hover: none) and (pointer: coarse) {
+    button:active,
+    a:active,
+    label:active,
+    summary:active,
+    [role='button']:active {
+      opacity: 0.55;
+    }
+  }
+
   .hanzi {
     @apply font-hanzi;
   }

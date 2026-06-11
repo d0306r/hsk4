@@ -3,6 +3,7 @@
 // (iOS apple-touch / PWA manifest용). 실행: node scripts/gen-icons.mjs
 import sharp from 'sharp';
 import { mkdirSync, writeFileSync } from 'fs';
+import pngToIco from 'png-to-ico';
 
 // 풀블리드 정사각(둥근 모서리는 OS가 처리) + 겹친 카드(흰/파랑) + 드롭섀도.
 // 카드는 maskable 안전 영역(중앙) 안에 들어오게 배치.
@@ -50,3 +51,12 @@ for (const [name, size] of targets) {
     .toFile(`public/icons/${name}`);
   console.log('wrote public/icons/' + name);
 }
+
+// PC 브라우저 탭 파비콘 (app/favicon.ico) — 16/32/48 멀티사이즈 ICO
+const icoPngs = await Promise.all(
+  [16, 32, 48].map((s) =>
+    sharp(buf, { density: 384 }).resize(s, s).png().toBuffer()
+  )
+);
+writeFileSync('app/favicon.ico', await pngToIco(icoPngs));
+console.log('wrote app/favicon.ico');
