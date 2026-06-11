@@ -42,6 +42,42 @@ export function getRecentDailyStats(days: number = 7): DailyStats[] {
 }
 
 /**
+ * 주간 리포트 — 이번 주(최근 7일)와 지난 주(그 전 7일) 집계·비교
+ */
+export function getWeeklyReport(): {
+  studied: number;
+  accuracy: number;
+  daysStudied: number;
+  studiedDelta: number;   // 지난 주 대비 학습량 증감
+  accuracyDelta: number;  // 지난 주 대비 정답률 증감(%p)
+} {
+  const recent = getRecentDailyStats(14); // 오래된 → 최신
+  const lastWeek = recent.slice(0, 7);
+  const thisWeek = recent.slice(7);
+
+  const agg = (arr: DailyStats[]) => {
+    const studied = arr.reduce((s, d) => s + d.studied, 0);
+    const correct = arr.reduce((s, d) => s + d.correct, 0);
+    const wrong = arr.reduce((s, d) => s + d.wrong, 0);
+    const attempts = correct + wrong;
+    const accuracy = attempts > 0 ? Math.round((correct / attempts) * 100) : 0;
+    const daysStudied = arr.filter((d) => d.studied > 0).length;
+    return { studied, accuracy, daysStudied };
+  };
+
+  const tw = agg(thisWeek);
+  const lw = agg(lastWeek);
+
+  return {
+    studied: tw.studied,
+    accuracy: tw.accuracy,
+    daysStudied: tw.daysStudied,
+    studiedDelta: tw.studied - lw.studied,
+    accuracyDelta: tw.accuracy - lw.accuracy,
+  };
+}
+
+/**
  * 현재 학습 스트릭 (몇 일 연속으로 학습했는지)
  *
  * 규칙:

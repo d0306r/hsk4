@@ -32,14 +32,14 @@ export function HomeGreeting() {
   }, []);
 
   if (!mounted) {
-    return <div className="px-5 pt-6 h-7" />;
+    return <div className="px-5 pt-6 pb-3 h-10" />;
   }
 
   const { text, emoji } = greetingByHour(new Date().getHours());
   const name = nickname.trim();
 
   return (
-    <div className="px-5 pt-6 flex items-center justify-between gap-3">
+    <div className="px-5 pt-6 pb-3 flex items-center justify-between gap-3">
       <p className="text-base font-semibold text-slate-800 dark:text-slate-100 min-w-0">
         {name && (
           <span className="text-brand-600 dark:text-brand-400">{name}님, </span>

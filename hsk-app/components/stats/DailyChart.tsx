@@ -4,30 +4,21 @@
 import { DailyStats } from '@/lib/progress/types';
 
 interface DailyChartProps {
-  data: DailyStats[];  // 7개 (왼쪽이 옛날, 오른쪽이 오늘)
+  data: DailyStats[]; // 7개 (왼쪽이 옛날, 오른쪽이 오늘)
+  /** true면 카드/헤더 없이 막대만 (다른 카드 안에 끼워 넣을 때) */
+  bare?: boolean;
 }
 
 const WEEKDAY_KO = ['일', '월', '화', '수', '목', '금', '토'];
 
-export default function DailyChart({ data }: DailyChartProps) {
-  // 최대값 계산 (그래프 높이 기준)
-  // 0이면 1로 (나누기 0 방지)
+export default function DailyChart({ data, bare = false }: DailyChartProps) {
+  // 최대값 계산 (그래프 높이 기준, 0이면 1로 나누기 방지)
   const maxStudied = Math.max(...data.map((d) => d.studied), 1);
-
-  // 총합 (요약 표시용)
   const total = data.reduce((sum, d) => sum + d.studied, 0);
   const avg = Math.round(total / data.length);
 
-  return (
-    <section className="card">
-      <div className="flex items-baseline justify-between mb-4">
-        <h2 className="text-base font-bold">최근 7일 학습량</h2>
-        <div className="text-xs text-slate-500">
-          총 <span className="font-bold text-brand-600">{total}</span>개 ·
-          평균 <span className="font-bold text-brand-600">{avg}</span>개/일
-        </div>
-      </div>
-
+  const chart = (
+    <>
       {/* 그래프 */}
       <div className="flex items-end justify-between gap-2 h-32 mb-2">
         {data.map((day, idx) => {
@@ -82,9 +73,7 @@ export default function DailyChart({ data }: DailyChartProps) {
             <div
               key={day.date}
               className={`flex-1 text-center text-xs ${
-                isToday
-                  ? 'text-brand-600 font-bold'
-                  : 'text-slate-400'
+                isToday ? 'text-brand-600 font-bold' : 'text-slate-400'
               }`}
             >
               {isToday ? '오늘' : weekday}
@@ -92,6 +81,21 @@ export default function DailyChart({ data }: DailyChartProps) {
           );
         })}
       </div>
+    </>
+  );
+
+  if (bare) return chart;
+
+  return (
+    <section className="card">
+      <div className="flex items-baseline justify-between mb-4">
+        <h2 className="text-base font-bold">최근 7일 학습량</h2>
+        <div className="text-xs text-slate-500">
+          총 <span className="font-bold text-brand-600">{total}</span>개 · 평균{' '}
+          <span className="font-bold text-brand-600">{avg}</span>개/일
+        </div>
+      </div>
+      {chart}
     </section>
   );
 }

@@ -1,15 +1,10 @@
 // components/home/LearningStatusCard.tsx
-// 오늘의 목표(링) + 전체 진도 + SRS 단계(토글)를 한 카드로 통합
+// 오늘의 목표(링) + 전체 진도(누적 막대: 숙달|학습중|신규)를 한 카드로 통합.
+// 접으면 진도 막대만, 펼치면 단계별 범례(개수)를 보여준다.
 'use client';
 
 import { useEffect, useState } from 'react';
-import {
-  Sparkles,
-  BookOpen,
-  GraduationCap,
-  ChevronDown,
-  LucideIcon,
-} from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { getTodayProgress } from '@/lib/progress';
 import { getSRSStageStats } from '@/lib/progress/stats';
 import { useSettingsStore } from '@/stores/settingsStore';
@@ -20,12 +15,19 @@ type SRSStats = ReturnType<typeof getSRSStageStats>;
 const RING_R = 30;
 const RING_C = 2 * Math.PI * RING_R;
 
+// 단계 색 (숙달=진함 → 신규=옅음)
+const STAGE = {
+  mature: { label: '숙달', bar: 'bg-brand-600 dark:bg-brand-300' },
+  learning: { label: '학습 중', bar: 'bg-brand-400 dark:bg-brand-500' },
+  new: { label: '신규', bar: 'bg-brand-100 dark:bg-brand-800' },
+} as const;
+
 export function LearningStatusCard() {
   const goal = useSettingsStore((s) => s.dailyGoal);
   const [data, setData] = useState<{ overall: Overall; srs: SRSStats } | null>(
     null
   );
-  // 기본 접힘 — 펼치면 SRS 단계 표시
+  // 기본 접힘 — 펼치면 단계 범례 표시
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
@@ -46,14 +48,19 @@ export function LearningStatusCard() {
   }
 
   const { overall, srs } = data;
-  const { learned, totalLearned, totalWords } = overall;
-  const percent = totalWords > 0 ? (totalLearned / totalWords) * 100 : 0;
 
   // 오늘의 목표
-  const goalPct = goal > 0 ? Math.min(100, Math.round((learned / goal) * 100)) : 0;
-  const goalDone = goal > 0 && learned >= goal;
-  const remaining = Math.max(0, goal - learned);
+  const goalPct =
+    goal > 0 ? Math.min(100, Math.round((overall.learned / goal) * 100)) : 0;
+  const goalDone = goal > 0 && overall.learned >= goal;
+  const remaining = Math.max(0, goal - overall.learned);
   const ringDash = RING_C * (goalPct / 100);
+
+  // 전체 진도 = 학습한 단어(학습중 + 숙달) / 전체
+  const total = srs.total;
+  const studied = srs.learning + srs.mature;
+  const percent = total > 0 ? (studied / total) * 100 : 0;
+  const pct = (n: number) => (total > 0 ? (n / total) * 100 : 0);
 
   return (
     <section className="card mx-5 mb-4">
@@ -72,7 +79,7 @@ export function LearningStatusCard() {
         />
       </button>
 
-      {/* 오늘의 목표 (진행 링) — 항상 표시 */}
+      {/* 오늘의 목표 (진행 링) */}
       <div className="flex items-center gap-4">
         <div className="relative flex-shrink-0">
           <svg width="72" height="72" viewBox="0 0 72 72" className="-rotate-90">
@@ -112,7 +119,7 @@ export function LearningStatusCard() {
             ) : (
               <>
                 <span className="text-brand-600 dark:text-brand-400">
-                  {learned}
+                  {overall.learned}
                 </span>
                 <span className="text-slate-400 dark:text-slate-500">
                   {' '}
@@ -129,125 +136,66 @@ export function LearningStatusCard() {
         </div>
       </div>
 
-      {/* 전체 진도 — 항상 표시 */}
+      {/* 전체 진도 — 누적 막대 (숙달|학습중|신규) */}
       <div className="border-t border-slate-100 dark:border-slate-700 my-4" />
-      <p className="text-xs text-slate-500 dark:text-slate-400 mb-1.5">전체 진도</p>
-      <div className="flex items-baseline gap-2 mb-2">
-        <span className="text-xl font-bold">
-          {totalLearned.toLocaleString()}
-        </span>
-        <span className="text-slate-400 dark:text-slate-500 text-sm">
-          / {totalWords.toLocaleString()} 단어
-        </span>
-        <span className="ml-auto text-lg font-bold text-brand-600 dark:text-brand-400">
-          {percent.toFixed(1)}%
-        </span>
+      <div className="flex items-baseline justify-between mb-2">
+        <p className="text-xs text-slate-500 dark:text-slate-400">전체 진도</p>
+        <p className="text-sm">
+          <span className="font-bold text-slate-900 dark:text-white">
+            {studied.toLocaleString()}
+          </span>
+          <span className="text-slate-400 dark:text-slate-500">
+            {' '}
+            / {total.toLocaleString()}
+          </span>
+          <span className="ml-2 font-bold text-brand-600 dark:text-brand-400">
+            {percent.toFixed(1)}%
+          </span>
+        </p>
       </div>
-      <div className="h-2.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+      <div className="flex h-2.5 rounded-full overflow-hidden bg-slate-100 dark:bg-slate-700">
         <div
-          className="h-full bg-gradient-to-r from-brand-500 to-brand-700 transition-all duration-700"
-          style={{ width: `${percent}%` }}
+          className={`${STAGE.mature.bar} transition-all duration-700`}
+          style={{ width: `${pct(srs.mature)}%` }}
+        />
+        <div
+          className={`${STAGE.learning.bar} transition-all duration-700`}
+          style={{ width: `${pct(srs.learning)}%` }}
+        />
+        <div
+          className={`${STAGE.new.bar} transition-all duration-700`}
+          style={{ width: `${pct(srs.new)}%` }}
         />
       </div>
 
-      {/* SRS 단계 (펼침 시) */}
+      {/* 단계 범례 (펼침 시) */}
       {expanded && (
-        <>
-          <div className="border-t border-slate-100 dark:border-slate-700 my-4" />
-          <div className="space-y-3">
-            <StageRow
-              Icon={Sparkles}
-              label="신규"
-              description="아직 학습 안 한 단어"
-              count={srs.new}
-              total={srs.total}
-              color="new"
-            />
-            <StageRow
-              Icon={BookOpen}
-              label="학습 중"
-              description="복습 간격이 짧은 단어"
-              count={srs.learning}
-              total={srs.total}
-              color="learning"
-            />
-            <StageRow
-              Icon={GraduationCap}
-              label="숙달"
-              description="3주 이상 안 봐도 되는 단어"
-              count={srs.mature}
-              total={srs.total}
-              color="mature"
-            />
-          </div>
-        </>
+        <div className="flex flex-wrap gap-x-4 gap-y-1.5 mt-3">
+          <LegendItem color={STAGE.mature.bar} label={STAGE.mature.label} count={srs.mature} />
+          <LegendItem color={STAGE.learning.bar} label={STAGE.learning.label} count={srs.learning} />
+          <LegendItem color={STAGE.new.bar} label={STAGE.new.label} count={srs.new} />
+        </div>
       )}
     </section>
   );
 }
 
-// ─────── SRS 단계 한 줄 ───────
-
-interface StageRowProps {
-  Icon: LucideIcon;
-  label: string;
-  description: string;
-  count: number;
-  total: number;
-  color: 'new' | 'learning' | 'mature';
-}
-
-function StageRow({
-  Icon,
-  label,
-  description,
-  count,
-  total,
+function LegendItem({
   color,
-}: StageRowProps) {
-  const percent = total > 0 ? (count / total) * 100 : 0;
-
-  const barClass = {
-    new: 'bg-brand-200 dark:bg-brand-700',
-    learning: 'bg-brand-300 dark:bg-brand-600',
-    mature: 'bg-brand-400 dark:bg-brand-500',
-  }[color];
-
-  const numClass = {
-    new: 'text-brand-600 dark:text-brand-300',
-    learning: 'text-brand-700 dark:text-brand-200',
-    mature: 'text-brand-800 dark:text-brand-100',
-  }[color];
-
+  label,
+  count,
+}: {
+  color: string;
+  label: string;
+  count: number;
+}) {
   return (
-    <div>
-      <div className="flex items-center justify-between mb-1.5">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
-            <Icon size={16} className="text-slate-500 dark:text-slate-400" />
-          </div>
-          <div>
-            <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
-              {label}
-            </p>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              {description}
-            </p>
-          </div>
-        </div>
-        <div className="text-right">
-          <p className={`text-lg font-bold ${numClass}`}>{count}</p>
-          <p className="text-xs text-slate-400 dark:text-slate-500">
-            {percent.toFixed(1)}%
-          </p>
-        </div>
-      </div>
-      <div className="h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
-        <div
-          className={`h-full ${barClass} transition-all duration-700`}
-          style={{ width: `${percent}%` }}
-        />
-      </div>
-    </div>
+    <span className="inline-flex items-center gap-1.5 text-xs">
+      <span className={`w-2.5 h-2.5 rounded-full ${color}`} />
+      <span className="text-slate-500 dark:text-slate-400">{label}</span>
+      <span className="font-bold text-slate-700 dark:text-slate-200">
+        {count}
+      </span>
+    </span>
   );
 }

@@ -9,6 +9,8 @@ import {
   GraduationCap,
   NotebookPen,
   Target,
+  TrendingUp,
+  TrendingDown,
   LucideIcon,
 } from 'lucide-react';
 import {
@@ -16,15 +18,18 @@ import {
   getCurrentStreak,
   getOverallStats,
   getMostWrongWords,
+  getWeeklyReport,
 } from '@/lib/progress/stats';
 import { DailyStats, WordProgress } from '@/lib/progress/types';
 import { Word } from '@/lib/words/types';
 import { useSettingsStore } from '@/stores/settingsStore';
 import DailyChart from './DailyChart';
+import AccuracyTrend from './AccuracyTrend';
 import StudyHeatmap from './StudyHeatmap';
 import { PageContainer } from '@/components/ui/PageContainer';
 
 type Overall = ReturnType<typeof getOverallStats>;
+type Weekly = ReturnType<typeof getWeeklyReport>;
 type WrongItem = { word: Word; progress: WordProgress };
 
 // 카드 공통: 회색 기반의 정돈된 면 + 헤어라인 보더
@@ -35,6 +40,8 @@ export default function StatsOverview() {
 
   const [data, setData] = useState<{
     daily: DailyStats[];
+    daily14: DailyStats[];
+    weekly: Weekly;
     streak: number;
     overall: Overall;
     mostWrong: WrongItem[];
@@ -42,8 +49,11 @@ export default function StatsOverview() {
 
   useEffect(() => {
     function load() {
+      const daily14 = getRecentDailyStats(14);
       setData({
-        daily: getRecentDailyStats(7),
+        daily: daily14.slice(-7),
+        daily14,
+        weekly: getWeeklyReport(),
         streak: getCurrentStreak(),
         overall: getOverallStats(),
         mostWrong: getMostWrongWords(5),
@@ -67,7 +77,7 @@ export default function StatsOverview() {
     );
   }
 
-  const { daily, streak, overall, mostWrong } = data;
+  const { daily, daily14, weekly, streak, overall, mostWrong } = data;
 
   return (
     <PageContainer width="wide" className="px-4 py-6 pb-24">
@@ -80,24 +90,121 @@ export default function StatsOverview() {
       {overall.totalStudied === 0 ? (
         <EmptyState />
       ) : (
-        <div className="lg:grid lg:grid-cols-[1fr_20rem] lg:gap-5 lg:items-start">
-          {/* 사이드바 — 폰에서는 맨 위(요약), PC에서는 오른쪽 */}
-          <aside className="space-y-4 mb-4 lg:mb-0 lg:order-2">
-            {streak > 0 && <StreakCard streak={streak} />}
-            <KeyMetrics overall={overall} />
-            {mostWrong.length > 0 && (
-              <MostWrongCard items={mostWrong} showPinyin={showPinyin} />
-            )}
-          </aside>
+        <>
+          {/* 이번 주 — 요약 + 7일 학습량 (상단 강조) */}
+          <WeeklyReportCard weekly={weekly} daily={daily} />
 
-          {/* 메인 — 그래프 + 잔디 */}
-          <div className="space-y-4 lg:order-1 lg:min-w-0">
-            <DailyChart data={daily} />
-            <StudyHeatmap />
+          <div className="lg:grid lg:grid-cols-[1fr_20rem] lg:gap-5 lg:items-start">
+            {/* 사이드바 — 폰에서는 맨 위(요약), PC에서는 오른쪽 */}
+            <aside className="space-y-4 mb-4 lg:mb-0 lg:order-2">
+              {streak > 0 && <StreakCard streak={streak} />}
+              <KeyMetrics overall={overall} />
+              {mostWrong.length > 0 && (
+                <MostWrongCard items={mostWrong} showPinyin={showPinyin} />
+              )}
+            </aside>
+
+            {/* 메인 — 정답률 추이 + 잔디 */}
+            <div className="space-y-4 lg:order-1 lg:min-w-0">
+              <AccuracyTrend data={daily14} />
+              <StudyHeatmap />
+            </div>
           </div>
-        </div>
+        </>
       )}
     </PageContainer>
+  );
+}
+
+// ─────── 이번 주 리포트 ───────
+
+function WeeklyReportCard({
+  weekly,
+  daily,
+}: {
+  weekly: Weekly;
+  daily: DailyStats[];
+}) {
+  return (
+    <section className={`${CARD} mb-4`}>
+      <h2 className="text-sm font-bold text-slate-500 dark:text-slate-400 mb-3">
+        이번 주
+      </h2>
+      <div className="grid grid-cols-3 gap-3 mb-5">
+        <WeekMetric
+          label="학습"
+          value={weekly.studied}
+          suffix="단어"
+          delta={weekly.studiedDelta}
+        />
+        <WeekMetric
+          label="정답률"
+          value={weekly.accuracy}
+          suffix="%"
+          delta={weekly.accuracyDelta}
+          deltaSuffix="%p"
+        />
+        <WeekMetric label="학습일" value={weekly.daysStudied} suffix="/ 7일" />
+      </div>
+
+      {/* 최근 7일 학습량 막대 */}
+      <DailyChart data={daily} bare />
+    </section>
+  );
+}
+
+function WeekMetric({
+  label,
+  value,
+  suffix,
+  delta,
+  deltaSuffix,
+}: {
+  label: string;
+  value: number;
+  suffix?: string;
+  delta?: number;
+  deltaSuffix?: string;
+}) {
+  return (
+    <div>
+      <p className="text-xs text-slate-400 dark:text-slate-500 mb-1">{label}</p>
+      <p className="text-xl font-bold text-slate-900 dark:text-white">
+        {value}
+        {suffix && (
+          <span className="ml-1 text-xs font-medium text-slate-400 dark:text-slate-500">
+            {suffix}
+          </span>
+        )}
+      </p>
+      {delta !== undefined && <DeltaChip delta={delta} suffix={deltaSuffix} />}
+    </div>
+  );
+}
+
+function DeltaChip({ delta, suffix }: { delta: number; suffix?: string }) {
+  if (delta === 0) {
+    return (
+      <p className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">
+        지난주와 같음
+      </p>
+    );
+  }
+  const up = delta > 0;
+  const Icon = up ? TrendingUp : TrendingDown;
+  return (
+    <p
+      className={`flex items-center gap-0.5 text-xs font-semibold mt-0.5 ${
+        up
+          ? 'text-green-600 dark:text-green-400'
+          : 'text-rose-500 dark:text-rose-400'
+      }`}
+    >
+      <Icon size={12} />
+      {up ? '+' : ''}
+      {delta}
+      {suffix ?? ''}
+    </p>
   );
 }
 
