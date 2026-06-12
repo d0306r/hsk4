@@ -4365,9 +4365,9 @@
       "id": 546,
       "hanzi": "元",
       "pinyin": "yuán",
-      "meaning": "시작의. 처음의. 첫째의.",
+      "meaning": "위안(元). [중국 화폐 단위]; 처음의.",
       "level": 3,
-      "partOfSpeech": "형용사"
+      "partOfSpeech": "양사"
     },
     {
       "id": 547,
@@ -4397,9 +4397,9 @@
       "id": 550,
       "hanzi": "越",
       "pinyin": "yuè",
-      "meaning": "넘다. 뛰어넘다.",
+      "meaning": "(越来越·越…越…) 점점. …할수록; 넘다.",
       "level": 3,
-      "partOfSpeech": "동사"
+      "partOfSpeech": "부사"
     },
     {
       "id": 551,
@@ -4492,9 +4492,9 @@
       "id": 562,
       "hanzi": "张",
       "pinyin": "zhāng",
-      "meaning": "열다. 펼치다.",
+      "meaning": "[양사] 장 (종이·책상·사진 등); (입을) 벌리다.",
       "level": 3,
-      "partOfSpeech": "동사"
+      "partOfSpeech": "양사"
     },
     {
       "id": 563,
@@ -4612,9 +4612,9 @@
       "id": 577,
       "hanzi": "种",
       "pinyin": "zhǒng",
-      "meaning": "종자. 열매. 씨(앗).",
+      "meaning": "[양사] 종류·가지 (这种); 씨앗. 심다.",
       "level": 3,
-      "partOfSpeech": "명사"
+      "partOfSpeech": "양사"
     },
     {
       "id": 578,
