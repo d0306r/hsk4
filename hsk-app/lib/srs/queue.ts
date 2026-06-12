@@ -76,9 +76,10 @@ export function buildStudyQueue(
   const targetReviewCount = maxCount - targetNewCount;
   
   // 복습 우선, 모자라면 신규로 채움
+  // 신규는 매번 랜덤하게 (id순으로 앞에서부터 뽑으면 항상 같은 단어가 나옴)
   const selectedReview = reviewCandidates.slice(0, targetReviewCount);
   const remainingSlots = maxCount - selectedReview.length;
-  const selectedNew = newCandidates.slice(0, remainingSlots);
+  const selectedNew = shuffle(newCandidates).slice(0, remainingSlots);
   
   // 4) 합치고 셔플 (단조롭지 않게)
   const queue = shuffle([...selectedReview, ...selectedNew]);

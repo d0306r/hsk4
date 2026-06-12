@@ -98,6 +98,26 @@ export default function WordDetailModal({
           </div>
         </div>
 
+        {/* 예문 */}
+        {word.example && (
+          <div className="px-6 py-5 border-b border-gray-100 dark:border-slate-700">
+            <h3 className="text-xs font-semibold text-gray-400 dark:text-slate-500 mb-2 uppercase tracking-wide">
+              예문
+            </h3>
+            <p className="hanzi text-base text-gray-900 dark:text-white leading-relaxed">
+              {word.example.sentence}
+            </p>
+            {showPinyin && (
+              <p className="text-sm text-gray-500 dark:text-slate-400 mt-1">
+                {word.example.pinyin}
+              </p>
+            )}
+            <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+              {word.example.translation}
+            </p>
+          </div>
+        )}
+
         {/* 학습 통계 */}
         <div className="px-6 py-5 border-b border-gray-100 dark:border-slate-700">
           <h3 className="text-xs font-semibold text-gray-400 dark:text-slate-500 mb-3 uppercase tracking-wide">

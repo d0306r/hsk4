@@ -61,6 +61,7 @@ export default function SessionResult({ level, allWords }: SessionResultProps) {
   const handleHome = () => {
     reset();
     router.push('/');
+    router.refresh(); // 라우터 캐시 무효화 → 홈 수치 즉시 갱신
   };
 
   return (

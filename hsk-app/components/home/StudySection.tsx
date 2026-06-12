@@ -1,7 +1,12 @@
 // components/home/StudySection.tsx
+'use client';
+
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import type { HSKLevel } from '@/types/word';
-import { fetchLevelStats } from '@/lib/db/progress-server';
+import { allWords } from '@/lib/words/mock';
+import { getAllProgress } from '@/lib/progress/api';
+import { countDueReviews } from '@/lib/srs/queue';
 
 interface StudySectionProps {
   level: HSKLevel;
@@ -11,14 +16,36 @@ interface StudySectionProps {
   reviewOnly?: boolean;
 }
 
-export async function StudySection({
+export function StudySection({
   level,
   title,
   href,
   reviewOnly = false,
 }: StudySectionProps) {
-  // 서버에서 직접 DB 조회 (RLS로 본인 데이터만 가져옴)
-  const stats = await fetchLevelStats(level as 3 | 4);
+  // localStorage(진도)가 master — 학습 직후 홈에 돌아오면 바로 반영되도록
+  // 서버 DB 대신 로컬에서 계산하고, 마운트·포커스 시 갱신한다.
+  const [stats, setStats] = useState<{
+    reviewDue: number;
+    newAvailable: number;
+  } | null>(null);
+
+  useEffect(() => {
+    async function load() {
+      const progress = await getAllProgress();
+      setStats(countDueReviews(allWords, progress, level as 3 | 4));
+    }
+    load();
+    window.addEventListener('focus', load);
+    return () => window.removeEventListener('focus', load);
+  }, [level]);
+
+  if (stats === null) {
+    return (
+      <section className="card mb-4 h-full animate-pulse">
+        <div className="h-28 bg-slate-100 dark:bg-slate-700/50 rounded" />
+      </section>
+    );
+  }
 
   const reviewCount = stats.reviewDue;
   const newCount = reviewOnly ? undefined : stats.newAvailable;
