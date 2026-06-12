@@ -11,11 +11,14 @@ export function AppGreeting({
   subtitle,
   right,
   className = '',
+  greeting,
 }: {
   subtitle?: string;
   /** 우측 액션. 지정 안 하면 스트릭 칩(있을 때)을 보여줌 */
   right?: ReactNode;
   className?: string;
+  /** 탭별 인사 문구. 지정 안 하면 시간대 인사(홈용) */
+  greeting?: { text: string; emoji: string };
 }) {
   const nickname = useSettingsStore((s) => s.nickname);
   const [mounted, setMounted] = useState(false);
@@ -36,7 +39,7 @@ export function AppGreeting({
     return <div className={`mb-5 h-12 ${className}`} />;
   }
 
-  const { text, emoji } = greetingByHour(new Date().getHours());
+  const { text, emoji } = greeting ?? greetingByHour(new Date().getHours());
   const name = nickname.trim();
   const rightNode =
     right ??

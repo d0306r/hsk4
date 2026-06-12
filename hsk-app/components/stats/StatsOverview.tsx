@@ -82,7 +82,10 @@ export default function StatsOverview() {
   return (
     <PageContainer width="wide" className="px-4 py-6 pb-24">
       {/* 헤더 — 닉네임 인사 (공용) */}
-      <AppGreeting subtitle="지금까지의 학습 현황이에요" />
+      <AppGreeting
+        greeting={{ text: '얼마나 성장했는지 볼까요?', emoji: '📊' }}
+        subtitle="지금까지의 학습 현황이에요"
+      />
 
       {overall.totalStudied === 0 ? (
         <EmptyState />

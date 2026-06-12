@@ -171,6 +171,7 @@ export default function WordBrowser() {
     <PageContainer width="wide" className="px-4 py-6 pb-24">
       {/* 헤더 — 공용 인사 + (즐겨찾기 있을 때) 즐겨찾기 학습 버튼 */}
       <AppGreeting
+        greeting={{ text: '오늘은 어떤 단어를 만나볼까요?', emoji: '📖' }}
         subtitle="HSK 3·4급 전체 단어를 둘러보고 검색하세요"
         right={
           favIds.length > 0 ? (

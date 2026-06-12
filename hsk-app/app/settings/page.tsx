@@ -67,7 +67,10 @@ export default function SettingsPage() {
     <main className="pb-24 px-5 pt-6 md:pt-20">
       <PageContainer width="narrow">
       <div className="max-w-3xl mx-auto">
-      <AppGreeting subtitle="학습 환경을 맞춤 설정할 수 있어요" />
+      <AppGreeting
+        greeting={{ text: '나에게 맞게 맞춰봐요', emoji: '⚙️' }}
+        subtitle="학습 환경을 맞춤 설정할 수 있어요"
+      />
 
       {/* 학습 그룹 */}
       <SettingsGroup title="학습">

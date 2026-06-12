@@ -82,7 +82,10 @@ export default function WrongNoteList({ allWords }: WrongNoteListProps) {
   if (items.length === 0) {
     return (
       <PageContainer width="wide" className="px-4 py-6 pb-24">
-        <AppGreeting subtitle="틀린 단어가 모이는 곳이에요" />
+        <AppGreeting
+          greeting={{ text: '틀린 단어, 다시 내 것으로 만들어요', emoji: '✍️' }}
+          subtitle="틀린 단어가 모이는 곳이에요"
+        />
         <div className="text-center mt-12 px-6">
           <div className="text-5xl mb-4">🎉</div>
           <h2 className="text-xl font-bold text-gray-900 dark:text-slate-100 mb-2">
@@ -108,6 +111,7 @@ export default function WrongNoteList({ allWords }: WrongNoteListProps) {
       <PageContainer width="wide" className="px-4 py-6 pb-24">
         {/* 헤더 — 공용 인사 + 복습 CTA(우측) */}
         <AppGreeting
+          greeting={{ text: '틀린 단어, 다시 내 것으로 만들어요', emoji: '✍️' }}
           subtitle={`${items.length}개의 단어를 더 외워야 해요`}
           right={
             <Link
