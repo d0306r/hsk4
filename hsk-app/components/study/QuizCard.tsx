@@ -24,6 +24,18 @@ export default function QuizCard({
   const [ttsOk, setTtsOk] = useState(false);
   useEffect(() => setTtsOk(isTTSAvailable()), []);
 
+  // 빈칸 채우기용: 예문에서 목표 한자를 가린 앞/뒤 (예문은 makeQuestion에서 보장)
+  const cloze =
+    direction === 'fill-blank' && word.example
+      ? (() => {
+          const s = word.example.sentence;
+          const i = s.indexOf(word.hanzi);
+          return i >= 0
+            ? { before: s.slice(0, i), after: s.slice(i + word.hanzi.length) }
+            : null;
+        })()
+      : null;
+
   // 듣기 문제: 새 문제마다 발음 자동 재생
   useEffect(() => {
     if (direction === 'listening' && isTTSAvailable()) {
@@ -40,6 +52,8 @@ export default function QuizCard({
             ? '이 뜻에 해당하는 한자는?'
             : direction === 'listening'
             ? '발음을 듣고 뜻을 고르세요'
+            : direction === 'fill-blank'
+            ? '빈칸에 알맞은 단어는?'
             : '이 단어의 뜻은?'}
         </div>
 
@@ -69,6 +83,25 @@ export default function QuizCard({
               </p>
             </div>
           )
+        ) : direction === 'fill-blank' ? (
+          <>
+            <div className="hanzi text-2xl font-bold leading-relaxed text-gray-900 dark:text-slate-100">
+              {cloze ? (
+                <>
+                  {cloze.before}
+                  <span className="inline-block min-w-[2.5rem] px-1 mx-0.5 text-center text-brand-500 dark:text-brand-400 border-b-2 border-brand-400 dark:border-brand-500 align-bottom">
+                    ?
+                  </span>
+                  {cloze.after}
+                </>
+              ) : (
+                word.hanzi
+              )}
+            </div>
+            <div className="text-sm text-gray-500 dark:text-slate-400 mt-3">
+              {word.example?.translation}
+            </div>
+          </>
         ) : direction === 'hanzi-to-meaning' ? (
           <>
             <div className="hanzi text-4xl font-bold mb-2 text-gray-900 dark:text-slate-100">
@@ -127,7 +160,7 @@ export default function QuizCard({
                 </span>
 
                 <span className="flex-1">
-                  {direction === 'meaning-to-hanzi' ? (
+                  {direction === 'meaning-to-hanzi' || direction === 'fill-blank' ? (
                     <span>
                       <span className="hanzi text-xl font-bold">{option.hanzi}</span>
                       {showPinyin && (

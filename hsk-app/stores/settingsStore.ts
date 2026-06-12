@@ -7,6 +7,7 @@ export type QuizDirection =
   | 'hanzi-to-meaning'
   | 'meaning-to-hanzi'
   | 'listening'
+  | 'fill-blank'
   | 'mixed';
 
 interface SettingsState {

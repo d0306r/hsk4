@@ -14,10 +14,11 @@ import { AppGreeting } from '@/components/ui/AppGreeting';
 
 // 퀴즈 방향별 도움말 (선택한 방향이 무슨 의미인지 설명)
 const QUIZ_DIRECTION_HELP: Record<QuizDirection, string> = {
-  mixed: '‘한자→뜻 · 뜻→한자 · 듣기’ 세 방식을 번갈아 가며 출제해요',
+  mixed: '‘한자→뜻 · 뜻→한자 · 빈칸 채우기’를 번갈아 가며 출제해요',
   'hanzi-to-meaning': '한자(汉字)를 보고 알맞은 뜻을 골라요',
   'meaning-to-hanzi': '한국어 뜻을 보고 알맞은 한자를 골라요',
   listening: '발음을 듣고 알맞은 뜻을 골라요',
+  'fill-blank': '예문 문장의 빈칸에 들어갈 단어를 골라요',
 };
 
 export default function SettingsPage() {
@@ -96,6 +97,7 @@ export default function SettingsPage() {
             <option value="hanzi-to-meaning">한자 → 뜻</option>
             <option value="meaning-to-hanzi">뜻 → 한자</option>
             <option value="listening">듣기 (발음 → 뜻)</option>
+            <option value="fill-blank">빈칸 채우기</option>
           </select>
         </SettingsRow>
 
