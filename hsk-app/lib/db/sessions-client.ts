@@ -83,8 +83,7 @@ export async function fetchSessionHeatmap(
 
 /**
  * study_sessions에서 날짜별 통계(daily)를 재구성 (기기 간 통계 동기화용)
- * 키는 applySessionRecords와 동일하게 started_at의 날짜 부분(UTC slice)을 사용해
- * 로컬에 저장된 daily 키와 정렬되도록 한다.
+ * 키는 조회 측(getRecentDailyStats/getCurrentStreak)과 동일하게 로컬 날짜를 사용한다.
  * 반환: { 'YYYY-MM-DD': { date, studied, correct, wrong }, ... }
  */
 export async function fetchDailyStatsFromDB(
@@ -119,8 +118,9 @@ export async function fetchDailyStatsFromDB(
     { date: string; studied: number; correct: number; wrong: number }
   > = {};
   for (const row of data ?? []) {
-    const key = (row.started_at ?? row.ended_at ?? '').slice(0, 10);
-    if (!key) continue;
+    const ts = row.started_at ?? row.ended_at;
+    if (!ts) continue;
+    const key = toLocalDateKey(new Date(ts)); // 로컬 날짜로 (조회 측과 키 일치)
     const e = map[key] ?? { date: key, studied: 0, correct: 0, wrong: 0 };
     e.studied += row.word_count ?? 0;
     e.correct += row.known_count ?? 0;

@@ -140,7 +140,10 @@ export function applySessionRecords(records: SessionRecord[]): ProgressData {
       rec.studiedAt
     );
 
-    const dateKey = rec.studiedAt.slice(0, 10);
+    // 로컬 날짜로 집계 (조회 측 getRecentDailyStats/getCurrentStreak가 로컬 날짜 키를
+    // 쓰므로 UTC slice를 쓰면 자정 부근·이른 아침 학습이 어긋남)
+    const d = new Date(rec.studiedAt);
+    const dateKey = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
     const existing: DailyStats = newDaily[dateKey] ?? {
       date: dateKey,
       studied: 0,
