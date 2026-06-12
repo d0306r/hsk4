@@ -4,5 +4,6 @@ export function greetingByHour(hour: number): { text: string; emoji: string } {
   if (hour < 11) return { text: '좋은 아침이에요', emoji: '☀️' };
   if (hour < 14) return { text: '오늘도 좋은 하루예요', emoji: '😊' };
   if (hour < 18) return { text: '좋은 오후예요', emoji: '🍵' };
-  return { text: '좋은 저녁이에요', emoji: '🌆' };
+  if (hour < 22) return { text: '좋은 저녁이에요', emoji: '🌆' };
+  return { text: '늦은 밤까지 수고 많아요', emoji: '🌙' };
 }
