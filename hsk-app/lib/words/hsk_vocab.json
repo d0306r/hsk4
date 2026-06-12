@@ -1090,9 +1090,9 @@
       "id": 136,
       "hanzi": "感兴趣",
       "pinyin": "gǎnxìngqù",
-      "meaning": "있다, 흥미가 있다, 좋아하다",
+      "meaning": "관심이 있다. 흥미가 있다.",
       "level": 3,
-      "partOfSpeech": "관심이"
+      "partOfSpeech": "동사"
     },
     {
       "id": 137,
@@ -1377,8 +1377,9 @@
       "id": 172,
       "hanzi": "和",
       "pinyin": "hé",
-      "meaning": "접속사",
-      "level": 3
+      "meaning": "…와〔과〕; 그리고.",
+      "level": 3,
+      "partOfSpeech": "접속사"
     },
     {
       "id": 173,
@@ -1544,9 +1545,9 @@
       "id": 193,
       "hanzi": "或者",
       "pinyin": "huòzhě",
-      "meaning": "아마. 어쩌면. 혹시(…인지 모른다).",
+      "meaning": "혹은. 또는. (아마)",
       "level": 3,
-      "partOfSpeech": "부사"
+      "partOfSpeech": "접속사"
     },
     {
       "id": 194,
@@ -1560,7 +1561,7 @@
       "id": 195,
       "hanzi": "极",
       "pinyin": "jí",
-      "meaning": "정점. 절정. 최고점. 꼭대기. 끝.",
+      "meaning": "몹시. 극히 (好极了); 정점. 끝.",
       "level": 3,
       "partOfSpeech": "명사"
     },
@@ -2007,9 +2008,9 @@
       "id": 251,
       "hanzi": "空调",
       "pinyin": "kōngtiáo",
-      "meaning": "(에어컨으로) 공기를 조절하다.",
+      "meaning": "에어컨.",
       "level": 3,
-      "partOfSpeech": "동사"
+      "partOfSpeech": "명사"
     },
     {
       "id": 252,
@@ -2031,9 +2032,9 @@
       "id": 254,
       "hanzi": "块",
       "pinyin": "kuài",
-      "meaning": "덩이. 덩어리.",
+      "meaning": "[양사] 덩이·조각; (구어) 위안(元) (五块钱).",
       "level": 3,
-      "partOfSpeech": "명사"
+      "partOfSpeech": "양사"
     },
     {
       "id": 255,
