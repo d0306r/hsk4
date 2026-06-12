@@ -188,9 +188,9 @@
       "id": 23,
       "hanzi": "被",
       "pinyin": "bèi",
-      "meaning": "덮다.",
+      "meaning": "…에게 …당하다 (피동 표지); 이불.",
       "level": 3,
-      "partOfSpeech": "동사"
+      "partOfSpeech": "개사"
     },
     {
       "id": 24,
@@ -244,8 +244,9 @@
       "id": 30,
       "hanzi": "别",
       "pinyin": "bié",
-      "meaning": "부사",
-      "level": 3
+      "meaning": "…하지 마라. …하지 마. [금지]",
+      "level": 3,
+      "partOfSpeech": "부사"
     },
     {
       "id": 31,
@@ -331,9 +332,9 @@
       "id": 41,
       "hanzi": "不客气",
       "pinyin": "búkèqi",
-      "meaning": "않다. 체면 차리지 않다.",
+      "meaning": "천만에요. (감사에 대한 답); 사양하지 않다.",
       "level": 3,
-      "partOfSpeech": "사양하지"
+      "partOfSpeech": "관용구"
     },
     {
       "id": 42,
@@ -513,9 +514,9 @@
       "id": 64,
       "hanzi": "次",
       "pinyin": "cì",
-      "meaning": "번(회).",
+      "meaning": "번. 회.",
       "level": 3,
-      "partOfSpeech": "동사"
+      "partOfSpeech": "양사"
     },
     {
       "id": 65,
@@ -561,9 +562,9 @@
       "id": 70,
       "hanzi": "打电话",
       "pinyin": "dǎdiànhuà",
-      "meaning": "걸다. 전화하다.",
+      "meaning": "전화를 걸다.",
       "level": 3,
-      "partOfSpeech": "전화를"
+      "partOfSpeech": "동사"
     },
     {
       "id": 71,
@@ -585,9 +586,9 @@
       "id": 73,
       "hanzi": "打篮球",
       "pinyin": "dǎlánqiú",
-      "meaning": "하다",
+      "meaning": "농구를 하다.",
       "level": 3,
-      "partOfSpeech": "농구를"
+      "partOfSpeech": "동사"
     },
     {
       "id": 74,
@@ -609,7 +610,7 @@
       "id": 76,
       "hanzi": "但是",
       "pinyin": "dànshì",
-      "meaning": "그러나. 그렇지만. [주로 ‘       ’ 등과 호응하여 쓰임]",
+      "meaning": "그러나. 그렇지만. [주로 虽然과 호응]",
       "level": 3,
       "partOfSpeech": "접속사"
     },
@@ -953,7 +954,7 @@
       "id": 119,
       "hanzi": "饭店",
       "pinyin": "fàndiàn",
-      "meaning": "호텔.",
+      "meaning": "식당; (큰 규모의) 호텔.",
       "level": 3,
       "partOfSpeech": "명사"
     },

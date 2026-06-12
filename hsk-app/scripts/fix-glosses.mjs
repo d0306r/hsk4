@@ -7,6 +7,15 @@ const PATH = 'lib/words/hsk_vocab.json';
 
 // id → 교정값 (meaning 필수, partOfSpeech는 필요할 때만)
 const FIXES = {
+  // HSK3 깨진/오류 뜻풀이
+  23: { meaning: '…에게 …당하다 (피동 표지); 이불.', partOfSpeech: '개사' }, // 被
+  30: { meaning: '…하지 마라. …하지 마. [금지]', partOfSpeech: '부사' }, // 别 (원본 meaning이 "부사")
+  41: { meaning: '천만에요. (감사에 대한 답); 사양하지 않다.', partOfSpeech: '관용구' }, // 不客气 (원본 데이터 깨짐)
+  64: { meaning: '번. 회.', partOfSpeech: '양사' }, // 次 (원본 POS가 동사)
+  70: { meaning: '전화를 걸다.', partOfSpeech: '동사' }, // 打电话 (원본 데이터 깨짐)
+  73: { meaning: '농구를 하다.', partOfSpeech: '동사' }, // 打篮球 (원본 데이터 깨짐)
+  76: { meaning: '그러나. 그렇지만. [주로 虽然과 호응]' }, // 但是 (원본에 빈 따옴표)
+  119: { meaning: '식당; (큰 규모의) 호텔.' }, // 饭店
   610: { meaning: '대단하다. 훌륭하다. 멋지다. (명사) 막대기. 몽둥이.', partOfSpeech: '형용사' }, // 棒
   645: { meaning: '만리장성.' }, // 长城
   654: { meaning: '담배를 피우다.' }, // 抽烟
