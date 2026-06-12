@@ -3398,7 +3398,7 @@
       "id": 425,
       "hanzi": "题",
       "pinyin": "tí",
-      "meaning": "제목.",
+      "meaning": "문제 (시험·연습 문제); 제목.",
       "level": 3,
       "partOfSpeech": "명사"
     },
@@ -3462,9 +3462,9 @@
       "id": 433,
       "hanzi": "踢足球",
       "pinyin": "tīzúqiú",
-      "meaning": "하다.",
+      "meaning": "축구를 하다.",
       "level": 3,
-      "partOfSpeech": "축구를"
+      "partOfSpeech": "동사"
     },
     {
       "id": 434,
@@ -3534,9 +3534,9 @@
       "id": 442,
       "hanzi": "完",
       "pinyin": "wán",
-      "meaning": "다 소모하다. 다하다. 없어지다. 다 떨어지다. 완료하다.",
+      "meaning": "다하다. 끝나다. 다 ~하다. 완료하다.",
       "level": 3,
-      "partOfSpeech": "형용사"
+      "partOfSpeech": "동사"
     },
     {
       "id": 443,
@@ -3606,8 +3606,9 @@
       "id": 451,
       "hanzi": "为",
       "pinyin": "wèi",
-      "meaning": "동사",
-      "level": 3
+      "meaning": "…을 위하여. …때문에. [为+대상]",
+      "level": 3,
+      "partOfSpeech": "개사"
     },
     {
       "id": 452,
@@ -3717,9 +3718,9 @@
       "id": 465,
       "hanzi": "先",
       "pinyin": "xiān",
-      "meaning": "원래. 처음.",
+      "meaning": "먼저. 우선.",
       "level": 3,
-      "partOfSpeech": "명사"
+      "partOfSpeech": "부사"
     },
     {
       "id": 466,
@@ -4068,8 +4069,9 @@
       "id": 509,
       "hanzi": "要",
       "pinyin": "yào",
-      "meaning": "능원동사",
-      "level": 3
+      "meaning": "원하다. 필요하다. …하려고 하다.",
+      "level": 3,
+      "partOfSpeech": "조동사"
     },
     {
       "id": 510,
@@ -4259,7 +4261,7 @@
       "id": 533,
       "hanzi": "一下",
       "pinyin": "yíxià",
-      "meaning": "단시간에. 갑자기.",
+      "meaning": "(동사 뒤) 좀. 한번. 잠깐.",
       "level": 3,
       "partOfSpeech": "부사"
     },

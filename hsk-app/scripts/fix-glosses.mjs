@@ -25,6 +25,13 @@ const FIXES = {
   281: { meaning: '(이층 이상의) 건물. (건물의) 층.' }, // 楼 (원본에 "계단" 오류)
   371: { meaning: '날. 일(日); 해. 태양.' }, // 日
   415: { meaning: '살. 세.', partOfSpeech: '양사' }, // 岁 (원본 POS가 명사)
+  425: { meaning: '문제 (시험·연습 문제); 제목.' }, // 题
+  433: { meaning: '축구를 하다.', partOfSpeech: '동사' }, // 踢足球 (원본 데이터 깨짐)
+  442: { meaning: '다하다. 끝나다. 다 ~하다. 완료하다.', partOfSpeech: '동사' }, // 完
+  451: { meaning: '…을 위하여. …때문에. [为+대상]', partOfSpeech: '개사' }, // 为 (원본 meaning이 "동사")
+  465: { meaning: '먼저. 우선.', partOfSpeech: '부사' }, // 先 (원본이 "원래·처음")
+  509: { meaning: '원하다. 필요하다. …하려고 하다.', partOfSpeech: '조동사' }, // 要 (원본 meaning이 "능원동사")
+  533: { meaning: '(동사 뒤) 좀. 한번. 잠깐.' }, // 一下
   610: { meaning: '대단하다. 훌륭하다. 멋지다. (명사) 막대기. 몽둥이.', partOfSpeech: '형용사' }, // 棒
   645: { meaning: '만리장성.' }, // 长城
   654: { meaning: '담배를 피우다.' }, // 抽烟
