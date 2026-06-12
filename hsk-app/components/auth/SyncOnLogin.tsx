@@ -32,26 +32,34 @@ export default function SyncOnLogin() {
       hydrating = false;
     };
 
+    // 대기 중인 변경을 즉시 업로드 (백그라운드 전환·탭 종료 시 호출)
+    const doPush = () => {
+      if (!pendingPush) return;
+      if (timer) {
+        clearTimeout(timer);
+        timer = null;
+      }
+      pendingPush = false;
+      const s = useSettingsStore.getState();
+      const f = useFavoritesStore.getState();
+      const t = useThemeStore.getState();
+      pushProfile({
+        nickname: s.nickname,
+        defaultWordCount: s.defaultWordCount,
+        dailyGoal: s.dailyGoal,
+        quizDirection: s.quizDirection,
+        showPinyin: s.showPinyin,
+        theme: t.theme,
+        favorites: f.ids,
+      });
+    };
+
     // 스토어 변경 → DB 업로드 (디바운스)
     const push = () => {
       if (hydrating) return;
       if (timer) clearTimeout(timer);
       pendingPush = true;
-      timer = setTimeout(() => {
-        pendingPush = false;
-        const s = useSettingsStore.getState();
-        const f = useFavoritesStore.getState();
-        const t = useThemeStore.getState();
-        pushProfile({
-          nickname: s.nickname,
-          defaultWordCount: s.defaultWordCount,
-          dailyGoal: s.dailyGoal,
-          quizDirection: s.quizDirection,
-          showPinyin: s.showPinyin,
-          theme: t.theme,
-          favorites: f.ids,
-        });
-      }, 1200);
+      timer = setTimeout(doPush, 1200);
     };
 
     // 진도+통계(daily) 내려받고 카드 새로고침
@@ -74,10 +82,16 @@ export default function SyncOnLogin() {
     const unsubFavorites = useFavoritesStore.subscribe(push);
     const unsubTheme = useThemeStore.subscribe(push);
 
-    // 3) 앱이 다시 포그라운드로 올 때 최신 데이터 당겨오기
-    //    (다른 기기에서 학습/설정 변경 후 돌아왔을 때 "실시간처럼" 반영)
-    const onVisible = async () => {
-      if (document.visibilityState !== 'visible' || disposed) return;
+    // 3) 가시성 변화 처리
+    //    - 숨김(백그라운드 전환): 대기 중인 설정 변경을 즉시 저장(flush)
+    //      → 바꾸자마자 닫아도 클라우드에 반영돼 다음 로드 때 안 되돌아감
+    //    - 보임(포그라운드 복귀): 최신 데이터 당겨오기
+    const onVisibility = async () => {
+      if (disposed) return;
+      if (document.visibilityState === 'hidden') {
+        doPush();
+        return;
+      }
       await pullProgress();
       // 막 변경해서 아직 업로드 안 된 로컬값이 있으면 덮어쓰지 않는다
       if (!pendingPush) {
@@ -85,15 +99,18 @@ export default function SyncOnLogin() {
         applyProfile(p);
       }
     };
-    document.addEventListener('visibilitychange', onVisible);
+    document.addEventListener('visibilitychange', onVisibility);
+    // 탭 종료/이탈 시에도 즉시 저장
+    window.addEventListener('pagehide', doPush);
 
     return () => {
       disposed = true;
-      if (timer) clearTimeout(timer);
+      doPush(); // 정리 시에도 대기 중 변경을 버리지 말고 저장
       unsubSettings();
       unsubFavorites();
       unsubTheme();
-      document.removeEventListener('visibilitychange', onVisible);
+      document.removeEventListener('visibilitychange', onVisibility);
+      window.removeEventListener('pagehide', doPush);
     };
   }, []);
 
