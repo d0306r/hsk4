@@ -8252,7 +8252,7 @@
       "id": 1033,
       "hanzi": "提",
       "pinyin": "tí",
-      "meaning": "(아래에서 위로) 끌어올리다. 높이다.",
+      "meaning": "(손에) 들다. (의견·문제를) 제기하다. 끌어올리다.",
       "level": 4,
       "partOfSpeech": "동사"
     },
@@ -8260,7 +8260,7 @@
       "id": 1034,
       "hanzi": "填空",
       "pinyin": "tiánkòng",
-      "meaning": "빈 자리〔직위〕를 메우다.",
+      "meaning": "빈칸을 채우다.",
       "level": 4,
       "partOfSpeech": "동사"
     },
@@ -8292,9 +8292,9 @@
       "id": 1038,
       "hanzi": "挺",
       "pinyin": "tǐng",
-      "meaning": "꼿꼿하다. 빳빳하다. 곧다.",
+      "meaning": "꽤. 제법. 상당히.",
       "level": 4,
-      "partOfSpeech": "형용사"
+      "partOfSpeech": "부사"
     },
     {
       "id": 1039,
@@ -8922,7 +8922,7 @@
       "id": 1117,
       "hanzi": "赢",
       "pinyin": "yíng",
-      "meaning": "이익을 얻다. 이윤을 남기다.",
+      "meaning": "(시합·내기에서) 이기다.",
       "level": 4,
       "partOfSpeech": "동사"
     },
@@ -8994,9 +8994,9 @@
       "id": 1126,
       "hanzi": "由",
       "pinyin": "yóu",
-      "meaning": "유래. 원인. 까닭. 이유.",
+      "meaning": "…이〔가〕 (담당하다). …에 의해; 원인. 까닭.",
       "level": 4,
-      "partOfSpeech": "명사"
+      "partOfSpeech": "개사"
     },
     {
       "id": 1127,
@@ -9314,17 +9314,17 @@
       "id": 1166,
       "hanzi": "指",
       "pinyin": "zhǐ",
-      "meaning": "손가락.",
+      "meaning": "가리키다. 지적하다; (손)가락.",
       "level": 4,
-      "partOfSpeech": "명사"
+      "partOfSpeech": "동사"
     },
     {
       "id": 1167,
       "hanzi": "之",
       "pinyin": "zhī",
-      "meaning": "가다.",
+      "meaning": "…의; ~ 중의 (之一·之间). [문어 조사]",
       "level": 4,
-      "partOfSpeech": "동사"
+      "partOfSpeech": "조사"
     },
     {
       "id": 1168,
@@ -9554,9 +9554,9 @@
       "id": 1196,
       "hanzi": "最好",
       "pinyin": "zuìhǎo",
-      "meaning": "가장〔제일〕 좋다.",
+      "meaning": "(부사) …하는 게 좋다; 가장 좋다.",
       "level": 4,
-      "partOfSpeech": "형용사"
+      "partOfSpeech": "부사"
     },
     {
       "id": 1197,
@@ -9570,9 +9570,9 @@
       "id": 1198,
       "hanzi": "座",
       "pinyin": "zuò",
-      "meaning": "좌석, 자리",
+      "meaning": "[양사] 채·동·좌 (산·다리·건물 등 큰 것); 자리.",
       "level": 4,
-      "partOfSpeech": "명사"
+      "partOfSpeech": "양사"
     },
     {
       "id": 1199,
@@ -9602,7 +9602,7 @@
       "id": 1202,
       "hanzi": "左右",
       "pinyin": "zuǒyòu",
-      "meaning": "좌와 우. 왼쪽과 오른쪽.",
+      "meaning": "(수량 뒤) …쯤. 가량. 안팎; 왼쪽과 오른쪽.",
       "level": 4,
       "partOfSpeech": "명사"
     },

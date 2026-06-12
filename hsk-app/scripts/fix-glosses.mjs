@@ -24,6 +24,16 @@ const FIXES = {
   921: { meaning: '(어떤 일을) 하다. 다루다. (~한 상태로) 만들다. 망가뜨리다.', partOfSpeech: '동사' }, // 弄 (弄坏·弄脏)
   955: { meaning: '오히려. 도리어. 그러나.', partOfSpeech: '부사' }, // 却
   966: { meaning: '입구.', partOfSpeech: '명사' }, // 入口 (진입구; '수입'은 进口)
+  1033: { meaning: '(손에) 들다. (의견·문제를) 제기하다. 끌어올리다.' }, // 提
+  1034: { meaning: '빈칸을 채우다.' }, // 填空
+  1038: { meaning: '꽤. 제법. 상당히.', partOfSpeech: '부사' }, // 挺 (挺好的)
+  1117: { meaning: '(시합·내기에서) 이기다.' }, // 赢
+  1126: { meaning: '…이〔가〕 (담당하다). …에 의해; 원인. 까닭.', partOfSpeech: '개사' }, // 由
+  1166: { meaning: '가리키다. 지적하다; (손)가락.', partOfSpeech: '동사' }, // 指
+  1167: { meaning: '…의; ~ 중의 (之一·之间). [문어 조사]', partOfSpeech: '조사' }, // 之
+  1196: { meaning: '(부사) …하는 게 좋다; 가장 좋다.', partOfSpeech: '부사' }, // 最好
+  1198: { meaning: '[양사] 채·동·좌 (산·다리·건물 등 큰 것); 자리.', partOfSpeech: '양사' }, // 座
+  1202: { meaning: '(수량 뒤) …쯤. 가량. 안팎; 왼쪽과 오른쪽.' }, // 左右
 };
 
 const vocab = JSON.parse(readFileSync(PATH, 'utf8'));
