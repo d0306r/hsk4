@@ -2247,7 +2247,7 @@
       "id": 281,
       "hanzi": "楼",
       "pinyin": "lóu",
-      "meaning": "(이층 이상의) 다층 건물. 층집. 층. 계단",
+      "meaning": "(이층 이상의) 건물. (건물의) 층.",
       "level": 3,
       "partOfSpeech": "명사"
     },
@@ -2966,7 +2966,7 @@
       "id": 371,
       "hanzi": "日",
       "pinyin": "rì",
-      "meaning": "태양. 해.",
+      "meaning": "날. 일(日); 해. 태양.",
       "level": 3,
       "partOfSpeech": "명사"
     },
@@ -3318,9 +3318,9 @@
       "id": 415,
       "hanzi": "岁",
       "pinyin": "suì",
-      "meaning": "살. 세. [연령을 세는 단위]",
+      "meaning": "살. 세.",
       "level": 3,
-      "partOfSpeech": "명사"
+      "partOfSpeech": "양사"
     },
     {
       "id": 416,
