@@ -220,9 +220,9 @@
       "id": 27,
       "hanzi": "本",
       "pinyin": "běn",
-      "meaning": "(～儿) 책. 공책.",
+      "meaning": "권. [책·노트 등을 세는 단위]",
       "level": 3,
-      "partOfSpeech": "명사"
+      "partOfSpeech": "양사"
     },
     {
       "id": 28,
@@ -421,7 +421,8 @@
       "hanzi": "超市",
       "pinyin": "chāoshì",
       "meaning": "超级市场(슈퍼마켓)의 약칭.",
-      "level": 3
+      "level": 3,
+      "partOfSpeech": "명사"
     },
     {
       "id": 53,
@@ -508,7 +509,8 @@
       "hanzi": "出租车",
       "pinyin": "chūzūchē",
       "meaning": "택시.",
-      "level": 3
+      "level": 3,
+      "partOfSpeech": "명사"
     },
     {
       "id": 64,
@@ -850,7 +852,7 @@
       "id": 106,
       "hanzi": "锻炼",
       "pinyin": "duànliàn",
-      "meaning": "단조하다. 제련하다.",
+      "meaning": "(몸을) 단련하다. 운동하다.",
       "level": 3,
       "partOfSpeech": "동사"
     },
@@ -898,9 +900,9 @@
       "id": 112,
       "hanzi": "多少",
       "pinyin": "duōshǎo",
-      "meaning": "얼마간. 약간. 다소. 좀.",
+      "meaning": "얼마. 몇. [수량·정도를 물음]",
       "level": 3,
-      "partOfSpeech": "부사"
+      "partOfSpeech": "대명사"
     },
     {
       "id": 113,
@@ -962,7 +964,7 @@
       "id": 120,
       "hanzi": "放",
       "pinyin": "fàng",
-      "meaning": "(자유롭게) 놓아주다. 풀어 주다. 석방하다.",
+      "meaning": "(물건을) 놓다. 두다; 놓아주다.",
       "level": 3,
       "partOfSpeech": "동사"
     },
@@ -1042,9 +1044,9 @@
       "id": 130,
       "hanzi": "附近",
       "pinyin": "fùjìn",
-      "meaning": "가까운. 인접한.",
+      "meaning": "부근. 근처.",
       "level": 3,
-      "partOfSpeech": "형용사"
+      "partOfSpeech": "명사"
     },
     {
       "id": 131,
@@ -1187,7 +1189,8 @@
       "hanzi": "公斤",
       "pinyin": "gōngjīn",
       "meaning": "킬로그램(kg).",
-      "level": 3
+      "level": 3,
+      "partOfSpeech": "양사"
     },
     {
       "id": 149,
@@ -1233,7 +1236,7 @@
       "id": 154,
       "hanzi": "关",
       "pinyin": "guān",
-      "meaning": "닫다. 덮다.끄다",
+      "meaning": "닫다. 끄다.",
       "level": 3,
       "partOfSpeech": "동사"
     },
@@ -1353,7 +1356,7 @@
       "id": 169,
       "hanzi": "号",
       "pinyin": "hào",
-      "meaning": "(～儿) (차례나 순번을 표시하는) 번호.",
+      "meaning": "(날짜의) 일; (순번) 번호.",
       "level": 3,
       "partOfSpeech": "명사"
     },
@@ -1633,7 +1636,7 @@
       "id": 204,
       "hanzi": "叫",
       "pinyin": "jiào",
-      "meaning": "외치다. 고함치다. 소리지르다. 소리치다. 부르짖다.",
+      "meaning": "부르다; (~하도록) 시키다; 외치다.",
       "level": 3,
       "partOfSpeech": "동사"
     },
@@ -1674,7 +1677,8 @@
       "hanzi": "机场",
       "pinyin": "jīchǎng",
       "meaning": "공항. 비행장",
-      "level": 3
+      "level": 3,
+      "partOfSpeech": "명사"
     },
     {
       "id": 210,
@@ -1816,9 +1820,9 @@
       "id": 227,
       "hanzi": "经常",
       "pinyin": "jīngcháng",
-      "meaning": "평소. 평상. 보통. 일상.",
+      "meaning": "자주. 늘. 항상.",
       "level": 3,
-      "partOfSpeech": "명사"
+      "partOfSpeech": "부사"
     },
     {
       "id": 228,
@@ -1904,7 +1908,7 @@
       "id": 238,
       "hanzi": "咖啡",
       "pinyin": "kāfēi",
-      "meaning": "커피(coffee)나무.",
+      "meaning": "커피(coffee).",
       "level": 3,
       "partOfSpeech": "명사"
     },
@@ -1984,7 +1988,7 @@
       "id": 248,
       "hanzi": "可能",
       "pinyin": "kěnéng",
-      "meaning": "가능하다.",
+      "meaning": "아마(도). 가능하다.",
       "level": 3,
       "partOfSpeech": "형용사"
     },
@@ -2185,7 +2189,8 @@
       "hanzi": "聊天",
       "pinyin": "liáotiān",
       "meaning": "잡담하다. 이야기하다. 수다떨다",
-      "level": 3
+      "level": 3,
+      "partOfSpeech": "동사"
     },
     {
       "id": 274,
@@ -2376,7 +2381,8 @@
       "hanzi": "没关系",
       "pinyin": "méiguānxi",
       "meaning": "괜찮다. 상관 없다. 문제 없다. 염려 없다.",
-      "level": 3
+      "level": 3,
+      "partOfSpeech": "관용구"
     },
     {
       "id": 298,
@@ -2646,7 +2652,7 @@
       "id": 331,
       "hanzi": "盘子",
       "pinyin": "pánzi",
-      "meaning": "쟁반.",
+      "meaning": "접시. 쟁반.",
       "level": 3,
       "partOfSpeech": "명사"
     },
@@ -4420,9 +4426,9 @@
       "id": 553,
       "hanzi": "运动",
       "pinyin": "yùndòng",
-      "meaning": "(물체의) 운동.",
+      "meaning": "운동. 스포츠. 운동하다.",
       "level": 3,
-      "partOfSpeech": "명사"
+      "partOfSpeech": "명사·동사"
     },
     {
       "id": 554,
@@ -4468,7 +4474,7 @@
       "id": 559,
       "hanzi": "怎么样",
       "pinyin": "zěnmeyàng",
-      "meaning": "별로〔그리〕 …않다. [주로 부정형과 반문형으로 쓰여 완곡한 어기를 나타냄]",
+      "meaning": "어떠하다. 어때(요)? [상황·의견·의향을 물음]",
       "level": 3,
       "partOfSpeech": "대명사"
     },
@@ -4971,7 +4977,7 @@
       "id": 622,
       "hanzi": "表示",
       "pinyin": "biǎoshì",
-      "meaning": "의미하다. 가리키다.",
+      "meaning": "(생각·감정·태도를) 나타내다. 표시하다.",
       "level": 4,
       "partOfSpeech": "동사"
     },
@@ -5508,7 +5514,8 @@
       "hanzi": "登机牌",
       "pinyin": "dēngjīpái",
       "meaning": "탑승권",
-      "level": 4
+      "level": 4,
+      "partOfSpeech": "명사"
     },
     {
       "id": 690,
@@ -5594,7 +5601,7 @@
       "id": 700,
       "hanzi": "短信",
       "pinyin": "duǎnxìn",
-      "meaning": "짧은 편지.",
+      "meaning": "(휴대폰) 문자 메시지.",
       "level": 4,
       "partOfSpeech": "명사"
     },
@@ -5786,7 +5793,7 @@
       "id": 724,
       "hanzi": "富",
       "pinyin": "fù",
-      "meaning": "많다. 풍부하다. 넉넉하다.",
+      "meaning": "부유하다. 재산이 많다; 풍부하다.",
       "level": 4,
       "partOfSpeech": "형용사"
     },
@@ -5866,9 +5873,9 @@
       "id": 734,
       "hanzi": "敢",
       "pinyin": "gǎn",
-      "meaning": "용기가 있다. 용감하다. 담력이 세다.",
+      "meaning": "감히 …하다. …할 용기가 있다.",
       "level": 4,
-      "partOfSpeech": "형용사"
+      "partOfSpeech": "조동사"
     },
     {
       "id": 735,
@@ -5955,7 +5962,8 @@
       "hanzi": "公里",
       "pinyin": "gōnglǐ",
       "meaning": "킬로미터(km).",
-      "level": 4
+      "level": 4,
+      "partOfSpeech": "양사"
     },
     {
       "id": 746,
@@ -6865,7 +6873,7 @@
       "id": 859,
       "hanzi": "客厅",
       "pinyin": "kètīng",
-      "meaning": "객실. 응접실.",
+      "meaning": "거실. 응접실.",
       "level": 4,
       "partOfSpeech": "명사"
     },
@@ -6929,9 +6937,9 @@
       "id": 867,
       "hanzi": "困",
       "pinyin": "kùn",
-      "meaning": "포위하다. 가두어 놓다.",
+      "meaning": "졸리다. 나른하다.",
       "level": 4,
-      "partOfSpeech": "동사"
+      "partOfSpeech": "형용사"
     },
     {
       "id": 868,
@@ -7137,7 +7145,7 @@
       "id": 893,
       "hanzi": "留",
       "pinyin": "liú",
-      "meaning": "보관하다. 보존하다. 간수하다. 보류하다.",
+      "meaning": "남기다. 남겨 두다; 머무르다; 보관하다.",
       "level": 4,
       "partOfSpeech": "동사"
     },
@@ -8138,7 +8146,8 @@
       "hanzi": "塑料袋",
       "pinyin": "sùliàodài",
       "meaning": "비닐봉지",
-      "level": 4
+      "level": 4,
+      "partOfSpeech": "명사"
     },
     {
       "id": 1019,
@@ -8496,9 +8505,9 @@
       "id": 1063,
       "hanzi": "咸",
       "pinyin": "xián",
-      "meaning": "전부. 모두. 다.",
+      "meaning": "(맛이) 짜다.",
       "level": 4,
-      "partOfSpeech": "부사"
+      "partOfSpeech": "형용사"
     },
     {
       "id": 1064,
@@ -8529,7 +8538,8 @@
       "hanzi": "橡皮",
       "pinyin": "xiàngpí",
       "meaning": "지우개.",
-      "level": 4
+      "level": 4,
+      "partOfSpeech": "명사"
     },
     {
       "id": 1068,
@@ -8616,7 +8626,8 @@
       "hanzi": "西红柿",
       "pinyin": "xīhóngshì",
       "meaning": "토마토.",
-      "level": 4
+      "level": 4,
+      "partOfSpeech": "명사"
     },
     {
       "id": 1079,

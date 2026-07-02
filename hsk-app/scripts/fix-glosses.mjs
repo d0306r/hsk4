@@ -63,6 +63,43 @@ const FIXES = {
   1196: { meaning: '(부사) …하는 게 좋다; 가장 좋다.', partOfSpeech: '부사' }, // 最好
   1198: { meaning: '[양사] 채·동·좌 (산·다리·건물 등 큰 것); 자리.', partOfSpeech: '양사' }, // 座
   1202: { meaning: '(수량 뒤) …쯤. 가량. 안팎; 왼쪽과 오른쪽.' }, // 左右
+
+  // ─── 뜻풀이 전수 검수(4-에이전트) 발견분 ───
+  // 뜻 오류/오해 소지
+  27: { meaning: '권. [책·노트 등을 세는 단위]', partOfSpeech: '양사' }, // 本
+  106: { meaning: '(몸을) 단련하다. 운동하다.' }, // 锻炼
+  112: { meaning: '얼마. 몇. [수량·정도를 물음]', partOfSpeech: '대명사' }, // 多少
+  120: { meaning: '(물건을) 놓다. 두다; 놓아주다.' }, // 放
+  130: { meaning: '부근. 근처.', partOfSpeech: '명사' }, // 附近
+  154: { meaning: '닫다. 끄다.' }, // 关 ("덮다" 제거)
+  169: { meaning: '(날짜의) 일; (순번) 번호.' }, // 号
+  204: { meaning: '부르다; (~하도록) 시키다; 외치다.' }, // 叫
+  227: { meaning: '자주. 늘. 항상.', partOfSpeech: '부사' }, // 经常
+  238: { meaning: '커피(coffee).' }, // 咖啡 ("커피나무" 오해)
+  248: { meaning: '아마(도). 가능하다.' }, // 可能 (부사 용법 보강)
+  331: { meaning: '접시. 쟁반.' }, // 盘子
+  553: { meaning: '운동. 스포츠. 운동하다.', partOfSpeech: '명사·동사' }, // 运动
+  559: { meaning: '어떠하다. 어때(요)? [상황·의견·의향을 물음]' }, // 怎么样
+  622: { meaning: '(생각·감정·태도를) 나타내다. 표시하다.' }, // 表示
+  700: { meaning: '(휴대폰) 문자 메시지.' }, // 短信 ("짧은 편지" 오류)
+  724: { meaning: '부유하다. 재산이 많다; 풍부하다.' }, // 富
+  734: { meaning: '감히 …하다. …할 용기가 있다.', partOfSpeech: '조동사' }, // 敢
+  859: { meaning: '거실. 응접실.' }, // 客厅 ("객실" 오해)
+  867: { meaning: '졸리다. 나른하다.', partOfSpeech: '형용사' }, // 困
+  893: { meaning: '남기다. 남겨 두다; 머무르다; 보관하다.' }, // 留
+  1063: { meaning: '(맛이) 짜다.', partOfSpeech: '형용사' }, // 咸 (원본 "전부·모두" 깨짐)
+  // 품사 필드 누락 보정 (뜻은 유지)
+  52: { partOfSpeech: '명사' }, // 超市
+  63: { partOfSpeech: '명사' }, // 出租车
+  148: { partOfSpeech: '양사' }, // 公斤
+  209: { partOfSpeech: '명사' }, // 机场
+  273: { partOfSpeech: '동사' }, // 聊天
+  297: { partOfSpeech: '관용구' }, // 没关系
+  689: { partOfSpeech: '명사' }, // 登机牌
+  745: { partOfSpeech: '양사' }, // 公里
+  1018: { partOfSpeech: '명사' }, // 塑料袋
+  1067: { partOfSpeech: '명사' }, // 橡皮
+  1078: { partOfSpeech: '명사' }, // 西红柿
 };
 
 const vocab = JSON.parse(readFileSync(PATH, 'utf8'));
@@ -71,9 +108,15 @@ const log = [];
 for (const w of vocab.words) {
   const f = FIXES[w.id];
   if (!f) continue;
-  log.push(`${w.id} ${w.hanzi}: "${w.meaning}" → "${f.meaning}"`);
-  w.meaning = f.meaning;
-  if (f.partOfSpeech) w.partOfSpeech = f.partOfSpeech;
+  if (f.meaning !== undefined) {
+    log.push(`${w.id} ${w.hanzi}: "${w.meaning}" → "${f.meaning}"`);
+    w.meaning = f.meaning;
+  }
+  if (f.partOfSpeech) {
+    if (f.meaning === undefined)
+      log.push(`${w.id} ${w.hanzi}: 품사 → "${f.partOfSpeech}"`);
+    w.partOfSpeech = f.partOfSpeech;
+  }
   n++;
 }
 
