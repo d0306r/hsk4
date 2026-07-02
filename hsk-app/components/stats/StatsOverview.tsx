@@ -27,6 +27,7 @@ import DailyChart from './DailyChart';
 import AccuracyTrend from './AccuracyTrend';
 import StudyHeatmap from './StudyHeatmap';
 import Achievements from './Achievements';
+import WeaknessInsight from './WeaknessInsight';
 import { PageContainer } from '@/components/ui/PageContainer';
 
 type Overall = ReturnType<typeof getOverallStats>;
@@ -107,6 +108,9 @@ export default function StatsOverview() {
           ) : (
             <StudyHeatmap />
           )}
+
+          {/* 취약 품사/급수 인사이트 */}
+          <WeaknessInsight />
 
           {/* 성취 배지 */}
           <Achievements />

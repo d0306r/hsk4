@@ -233,6 +233,73 @@ export function getMostWrongWords(limit: number = 5): Array<{
 
 
 /**
+ * 취약점 분석 — 학습 데이터에서 정답률이 가장 낮은 품사/급수를 찾는다.
+ * 노이즈를 줄이려 최소 시도 횟수 미만인 그룹은 후보에서 제외.
+ */
+export interface WeakBucket {
+  label: string;
+  accuracy: number; // %
+  attempts: number;
+}
+
+export function getWeaknessInsight(): { pos: WeakBucket | null; level: WeakBucket | null } {
+  const { words } = readProgress();
+  const wordMap = new Map(allWords.map((w) => [w.id, w]));
+
+  const posAgg = new Map<string, { attempts: number; correct: number }>();
+  const lvlAgg = new Map<number, { attempts: number; correct: number }>();
+
+  for (const p of Object.values(words)) {
+    if (p.totalAttempts === 0) continue;
+    const w = wordMap.get(p.wordId);
+    if (!w) continue;
+
+    const pos = (w.partOfSpeech && w.partOfSpeech.trim()) || '기타';
+    const pa = posAgg.get(pos) ?? { attempts: 0, correct: 0 };
+    pa.attempts += p.totalAttempts;
+    pa.correct += p.correctCount;
+    posAgg.set(pos, pa);
+
+    const la = lvlAgg.get(w.level) ?? { attempts: 0, correct: 0 };
+    la.attempts += p.totalAttempts;
+    la.correct += p.correctCount;
+    lvlAgg.set(w.level, la);
+  }
+
+  const POS_MIN = 8; // 품사는 표본이 적으니 최소 시도 8회 이상
+  const LVL_MIN = 15;
+
+  const worstPos = pickWorst(
+    Array.from(posAgg.entries()).map(([label, v]) => ({ label, ...v })),
+    POS_MIN
+  );
+  const worstLvl = pickWorst(
+    Array.from(lvlAgg.entries()).map(([lvl, v]) => ({ label: `${lvl}급`, ...v })),
+    LVL_MIN
+  );
+
+  return { pos: worstPos, level: worstLvl };
+}
+
+function pickWorst(
+  groups: Array<{ label: string; attempts: number; correct: number }>,
+  minAttempts: number
+): WeakBucket | null {
+  const eligible = groups
+    .filter((g) => g.attempts >= minAttempts)
+    .map((g) => ({
+      label: g.label,
+      attempts: g.attempts,
+      accuracy: Math.round((g.correct / g.attempts) * 100),
+    }))
+    // 100%(완벽)면 "취약"이 아니므로 제외
+    .filter((g) => g.accuracy < 100)
+    .sort((a, b) => a.accuracy - b.accuracy);
+
+  return eligible[0] ?? null;
+}
+
+/**
  * 약점 집중 학습용 — 틀린 적 있는 단어를 '많이·최근에 틀린' 순으로 반환.
  * getMostWrongWords와 동일한 정렬 기준을 쓰되 Word[] 형태로, 더 넉넉히(기본 30개).
  */
