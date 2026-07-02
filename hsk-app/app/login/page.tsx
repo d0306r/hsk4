@@ -16,6 +16,19 @@ export default function LoginPage() {
           </p>
         </div>
 
+        {/* 핵심 소개 (발표/첫 방문용) */}
+        <ul className="mb-6 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+          <li className="flex items-center gap-2">
+            <span>📖</span> HSK 3·4급 <b>1,203단어</b> · 예문·번역 100%
+          </li>
+          <li className="flex items-center gap-2">
+            <span>🔁</span> 복습(SRS)으로 <b>오래 기억</b>
+          </li>
+          <li className="flex items-center gap-2">
+            <span>🔊</span> 발음 듣기 · 📊 학습 통계·연속 기록
+          </li>
+        </ul>
+
         <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 p-6">
           <LoginForm />
         </div>
