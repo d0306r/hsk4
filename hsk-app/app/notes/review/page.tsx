@@ -17,8 +17,17 @@ export default function NotesReviewPage() {
 
   useEffect(() => {
     async function load() {
-      const ids = await getWrongNoteIds();
       const wordMap = new Map(allWords.map((w) => [w.id, w]));
+
+      // ?single=<id> 가 있으면 그 단어 하나만 복습
+      const single = new URLSearchParams(window.location.search).get('single');
+      if (single) {
+        const w = wordMap.get(Number(single));
+        setWords(w ? [w] : []);
+        return;
+      }
+
+      const ids = await getWrongNoteIds();
       const list = ids
         .map((id) => wordMap.get(id))
         .filter((w): w is Word => w !== undefined);

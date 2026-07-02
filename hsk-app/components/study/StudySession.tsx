@@ -92,6 +92,8 @@ export default function StudySession({
         >
           <div className="max-w-xl mx-auto">
             <div
+              role="status"
+              aria-live="assertive"
               className={`text-center mb-2 font-bold ${
                 isCorrect
                   ? 'text-green-600 dark:text-green-400'
@@ -101,6 +103,7 @@ export default function StudySession({
               {isCorrect ? '✓ 정답!' : '✗ 틀렸어요'}
             </div>
             <button
+              autoFocus
               onClick={nextQuestion}
               className="w-full py-3.5 bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white font-bold rounded-xl active:scale-[0.98] transition"
             >

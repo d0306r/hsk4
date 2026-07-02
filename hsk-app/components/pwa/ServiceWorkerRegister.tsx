@@ -15,6 +15,11 @@ export default function ServiceWorkerRegister() {
       });
     };
 
+    // 이미 load가 끝난 뒤(캐시된 빠른 로드) 이 effect가 실행될 수 있으므로 즉시 등록
+    if (document.readyState === 'complete') {
+      onLoad();
+      return;
+    }
     window.addEventListener('load', onLoad);
     return () => window.removeEventListener('load', onLoad);
   }, []);

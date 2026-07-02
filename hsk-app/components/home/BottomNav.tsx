@@ -61,7 +61,7 @@ export function BottomNav() {
             aria-label="홈으로"
             className="font-bold text-lg text-brand-600 dark:text-brand-400 hover:opacity-80 transition-opacity cursor-pointer"
           >
-            HSK 4급 필수 단어
+            HSK 3·4급 필수 단어
           </Link>
           <div className="flex items-center gap-1">
             {navItems.map(({ href, label, icon: Icon, isActive }) => {
@@ -70,6 +70,7 @@ export function BottomNav() {
                 <Link
                   key={href}
                   href={href}
+                  aria-current={active ? 'page' : undefined}
                   className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     active
                       ? 'text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/30'
@@ -98,6 +99,7 @@ export function BottomNav() {
               <Link
                 key={href}
                 href={href}
+                aria-current={active ? 'page' : undefined}
                 className={`flex-1 flex flex-col items-center justify-center gap-1 transition-colors active:bg-slate-100 dark:active:bg-slate-800 ${
                   active
                     ? 'text-brand-600 dark:text-brand-400'

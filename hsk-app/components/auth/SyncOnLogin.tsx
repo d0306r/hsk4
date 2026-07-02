@@ -3,7 +3,9 @@
 
 import { useEffect } from 'react';
 import { syncFromDB } from '@/lib/progress/api';
+import { clearAllProgress } from '@/lib/progress/storage';
 import { fetchProfile, pushProfile, type SyncedProfile } from '@/lib/sync/profile';
+import { createClient } from '@/lib/supabase/client';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { useFavoritesStore } from '@/stores/favoritesStore';
 import { useThemeStore } from '@/stores/themeStore';
@@ -27,8 +29,12 @@ export default function SyncOnLogin() {
       if (p.quizDirection) s.setQuizDirection(p.quizDirection);
       if (typeof p.showPinyin === 'boolean') s.setShowPinyin(p.showPinyin);
       if (p.theme) useThemeStore.getState().setTheme(p.theme);
-      if (Array.isArray(p.favorites))
-        useFavoritesStore.getState().setAll(p.favorites);
+      // 즐겨찾기는 덮어쓰지 않고 로컬(게스트 시절 별표 포함)과 합집합으로 병합
+      if (Array.isArray(p.favorites)) {
+        const local = useFavoritesStore.getState().ids;
+        const merged = Array.from(new Set([...local, ...p.favorites]));
+        useFavoritesStore.getState().setAll(merged);
+      }
       hydrating = false;
     };
 
@@ -70,17 +76,47 @@ export default function SyncOnLogin() {
       if (!disposed) window.dispatchEvent(new Event('focus'));
     };
 
-    // 1) 최초 1회 동기화
-    pullProgress();
-    (async () => {
+    // 로그인 시: 진도 당겨오기 + 프로필 반영
+    const syncIn = async () => {
+      await pullProgress();
+      if (disposed) return;
       const p = await fetchProfile();
       applyProfile(p);
-    })();
+    };
+
+    // 로그아웃 시: 이 기기의 로컬 데이터 정리 (공유 기기에서 다음 계정으로 유출 방지)
+    const clearLocal = () => {
+      hydrating = true; // 정리 중 업로드 트리거 방지
+      clearAllProgress();
+      useFavoritesStore.getState().setAll([]);
+      useSettingsStore.getState().setNickname('');
+      try {
+        localStorage.removeItem('hsk-badges-seen');
+      } catch {
+        /* noop */
+      }
+      hydrating = false;
+      if (!disposed) window.dispatchEvent(new Event('focus'));
+    };
+
+    // 1) 최초 1회 동기화
+    syncIn();
 
     // 2) 이후 변경 시 업로드 구독
     const unsubSettings = useSettingsStore.subscribe(push);
     const unsubFavorites = useFavoritesStore.subscribe(push);
     const unsubTheme = useThemeStore.subscribe(push);
+
+    // 2-1) 인증 상태 변화 구독 — 로그인/로그아웃이 소프트 내비게이션이라
+    //      SyncOnLogin이 리마운트되지 않으므로 여기서 직접 처리한다.
+    const supabase = createClient();
+    const {
+      data: { subscription: authSub },
+    } = supabase.auth.onAuthStateChange((event) => {
+      if (disposed) return;
+      if (event === 'SIGNED_IN') syncIn();
+      else if (event === 'SIGNED_OUT') clearLocal();
+    });
 
     // 3) 가시성 변화 처리
     //    - 숨김(백그라운드 전환): 대기 중인 설정 변경을 즉시 저장(flush)
@@ -109,6 +145,7 @@ export default function SyncOnLogin() {
       unsubSettings();
       unsubFavorites();
       unsubTheme();
+      authSub?.unsubscribe();
       document.removeEventListener('visibilitychange', onVisibility);
       window.removeEventListener('pagehide', doPush);
     };

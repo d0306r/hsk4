@@ -38,7 +38,9 @@ export default function DailyChart({ data, bare = false }: DailyChartProps) {
               {/* 값 라벨 — 막대 바로 위 (학습한 날만) */}
               <span
                 className={`h-4 flex items-end text-xs font-semibold leading-none ${
-                  isToday ? 'text-brand-600' : 'text-slate-500'
+                  isToday
+                    ? 'text-brand-600 dark:text-brand-400'
+                    : 'text-slate-500 dark:text-slate-400'
                 }`}
               >
                 {isEmpty ? '' : day.studied}
@@ -73,7 +75,9 @@ export default function DailyChart({ data, bare = false }: DailyChartProps) {
             <div
               key={day.date}
               className={`flex-1 text-center text-xs ${
-                isToday ? 'text-brand-600 font-bold' : 'text-slate-400'
+                isToday
+                  ? 'text-brand-600 dark:text-brand-400 font-bold'
+                  : 'text-slate-400 dark:text-slate-500'
               }`}
             >
               {isToday ? '오늘' : weekday}
@@ -90,9 +94,9 @@ export default function DailyChart({ data, bare = false }: DailyChartProps) {
     <section className="card">
       <div className="flex items-baseline justify-between mb-4">
         <h2 className="text-base font-bold">최근 7일 학습량</h2>
-        <div className="text-xs text-slate-500">
-          총 <span className="font-bold text-brand-600">{total}</span>개 · 평균{' '}
-          <span className="font-bold text-brand-600">{avg}</span>개/일
+        <div className="text-xs text-slate-500 dark:text-slate-400">
+          총 <span className="font-bold text-brand-600 dark:text-brand-400">{total}</span>개 · 평균{' '}
+          <span className="font-bold text-brand-600 dark:text-brand-400">{avg}</span>개/일
         </div>
       </div>
       {chart}

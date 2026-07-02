@@ -35,7 +35,13 @@ export function importBackup(json: string): { ok: boolean; error?: string } {
   } catch {
     return { ok: false, error: '파일을 읽을 수 없어요 (JSON 형식 아님)' };
   }
-  if (!parsed || parsed.app !== APP || typeof parsed.data !== 'object') {
+  if (
+    !parsed ||
+    parsed.app !== APP ||
+    parsed.data === null ||
+    typeof parsed.data !== 'object' ||
+    Array.isArray(parsed.data)
+  ) {
     return { ok: false, error: '이 앱의 백업 파일이 아니에요' };
   }
   const data = parsed.data as Record<string, unknown>;

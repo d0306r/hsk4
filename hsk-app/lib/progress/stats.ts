@@ -169,8 +169,9 @@ export function getOverallStats() {
   const wordValues = Object.values(words);
   const dailyValues = Object.values(daily);
 
-  // 단어 기반 통계
-  const totalStudied = wordValues.length;
+  // 단어 기반 통계 — '한 번이라도 실제로 학습(시도)한' 단어만.
+  // (오답 노트에 수동 추가만 된 미학습 단어는 제외)
+  const totalStudied = wordValues.filter((w) => w.totalAttempts > 0).length;
   const totalCorrectAttempts = wordValues.reduce((s, w) => s + w.correctCount, 0);
   const totalAttempts = wordValues.reduce((s, w) => s + w.totalAttempts, 0);
   const masteredWords = wordValues.filter((w) => !w.inWrongNote && w.correctCount > 0).length;
@@ -340,7 +341,8 @@ export function getSRSStageStats(): {
     (w) => getSRSStage(w.srs) === 'new'
   ).length;
   
-  const totalNew = (allWords.length - studiedCount) + newInProgress;
+  // 진도에 allWords에 없는 id(레거시/가져온 데이터)가 섞이면 음수가 될 수 있어 0으로 클램프
+  const totalNew = Math.max(0, allWords.length - studiedCount) + newInProgress;
   
   return {
     new: totalNew,

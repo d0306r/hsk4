@@ -152,6 +152,17 @@ export function OnboardingModal() {
     }
   }, []);
 
+  // Escape로 닫기
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') close();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
+
   function close() {
     try {
       localStorage.setItem(FLAG, '1');
@@ -215,6 +226,7 @@ export function OnboardingModal() {
                 건너뛰기
               </button>
               <button
+                autoFocus
                 onClick={() => setI((v) => v + 1)}
                 className="flex-1 py-3.5 rounded-xl bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white text-[15px] font-semibold active:scale-[0.98] transition"
               >
@@ -223,6 +235,7 @@ export function OnboardingModal() {
             </>
           ) : (
             <button
+              autoFocus
               onClick={close}
               className="flex-1 py-3.5 rounded-xl bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white text-[15px] font-semibold active:scale-[0.98] transition"
             >

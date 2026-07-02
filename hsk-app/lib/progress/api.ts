@@ -60,7 +60,7 @@ export async function getProgress(): Promise<{
   const values = Object.values(allProgress);
 
   return {
-    totalStudied: values.length,
+    totalStudied: values.filter((w) => w.totalAttempts > 0).length,
     mastered: values.filter((w) => !w.inWrongNote && w.correctCount > 0).length,
     inWrongNote: values.filter((w) => w.inWrongNote).length,
   };

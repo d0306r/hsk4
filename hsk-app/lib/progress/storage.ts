@@ -132,7 +132,14 @@ export function applySessionRecords(records: SessionRecord[]): ProgressData {
 
   const studiedIdsPerDay: Record<string, Set<number>> = {};
 
+  // 로컬 날짜 키
+  const toKey = (dt: Date) =>
+    `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, '0')}-${String(dt.getDate()).padStart(2, '0')}`;
+
   for (const rec of records) {
+    // 이 세션 이전에 그 단어를 '오늘' 이미 학습했는지 (별도 세션 재학습의 이중 카운트 방지)
+    const prev = data.words[rec.wordId];
+
     newWords[rec.wordId] = updateWordProgress(
       newWords[rec.wordId],
       rec.wordId,
@@ -143,7 +150,7 @@ export function applySessionRecords(records: SessionRecord[]): ProgressData {
     // 로컬 날짜로 집계 (조회 측 getRecentDailyStats/getCurrentStreak가 로컬 날짜 키를
     // 쓰므로 UTC slice를 쓰면 자정 부근·이른 아침 학습이 어긋남)
     const d = new Date(rec.studiedAt);
-    const dateKey = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    const dateKey = toKey(d);
     const existing: DailyStats = newDaily[dateKey] ?? {
       date: dateKey,
       studied: 0,
@@ -151,12 +158,17 @@ export function applySessionRecords(records: SessionRecord[]): ProgressData {
       wrong: 0,
     };
 
+    // 이미 오늘 학습한 단어면 studied(고유 단어 수)에 다시 더하지 않음
+    const alreadyStudiedToday = prev?.lastStudiedAt
+      ? toKey(new Date(prev.lastStudiedAt)) === dateKey
+      : false;
+
     if (!studiedIdsPerDay[dateKey]) {
       studiedIdsPerDay[dateKey] = new Set();
     }
     if (!studiedIdsPerDay[dateKey].has(rec.wordId)) {
       studiedIdsPerDay[dateKey].add(rec.wordId);
-      existing.studied += 1;
+      if (!alreadyStudiedToday) existing.studied += 1;
     }
 
     if (rec.result === 'known') {
@@ -307,8 +319,12 @@ export function mergeProgressFromDB(
       : 0;
 
     if (dbTime > localTime) {
-      // DB가 더 최근 → DB 데이터로 덮어쓰기
-      newWords[dbWord.wordId] = dbWord;
+      // DB가 더 최근 → DB 데이터로 덮어쓰기.
+      // 단, currentStreak은 DB에 저장되지 않아(항상 0) 로컬 값을 보존한다.
+      newWords[dbWord.wordId] = {
+        ...dbWord,
+        currentStreak: Math.max(localWord.currentStreak, dbWord.currentStreak),
+      };
     }
     // 로컬이 더 최근 또는 같음 → 로컬 유지 (덮어쓰지 않음)
   }

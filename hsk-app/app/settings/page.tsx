@@ -42,6 +42,10 @@ export default function SettingsPage() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [pendingImport, setPendingImport] = useState<string | null>(null);
 
+  // 지속(localStorage) 설정값을 그대로 렌더하면 SSR 기본값과 불일치 → 마운트 후 렌더
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   // 로그인 상태/이메일 (loggedIn: null=확인 중)
   const [userEmail, setUserEmail] = useState<string | null>(null);
   const [loggedIn, setLoggedIn] = useState<boolean | null>(null);
@@ -106,6 +110,21 @@ export default function SettingsPage() {
       setToast(res.error ?? '가져오기에 실패했어요');
     }
   };
+
+  if (!mounted) {
+    return (
+      <main className="pb-24 px-5 pt-6 md:pt-20">
+        <PageContainer width="narrow">
+          <div className="max-w-3xl mx-auto animate-pulse space-y-4">
+            <div className="h-10 bg-slate-100 dark:bg-slate-700 rounded" />
+            <div className="h-40 bg-slate-100 dark:bg-slate-700 rounded" />
+            <div className="h-40 bg-slate-100 dark:bg-slate-700 rounded" />
+          </div>
+        </PageContainer>
+        <BottomNav />
+      </main>
+    );
+  }
 
   return (
     <main className="pb-24 px-5 pt-6 md:pt-20">

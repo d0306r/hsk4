@@ -77,8 +77,13 @@ export default function WordBrowser() {
   const [ttsOk, setTtsOk] = useState(false);
   useEffect(() => setTtsOk(isTTSAvailable()), []);
 
+  // 지속(localStorage) 즐겨찾기는 SSR 기본값([])과 불일치 → 마운트 전엔 []로 렌더
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   // 즐겨찾기(내 단어장)
-  const favIds = useFavoritesStore((s) => s.ids);
+  const favIdsRaw = useFavoritesStore((s) => s.ids);
+  const favIds = mounted ? favIdsRaw : [];
   const toggleFav = useFavoritesStore((s) => s.toggle);
 
   // 무한 스크롤용 — 센티넬 관찰, 현재 결과 길이는 ref로 최신값 참조

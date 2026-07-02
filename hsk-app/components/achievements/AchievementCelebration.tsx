@@ -18,12 +18,23 @@ export default function AchievementCelebration() {
     if (fresh.length > 0) setBadges(fresh);
   }, []);
 
-  if (badges.length === 0) return null;
-
   function close() {
     markBadgesSeen(badges.map((b) => b.id));
     setBadges([]);
   }
+
+  // Escape로 닫기
+  useEffect(() => {
+    if (badges.length === 0) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') close();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [badges]);
+
+  if (badges.length === 0) return null;
 
   return (
     <div
@@ -61,6 +72,7 @@ export default function AchievementCelebration() {
         </div>
 
         <button
+          autoFocus
           onClick={close}
           className="w-full py-3 rounded-xl bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white text-sm font-semibold active:scale-[0.98] transition"
         >
