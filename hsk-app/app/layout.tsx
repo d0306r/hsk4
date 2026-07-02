@@ -2,6 +2,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import SyncOnLogin from '@/components/auth/SyncOnLogin';
+import ServiceWorkerRegister from '@/components/pwa/ServiceWorkerRegister';
 
 const SITE_TITLE = 'HSK 3·4급 필수 단어';
 const SITE_DESC =
@@ -77,6 +78,8 @@ export default function RootLayout({
       <body className="min-h-screen">
         {/* 로그인 시 DB → localStorage 동기화 (UI 없음, 백그라운드) */}
         <SyncOnLogin />
+        {/* 오프라인 지원 서비스워커 등록 (프로덕션 전용, UI 없음) */}
+        <ServiceWorkerRegister />
 
         {/* 폭 제한은 각 페이지의 PageContainer가 담당.
             폰(<430px)에서는 화면이 더 좁아 기존과 동일하게 보임 */}

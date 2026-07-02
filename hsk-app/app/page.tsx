@@ -5,11 +5,15 @@ import { StudySection } from '@/components/home/StudySection';
 import { LearningStatusCard } from '@/components/home/LearningStatusCard';
 import { GuestBanner } from '@/components/home/GuestBanner';
 import { BottomNav } from '@/components/home/BottomNav';
+import { OnboardingModal } from '@/components/onboarding/OnboardingModal';
 import { PageContainer } from '@/components/ui/PageContainer';
 
 export default function HomePage() {
   return (
     <main className="pb-24 md:pt-16 md:pb-8">
+      {/* 첫 실행 안내 (1회) */}
+      <OnboardingModal />
+
       <PageContainer width="narrow">
         {/* 인사 + 연속 학습 칩 */}
         <HomeGreeting />

@@ -3,10 +3,10 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'HSK 4급 필수 단어',
-    short_name: 'HSK 4급',
+    name: 'HSK 3·4급 필수 단어',
+    short_name: 'HSK 단어',
     description:
-      'HSK 4급 필수 단어를 매일 조금씩 외우고, 틀린 단어는 복습으로 오래 기억하세요',
+      'HSK 3·4급 필수 단어를 예문·발음과 함께 매일 조금씩, 복습(SRS)으로 오래 기억하세요',
     start_url: '/',
     display: 'standalone',
     orientation: 'portrait',
