@@ -289,9 +289,18 @@ function MostWrongCard({
 }) {
   return (
     <section className={CARD}>
-      <h2 className="text-sm font-bold text-slate-500 dark:text-slate-400 mb-2">
-        자주 틀린 단어
-      </h2>
+      <div className="flex items-center justify-between mb-2">
+        <h2 className="text-sm font-bold text-slate-500 dark:text-slate-400">
+          자주 틀린 단어
+        </h2>
+        <Link
+          href="/study/weak"
+          className="flex items-center gap-1 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline"
+        >
+          <Target size={13} />
+          집중 복습
+        </Link>
+      </div>
       <div className="space-y-0.5">
         {items.map(({ word, progress }) => (
           <Link

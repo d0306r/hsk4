@@ -194,6 +194,14 @@ export function getMostWrongWords(limit: number = 5): Array<{
 
 
 /**
+ * 약점 집중 학습용 — 틀린 적 있는 단어를 '많이·최근에 틀린' 순으로 반환.
+ * getMostWrongWords와 동일한 정렬 기준을 쓰되 Word[] 형태로, 더 넉넉히(기본 30개).
+ */
+export function getWeakWords(limit: number = 30): Word[] {
+  return getMostWrongWords(limit).map(({ word }) => word);
+}
+
+/**
  * SRS 단계별 단어 수 통계
  * - new: 신규 (아직 한 번도 학습 안 한 단어 + 학습 기록 있지만 repetitions=0)
  * - learning: 학습 중 (interval < 21일)
