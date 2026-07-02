@@ -2,6 +2,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { BottomNav } from '@/components/home/BottomNav';
 import { useSettingsStore, type QuizDirection } from '@/stores/settingsStore';
 import { useThemeStore } from '@/stores/themeStore';
@@ -34,13 +35,15 @@ export default function SettingsPage() {
   const [showResetNotes, setShowResetNotes] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
 
-  // 로그인된 유저 이메일
+  // 로그인 상태/이메일 (loggedIn: null=확인 중)
   const [userEmail, setUserEmail] = useState<string | null>(null);
+  const [loggedIn, setLoggedIn] = useState<boolean | null>(null);
 
   // 마운트 시 유저 정보 가져오기
   useEffect(() => {
     const supabase = createClient();
     supabase.auth.getUser().then(({ data: { user } }) => {
+      setLoggedIn(!!user);
       setUserEmail(user?.email ?? null);
     });
   }, []);
@@ -144,22 +147,35 @@ export default function SettingsPage() {
         <SettingsRow label="이름">
           <NicknameInput />
         </SettingsRow>
-        <SettingsRow label="이메일">
+        <SettingsRow label="계정">
           <span className="text-sm text-slate-500 dark:text-slate-400">
-            {userEmail ?? '로딩 중...'}
+            {loggedIn === null
+              ? '확인 중...'
+              : loggedIn
+              ? userEmail
+              : '게스트 (미로그인)'}
           </span>
         </SettingsRow>
       </SettingsGroup>
 
-      {/* 로그아웃 버튼 */}
-      <form action={signOut}>
-        <button
-          type="submit"
-          className="w-full py-3 mb-6 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 font-semibold rounded-xl active:scale-[0.98] transition"
+      {/* 로그인 상태에 따라: 로그아웃 / 로그인 유도 */}
+      {loggedIn === false ? (
+        <Link
+          href="/login"
+          className="block w-full py-3 mb-6 text-center bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white font-semibold rounded-xl active:scale-[0.98] transition"
         >
-          로그아웃
-        </button>
-      </form>
+          로그인 · 회원가입 (기기 간 동기화)
+        </Link>
+      ) : loggedIn ? (
+        <form action={signOut}>
+          <button
+            type="submit"
+            className="w-full py-3 mb-6 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 font-semibold rounded-xl active:scale-[0.98] transition"
+          >
+            로그아웃
+          </button>
+        </form>
+      ) : null}
 
       {/* 초기화 확인 모달 */}
       <ConfirmModal

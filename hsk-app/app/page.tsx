@@ -3,6 +3,7 @@ import { HomeGreeting } from '@/components/home/HomeGreeting';
 import { WelcomeHint } from '@/components/home/WelcomeHint';
 import { StudySection } from '@/components/home/StudySection';
 import { LearningStatusCard } from '@/components/home/LearningStatusCard';
+import { GuestBanner } from '@/components/home/GuestBanner';
 import { BottomNav } from '@/components/home/BottomNav';
 import { PageContainer } from '@/components/ui/PageContainer';
 
@@ -12,6 +13,9 @@ export default function HomePage() {
       <PageContainer width="narrow">
         {/* 인사 + 연속 학습 칩 */}
         <HomeGreeting />
+
+        {/* 게스트일 때만: 로그인 유도 */}
+        <GuestBanner />
 
         {/* 학습 현황 — 접힘 기본(전체 진도만), 펼치면 SRS 단계 */}
         <LearningStatusCard />

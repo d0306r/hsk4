@@ -2,9 +2,6 @@
 import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
 
-// 로그인 안 해도 접근 가능한 경로
-const PUBLIC_PATHS = ['/login', '/signup', '/auth'];
-
 export async function updateSession(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request });
 
@@ -29,18 +26,9 @@ export async function updateSession(request: NextRequest) {
     }
   );
 
-  // 세션 갱신
+  // 세션 갱신 (쿠키 리프레시)
   const { data: { user } } = await supabase.auth.getUser();
-
   const pathname = request.nextUrl.pathname;
-  const isPublicPath = PUBLIC_PATHS.some((path) => pathname.startsWith(path));
-
-  // 비로그인 + 보호된 경로 → 로그인 페이지로
-  if (!user && !isPublicPath) {
-    const url = request.nextUrl.clone();
-    url.pathname = '/login';
-    return NextResponse.redirect(url);
-  }
 
   // 로그인 상태 + 로그인/회원가입 페이지 접근 → 홈으로
   if (user && (pathname === '/login' || pathname === '/signup')) {
@@ -49,5 +37,7 @@ export async function updateSession(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
+  // 비로그인도 게스트로 앱 사용 가능 (강제 로그인 제거).
+  // 진도는 localStorage에 저장되고, 로그인하면 클라우드 동기화가 켜진다.
   return supabaseResponse;
 }
