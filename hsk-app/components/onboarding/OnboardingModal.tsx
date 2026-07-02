@@ -20,7 +20,7 @@ type Slide = {
 
 function WordPreview() {
   return (
-    <div className="w-full max-w-[15rem] rounded-2xl bg-white dark:bg-slate-900 shadow-sm border border-slate-200 dark:border-slate-700 px-5 py-4 text-center">
+    <div className="w-full max-w-[16.5rem] rounded-2xl bg-white dark:bg-slate-900 shadow-sm border border-slate-200 dark:border-slate-700 px-5 py-4 text-center">
       <div className="text-4xl font-bold text-slate-900 dark:text-white leading-none">
         咖啡
       </div>
@@ -41,7 +41,7 @@ function WordPreview() {
 function ReviewPreview() {
   const opts = ['자주. 늘. 항상.', '접시. 쟁반.', '커피(coffee).'];
   return (
-    <div className="w-full max-w-[15rem] space-y-2">
+    <div className="w-full max-w-[16.5rem] space-y-2">
       <div className="rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-200 dark:border-slate-700 py-3 text-center">
         <div className="text-2xl font-bold text-slate-900 dark:text-white">经常</div>
       </div>
@@ -73,7 +73,7 @@ function StatsPreview() {
   ];
   const shade = ['bg-slate-100 dark:bg-slate-700', 'bg-brand-200 dark:bg-brand-800', 'bg-brand-400 dark:bg-brand-600', 'bg-brand-600 dark:bg-brand-400'];
   return (
-    <div className="w-full max-w-[15rem] rounded-2xl bg-white dark:bg-slate-900 shadow-sm border border-slate-200 dark:border-slate-700 p-4">
+    <div className="w-full max-w-[16.5rem] rounded-2xl bg-white dark:bg-slate-900 shadow-sm border border-slate-200 dark:border-slate-700 p-4">
       <div className="flex justify-between text-center mb-3">
         <div>
           <div className="text-lg font-bold text-slate-900 dark:text-white">128</div>
@@ -99,7 +99,7 @@ function StatsPreview() {
 
 function OfflinePreview() {
   return (
-    <div className="w-full max-w-[15rem] flex flex-col items-center">
+    <div className="w-full max-w-[16.5rem] flex flex-col items-center">
       <div className="relative w-20 h-20 rounded-[1.35rem] bg-cover bg-center shadow-md" style={{ backgroundImage: "url('/icon.svg')" }}>
         <span className="absolute -top-2 -right-2 flex items-center gap-1 rounded-full bg-slate-800 text-white text-[10px] px-2 py-0.5 shadow">
           <WifiOff size={10} /> 오프라인
@@ -173,9 +173,9 @@ export function OnboardingModal() {
       aria-modal="true"
       aria-label="앱 소개"
     >
-      <div className="w-full sm:max-w-md rounded-t-3xl sm:rounded-3xl bg-white dark:bg-slate-800 shadow-xl p-6 pt-8 max-h-[92vh] overflow-y-auto">
-        {/* 미리보기 화면 */}
-        <div className="flex items-center justify-center min-h-[13rem] rounded-2xl bg-gradient-to-b from-brand-50 to-white dark:from-slate-900 dark:to-slate-800/50 px-4 py-5 mb-6">
+      <div className="w-full sm:max-w-lg rounded-t-3xl sm:rounded-3xl bg-white dark:bg-slate-800 shadow-xl p-6 pt-8 max-h-[92vh] overflow-y-auto">
+        {/* 미리보기 화면 — 고정 높이로 슬라이드마다 크기 통일 */}
+        <div className="flex items-center justify-center h-[15.5rem] rounded-2xl bg-gradient-to-b from-brand-50 to-white dark:from-slate-900 dark:to-slate-800/50 px-4 mb-6 overflow-hidden">
           {s.preview}
         </div>
 
@@ -183,10 +183,10 @@ export function OnboardingModal() {
         <div className="flex items-center justify-center gap-2 text-brand-600 dark:text-brand-300 mb-2">
           {s.icon}
         </div>
-        <h2 className="text-center text-2xl font-bold text-slate-900 dark:text-white break-keep">
+        <h2 className="text-center text-2xl font-bold text-slate-900 dark:text-white break-keep min-h-[2rem]">
           {s.title}
         </h2>
-        <p className="text-center text-[15px] text-slate-500 dark:text-slate-300 mt-3 leading-relaxed break-keep min-h-[3rem] px-2">
+        <p className="text-center text-[15px] text-slate-500 dark:text-slate-300 mt-3 leading-relaxed break-keep h-[3rem] px-2">
           {s.desc}
         </p>
 
