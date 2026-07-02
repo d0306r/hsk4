@@ -117,25 +117,25 @@ const SLIDES: Slide[] = [
   {
     icon: <BookOpen size={26} />,
     title: 'HSK 3·4급 1,203단어',
-    desc: '모든 단어에 예문과 발음이 함께 있어요. 뜻만 외우지 말고 문장으로 익혀요.',
+    desc: '모든 단어에 예문과 발음이 함께 있어요.\n뜻만 외우지 말고 문장으로 익혀요.',
     preview: <WordPreview />,
   },
   {
     icon: <Repeat size={26} />,
     title: '복습(SRS)으로 오래 기억',
-    desc: '틀린 단어는 알맞은 간격으로 다시 나와요. 매일 조금씩만 해도 쌓입니다.',
+    desc: '틀린 단어는 알맞은 간격으로 다시 나와요.\n매일 조금씩만 해도 쌓입니다.',
     preview: <ReviewPreview />,
   },
   {
     icon: <BarChart3 size={26} />,
     title: '통계 · 연속 기록',
-    desc: '학습 잔디와 정답률로 진행 상황을 한눈에. 연속 학습일이 이어져요.',
+    desc: '학습 잔디와 정답률로 진행 상황을 한눈에.\n연속 학습일이 이어져요.',
     preview: <StatsPreview />,
   },
   {
     icon: <WifiOff size={26} />,
     title: '설치하면 오프라인도 OK',
-    desc: '홈 화면에 추가하면 앱처럼 열리고, 인터넷 없이도 학습할 수 있어요.',
+    desc: '홈 화면에 추가하면 앱처럼 열리고,\n인터넷 없이도 학습할 수 있어요.',
     preview: <OfflinePreview />,
   },
 ];
@@ -186,7 +186,7 @@ export function OnboardingModal() {
         <h2 className="text-center text-2xl font-bold text-slate-900 dark:text-white break-keep min-h-[2rem]">
           {s.title}
         </h2>
-        <p className="text-center text-[15px] text-slate-500 dark:text-slate-300 mt-3 leading-relaxed break-keep h-[3rem] px-2">
+        <p className="text-center text-[15px] text-slate-500 dark:text-slate-300 mt-3 leading-relaxed break-keep whitespace-pre-line h-[3rem] px-2">
           {s.desc}
         </p>
 
