@@ -72,3 +72,50 @@ export function computeAchievements(): Achievement[] {
     };
   });
 }
+
+// ─── 새로 획득한 배지 감지 (즉시 축하용) ───
+const SEEN_KEY = 'hsk-badges-seen';
+
+function readSeen(): Set<string> {
+  try {
+    const raw = localStorage.getItem(SEEN_KEY);
+    return new Set<string>(raw ? JSON.parse(raw) : []);
+  } catch {
+    return new Set();
+  }
+}
+
+function writeSeen(set: Set<string>): void {
+  try {
+    localStorage.setItem(SEEN_KEY, JSON.stringify(Array.from(set)));
+  } catch {
+    /* noop */
+  }
+}
+
+/**
+ * 아직 축하하지 않은(새로 획득한) 배지 목록.
+ * 최초 실행 시엔 현재 보유분을 조용히 seen 처리해 기존 사용자 폭탄을 막는다.
+ * 반환된 배지는 아직 seen에 기록하지 않으므로, 축하 표시 후 markBadgesSeen을 호출해야 한다.
+ */
+export function getNewlyEarnedBadges(): Achievement[] {
+  if (typeof window === 'undefined') return [];
+  const earned = computeAchievements().filter((a) => a.earned);
+
+  const raw = localStorage.getItem(SEEN_KEY);
+  if (raw === null) {
+    // 첫 실행: 현재 보유분을 조용히 확정
+    writeSeen(new Set(earned.map((a) => a.id)));
+    return [];
+  }
+
+  const seen = readSeen();
+  return earned.filter((a) => !seen.has(a.id));
+}
+
+/** 축하를 마친 배지를 seen에 확정 */
+export function markBadgesSeen(ids: string[]): void {
+  const seen = readSeen();
+  ids.forEach((id) => seen.add(id));
+  writeSeen(seen);
+}

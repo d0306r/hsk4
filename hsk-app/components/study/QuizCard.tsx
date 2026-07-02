@@ -6,6 +6,7 @@ import { Volume2 } from 'lucide-react';
 import { QuizQuestion } from '@/stores/studyStore';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { isTTSAvailable, speakChinese } from '@/lib/tts';
+import { hapticFeedback, playAnswerSound } from '@/lib/feedback';
 
 interface QuizCardProps {
   question: QuizQuestion;
@@ -21,8 +22,21 @@ export default function QuizCard({
   const { word, direction, options, correctIndex } = question;
   const isAnswered = selectedIndex !== null;
   const showPinyin = useSettingsStore((s) => s.showPinyin);
+  const soundEffects = useSettingsStore((s) => s.soundEffects);
   const [ttsOk, setTtsOk] = useState(false);
   useEffect(() => setTtsOk(isTTSAvailable()), []);
+
+  const answeredWrong = isAnswered && selectedIndex !== correctIndex;
+
+  // 답을 고른 순간: 햅틱 + (설정 시) 효과음
+  useEffect(() => {
+    if (selectedIndex === null) return;
+    const correct = selectedIndex === correctIndex;
+    hapticFeedback(correct);
+    if (soundEffects) playAnswerSound(correct);
+    // selectedIndex가 바뀌는 순간에만 1회
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedIndex]);
 
   // 빈칸 채우기용: 예문에서 목표 한자를 가린 앞/뒤 (예문은 makeQuestion에서 보장)
   const cloze =
@@ -46,7 +60,11 @@ export default function QuizCard({
   return (
     <div className="w-full">
       {/* 문제 영역 */}
-      <div className="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-700 rounded-2xl p-5 mb-4 text-center shadow-sm">
+      <div
+        className={`bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-700 rounded-2xl p-5 mb-4 text-center shadow-sm ${
+          answeredWrong ? 'animate-shake' : ''
+        }`}
+      >
         <div className="text-xs text-gray-400 dark:text-slate-500 mb-3 font-semibold">
           {direction === 'meaning-to-hanzi'
             ? '이 뜻에 해당하는 한자는?'
@@ -138,7 +156,7 @@ export default function QuizCard({
               'bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-brand-500 text-gray-900 dark:text-slate-100';
           } else if (index === correctIndex) {
             buttonClass +=
-              'bg-green-50 dark:bg-green-900/30 border-green-500 dark:border-green-400 text-green-900 dark:text-green-100';
+              'bg-green-50 dark:bg-green-900/30 border-green-500 dark:border-green-400 text-green-900 dark:text-green-100 animate-pop';
           } else if (index === selectedIndex) {
             buttonClass +=
               'bg-red-50 dark:bg-red-900/30 border-red-500 dark:border-red-400 text-red-900 dark:text-red-100';

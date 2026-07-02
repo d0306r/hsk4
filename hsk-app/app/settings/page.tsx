@@ -1,12 +1,13 @@
 // app/settings/page.tsx
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { BottomNav } from '@/components/home/BottomNav';
 import { useSettingsStore, type QuizDirection } from '@/stores/settingsStore';
 import { useThemeStore } from '@/stores/themeStore';
 import { resetAllProgress, resetWrongNotes } from '@/lib/progress/api';
+import { downloadBackup, importBackup } from '@/lib/backup';
 import { createClient } from '@/lib/supabase/client';
 import { signOut } from '@/app/auth/actions';
 import ConfirmModal from '@/components/ui/ConfirmModal';
@@ -26,14 +27,20 @@ export default function SettingsPage() {
   const {
     quizDirection,
     showPinyin,
+    soundEffects,
     setQuizDirection,
     togglePinyin,
+    toggleSoundEffects,
   } = useSettingsStore();
 
   // 초기화 모달 상태
   const [showResetAll, setShowResetAll] = useState(false);
   const [showResetNotes, setShowResetNotes] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
+
+  // 백업 가져오기(덮어쓰기) 확인용
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [pendingImport, setPendingImport] = useState<string | null>(null);
 
   // 로그인 상태/이메일 (loggedIn: null=확인 중)
   const [userEmail, setUserEmail] = useState<string | null>(null);
@@ -65,6 +72,39 @@ export default function SettingsPage() {
     await resetWrongNotes();
     setShowResetNotes(false);
     setToast('오답 노트가 초기화되었어요');
+  };
+
+  const handleExport = () => {
+    try {
+      downloadBackup();
+      setToast('진도를 파일로 내보냈어요');
+    } catch {
+      setToast('내보내기에 실패했어요');
+    }
+  };
+
+  const handleFilePick = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    e.target.value = ''; // 같은 파일 다시 선택 가능하도록 리셋
+    if (!file) return;
+    try {
+      const text = await file.text();
+      setPendingImport(text); // 확인 모달로
+    } catch {
+      setToast('파일을 읽지 못했어요');
+    }
+  };
+
+  const handleImportConfirm = () => {
+    if (pendingImport === null) return;
+    const res = importBackup(pendingImport);
+    setPendingImport(null);
+    if (res.ok) {
+      setToast('복원 완료 — 새로고침할게요');
+      setTimeout(() => window.location.reload(), 800);
+    } else {
+      setToast(res.error ?? '가져오기에 실패했어요');
+    }
   };
 
   return (
@@ -117,6 +157,9 @@ export default function SettingsPage() {
         <SettingsRow label="병음 표시">
           <Toggle checked={showPinyin} onChange={togglePinyin} />
         </SettingsRow>
+        <SettingsRow label="정답 효과음">
+          <Toggle checked={soundEffects} onChange={toggleSoundEffects} />
+        </SettingsRow>
         <SettingsRow label="다크 모드">
           <DarkModeToggle />
         </SettingsRow>
@@ -124,6 +167,29 @@ export default function SettingsPage() {
 
       {/* 데이터 그룹 */}
       <SettingsGroup title="데이터">
+        <SettingsRow label="진도 내보내기 (백업)">
+          <button
+            onClick={handleExport}
+            className="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline"
+          >
+            내보내기
+          </button>
+        </SettingsRow>
+        <SettingsRow label="진도 가져오기 (복원)">
+          <button
+            onClick={() => fileInputRef.current?.click()}
+            className="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline"
+          >
+            가져오기
+          </button>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="application/json,.json"
+            onChange={handleFilePick}
+            className="hidden"
+          />
+        </SettingsRow>
         <SettingsRow label="학습 기록 초기화">
           <button
             onClick={() => setShowResetAll(true)}
@@ -202,6 +268,18 @@ export default function SettingsPage() {
         variant="danger"
         onConfirm={handleResetNotes}
         onCancel={() => setShowResetNotes(false)}
+      />
+
+      <ConfirmModal
+        isOpen={pendingImport !== null}
+        title="백업을 불러올까요?"
+        message={
+          '현재 기기의 진도·설정이 백업 파일 내용으로 덮어써져요.\n계속하면 새로고침됩니다.'
+        }
+        confirmText="가져오기"
+        cancelText="취소"
+        onConfirm={handleImportConfirm}
+        onCancel={() => setPendingImport(null)}
       />
 
       {/* 완료 토스트 */}

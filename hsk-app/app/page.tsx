@@ -7,6 +7,8 @@ import { GuestBanner } from '@/components/home/GuestBanner';
 import { DailyGoalCard } from '@/components/home/DailyGoalCard';
 import { BottomNav } from '@/components/home/BottomNav';
 import { OnboardingModal } from '@/components/onboarding/OnboardingModal';
+import InstallPrompt from '@/components/pwa/InstallPrompt';
+import AchievementCelebration from '@/components/achievements/AchievementCelebration';
 import { PageContainer } from '@/components/ui/PageContainer';
 
 export default function HomePage() {
@@ -15,12 +17,18 @@ export default function HomePage() {
       {/* 첫 실행 안내 (1회) */}
       <OnboardingModal />
 
+      {/* 새 배지 획득 축하 (있을 때만) */}
+      <AchievementCelebration />
+
       <PageContainer width="narrow">
         {/* 인사 + 연속 학습 칩 */}
         <HomeGreeting />
 
         {/* 게스트일 때만: 로그인 유도 */}
         <GuestBanner />
+
+        {/* 앱 설치 유도 (설치 가능 환경에서만) */}
+        <InstallPrompt />
 
         {/* 오늘의 목표 진행 링 (학습 기록 있는 사용자) */}
         <DailyGoalCard />
