@@ -3,9 +3,14 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import SyncOnLogin from '@/components/auth/SyncOnLogin';
 
+const SITE_TITLE = 'HSK 3·4급 필수 단어';
+const SITE_DESC =
+  '예문·발음과 함께 HSK 3·4급 필수 단어를 매일 조금씩, 복습(SRS)으로 오래 기억하세요';
+
 export const metadata: Metadata = {
-  title: 'HSK 4급 필수 단어',
-  description: 'HSK 4급 필수 단어를 매일 조금씩 외우고, 틀린 단어는 복습으로 오래 기억하세요',
+  metadataBase: new URL('https://hsk4voca.vercel.app'),
+  title: SITE_TITLE,
+  description: SITE_DESC,
   // manifest는 app/manifest.ts가 자동 주입.
   // 파비콘은 SVG, iOS 홈 화면은 PNG(apple-touch-icon, SVG 미지원)
   icons: {
@@ -15,7 +20,23 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'HSK 4급 필수 단어',
+    title: SITE_TITLE,
+  },
+  // 링크 공유(카톡·SNS) 미리보기
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESC,
+    url: '/',
+    siteName: SITE_TITLE,
+    locale: 'ko_KR',
+    type: 'website',
+    images: [{ url: '/icons/icon-512.png', width: 512, height: 512, alt: SITE_TITLE }],
+  },
+  twitter: {
+    card: 'summary',
+    title: SITE_TITLE,
+    description: SITE_DESC,
+    images: ['/icons/icon-512.png'],
   },
 };
 
