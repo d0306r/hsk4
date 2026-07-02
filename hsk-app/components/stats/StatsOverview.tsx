@@ -26,6 +26,7 @@ import { useSettingsStore } from '@/stores/settingsStore';
 import DailyChart from './DailyChart';
 import AccuracyTrend from './AccuracyTrend';
 import StudyHeatmap from './StudyHeatmap';
+import Achievements from './Achievements';
 import { PageContainer } from '@/components/ui/PageContainer';
 
 type Overall = ReturnType<typeof getOverallStats>;
@@ -106,6 +107,9 @@ export default function StatsOverview() {
           ) : (
             <StudyHeatmap />
           )}
+
+          {/* 성취 배지 */}
+          <Achievements />
         </div>
       )}
     </PageContainer>

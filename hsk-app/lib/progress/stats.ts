@@ -42,6 +42,15 @@ export function getRecentDailyStats(days: number = 7): DailyStats[] {
 }
 
 /**
+ * 오늘 하루 통계 (없으면 0으로 채운 값)
+ */
+export function getTodayStats(): DailyStats {
+  const { daily } = readProgress();
+  const key = toDateKey(new Date());
+  return daily[key] ?? { date: key, studied: 0, correct: 0, wrong: 0 };
+}
+
+/**
  * 주간 리포트 — 이번 주(최근 7일)와 지난 주(그 전 7일) 집계·비교
  */
 export function getWeeklyReport(): {
@@ -120,6 +129,36 @@ export function getCurrentStreak(): number {
   }
 
   return streak;
+}
+
+/**
+ * 최장 연속 학습일 (영구 기록 — 배지용)
+ * daily 데이터에서 가장 긴 연속 학습 구간을 찾는다.
+ */
+export function getLongestStreak(): number {
+  const { daily } = readProgress();
+  const days = Object.keys(daily)
+    .filter((k) => (daily[k]?.studied ?? 0) > 0)
+    .sort(); // 'YYYY-MM-DD' 문자열 정렬 = 날짜 정렬
+
+  let best = 0;
+  let run = 0;
+  let prev: Date | null = null;
+
+  for (const key of days) {
+    const [y, m, d] = key.split('-').map(Number);
+    const cur = new Date(y, m - 1, d);
+    if (prev) {
+      const diff = Math.round((cur.getTime() - prev.getTime()) / 86400000);
+      run = diff === 1 ? run + 1 : 1;
+    } else {
+      run = 1;
+    }
+    if (run > best) best = run;
+    prev = cur;
+  }
+
+  return best;
 }
 
 /**

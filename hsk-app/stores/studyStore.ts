@@ -53,9 +53,17 @@ function makeQuestion(
   // 방향 결정
   let direction: QuizDirection;
   if (directionPref === 'mixed') {
+    // 한자→뜻 30 / 뜻→한자 30 / 빈칸 20 / 듣기 20
+    // (듣기는 TTS 미지원 시 QuizCard가 병음 표시로 폴백)
     const r = Math.random();
     direction =
-      r < 0.34 ? 'hanzi-to-meaning' : r < 0.67 ? 'meaning-to-hanzi' : 'fill-blank';
+      r < 0.3
+        ? 'hanzi-to-meaning'
+        : r < 0.6
+        ? 'meaning-to-hanzi'
+        : r < 0.8
+        ? 'fill-blank'
+        : 'listening';
   } else {
     direction = directionPref;
   }

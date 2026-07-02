@@ -4,6 +4,7 @@ import { WelcomeHint } from '@/components/home/WelcomeHint';
 import { StudySection } from '@/components/home/StudySection';
 import { LearningStatusCard } from '@/components/home/LearningStatusCard';
 import { GuestBanner } from '@/components/home/GuestBanner';
+import { DailyGoalCard } from '@/components/home/DailyGoalCard';
 import { BottomNav } from '@/components/home/BottomNav';
 import { OnboardingModal } from '@/components/onboarding/OnboardingModal';
 import { PageContainer } from '@/components/ui/PageContainer';
@@ -20,6 +21,9 @@ export default function HomePage() {
 
         {/* 게스트일 때만: 로그인 유도 */}
         <GuestBanner />
+
+        {/* 오늘의 목표 진행 링 (학습 기록 있는 사용자) */}
+        <DailyGoalCard />
 
         {/* 학습 현황 — 접힘 기본(전체 진도만), 펼치면 SRS 단계 */}
         <LearningStatusCard />
