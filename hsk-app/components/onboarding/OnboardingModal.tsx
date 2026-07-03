@@ -6,6 +6,8 @@
 
 import { useEffect, useState } from 'react';
 import { BookOpen, Repeat, BarChart3, WifiOff } from 'lucide-react';
+import { getOverallStats } from '@/lib/progress/stats';
+import { createClient } from '@/lib/supabase/client';
 
 const FLAG = 'hsk-onboarded';
 
@@ -145,11 +147,35 @@ export function OnboardingModal() {
   const [i, setI] = useState(0);
 
   useEffect(() => {
-    try {
-      if (!localStorage.getItem(FLAG)) setOpen(true);
-    } catch {
-      /* localStorage 접근 불가 시 표시 안 함 */
-    }
+    let cancelled = false;
+    (async () => {
+      try {
+        if (localStorage.getItem(FLAG)) return; // 이미 봄
+
+        // 이미 학습 기록이 있으면 신규 사용자가 아님 → 건너뜀(플래그 확정)
+        if (getOverallStats().totalStudied > 0) {
+          localStorage.setItem(FLAG, '1');
+          return;
+        }
+
+        // 로그인 상태면 이미 써본 사용자(다른 기기 등) → 온보딩 생략
+        const {
+          data: { user },
+        } = await createClient().auth.getUser();
+        if (cancelled) return;
+        if (user) {
+          localStorage.setItem(FLAG, '1');
+          return;
+        }
+
+        setOpen(true);
+      } catch {
+        /* localStorage/네트워크 접근 불가 시 표시 안 함 */
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // Escape로 닫기
