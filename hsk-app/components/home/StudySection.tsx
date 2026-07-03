@@ -67,14 +67,23 @@ export function StudySection({
         </div>
       </div>
 
-      <div className="flex gap-2 mb-4">
-        {newCount !== undefined && newCount > 0 && (
-          <span className="flex-1 text-center text-sm bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-500 rounded-lg py-2">
-            신규 {newCount}
+      {/* 버튼처럼 보이지 않도록 정보 표시(점+숫자) — 실제 동작은 아래 '시작하기' 하나 */}
+      <div className="flex items-center gap-4 mb-4 text-sm text-slate-600 dark:text-slate-300">
+        {newCount !== undefined && (
+          <span className="inline-flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-brand-500 dark:bg-brand-400" />
+            신규{' '}
+            <span className="font-bold text-slate-900 dark:text-white">
+              {newCount}
+            </span>
           </span>
         )}
-        <span className="flex-1 text-center text-sm bg-slate-100 dark:bg-slate-700 rounded-lg py-2">
-          복습 {reviewCount}
+        <span className="inline-flex items-center gap-1.5">
+          <span className="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-500" />
+          복습{' '}
+          <span className="font-bold text-slate-900 dark:text-white">
+            {reviewCount}
+          </span>
         </span>
       </div>
 

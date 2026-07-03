@@ -5,7 +5,6 @@ import { StudySection } from '@/components/home/StudySection';
 import { LearningStatusCard } from '@/components/home/LearningStatusCard';
 import { GuestBanner } from '@/components/home/GuestBanner';
 import { DailyGoalCard } from '@/components/home/DailyGoalCard';
-import { HomeBadges } from '@/components/home/HomeBadges';
 import { BottomNav } from '@/components/home/BottomNav';
 import { OnboardingModal } from '@/components/onboarding/OnboardingModal';
 import InstallPrompt from '@/components/pwa/InstallPrompt';
@@ -36,9 +35,6 @@ export default function HomePage() {
 
         {/* 학습 현황 — 접힘 기본(전체 진도만), 펼치면 SRS 단계 */}
         <LearningStatusCard />
-
-        {/* 획득한 배지 (있을 때만) */}
-        <HomeBadges />
 
         {/* 첫 방문자 시작 안내 (학습 기록 있으면 자동 숨김) */}
         <WelcomeHint />
