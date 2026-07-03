@@ -9,6 +9,7 @@ import { BottomNav } from '@/components/home/BottomNav';
 import { OnboardingModal } from '@/components/onboarding/OnboardingModal';
 import InstallPrompt from '@/components/pwa/InstallPrompt';
 import AchievementCelebration from '@/components/achievements/AchievementCelebration';
+import { PageContainer } from '@/components/ui/PageContainer';
 
 export default function HomePage() {
   return (
@@ -19,8 +20,8 @@ export default function HomePage() {
       {/* 새 배지 획득 축하 (있을 때만) */}
       <AchievementCelebration />
 
-      {/* 홈은 앱형 밀도를 위해 폭을 좁게 유지 */}
-      <div className="max-w-2xl mx-auto w-full">
+      {/* 홈은 집중형(narrow) 폭 — 설정·학습과 동일 */}
+      <PageContainer width="narrow">
         {/* 인사 + 연속 학습 칩 + 배지 */}
         <HomeGreeting />
 
@@ -46,7 +47,7 @@ export default function HomePage() {
           {/* 학습 현황 — 접힘 기본(전체 진도만), 펼치면 SRS 단계 */}
           <LearningStatusCard />
         </div>
-      </div>
+      </PageContainer>
 
       <BottomNav />
     </main>
