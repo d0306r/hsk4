@@ -5,6 +5,8 @@ import { StudyLauncher } from '@/components/home/StudyLauncher';
 import { LearningStatusCard } from '@/components/home/LearningStatusCard';
 import { GuestBanner } from '@/components/home/GuestBanner';
 import { DailyGoalCard } from '@/components/home/DailyGoalCard';
+import { WordOfTheDay } from '@/components/home/WordOfTheDay';
+import { UpcomingReviewChart } from '@/components/home/UpcomingReviewChart';
 import { BottomNav } from '@/components/home/BottomNav';
 import { OnboardingModal } from '@/components/onboarding/OnboardingModal';
 import InstallPrompt from '@/components/pwa/InstallPrompt';
@@ -46,6 +48,10 @@ export default function HomePage() {
 
           {/* 학습 현황 — 접힘 기본(전체 진도만), 펼치면 SRS 단계 */}
           <LearningStatusCard />
+
+          {/* 오늘의 단어 · 다가오는 복습 — 좌우로 세로 여백 채움 */}
+          <WordOfTheDay />
+          <UpcomingReviewChart />
         </div>
       </PageContainer>
 

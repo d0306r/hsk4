@@ -25,7 +25,7 @@ export function UpcomingReviewChart() {
 
   if (schedule === null) {
     return (
-      <section className="card mx-5 mb-4 animate-pulse">
+      <section className="card h-full animate-pulse">
         <div className="h-32 bg-slate-100 dark:bg-slate-700 rounded" />
       </section>
     );
@@ -35,7 +35,7 @@ export function UpcomingReviewChart() {
   const totalCount = schedule.reduce((s, d) => s + d.count, 0);
   if (totalCount === 0) {
     return (
-      <section className="card mx-5 mb-4">
+      <section className="card h-full">
         <h2 className="text-base font-bold mb-3">복습 예정</h2>
         <div className="text-center py-6 text-sm text-slate-500 dark:text-slate-400">
           앞으로 7일간 복습 예정인 단어가 없어요
