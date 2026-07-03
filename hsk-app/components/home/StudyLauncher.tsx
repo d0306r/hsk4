@@ -4,7 +4,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, ArrowRight } from 'lucide-react';
 import { allWords } from '@/lib/words/mock';
 import { getAllProgress } from '@/lib/progress/api';
 import { countDueReviews } from '@/lib/srs/queue';
@@ -106,9 +106,13 @@ export function StudyLauncher() {
           ) : (
             <Link
               href={href}
-              className="block w-full py-4 rounded-xl bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white font-bold text-center active:scale-[0.98] transition"
+              className="flex items-center justify-between w-full py-4 px-5 rounded-xl bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white font-bold active:scale-[0.98] transition"
             >
-              학습 시작 · {total}단어
+              <span>학습 시작</span>
+              <span className="flex items-center gap-1.5 text-sm font-semibold text-white/90">
+                {total}단어
+                <ArrowRight size={18} />
+              </span>
             </Link>
           )}
         </>
