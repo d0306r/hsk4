@@ -53,7 +53,7 @@ export function HomeGreeting() {
             🔥 {streak}일
           </span>
         )}
-        {badges.length > 0 && (
+        {loggedIn && badges.length > 0 && (
           <div className="relative" onMouseLeave={() => setHovered(null)}>
             <div className="flex items-center gap-0.5">
               {badges.slice(-3).map((b) => (
