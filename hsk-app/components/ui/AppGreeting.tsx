@@ -6,6 +6,7 @@ import { ReactNode, useEffect, useState } from 'react';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { getCurrentStreak } from '@/lib/progress/stats';
 import { greetingByHour } from '@/lib/greeting';
+import { useLoggedIn } from '@/lib/hooks/useLoggedIn';
 
 export function AppGreeting({
   subtitle,
@@ -21,6 +22,7 @@ export function AppGreeting({
   greeting?: { text: string; emoji: string };
 }) {
   const nickname = useSettingsStore((s) => s.nickname);
+  const loggedIn = useLoggedIn();
   const [mounted, setMounted] = useState(false);
   const [streak, setStreak] = useState(0);
 
@@ -40,7 +42,8 @@ export function AppGreeting({
   }
 
   const { text, emoji } = greeting ?? greetingByHour(new Date().getHours());
-  const name = nickname.trim();
+  // 이름은 로그인 상태에서만 (게스트에게 이전 계정 이름이 남아 보이지 않도록)
+  const name = loggedIn ? nickname.trim() : '';
   const rightNode =
     right ??
     (streak > 0 ? (

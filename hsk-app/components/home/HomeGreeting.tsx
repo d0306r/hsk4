@@ -7,9 +7,11 @@ import { useSettingsStore } from '@/stores/settingsStore';
 import { getCurrentStreak } from '@/lib/progress/stats';
 import { computeAchievements, Achievement } from '@/lib/progress/achievements';
 import { greetingByHour } from '@/lib/greeting';
+import { useLoggedIn } from '@/lib/hooks/useLoggedIn';
 
 export function HomeGreeting() {
   const nickname = useSettingsStore((s) => s.nickname);
+  const loggedIn = useLoggedIn();
 
   // 시간/로컬스토리지 기반이라 마운트 후에만 렌더 (하이드레이션 불일치 방지)
   const [mounted, setMounted] = useState(false);
@@ -33,7 +35,8 @@ export function HomeGreeting() {
   }
 
   const { text, emoji } = greetingByHour(new Date().getHours());
-  const name = nickname.trim();
+  // 게스트에겐 이전 계정 이름이 남아 보이지 않도록, 로그인 상태에서만 이름 표시
+  const name = loggedIn ? nickname.trim() : '';
 
   return (
     <div className="px-5 pt-6 pb-3 flex items-center justify-between gap-3">
