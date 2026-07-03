@@ -32,7 +32,7 @@ export function LearningStatusCard() {
 
   if (srs === null) {
     return (
-      <section className="card mx-5 mb-4 animate-pulse">
+      <section className="card h-full animate-pulse">
         <div className="h-24 bg-slate-100 dark:bg-slate-700 rounded" />
       </section>
     );
@@ -45,7 +45,7 @@ export function LearningStatusCard() {
   const pct = (n: number) => (total > 0 ? (n / total) * 100 : 0);
 
   return (
-    <section className="card mx-5 mb-4">
+    <section className="card h-full">
       {/* 헤더 = 토글 */}
       <button
         onClick={() => setExpanded((v) => !v)}

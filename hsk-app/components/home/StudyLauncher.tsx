@@ -45,7 +45,7 @@ export function StudyLauncher() {
   const href = SCOPES.find((s) => s.key === scope)!.href;
 
   return (
-    <section className="card mx-5 mb-4">
+    <section className="card h-full">
       <div className="flex items-center gap-2 mb-3">
         <Sparkles size={18} className="text-brand-600 dark:text-brand-400" />
         <h2 className="text-base font-bold">오늘의 학습</h2>

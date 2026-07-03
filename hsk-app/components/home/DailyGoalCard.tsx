@@ -97,7 +97,7 @@ export function DailyGoalCard() {
 
   return (
     <section
-      className={`card mx-5 mb-4 flex items-center gap-4 ${
+      className={`card h-full flex items-center gap-4 ${
         done
           ? 'bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800/50'
           : ''
