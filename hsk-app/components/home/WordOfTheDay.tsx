@@ -3,7 +3,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Volume2, Star } from 'lucide-react';
+import { Volume2, Star, Shuffle } from 'lucide-react';
 import { allWords } from '@/lib/words/mock';
 import { Word } from '@/lib/words/types';
 import { isTTSAvailable, speakChinese } from '@/lib/tts';
@@ -28,6 +28,17 @@ export function WordOfTheDay() {
     setTtsOk(isTTSAvailable());
   }, []);
 
+  // 다른 단어로 셔플 (현재와 다른 무작위 단어)
+  const shuffle = () => {
+    setWord((cur) => {
+      let next = cur;
+      while (!next || next.id === cur?.id) {
+        next = allWords[Math.floor(Math.random() * allWords.length)];
+      }
+      return next;
+    });
+  };
+
   if (!word) {
     return (
       <section className="card h-full animate-pulse">
@@ -42,9 +53,18 @@ export function WordOfTheDay() {
     <section className="card h-full flex flex-col">
       <div className="flex items-center justify-between mb-3">
         <h2 className="text-base font-bold">오늘의 단어</h2>
-        <span className="text-xs font-semibold text-brand-600 dark:text-brand-400">
-          HSK {word.level}급
-        </span>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={shuffle}
+            aria-label="다른 단어 보기"
+            className="p-1 rounded-full text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-900/30 transition active:scale-90"
+          >
+            <Shuffle size={15} />
+          </button>
+          <span className="text-xs font-semibold text-brand-600 dark:text-brand-400">
+            HSK {word.level}급
+          </span>
+        </div>
       </div>
 
       {/* 한자 + 병음 + 액션 */}

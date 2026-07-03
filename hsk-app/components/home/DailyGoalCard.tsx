@@ -104,14 +104,16 @@ export function DailyGoalCard() {
       }`}
     >
       <Ring ratio={ratio} done={done} studied={studied} goal={safeGoal} />
-      <div className="min-w-0">
+      <div className="min-w-0 flex-1">
         {done ? (
           <>
             <p className="text-base font-bold text-emerald-700 dark:text-emerald-300">
               🎉 오늘 목표 달성!
             </p>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
-              오늘 {studied}단어 학습했어요. 내일도 이어가요!
+            <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed break-keep">
+              오늘 {studied}단어 학습했어요.
+              <br />
+              내일도 이어가요!
             </p>
           </>
         ) : (
@@ -119,10 +121,20 @@ export function DailyGoalCard() {
             <p className="text-base font-bold text-slate-900 dark:text-slate-100">
               오늘의 목표
             </p>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
-              {studied === 0
-                ? `오늘 ${safeGoal}단어를 목표로 시작해볼까요?`
-                : `${remaining}단어만 더 하면 오늘 목표 달성!`}
+            <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed break-keep">
+              {studied === 0 ? (
+                <>
+                  오늘 <b className="font-semibold text-slate-700 dark:text-slate-200">{safeGoal}단어</b>를
+                  <br />
+                  목표로 시작해볼까요?
+                </>
+              ) : (
+                <>
+                  <b className="font-semibold text-brand-600 dark:text-brand-400">{remaining}단어</b>만 더 하면
+                  <br />
+                  오늘 목표 달성!
+                </>
+              )}
             </p>
           </>
         )}

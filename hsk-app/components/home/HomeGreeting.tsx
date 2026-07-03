@@ -15,6 +15,7 @@ export function HomeGreeting() {
   const [mounted, setMounted] = useState(false);
   const [streak, setStreak] = useState(0);
   const [badges, setBadges] = useState<Achievement[]>([]);
+  const [hovered, setHovered] = useState<Achievement | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -50,21 +51,49 @@ export function HomeGreeting() {
           </span>
         )}
         {badges.length > 0 && (
-          <Link
-            href="/stats"
-            aria-label={`내 배지 ${badges.length}개 보기`}
-            className="flex items-center gap-0.5 active:scale-95 transition"
-          >
-            {badges.slice(-3).map((b) => (
-              <span
-                key={b.id}
-                title={`${b.title} — ${b.desc}`}
-                className="text-lg leading-none"
+          <div className="relative" onMouseLeave={() => setHovered(null)}>
+            <div className="flex items-center gap-0.5">
+              {badges.slice(-3).map((b) => (
+                <button
+                  key={b.id}
+                  type="button"
+                  onMouseEnter={() => setHovered(b)}
+                  onClick={() =>
+                    setHovered((cur) => (cur?.id === b.id ? null : b))
+                  }
+                  aria-label={`${b.title}: ${b.desc}`}
+                  className="text-lg leading-none px-0.5 active:scale-90 transition"
+                >
+                  {b.icon}
+                </button>
+              ))}
+            </div>
+
+            {/* 호버/탭 시 흰색 박스 툴팁 */}
+            {hovered && (
+              <Link
+                href="/stats"
+                className="absolute right-0 top-full mt-2 z-40 w-60 rounded-2xl bg-white dark:bg-slate-800 shadow-xl border border-slate-200 dark:border-slate-700 p-3.5 text-left"
               >
-                {b.icon}
-              </span>
-            ))}
-          </Link>
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl leading-none flex-shrink-0">
+                    {hovered.icon}
+                  </span>
+                  <div className="min-w-0">
+                    <div className="text-sm font-bold text-slate-900 dark:text-white">
+                      {hovered.title}
+                    </div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 break-keep">
+                      {hovered.desc}
+                    </div>
+                  </div>
+                </div>
+                <div className="text-[11px] font-semibold text-brand-600 dark:text-brand-400 mt-2.5">
+                  통계에서 전체 보기 →
+                </div>
+              </Link>
+            )}
+          </div>
         )}
       </div>
     </div>
