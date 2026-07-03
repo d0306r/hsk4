@@ -132,6 +132,26 @@ export function getCurrentStreak(): number {
 }
 
 /**
+ * 급수별 학습 진도 (배지·완주용) — 실제 학습(시도>0)한 단어 기준
+ */
+export function getLevelProgress(): Record<number, { studied: number; total: number }> {
+  const { words } = readProgress();
+  const wordMap = new Map(allWords.map((w) => [w.id, w]));
+  const res: Record<number, { studied: number; total: number }> = {};
+
+  for (const w of allWords) {
+    if (!res[w.level]) res[w.level] = { studied: 0, total: 0 };
+    res[w.level].total += 1;
+  }
+  for (const p of Object.values(words)) {
+    if (p.totalAttempts === 0) continue;
+    const w = wordMap.get(p.wordId);
+    if (w && res[w.level]) res[w.level].studied += 1;
+  }
+  return res;
+}
+
+/**
  * 최장 연속 학습일 (영구 기록 — 배지용)
  * daily 데이터에서 가장 긴 연속 학습 구간을 찾는다.
  */

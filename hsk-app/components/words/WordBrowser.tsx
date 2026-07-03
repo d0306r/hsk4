@@ -1,7 +1,7 @@
 // components/words/WordBrowser.tsx
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { Search, X, Volume2, Star } from 'lucide-react';
 import { allWords } from '@/lib/words/mock';
@@ -67,7 +67,7 @@ function normalize(s: string): string {
 export default function WordBrowser() {
   const [query, setQuery] = useState('');
   const [level, setLevel] = useState<LevelFilter>('all');
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [page, setPage] = useState(1);
   const [progressMap, setProgressMap] = useState<Record<number, WordProgress>>({});
   const [selected, setSelected] = useState<Word | null>(null);
   const [status, setStatus] = useState<StatusFilter>('all');
@@ -85,10 +85,6 @@ export default function WordBrowser() {
   const favIdsRaw = useFavoritesStore((s) => s.ids);
   const favIds = mounted ? favIdsRaw : [];
   const toggleFav = useFavoritesStore((s) => s.toggle);
-
-  // 무한 스크롤용 — 센티넬 관찰, 현재 결과 길이는 ref로 최신값 참조
-  const sentinelRef = useRef<HTMLDivElement>(null);
-  const filteredLenRef = useRef(0);
 
   // SRS 상태 배지용 진도 로드 (학습한 단어 표시) — 모달의 노트 토글 후에도 재호출
   const loadProgress = useCallback(async () => {
@@ -144,33 +140,22 @@ export default function WordBrowser() {
     return list; // 사전순(데이터 기본 순서)
   }, [query, level, status, exampleOnly, favoritesOnly, favIds, sort, progressMap]);
 
-  filteredLenRef.current = filtered.length;
-
-  // 필터/검색/정렬이 바뀌면 처음부터 다시 보여줌
+  // 필터/검색/정렬이 바뀌면 1페이지로
   useEffect(() => {
-    setVisibleCount(PAGE_SIZE);
+    setPage(1);
   }, [query, level, status, exampleOnly, favoritesOnly, sort]);
 
-  // 무한 스크롤: 하단 센티넬이 보이면 PAGE_SIZE만큼 더 노출
-  useEffect(() => {
-    const el = sentinelRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setVisibleCount((c) =>
-            Math.min(c + PAGE_SIZE, filteredLenRef.current)
-          );
-        }
-      },
-      { rootMargin: '300px' }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const safePage = Math.min(page, totalPages);
+  const pageItems = filtered.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
 
-  const pageItems = filtered.slice(0, visibleCount);
-  const hasMore = visibleCount < filtered.length;
+  const goPage = (p: number) => {
+    setPage(Math.min(Math.max(1, p), totalPages));
+    // 페이지 전환 시 목록 상단으로
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   return (
     <PageContainer width="wide" className="px-4 py-6 pb-24">
@@ -359,12 +344,9 @@ export default function WordBrowser() {
         </div>
       )}
 
-      {/* 무한 스크롤 센티넬 */}
-      <div ref={sentinelRef} className="h-8" />
-      {hasMore && (
-        <p className="text-center text-xs text-slate-400 dark:text-slate-500 -mt-4 pb-2">
-          스크롤하면 더 불러와요
-        </p>
+      {/* 페이지네이션 */}
+      {totalPages > 1 && (
+        <Pagination page={safePage} totalPages={totalPages} onChange={goPage} />
       )}
 
       {/* 상세 모달 */}
@@ -377,6 +359,85 @@ export default function WordBrowser() {
         />
       )}
     </PageContainer>
+  );
+}
+
+// ─────── 페이지네이션 ───────
+
+// 현재 페이지 주변 + 처음/끝을 보여주는 페이지 번호 목록 (…는 -1로 표기)
+function pageList(page: number, total: number): number[] {
+  const pages = new Set<number>([1, total, page, page - 1, page + 1]);
+  const sorted = Array.from(pages)
+    .filter((p) => p >= 1 && p <= total)
+    .sort((a, b) => a - b);
+  const out: number[] = [];
+  let prev = 0;
+  for (const p of sorted) {
+    if (prev && p - prev > 1) out.push(-1); // 생략(…)
+    out.push(p);
+    prev = p;
+  }
+  return out;
+}
+
+function Pagination({
+  page,
+  totalPages,
+  onChange,
+}: {
+  page: number;
+  totalPages: number;
+  onChange: (p: number) => void;
+}) {
+  const btn =
+    'min-w-[2.25rem] h-9 px-2 rounded-lg text-sm font-semibold flex items-center justify-center transition select-none';
+  return (
+    <nav
+      className="flex items-center justify-center gap-1.5 mt-6 flex-wrap"
+      aria-label="페이지 이동"
+    >
+      <button
+        onClick={() => onChange(page - 1)}
+        disabled={page <= 1}
+        className={`${btn} border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 disabled:opacity-40 disabled:pointer-events-none hover:bg-slate-100 dark:hover:bg-slate-800`}
+        aria-label="이전 페이지"
+      >
+        이전
+      </button>
+
+      {pageList(page, totalPages).map((p, i) =>
+        p === -1 ? (
+          <span
+            key={`gap-${i}`}
+            className="min-w-[2rem] text-center text-slate-400 dark:text-slate-500 select-none"
+          >
+            …
+          </span>
+        ) : (
+          <button
+            key={p}
+            onClick={() => onChange(p)}
+            aria-current={p === page ? 'page' : undefined}
+            className={`${btn} ${
+              p === page
+                ? 'bg-brand-600 dark:bg-brand-500 text-white'
+                : 'border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
+            }`}
+          >
+            {p}
+          </button>
+        )
+      )}
+
+      <button
+        onClick={() => onChange(page + 1)}
+        disabled={page >= totalPages}
+        className={`${btn} border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 disabled:opacity-40 disabled:pointer-events-none hover:bg-slate-100 dark:hover:bg-slate-800`}
+        aria-label="다음 페이지"
+      >
+        다음
+      </button>
+    </nav>
   );
 }
 
