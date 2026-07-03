@@ -52,6 +52,15 @@ export default function HomePage() {
             title="3급 학습"
             href="/study/3"
           />
+
+          {/* 전체(3·4급) 섞어 학습 — 전폭 */}
+          <div className="md:col-span-2">
+            <StudySection
+              level="all"
+              title="전체 섞어 학습"
+              href="/study/all"
+            />
+          </div>
         </div>
       </PageContainer>
 

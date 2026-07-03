@@ -9,7 +9,7 @@ import { getAllProgress } from '@/lib/progress/api';
 import { countDueReviews } from '@/lib/srs/queue';
 
 interface StudySectionProps {
-  level: HSKLevel;
+  level: HSKLevel | 'all';
   title: string;
   href: string;
   /** true면 신규 단어 카드 숨김 (복습 전용 카드용) */
@@ -32,7 +32,13 @@ export function StudySection({
   useEffect(() => {
     async function load() {
       const progress = await getAllProgress();
-      setStats(countDueReviews(allWords, progress, level as 3 | 4));
+      setStats(
+        countDueReviews(
+          allWords,
+          progress,
+          level === 'all' ? undefined : (level as 3 | 4)
+        )
+      );
     }
     load();
     window.addEventListener('focus', load);
@@ -57,7 +63,7 @@ export function StudySection({
       <div className="flex items-start justify-between gap-3 mb-3">
         <div className="min-w-0">
           <span className="inline-block text-xs font-semibold text-brand-600 dark:text-brand-500 mb-1">
-            HSK {level}급
+            {level === 'all' ? 'HSK 3·4급' : `HSK ${level}급`}
           </span>
           <h2 className="text-lg font-bold leading-snug">{title}</h2>
         </div>

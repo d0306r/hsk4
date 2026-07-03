@@ -10,13 +10,15 @@ import { countDueReviews } from '@/lib/srs/queue';
 import { useSettingsStore } from '@/stores/settingsStore';
 
 interface SessionSetupProps {
-  level: number;
+  level: number | 'all';
 }
 
 export default function SessionSetup({ level }: SessionSetupProps) {
   const router = useRouter();
   const defaultWordCount = useSettingsStore((s) => s.defaultWordCount);
-  
+
+  const isAll = level === 'all';
+
   const [counts, setCounts] = useState<{
     reviewDue: number;
     newAvailable: number;
@@ -25,11 +27,15 @@ export default function SessionSetup({ level }: SessionSetupProps) {
   useEffect(() => {
     async function load() {
       const progressMap = await getAllProgress();
-      const result = countDueReviews(allWords, progressMap, level);
+      const result = countDueReviews(
+        allWords,
+        progressMap,
+        isAll ? undefined : (level as number)
+      );
       setCounts(result);
     }
     load();
-  }, [level]);
+  }, [level, isAll]);
 
   const start = () => {
     router.push(`/study/${level}/session?count=${defaultWordCount}`);
@@ -82,7 +88,7 @@ export default function SessionSetup({ level }: SessionSetupProps) {
       </div>
 
       <h1 className="text-2xl font-bold mb-2">
-        HSK {level}급 학습
+        {isAll ? 'HSK 3·4급 전체 학습' : `HSK ${level}급 학습`}
       </h1>
       <p className="text-gray-500 dark:text-slate-400 mb-10">
         {isEmpty 

@@ -16,7 +16,8 @@ export default function StudySessionPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  const level = parseInt(params.level, 10);
+  const isAll = params.level === 'all';
+  const level = isAll ? undefined : parseInt(params.level, 10);
   const count = parseInt(searchParams.get('count') ?? '20', 10);
 
   // 클라이언트에서 localStorage 진도를 읽어 실제 SRS 큐 생성
@@ -28,7 +29,7 @@ export default function StudySessionPage() {
       const result = buildStudyQueue(allWords, progressMap, {
         maxCount: count,
         newRatio: 0.3, // SessionSetup의 신규 30% 로직과 동일
-        level,
+        level, // undefined = 전체(3·4급)
       });
       setQueue(result.words);
     }
@@ -69,12 +70,12 @@ export default function StudySessionPage() {
           <div className="text-5xl mb-4">🎉</div>
           <p className="text-lg font-semibold mb-2">학습할 단어가 없습니다</p>
           <p className="text-sm text-slate-500 dark:text-slate-400">
-            HSK {level}급 복습/신규 단어를 모두 끝냈어요.
+            {isAll ? 'HSK 3·4급' : `HSK ${level}급`} 복습/신규 단어를 모두 끝냈어요.
             <br />
             내일 다시 와주세요.
           </p>
           <button
-            onClick={() => router.push(`/study/${level}`)}
+            onClick={() => router.push(`/study/${params.level}`)}
             className="mt-6 px-5 py-2.5 bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white font-bold rounded-xl active:scale-[0.98] transition"
           >
             돌아가기
@@ -90,7 +91,7 @@ export default function StudySessionPage() {
         <StudySession
           initialWords={queue}
           allWords={allWords}
-          level={level}
+          level={level ?? 0}
         />
       </PageContainer>
     </main>

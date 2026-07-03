@@ -8,7 +8,7 @@ interface PageProps {
 }
 
 export default function StudyLevelPage({ params }: PageProps) {
-  const level = parseInt(params.level, 10);
+  const level = params.level === 'all' ? 'all' : parseInt(params.level, 10);
 
   return (
     <main className="min-h-screen px-4 py-8 pb-24 md:pt-20">
