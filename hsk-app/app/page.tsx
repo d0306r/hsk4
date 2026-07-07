@@ -5,6 +5,8 @@ import { StudyLauncher } from '@/components/home/StudyLauncher';
 import { LearningStatusCard } from '@/components/home/LearningStatusCard';
 import { GuestBanner } from '@/components/home/GuestBanner';
 import { DailyGoalCard } from '@/components/home/DailyGoalCard';
+import { LevelCard } from '@/components/home/LevelCard';
+import { ModeLinks } from '@/components/home/ModeLinks';
 import { WordOfTheDay } from '@/components/home/WordOfTheDay';
 import { UpcomingReviewChart } from '@/components/home/UpcomingReviewChart';
 import { BottomNav } from '@/components/home/BottomNav';
@@ -47,6 +49,12 @@ export default function HomePage() {
           <div className="sm:col-span-2">
             <StudyLauncher />
           </div>
+
+          {/* 레벨 & 경험치 (학습 기록 있는 사용자) */}
+          <LevelCard />
+
+          {/* 다른 모드 — 플래시카드 · 스피드 퀴즈 */}
+          <ModeLinks />
 
           {/* 오늘의 목표 진행 링 (학습 기록 있는 사용자) */}
           <DailyGoalCard />

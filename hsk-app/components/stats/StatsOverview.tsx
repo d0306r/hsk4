@@ -29,6 +29,7 @@ import StudyHeatmap from './StudyHeatmap';
 import Achievements from './Achievements';
 import WeaknessInsight from './WeaknessInsight';
 import { CountUp } from '@/components/ui/CountUp';
+import ShareButton from './ShareButton';
 import { PageContainer } from '@/components/ui/PageContainer';
 
 type Overall = ReturnType<typeof getOverallStats>;
@@ -84,10 +85,11 @@ export default function StatsOverview() {
 
   return (
     <PageContainer width="wide" className="px-4 py-6 pb-24">
-      {/* 헤더 — 닉네임 인사 (공용) */}
+      {/* 헤더 — 닉네임 인사 (공용) + 공유 카드 */}
       <AppGreeting
         greeting={{ text: '얼마나 성장했는지 볼까요?', emoji: '📊' }}
         subtitle="지금까지의 학습 현황이에요"
+        right={overall.totalStudied > 0 ? <ShareButton /> : undefined}
       />
 
       {overall.totalStudied === 0 ? (
