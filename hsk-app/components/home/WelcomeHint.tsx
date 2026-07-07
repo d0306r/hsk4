@@ -26,26 +26,21 @@ export function WelcomeHint() {
   if (studied === null || studied > 0) return null;
 
   return (
-    <section
-      className="card mx-5 mb-4
-                 bg-gradient-to-br from-brand-50 to-brand-100
-                 dark:from-brand-900/20 dark:to-brand-800/20
-                 border border-brand-100 dark:border-brand-900/30"
-    >
+    <section className="card mx-5 mb-4">
       <div className="flex items-start gap-3">
-        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-100 dark:bg-brand-900/50 flex items-center justify-center">
-          <Sparkles size={20} className="text-brand-600 dark:text-brand-400" />
+        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center">
+          <Sparkles size={20} className="text-brand-600 dark:text-brand-300" />
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-base font-bold text-slate-900 dark:text-slate-100 mb-1">
             HSK 4급 학습을 시작해볼까요?
           </p>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mb-3">
+          <p className="text-sm text-slate-500 dark:text-slate-400 mb-3 break-keep">
             아래에서 학습을 시작하면 진도와 통계가 차곡차곡 쌓여요.
           </p>
           <Link
             href="/study/4"
-            className="inline-block px-4 py-2 bg-brand-600 dark:bg-brand-500 text-white text-sm font-semibold rounded-xl active:scale-[0.98] transition"
+            className="inline-block px-4 py-2 rounded-xl bg-brand-100 dark:bg-brand-900/40 hover:bg-brand-200 dark:hover:bg-brand-900/60 text-brand-700 dark:text-brand-200 border border-brand-200 dark:border-brand-800/60 text-sm font-semibold active:scale-[0.98] transition"
           >
             첫 학습 시작하기
           </Link>
