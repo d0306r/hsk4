@@ -24,8 +24,8 @@ function drawCard(): Promise<Blob | null> {
 
   // 배경 그라디언트
   const g = ctx.createLinearGradient(0, 0, S, S);
-  g.addColorStop(0, '#3266bf');
-  g.addColorStop(1, '#2a5199');
+  g.addColorStop(0, '#4a72bd');
+  g.addColorStop(1, '#3d5d9a');
   ctx.fillStyle = g;
   ctx.fillRect(0, 0, S, S);
 
