@@ -25,7 +25,7 @@ export function fireConfetti(count = 120): void {
   }
   ctx.scale(dpr, dpr);
 
-  const colors = ['#3a6188', '#6f95bc', '#22c55e', '#f59e0b', '#ef4444', '#4c78a4', '#ec4899'];
+  const colors = ['#3266bf', '#5f95e6', '#22c55e', '#f59e0b', '#ef4444', '#3f78d6', '#ec4899'];
   type P = {
     x: number;
     y: number;
