@@ -11,6 +11,18 @@ import { syncSessionResults, saveStudySession } from '@/lib/progress/api';
 import { isTTSAvailable, speakChinese } from '@/lib/tts';
 import { Word } from '@/lib/words/types';
 import { BottomNav } from '@/components/home/BottomNav';
+import { CountUp } from '@/components/ui/CountUp';
+import { fireConfetti } from '@/lib/confetti';
+
+// 정답률 → 등급/칭호
+function gradeOf(rate: number): { grade: string; label: string } {
+  if (rate >= 100) return { grade: 'S', label: '완벽해요!' };
+  if (rate >= 90) return { grade: 'A', label: '훌륭해요!' };
+  if (rate >= 80) return { grade: 'B', label: '잘했어요!' };
+  if (rate >= 70) return { grade: 'C', label: '좋아요!' };
+  if (rate >= 50) return { grade: 'D', label: '조금 더!' };
+  return { grade: 'E', label: '다시 도전!' };
+}
 
 interface SessionResultProps {
   level: number;
@@ -26,6 +38,7 @@ export default function SessionResult({ level, allWords }: SessionResultProps) {
   const toggleFav = useFavoritesStore((s) => s.toggle);
   const [syncing, setSyncing] = useState(true);
   const [ttsOk, setTtsOk] = useState(false);
+  const [ringOn, setRingOn] = useState(false); // 링 채움 애니메이션 트리거
   useEffect(() => setTtsOk(isTTSAvailable()), []);
 
   // 통계 계산
@@ -33,6 +46,25 @@ export default function SessionResult({ level, allWords }: SessionResultProps) {
   const unknown = records.filter((r) => r.result === 'unknown').length;
   const total = records.length;
   const rate = total > 0 ? Math.round((known / total) * 100) : 0;
+  const { grade, label } = gradeOf(rate);
+
+  // 마운트 후 링을 목표까지 채우고, 만점이면 컨페티
+  useEffect(() => {
+    const t = setTimeout(() => setRingOn(true), 80);
+    if (rate >= 100 && total > 0) {
+      const c = setTimeout(() => fireConfetti(160), 300);
+      return () => {
+        clearTimeout(t);
+        clearTimeout(c);
+      };
+    }
+    return () => clearTimeout(t);
+  }, [rate, total]);
+
+  // 정답률 링 기하
+  const R = 66;
+  const C = 2 * Math.PI * R;
+  const ringOffset = ringOn ? C * (1 - rate / 100) : C;
 
   // 틀린 단어 목록
   const wordMap = new Map(allWords.map((w) => [w.id, w]));
@@ -73,15 +105,47 @@ export default function SessionResult({ level, allWords }: SessionResultProps) {
         {syncing ? '결과 저장 중...' : '결과가 저장되었어요'}
       </p>
 
-      {/* 정답률 원형 */}
-      <div className="flex justify-center mb-6">
-        <div className="w-40 h-40 rounded-full bg-brand-50 dark:bg-brand-900/30 border-4 border-brand-500 dark:border-brand-400 flex flex-col items-center justify-center">
-          <div className="text-4xl font-bold text-brand-600 dark:text-brand-300">
-            {rate}%
+      {/* 정답률 링 (애니메이션) + 등급 */}
+      <div className="flex flex-col items-center mb-6">
+        <div className="relative w-44 h-44">
+          <svg width="176" height="176" viewBox="0 0 176 176" className="-rotate-90">
+            <circle
+              cx="88"
+              cy="88"
+              r={R}
+              fill="none"
+              strokeWidth="12"
+              className="stroke-slate-100 dark:stroke-slate-700"
+            />
+            <circle
+              cx="88"
+              cy="88"
+              r={R}
+              fill="none"
+              strokeWidth="12"
+              strokeLinecap="round"
+              className="stroke-brand-500 dark:stroke-brand-400"
+              strokeDasharray={C}
+              strokeDashoffset={ringOffset}
+              style={{ transition: 'stroke-dashoffset 1s ease-out' }}
+            />
+          </svg>
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <div className="text-4xl font-bold text-brand-600 dark:text-brand-300">
+              <CountUp value={rate} duration={1000} />%
+            </div>
+            <div className="text-xs text-gray-500 dark:text-slate-400 mt-0.5">
+              정답률
+            </div>
           </div>
-          <div className="text-xs text-gray-500 dark:text-slate-400 mt-1">
-            정답률
-          </div>
+        </div>
+        <div className="mt-3 flex items-center gap-2">
+          <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-600 dark:bg-brand-500 text-white text-lg font-extrabold">
+            {grade}
+          </span>
+          <span className="text-base font-bold text-slate-800 dark:text-slate-100">
+            {label}
+          </span>
         </div>
       </div>
 

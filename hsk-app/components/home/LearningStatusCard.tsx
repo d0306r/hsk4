@@ -6,6 +6,7 @@
 import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { getSRSStageStats } from '@/lib/progress/stats';
+import { CountUp } from '@/components/ui/CountUp';
 
 type SRSStats = ReturnType<typeof getSRSStageStats>;
 
@@ -66,14 +67,14 @@ export function LearningStatusCard() {
         <p className="text-xs text-slate-500 dark:text-slate-400">전체 진도</p>
         <p className="text-sm">
           <span className="font-bold text-slate-900 dark:text-white">
-            {studied.toLocaleString()}
+            <CountUp value={studied} />
           </span>
           <span className="text-slate-400 dark:text-slate-500">
             {' '}
             / {total.toLocaleString()}
           </span>
           <span className="ml-2 font-bold text-brand-600 dark:text-brand-400">
-            {percent.toFixed(1)}%
+            <CountUp value={percent} decimals={1} />%
           </span>
         </p>
       </div>

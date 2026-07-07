@@ -25,7 +25,9 @@ export default function HomePage() {
       {/* 홈은 집중형(narrow) 폭 — 설정·학습과 동일 */}
       <PageContainer width="narrow">
         {/* 인사 + 연속 학습 칩 + 배지 */}
-        <HomeGreeting />
+        <div className="animate-rise">
+          <HomeGreeting />
+        </div>
 
         {/* 게스트일 때만: 로그인 유도 */}
         <GuestBanner />
@@ -37,7 +39,10 @@ export default function HomePage() {
         <WelcomeHint />
 
         {/* 학습 영역 — 데스크톱 2열 벤토 (휑함 방지) */}
-        <div className="px-5 pt-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div
+          className="px-5 pt-1 grid grid-cols-1 sm:grid-cols-2 gap-4 animate-rise"
+          style={{ animationDelay: '90ms' }}
+        >
           {/* 통합 학습 시작 — 가장 중요한 액션, 위쪽 전폭 */}
           <div className="sm:col-span-2">
             <StudyLauncher />

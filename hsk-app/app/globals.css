@@ -84,3 +84,15 @@
 @media (prefers-reduced-motion: reduce) {
   .animate-shake, .animate-pop { animation: none; }
 }
+
+/* 진입 애니메이션 (아래에서 부드럽게 나타남) */
+@keyframes hsk-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-rise {
+  animation: hsk-rise 0.5s ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise { animation: none; }
+}

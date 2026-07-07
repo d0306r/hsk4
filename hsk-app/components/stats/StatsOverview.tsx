@@ -28,6 +28,7 @@ import AccuracyTrend from './AccuracyTrend';
 import StudyHeatmap from './StudyHeatmap';
 import Achievements from './Achievements';
 import WeaknessInsight from './WeaknessInsight';
+import { CountUp } from '@/components/ui/CountUp';
 import { PageContainer } from '@/components/ui/PageContainer';
 
 type Overall = ReturnType<typeof getOverallStats>;
@@ -271,7 +272,7 @@ function KeyMetrics({ overall }: { overall: Overall }) {
                     : 'text-slate-900 dark:text-white'
                 }
               >
-                {value}
+                <CountUp value={value} />
               </span>
               {suffix && (
                 <span className="ml-1 text-xs font-medium text-slate-400 dark:text-slate-500">

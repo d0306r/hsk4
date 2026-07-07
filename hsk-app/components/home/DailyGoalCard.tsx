@@ -2,9 +2,10 @@
 // 오늘 학습량 vs 하루 목표를 도넛 링으로 표시. 목표 달성 시 축하 상태로 전환.
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { getTodayStats, getOverallStats } from '@/lib/progress/stats';
+import { fireConfetti } from '@/lib/confetti';
 
 function Ring({
   ratio,
@@ -75,11 +76,18 @@ export function DailyGoalCard() {
   const [mounted, setMounted] = useState(false);
   const [studied, setStudied] = useState(0);
   const [hasHistory, setHasHistory] = useState(false);
+  const prevDoneRef = useRef<boolean | null>(null);
 
   useEffect(() => {
     setMounted(true);
     function refresh() {
-      setStudied(getTodayStats().studied);
+      const s = getTodayStats().studied;
+      const g = useSettingsStore.getState().dailyGoal || 20;
+      const nowDone = s >= g;
+      // 미달→달성으로 새로 넘어온 순간에만 컨페티 (첫 로드/이미 달성엔 안 터짐)
+      if (prevDoneRef.current === false && nowDone) fireConfetti();
+      prevDoneRef.current = nowDone;
+      setStudied(s);
       setHasHistory(getOverallStats().totalStudied > 0);
     }
     refresh();

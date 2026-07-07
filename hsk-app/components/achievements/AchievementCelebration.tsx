@@ -8,6 +8,7 @@ import {
   markBadgesSeen,
   Achievement,
 } from '@/lib/progress/achievements';
+import { fireConfetti } from '@/lib/confetti';
 
 export default function AchievementCelebration() {
   const [badges, setBadges] = useState<Achievement[]>([]);
@@ -15,7 +16,10 @@ export default function AchievementCelebration() {
   useEffect(() => {
     // 마운트 직후 한 번 확인 (세션 후 홈 복귀 시점 등)
     const fresh = getNewlyEarnedBadges();
-    if (fresh.length > 0) setBadges(fresh);
+    if (fresh.length > 0) {
+      setBadges(fresh);
+      fireConfetti();
+    }
   }, []);
 
   function close() {
