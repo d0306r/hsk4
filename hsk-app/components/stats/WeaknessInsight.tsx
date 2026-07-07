@@ -50,11 +50,11 @@ export default function WeaknessInsight() {
       </div>
 
       <Link
-        href="/study/weak"
+        href="/notes"
         className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline"
       >
         <Target size={13} />
-        약점 집중 복습하기
+        오답노트에서 복습하기
       </Link>
     </section>
   );

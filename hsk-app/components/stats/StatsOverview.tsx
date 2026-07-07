@@ -304,11 +304,11 @@ function MostWrongCard({
           자주 틀린 단어
         </h2>
         <Link
-          href="/study/weak"
+          href="/notes"
           className="flex items-center gap-1 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline"
         >
           <Target size={13} />
-          집중 복습
+          오답노트
         </Link>
       </div>
       <div className="space-y-0.5">
