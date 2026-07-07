@@ -53,7 +53,7 @@ export function LevelCard() {
     <section className="card h-full">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
-          <span className="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 dark:from-brand-500 dark:to-brand-400 text-white font-extrabold text-sm shadow-sm">
+          <span className="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-extrabold text-sm">
             {info.level}
           </span>
           <div className="leading-tight">
@@ -74,7 +74,7 @@ export function LevelCard() {
       {/* 경험치 바 */}
       <div className="h-3 rounded-full bg-slate-100 dark:bg-slate-700 overflow-hidden">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-brand-400 to-brand-600 dark:from-brand-500 dark:to-brand-400 transition-all duration-700 ease-out"
+          className="h-full rounded-full bg-brand-300 dark:bg-brand-500 transition-all duration-700 ease-out"
           style={{ width: `${barOn ? Math.round(info.ratio * 100) : 0}%` }}
         />
       </div>

@@ -106,10 +106,10 @@ export function StudyLauncher() {
           ) : (
             <Link
               href={href}
-              className="flex items-center justify-between w-full py-4 px-5 rounded-xl bg-brand-600 dark:bg-brand-500 hover:bg-brand-700 dark:hover:bg-brand-400 text-white font-bold active:scale-[0.98] transition"
+              className="flex items-center justify-between w-full py-4 px-5 rounded-xl bg-brand-100 dark:bg-brand-900/30 hover:bg-brand-200 dark:hover:bg-brand-900/50 text-brand-700 dark:text-brand-200 font-bold border border-brand-200 dark:border-brand-800/60 active:scale-[0.98] transition"
             >
               <span>학습 시작</span>
-              <span className="flex items-center gap-1.5 text-sm font-semibold text-white/90">
+              <span className="flex items-center gap-1.5 text-sm font-semibold text-brand-500 dark:text-brand-300">
                 {total}단어
                 <ArrowRight size={18} />
               </span>
