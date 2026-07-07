@@ -317,9 +317,9 @@ export default function SettingsPage() {
         </div>
       )}
 
-      <BottomNav />
       </div>
       </PageContainer>
+      <BottomNav />
     </main>
   );
 }
