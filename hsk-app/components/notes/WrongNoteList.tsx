@@ -23,8 +23,8 @@ interface NoteItem {
   progress: WordProgress;
 }
 
-// 페이지당 9개 (PC 3열 × 3행). 9개 초과면 다음 페이지로 넘어감
-const PAGE_SIZE = 9;
+// 페이지당 24개 — 단어장과 동일 (PC 3열 기준 8행). 초과분은 다음 페이지로
+const PAGE_SIZE = 24;
 
 export default function WrongNoteList({ allWords }: WrongNoteListProps) {
   const [items, setItems] = useState<NoteItem[] | null>(null);
