@@ -21,7 +21,7 @@ function Ring({
   const R = 34;
   const C = 2 * Math.PI * R;
   const offset = C * (1 - Math.min(ratio, 1));
-  const stroke = done ? '#059669' : '#4f46e5'; // emerald-600 / indigo-600(brand)
+  const stroke = done ? '#059669' : '#3a6188'; // emerald-600 / brand-600
 
   return (
     <svg width="84" height="84" viewBox="0 0 84 84" className="flex-shrink-0 -rotate-90">
