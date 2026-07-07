@@ -13,13 +13,16 @@ export function AppGreeting({
   right,
   className = '',
   greeting,
+  showStreak = false,
 }: {
   subtitle?: string;
-  /** 우측 액션. 지정 안 하면 스트릭 칩(있을 때)을 보여줌 */
+  /** 우측 액션. 지정하면 스트릭보다 우선 */
   right?: ReactNode;
   className?: string;
   /** 탭별 인사 문구. 지정 안 하면 시간대 인사(홈용) */
   greeting?: { text: string; emoji: string };
+  /** true일 때만 🔥연속일 칩 표시 (통계 등) */
+  showStreak?: boolean;
 }) {
   const nickname = useSettingsStore((s) => s.nickname);
   const loggedIn = useLoggedIn();
@@ -46,7 +49,7 @@ export function AppGreeting({
   const name = loggedIn ? nickname.trim() : '';
   const rightNode =
     right ??
-    (streak > 0 ? (
+    (showStreak && streak > 0 ? (
       <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 text-xs font-bold">
         🔥 {streak}일
       </span>
