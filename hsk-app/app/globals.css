@@ -86,13 +86,14 @@
   .animate-shake, .animate-pop { animation: none; }
 }
 
-/* 진입 애니메이션 (아래에서 부드럽게 나타남) */
+/* 진입 애니메이션 (아래에서 부드럽게 나타남) — 최종은 transform:none으로 두어
+   내부 position:fixed 요소가 깨지지 않게 한다 */
 @keyframes hsk-rise {
   from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: none; }
 }
 .animate-rise {
-  animation: hsk-rise 0.5s ease-out both;
+  animation: hsk-rise 0.45s ease-out both;
 }
 @media (prefers-reduced-motion: reduce) {
   .animate-rise { animation: none; }

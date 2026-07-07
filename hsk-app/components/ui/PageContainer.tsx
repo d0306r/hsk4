@@ -20,7 +20,7 @@ export function PageContainer({
 }) {
   const maxW = width === 'wide' ? 'max-w-5xl' : 'max-w-3xl';
   return (
-    <div className={`${maxW} mx-auto w-full ${className}`}>
+    <div className={`${maxW} mx-auto w-full animate-rise ${className}`}>
       {children}
     </div>
   );
