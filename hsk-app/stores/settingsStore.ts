@@ -22,6 +22,7 @@ interface SettingsState {
   // 표시 설정
   showPinyin: boolean;             // 병음 표시 여부
   soundEffects: boolean;           // 정답/오답 효과음
+  animations: boolean;             // 화면 효과(컨페티·카운트업 등)
 
   // 액션
   setNickname: (name: string) => void;
@@ -31,6 +32,7 @@ interface SettingsState {
   setShowPinyin: (show: boolean) => void;
   togglePinyin: () => void;
   toggleSoundEffects: () => void;
+  toggleAnimations: () => void;
 }
 
 export const useSettingsStore = create<SettingsState>()(
@@ -43,6 +45,7 @@ export const useSettingsStore = create<SettingsState>()(
       quizDirection: 'mixed',
       showPinyin: true,
       soundEffects: false,
+      animations: true,
 
       // 액션
       setNickname: (name) => set({ nickname: name }),
@@ -53,6 +56,8 @@ export const useSettingsStore = create<SettingsState>()(
       togglePinyin: () => set((state) => ({ showPinyin: !state.showPinyin })),
       toggleSoundEffects: () =>
         set((state) => ({ soundEffects: !state.soundEffects })),
+      toggleAnimations: () =>
+        set((state) => ({ animations: !state.animations })),
     }),
     {
       name: 'hsk-settings',  // localStorage 키

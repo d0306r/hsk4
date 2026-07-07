@@ -3,6 +3,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useSettingsStore } from '@/stores/settingsStore';
 
 export function CountUp({
   value,
@@ -17,13 +18,14 @@ export function CountUp({
 }) {
   const [display, setDisplay] = useState(0);
   const rafRef = useRef<number | null>(null);
+  const animations = useSettingsStore((s) => s.animations);
 
   useEffect(() => {
-    // 모션 최소화 설정이면 즉시 표시
+    // 화면 효과 off 또는 모션 최소화 설정이면 즉시 표시
     const reduce =
       typeof window !== 'undefined' &&
       window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-    if (reduce) {
+    if (!animations || reduce) {
       setDisplay(value);
       return;
     }
@@ -42,7 +44,7 @@ export function CountUp({
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
-  }, [value, duration]);
+  }, [value, duration, animations]);
 
   const shown =
     decimals > 0

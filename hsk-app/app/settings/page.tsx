@@ -28,9 +28,11 @@ export default function SettingsPage() {
     quizDirection,
     showPinyin,
     soundEffects,
+    animations,
     setQuizDirection,
     togglePinyin,
     toggleSoundEffects,
+    toggleAnimations,
   } = useSettingsStore();
 
   // 초기화 모달 상태
@@ -178,6 +180,9 @@ export default function SettingsPage() {
         </SettingsRow>
         <SettingsRow label="정답 효과음">
           <Toggle checked={soundEffects} onChange={toggleSoundEffects} />
+        </SettingsRow>
+        <SettingsRow label="화면 효과 (컨페티·애니메이션)">
+          <Toggle checked={animations} onChange={toggleAnimations} />
         </SettingsRow>
         <SettingsRow label="다크 모드">
           <DarkModeToggle />

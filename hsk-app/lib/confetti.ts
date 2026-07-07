@@ -1,9 +1,11 @@
 // lib/confetti.ts — 의존성 없는 canvas 컨페티 (축하 연출)
 // fireConfetti() 호출 시 화면 상단에서 색종이가 터져 내림.
+import { useSettingsStore } from '@/stores/settingsStore';
 
 export function fireConfetti(count = 120): void {
   if (typeof window === 'undefined') return;
-  // 모션 최소화 설정이면 생략
+  // 사용자가 화면 효과를 껐거나, 모션 최소화 설정이면 생략
+  if (!useSettingsStore.getState().animations) return;
   if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
 
   const canvas = document.createElement('canvas');
