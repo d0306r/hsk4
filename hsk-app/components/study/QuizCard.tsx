@@ -208,28 +208,28 @@ export default function QuizCard({
 
       {/* 정답 후 단어 정보 */}
       {isAnswered && (
-        <div className="mt-6 p-4 bg-brand-50 dark:bg-brand-900/30 rounded-xl">
+        <div className="mt-6 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
           <div className="flex items-baseline gap-3 mb-1">
-            <span className="hanzi text-2xl font-bold text-brand-900 dark:text-brand-100">
+            <span className="hanzi text-2xl font-bold text-slate-900 dark:text-white">
               {word.hanzi}
             </span>
             {showPinyin && (
-              <span className="text-sm text-brand-600 dark:text-brand-300">
+              <span className="text-sm text-brand-600 dark:text-brand-400">
                 [{word.pinyin}]
               </span>
             )}
             {word.partOfSpeech && (
-              <span className="text-xs text-brand-500 dark:text-brand-300 font-semibold">
+              <span className="text-xs text-slate-400 dark:text-slate-500 font-semibold">
                 {word.partOfSpeech}
               </span>
             )}
           </div>
-          <div className="text-sm text-gray-700 dark:text-slate-300">{word.meaning}</div>
+          <div className="text-sm text-slate-700 dark:text-slate-300">{word.meaning}</div>
 
           {word.example && (
-            <div className="mt-3 pt-3 border-t border-brand-100 dark:border-brand-800/50">
+            <div className="mt-3 pt-3 border-t border-slate-200 dark:border-slate-700">
               <div className="flex items-start justify-between gap-2">
-                <p className="hanzi text-sm font-medium text-brand-900 dark:text-brand-100">
+                <p className="hanzi text-sm font-medium text-slate-800 dark:text-slate-100">
                   {word.example.sentence}
                 </p>
                 {ttsOk && (
@@ -237,18 +237,18 @@ export default function QuizCard({
                     type="button"
                     onClick={() => speakChinese(word.example!.sentence)}
                     aria-label="예문 발음 듣기"
-                    className="flex-shrink-0 p-1 -mr-1 rounded-full text-brand-600 dark:text-brand-300 hover:bg-brand-100 dark:hover:bg-brand-800/50 transition active:scale-95"
+                    className="flex-shrink-0 p-1 -mr-1 rounded-full text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-700 transition active:scale-95"
                   >
                     <Volume2 size={16} />
                   </button>
                 )}
               </div>
               {showPinyin && (
-                <p className="text-xs text-brand-600 dark:text-brand-300 mt-0.5">
+                <p className="text-xs text-brand-600 dark:text-brand-400 mt-0.5">
                   {word.example.pinyin}
                 </p>
               )}
-              <p className="text-xs text-gray-600 dark:text-slate-400 mt-0.5">
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                 {word.example.translation}
               </p>
             </div>
