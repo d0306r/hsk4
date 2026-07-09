@@ -139,13 +139,10 @@ export default function SessionResult({ level, allWords }: SessionResultProps) {
             </div>
           </div>
         </div>
-        <div className="mt-3 flex items-center gap-2">
-          <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-600 dark:bg-brand-500 text-white text-lg font-extrabold">
-            {grade}
-          </span>
-          <span className="text-base font-bold text-slate-800 dark:text-slate-100">
-            {label}
-          </span>
+        <div className="mt-3 text-base font-bold text-slate-800 dark:text-slate-100">
+          <span className="text-brand-600 dark:text-brand-400">{grade}등급</span>
+          <span className="mx-1.5 text-slate-300 dark:text-slate-600">·</span>
+          {label}
         </div>
       </div>
 
